@@ -273,3 +273,8 @@ After modifying source, the original release manifest will no longer match. Keep
 ## 10. Copyable prompt for another AI
 
 > You are working on this local Windows fruit-fly simulation. Read AI协作约定.md, docs/项目详情.md and docs/AI二次开发文档.md first. Use the project's two Python environments and relative root paths. Inspect the actual code before proposing biological functionality. Preserve exact string neuron IDs and tensor order, the P9 A/B convention, honest model-time/event statistics, and the distinction between engineering policy and neural mechanism. Implement the requested change, run scoped checks, preserve user experiment records, and explain what changed and what remains unimplemented. Do not modify system Python/PATH or replace the connectome/dynamics unless explicitly requested.
+
+
+## 0.1.0-alpha.1 运行包补充
+
+维护者已授权本次 Pre-release 和运行包更新；未来更新仍需请求。运行包含独立 Python、连接表和普通依赖，PyTorch 与 imageio-ffmpeg wheel 由接收方按 docs/下载说明.md 另行补齐。delivery/外部依赖.json 记录录像 wheel 的固定 URL、大小和哈希；bootstrap 在创建环境前校验。构建在 GitHub 准备目录进行，只从已提交的干净源码生成，实际提交写入包内版本信息与清单；不改写源码提交自身的 source_commit。本轮未运行安装、仿真、GPU 或性能测试。

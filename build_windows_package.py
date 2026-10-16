@@ -7,7 +7,6 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
-import urllib.request
 import zipfile
 from email.parser import BytesParser
 from project_info import project_info
@@ -44,8 +43,12 @@ def write_manifest(stage):
         if any(p in {'.venv', '.brain-venv', '.cache', '__pycache__', 'output'} for p in relative.parts):
             raise RuntimeError('Unexpected mutable/test directory in release stage: ' + str(relative))
         files.append(dict(path=relative.as_posix(), bytes=path.stat().st_size, sha256=sha256(path)))
-    manifest = dict(release=RELEASE, project=project_info(), generated_at_utc=datetime.now(timezone.utc).isoformat(),
-                    platform='Windows x64', external_torch_included=False, files=files)
+    identity = json.loads((stage / '版本信息.json').read_text(encoding='utf-8'))
+    external = json.loads((stage / 'delivery/外部依赖.json').read_text(encoding='utf-8'))
+    manifest = dict(release=RELEASE, project=identity, source_commit=identity.get('source_commit'),
+                    generated_at_utc=datetime.now(timezone.utc).isoformat(),
+                    platform='Windows x64', external_torch_included=False,
+                    external_wheels=external['wheels'], files=files)
     (stage / 'bundle-manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
     return manifest
 
@@ -54,9 +57,11 @@ def create_zip(stage, archive=None):
     if not (stage / '.flywire-release-stage').exists():
         raise RuntimeError('Not a release stage created by this builder')
     manifest = write_manifest(stage)
-    archive = Path(archive).resolve() if archive else stage.with_suffix('.zip')
+    archive = Path(archive).resolve() if archive else Path(str(stage) + '.zip')
     if archive.is_relative_to(stage):
         raise RuntimeError('Archive must be outside the release stage')
+    if archive.exists() or archive.with_suffix('.zip.sha256').exists():
+        raise RuntimeError('Archive or checksum already exists; choose a new path (nothing was overwritten)')
     with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6, allowZip64=True) as bundle:
         for item in manifest['files']:
             bundle.write(stage / item['path'], arcname=stage.name + '/' + item['path'])
@@ -88,6 +93,12 @@ def main():
         raise RuntimeError('Output already exists; choose a new --output directory (nothing was deleted)')
     if not args.uv or not Path(args.uv).is_file():
         raise RuntimeError('Provide --uv PATH_TO_UV_EXE')
+    source_commit = None
+    if (ROOT / '.git').is_dir():
+        if subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT):
+            raise RuntimeError('Commit reviewed source changes before building a versioned kit')
+        source_commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT,
+                                                encoding='ascii').strip()
     stage.mkdir(parents=True,exist_ok=args.resume)
     (stage / '.flywire-release-stage').write_text(RELEASE, encoding='ascii')
     for path in ROOT.glob('*.py'):
@@ -96,8 +107,12 @@ def main():
         shutil.copy2(path, stage / path.name)
     for name in ('activity_monitor.html', 'habitat.html', '环境仿真说明.md', '神经元注释说明.md', '脑活动监视说明.md',
                  'AGENTS.md', 'AI协作约定.md', '第三方许可与来源.md', '许可说明.md', '许可证.txt',
-                 '数据使用与署名.md', '引用文献.md', '版本信息.json', '版本与更新记录.md', '项目说明.md'):
+                 '数据使用与署名.md', '引用文献.md', '版本信息.json', '版本与更新记录.md', '项目说明.md',
+                 '外部资源清单.json'):
         shutil.copy2(ROOT / name, stage / name)
+    identity = project_info()
+    identity['source_commit'] = source_commit
+    (stage / '版本信息.json').write_text(json.dumps(identity, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     for name in ('web', 'delivery', 'docs', 'licenses'):
         copy_tree(ROOT / name, stage / name)
     # Include source and bundled simplified body meshes, not .git or generated build products.
@@ -110,10 +125,9 @@ def main():
     for path in (ROOT / 'brain-model/data').iterdir():
         if path.is_file() and path.suffix in ('.csv', '.json', '.parquet'):
             shutil.copy2(path, stage / 'brain-model/data' / path.name)
-    for name in ('annotations', 'morphology'):
-        copy_tree(ROOT / 'downloads' / name, stage / 'downloads' / name)
-    (stage / 'downloads/请将PyTorch安装文件放在这里.txt').write_text(
-        '请按 docs/下载说明.md 下载指定版本的 PyTorch 安装文件，放入本文件夹。\n', encoding='utf-8')
+    (stage / 'downloads').mkdir(parents=True, exist_ok=True)
+    (stage / 'downloads/请将外部安装文件放在这里.txt').write_text(
+        '请按 docs/下载说明.md 下载指定 PyTorch 与 imageio-ffmpeg wheel，放入本文件夹。\n', encoding='utf-8')
     introduction = (ROOT / 'docs/交付包说明.md').read_text(encoding='utf-8')
     for document in (ROOT / 'docs').glob('*.md'):
         introduction = introduction.replace(f']({document.name})', f'](docs/{document.name})')
@@ -128,9 +142,14 @@ def main():
     lock_dir = stage / 'requirements'
     lock_dir.mkdir(exist_ok=True)
     metadata = {}
+    external = json.loads((ROOT / 'delivery/外部依赖.json').read_text(encoding='utf-8'))['wheels']
+    external_names = {item['file'] for item in external}
+    notices = stage / 'licenses/wheels'
     for kind in ('body', 'brain'):
         entries = []
         for wheel in sorted((args.wheel_cache / kind).glob('*.whl')):
+            if wheel.name in external_names:
+                continue
             destination = wheels / wheel.name
             if destination.exists() and sha256(destination) != sha256(wheel):
                 raise RuntimeError('Conflicting wheel bytes: ' + wheel.name)
@@ -145,6 +164,19 @@ def main():
                 metadata[wheel.name] = dict(name=str(name), version=str(version), sha256=sha256(wheel),
                                             license_expression=value('License-Expression'),
                                             license=value('License'), home_page=value('Home-page'))
+                for member in archive.infolist():
+                    if member.is_dir() or member.filename.endswith('.py'):
+                        continue
+                    if not any(word in member.filename.lower() for word in ('license', 'copying', 'notice', 'copyright')):
+                        continue
+                    target = (notices / wheel.name / member.filename).resolve()
+                    if not target.is_relative_to(notices.resolve()):
+                        raise RuntimeError('Invalid wheel notice path: ' + member.filename)
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_bytes(archive.read(member))
+        for item in external:
+            if kind in item['profiles']:
+                entries.append(f"{item['name']}=={item['version']} --hash=sha256:{item['sha256']}")
         if kind == 'body' and not any(line.startswith('flygym==2.1.0 ') for line in entries):
             raise RuntimeError('Missing locally built FlyGym wheel')
         if kind == 'brain':
@@ -171,10 +203,10 @@ def main():
     (stage / '请先阅读.txt').write_text(
         'FlyWire Windows 本地实验场\n\n'
         '1. 完整解压到纯英文路径，例如 D:\\FlyWire（可带空格）。不要在 ZIP 内运行。\n'
-        '2. 按 docs\\下载说明.md 下载指定 PyTorch wheel，放进 downloads。\n'
+        '2. 按 docs\\下载说明.md 下载指定 PyTorch 与 imageio-ffmpeg wheel，放进 downloads。\n'
         '3. 双击 Setup.cmd，等待离线安装完成。不会修改系统 Python、PATH 或全局包。\n'
         '4. 双击 Start-Habitat.cmd，在自动打开的网页观察果蝇。\n\n'
-        '可选：安装后运行 Smoke-Test.cmd，做短时间完整自检。\n'
+        '可选：安装后运行 Smoke-Test.cmd，执行历史自检入口；本版构建没有运行仿真测试。\n'
         '操作说明：docs\\操作说明.md\n'
         '项目详情：docs\\项目详情.md\n'
         '给 AI 的二次开发文档：docs\\AI二次开发文档.md；先读 AI协作约定.md。\n', encoding='utf-8')

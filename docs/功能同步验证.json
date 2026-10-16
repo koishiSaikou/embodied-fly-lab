@@ -190,5 +190,23 @@
       "docs/首次发布说明.md",
       "docs/发布步骤.md"
     ]
+  },
+  "subsequent_prerelease_preparation": {
+    "prepared_at_utc": "2026-10-16T08:24:47.812375+00:00",
+    "version": "0.1.0-alpha.1",
+    "release_status": "demo-prerelease",
+    "authorization": [
+      "Create public GitHub pre-release",
+      "Update Windows delivery kit"
+    ],
+    "backup_directory": "output/code_sync_backup/20261016_162447_777587",
+    "synchronized_files": 22,
+    "tests_run": false,
+    "simulation_started": false,
+    "installation_executed": false,
+    "old_packages_preserved": true,
+    "release_created_at_record_time": false,
+    "delivery_built_at_record_time": false,
+    "binary_review": "docs/运行包许可与来源.md"
   }
 }

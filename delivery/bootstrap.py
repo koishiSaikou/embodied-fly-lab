@@ -44,6 +44,19 @@ def main():
         raise RuntimeError('MuJoCo on Windows cannot reliably open mesh files under non-ASCII paths.\n'
                            'Move/extract this kit to an English path such as D:\\FlyWire, then rerun Setup.cmd.\n'
                            'Spaces are supported. No system Python changes are needed.')
+    kinds = ['body'] if args.body_only else ['body', 'brain']
+    external = json.loads((ROOT / 'delivery/外部依赖.json').read_text(encoding='utf-8'))['wheels']
+    for item in external:
+        if not set(item['profiles']).intersection(kinds):
+            continue
+        wheel = (ROOT / 'downloads' / item['file']).resolve()
+        if not wheel.is_relative_to((ROOT / 'downloads').resolve()):
+            raise RuntimeError('Invalid external wheel filename')
+        if not wheel.is_file():
+            raise RuntimeError(f"Missing external wheel: {item['file']}\nDownload: {item['url']}\n"
+                               f'Save as: {wheel}\nSee docs/下载说明.md. Setup does not download it automatically.')
+        if wheel.stat().st_size != item['bytes'] or digest(wheel) != item['sha256']:
+            raise RuntimeError('External wheel checksum mismatch: ' + item['file'])
     wheel = ROOT / 'downloads' / TORCH_NAME
     if not args.body_only:
         if not wheel.is_file():
@@ -68,7 +81,6 @@ def main():
         transcript.append(command)
         subprocess.run(command, cwd=ROOT, env=env, check=True)
 
-    kinds = ['body'] if args.body_only else ['body', 'brain']
     try:
         for kind in kinds:
             version = '313' if kind == 'body' else '312'

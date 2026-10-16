@@ -17,7 +17,7 @@ GPL-3.0-or-later 本身不禁止商业使用。FlyWire 的非商业条件适用�
 来源及条件见 [第三方许可与来源](第三方许可与来源.md)、[引用文献](引用文献.md) 和 [许可核对报告](docs/许可核对报告.md)。本记录不构成“绝无版权争议”的保证。
 </pre></section><section><h2>第三方来源</h2><pre># 第三方许可与来源
 
-核对日期：2026-10-16。适用于当前源码；旧交付 ZIP 没有重建。本项目包含程序与数据，不能统一贴一个许可覆盖所有文件。
+核对日期：2026-10-16。源码与运行包范围分别记录；本版本另提供更新后的 Windows 运行包。本项目包含程序与数据，不能统一贴一个许可覆盖所有文件。
 
 | 组件 / 路径 | 来源与许可 | 保留内容与修改 |
 | --- | --- | --- |
@@ -29,13 +29,13 @@ GPL-3.0-or-later 本身不禁止商业使用。FlyWire 的非商业条件适用�
 | FlyWire 神经元、连接、注释与骨架数据 | [FlyWire 公开规则](https://flywire.ai/guidelines)，CC BY-NC 4.0 | 数据及派生物另见 [数据使用与署名](数据使用与署名.md)，不改称 GPL 数据 |
 | 78 个静态脑区 | [fafbseg 数据来源](https://raw.githubusercontent.com/navis-org/fafbseg-py/d0da95123ee606e204ae2c702e7bc78538646fbd/fafbseg/data/README.md)及 [VFB 固定说明](https://raw.githubusercontent.com/VirtualFlyBrain/DrosAdultBRAINdomains/0f79bb86d199d54785fe6ad21cbd42ea373d9013/LICENSE-NOTES.md) | 基础 BrainName 标签/形状 CC BY 4.0，署名 Ito、Jenett、Shinomiya、VFB；fafbseg 分发软件 GPL-3.0。两层来源不混成单一软件许可 |
 | uv 0.12.18 | [Astral uv](https://github.com/astral-sh/uv/tree/0.12.18)，MIT OR Apache-2.0 | licenses/uv-LICENSE-MIT.txt 与 uv-LICENSE-APACHE.txt；源码仓库不包含其可执行文件 |
-| CPython、PyTorch/CUDA、MuJoCo、wheels、FFmpeg | 接收方从各发行方另行获取，见 [依赖许可清单](docs/依赖许可清单.json) | 当前 Git 候选不含解释器、wheels、FFmpeg 或 CUDA DLL；安装元数据不是整个二进制发行物的许可证明。以后打运行包时另核再分发条件并保留全部原始声明 |
+| CPython、PyTorch/CUDA、MuJoCo、wheels、FFmpeg | 接收方从各发行方另行获取，见 [依赖许可清单](docs/依赖许可清单.json) | 当前 Git 候选不含解释器、wheels、FFmpeg 或 CUDA DLL；安装元数据不是整个二进制发行物的许可证明。运行包的实际 wheel、许可原文、CPython 附属声明和外部 FFmpeg 处理另见 [运行包许可与来源](docs/运行包许可与来源.md) |
 
 [Apache 官方说明](https://www.apache.org/licenses/GPL-compatibility)区分 GPLv3 与 GPLv2-only 的兼容性。因此新增代码采用 GPLv3-or-later，保留 Eon 的“or later”，不简写成 GPL-2.0-only，也不改写上游原许可。
 
 brain_worker.py 导入上游脑实现，再与身体进程交换 JSON。分进程不被视作自动免除 GPL 义务的理由。公开源码保留实际使用的上游源码、本地修改源码和安装入口；再分发运行包时须另行满足对应源代码等条件。
 
-原说明中“随包 runtime/wheels 清单”是旧交付物约定；当前源码没有这些文件，不能把旧 ZIP 的说明当作当前源码资产证明。当前具体范围、哈希和保留问题见 [许可核对清单](docs/许可核对清单.json)、[核对报告](docs/许可核对报告.md)。
+源码仓库不包含 runtime/wheels 二进制；本版本运行包则包含其实际二进制及 `licenses/wheel-components.json`、`licenses/runtime-provenance.json`、原始许可副本和逐文件校验。不得混用两种发行范围。当前具体范围、哈希和保留问题见 [许可核对清单](docs/许可核对清单.json)、[核对报告](docs/许可核对报告.md)。
 
 外部论文、视频、截图、配图、商标和水印不因存在下载链接而成为本项目获授权素材。宣传使用自己的模拟画面并保留模型/数据署名，不复制用户参考视频的素材，也不暗示官方背书。
 </pre></section><section><h2>数据与署名</h2><pre># 数据使用与署名
@@ -107,6 +107,29 @@ fafbseg 分发软件 GPL-3.0 与基础数据 CC BY 4.0 是不同层次。本次�
 - Jenett et al. (2012), A GAL4-driver line resource for Drosophila neurobiology：[DOI](https://doi.org/10.1016/j.celrep.2012.09.011)。JFRC2 图像背景与原作者致谢。
 - Vaxenburg et al. (2025), Whole-body physics simulation of fruit fly locomotion：[DOI](https://doi.org/10.1038/s41586-025-09029-4)。使用可选 FlyBody 时引用；不是当前默认身体。
 - 使用可选肌肉模型时按 FlyGym 原说明补充 Özdil et al. (2026)：[论文](https://arxiv.org/abs/2509.06426)；默认关节控制不宣称复现该肌肉学习。
+</pre></section><section><h2>Windows 运行包来源</h2><pre># Windows 运行包许可与来源
+
+日期：2026-10-16；版本 0.1.0-alpha.1。此页是对先前源码核对的二进制范围补充；不改变任何第三方原许可。源码与数据的 GPL/非商业边界继续见根目录中文许可及署名文档。
+
+## 实际范围
+
+运行包保留本项目与上游实际源码、FlyGym 默认资产、连接表、派生注释/形态、完整许可与引用；不含个人实验、生成权重或原注释 README/字段文档。原始注释 TSV/骨架下载缓存不收录，普通运行使用已准备的资源，需要重建时按外部资源清单获取。
+
+CPython 3.13.15（python-build-standalone 20260807）及 3.12.14（20260901）复制基础解释器和标准库，不复制用户 site-packages、旧环境和全局配置。保留各自 LICENSE.txt、Tcl/Tk 原声明，并补入固定构建版本的 `licenses/CPython附属许可-*.rst`。这些附属汇总跨平台列举多个上游，不表示 Windows 包包含汇总中每一个组件；本包未修改解释器源码。构建配置和各依赖来源见 [20260807](https://github.com/astral-sh/python-build-standalone/tree/20260807) 与 [20260901](https://github.com/astral-sh/python-build-standalone/tree/20260901)。
+
+便携 uv 0.12.18 保留 MIT / Apache-2.0 官方全文和固定来源。普通依赖使用原 wheel 字节，包括本地从随包源码构建的 FlyGym wheel；原 wheel 内的许可/NOTICE 不改写，并额外提取到 `licenses/wheels/` 方便离线阅读。实际文件和元数据见 `licenses/wheel-components.json`，精确原件 SHA256、许可文件哈希和查验依据见 [运行包二进制来源](运行包二进制来源.json)。Loguru wheel 未带独立 LICENSE，补入其 0.7.3 上游 MIT 原文。
+
+## 原生依赖的边界
+
+不能把 wheel 顶层许可当作内部所有二进制的统一许可。NumPy/SciPy 附带 OpenBLAS 及 GCC 运行库声明与 GCC Runtime Library Exception；原文一同保留。Pillow 的 FreeType 采用其 FTL 路径，保留 FreeType Project 与其他图像库声明；不把文档提及的 XZ 命令行脚本推定为本包实际程序。PyOpenGL 的 GLE 采用其原 COPYING 允许的 IBM source 许可路径，并保留 COPYING.src 与原声明，不强行改成 GPL-only。
+
+MuJoCo 3.9.0 wheel 自带第三方许可明确采用 `EIGEN_MPL2_ONLY`，保留其 MPL 及其他原声明。[MuJoCo 源码和构建配置](https://github.com/google-deepmind/mujoco/tree/3.9.0)及[固定依赖文件](https://github.com/google-deepmind/mujoco/blob/3.9.0/cmake/MujocoDependencies.cmake)给出 Eigen 提交 `ea13a98decd497a8c5588fb5de71b57bcf10d864`；对应[Eigen 源码](https://gitlab.com/libeigen/eigen/-/tree/ea13a98decd497a8c5588fb5de71b57bcf10d864)可供获取/修改，未由本项目修改。此次环境访问 GitLab 返回 403，记录的是 MuJoCo 固定构建配置的来源依据，并未谎称已下载 Eigen 存档。certifi 保留其 MPL/MIT 及随 wheel 提供的 Python、证书源文件声明。
+
+FFmpeg 的录像 wheel **不在本运行 ZIP 内**。对缓存字节的静态检查发现其内含 `ffmpeg-win-x86_64-v7.1.exe` 和 `--enable-gpl` 构建标志，单独的 Python BSD 声明不足以替这个二进制授予再分发权。接收方按 [下载说明](下载说明.md)从原发行方下载完整 wheel；本项目不提供伪造源码承诺。PyTorch/CUDA 大 wheel 同样由接收方从官方获得，不在 ZIP 内。
+
+## 核对边界
+
+本次核对实际文件、许可原文、来源链接、固定版本及校验值；未安装依赖、执行二进制或跑仿真测试。没有联系第三方或取得额外商业数据授权。公共 Demo 不等于整个混合包可商用；不对专利、商标或零版权争议作保证。若替换依赖/数据、收费或再次分发新的二进制组合，需要按新的实际范围处理。
 </pre></section><details><summary>GNU GPL v3 原始全文</summary><pre lang="en">                    GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 

@@ -279,7 +279,7 @@ function renderLifecycle(state) {
   if(state.project){
     document.title=state.project.name+' · '+state.project.version;
     const version=document.getElementById('appVersion');
-    if(version)version.textContent=`${state.project.name} ${state.project.version} · Demo · ${state.project.release_status==='unpublished-demo'?'尚未公开发布':state.project.release_status}`;
+    if(version)version.textContent=`${state.project.name} ${state.project.version} · Demo · ${state.project.release_status==='demo-prerelease'?'公开测试版':state.project.release_status==='unpublished-demo'?'尚未公开发布':state.project.release_status}`;
   }
   const wait=state.brain_wait, running=state.status==='running', h=state.habitat;
   const labels={loading:'正在载入模型…',saving:'正在收尾保存…',finished:'实验已保存',error:'实验异常停止',interrupted:'用户已停止'};
