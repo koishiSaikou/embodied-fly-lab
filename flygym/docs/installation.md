@@ -1,0 +1,168 @@
+# Installation
+
+=== "Using pip"
+
+    !!! tip "Virtual Environments"
+
+        We recommend that you create a virtual environment (using [venv](https://docs.python.org/3/library/venv.html), [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html), [uv](https://docs.astral.sh/uv/), [Poetry](https://python-poetry.org/), etc.).
+
+    FlyGym is published on the [Python Package Index (PyPI)](https://pypi.org/project/flygym/). You can use FlyGym using `pip` directly. If you only care about the basic functionalities:
+
+    ```sh
+    pip install flygym
+    ```
+
+    Add the `warp` optional dependency if you want to use the `flygym.warp` GPU-accelerated backend:
+    
+    ```sh
+    pip install flygym[warp]
+    ```
+
+    Add the `examples` optional dependency if you want to follow the tutorials:
+
+    ```sh
+    pip install flygym[examples]
+    ```
+
+    Add the `rl` optional dependency for reinforcement-learning training (e.g. the muscle imitation tutorial), which installs Gymnasium, Stable-Baselines3, and TensorBoard:
+
+    ```sh
+    pip install flygym[rl]
+    ```
+
+    You can combine multiple optional dependencies in one command. For example:
+
+    ```sh
+    pip install flygym[warp,examples,rl]
+    ```
+
+
+=== "Using `uv` (for development)"
+
+    FlyGym uses `uv` for package management. Install `uv` following its [official documentation](https://docs.astral.sh/uv/getting-started/installation/).
+
+    Clone the FlyGym repository:
+
+    ```sh
+    git clone git@github.com:NeLy-EPFL/flygym.git
+    cd flygym
+    ```
+
+    Then install using `uv`. The following installs all optional dependencies, but you can
+
+    * remove `--extra warp` if you don't care for GPU acceleration, or if you don't have a NVIDIA GPU (e.g., you're on a Mac),
+    * remove `--extra dev` if you don't care for development tools (e.g., unit testing, automatic doc generation), or
+    * remove `--extra examples` if you don't care for running the tutorials.
+    
+    ```sh
+    uv sync --extra warp --extra dev --extra examples
+    ```
+
+    !!! note
+
+        Developers should also install the `nbstripout` filter, which removes bulky Jupyter Notebook outputs upon `git add` (without touching the actual files—the outputs are only removed in the version-controlled files). Note that this does not integrate well with IDEs, so you should run `git add <files>` in command line instead of using, for example, the GUI in VS Code.
+
+        ```sh
+        source .venv/bin/activate
+        nbstripout --install --attributes .gitattributes
+        ```
+
+    !!! tip "Profiling FlyGym simulations"
+
+        For instructions on CPU/GPU performance profiling (including the `nsys`
+        prerequisite), see the [Performance profiling](tutorials/7_performance_profiling.md)
+        guide.
+
+
+=== "Using Docker"
+
+    FlyGym is published as a Docker image on [Docker Hub](https://hub.docker.com/r/nelyepfl/flygym). The image comes with all optional dependencies pre-installed and EGL rendering pre-configured, making it suitable for headless servers.
+
+    Pull the latest image:
+
+    ```sh
+    docker pull nelyepfl/flygym
+    ```
+
+    Or pull a specific version (e.g., v2.0.2):
+
+    ```sh
+    docker pull nelyepfl/flygym:v2.0.2
+    ```
+
+    Start an interactive shell inside the container:
+
+    ```sh
+    docker run -it nelyepfl/flygym
+    ```
+
+    To share files between your host machine and the container, mount a local directory:
+
+    ```sh
+    docker run -it -v /path/to/your/work:/root/work nelyepfl/flygym
+    ```
+
+    The FlyGym source code is located at `/root/flygym` inside the container. The virtual environment is managed by `uv`; activate it with:
+
+    ```sh
+    source /root/flygym/.venv/bin/activate
+    ```
+
+=== "Online using Google Colab"
+
+    You can run the tutorials in [Google Colab](https://colab.research.google.com/) without installing anything locally. Every tutorial notebook (excluding text-only ones) has an "Open in Colab" badge at
+    the top:
+
+    [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NeLy-EPFL/flygym/blob/v2.1.0/tutorials/1a_basic_model_composition.ipynb)
+
+    !!! warning "Colab is slow"
+
+        Execution on Colab can be **up to ~50× slower** than on a local machine or dedicated GPU, depending on the resources Colab makes available at the time. Use Colab only for testing and following along with the tutorials—not for production runs or benchmarking.
+
+    Click the badge to open the notebook in Colab, then run the first code cell (titled *Google Colab setup*). It installs FlyGym from GitHub (matching the version of the notebook) and configures headless (EGL) rendering for you:
+
+    ```python
+    import os
+    import sys
+
+    if "google.colab" in sys.modules:
+        os.environ["MUJOCO_GL"] = "egl"
+        os.environ["PYOPENGL_PLATFORM"] = "egl"
+        %pip install -q tqdm "flygym @ git+https://github.com/NeLy-EPFL/flygym.git@v2.1.0"
+    ```
+
+    !!! note
+
+        On Colab we install plain `flygym` (rather than `flygym[examples]`) because the `examples` extra would upgrade `ipython`, `ipykernel`, and `pandas` over the versions Colab ships, triggering dependency-conflict warnings. The tutorials only need `tqdm` on top of base FlyGym, so we install that explicitly.
+
+    After the setup cell finishes, run the rest of the notebook as usual. FlyGym downloads the fly meshes from S3 on first use, so no large files need to be uploaded.
+
+    !!! tip "GPU-accelerated tutorial"
+
+        The [GPU-accelerated simulation](tutorials/3_gpu_accelerated_simulation.ipynb) tutorial uses the `flygym.warp` backend, which requires a GPU. Before running it, switch Colab to a GPU runtime via *Runtime > Change runtime type > T4 GPU*. Its setup cell installs the `warp` extra automatically.
+
+        On a GPU runtime, `pip` may warn that Colab's preinstalled `cudf`/`cuml` (RAPIDS) require `numba<0.62` while FlyGym installs a newer `numba`. This warning is harmless: the tutorial uses MuJoCo Warp, not RAPIDS, so the upgraded `numba` does not affect it.
+
+!!! warning "Special notes for rendering on machines without a display"
+
+    If you are using a machine without a display (e.g. a server), you will need to switch the renderer to EGL (see [this page](https://docs.pytorch.org/rl/main/reference/generated/knowledge_base/MUJOCO_INSTALLATION.html#prerequisite-for-rendering-all-mujoco-versions) for details). This requires setting the following environment variables before running FlyGym:
+
+    ```sh
+    export MUJOCO_GL=egl
+    export PYOPENGL_PLATFORM=egl
+    ```
+
+    If you want to change this setting by default, you can add the two lines above to the end of your `.bashrc` file.
+
+    If you are using a Conda environment, you can change the environment variables as follows (replacing my-env-name accordingly), and then re-activate the environment:
+
+    ```sh
+    conda activate my-env-name
+    conda env config vars set MUJOCO_GL=egl PYOPENGL_PLATFORM=egl
+    ```
+
+    You might need to install EGL-related dependencies on your machine. For example, on some Ubuntu/Debian systems, you might need to install the following:
+
+    ```sh
+    apt-get install libegl1-mesa-dev
+    ```

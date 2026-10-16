@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>果蝇感觉与行为实验场 · 0.1.0-alpha.1</title>
+  <link rel="stylesheet" href="/assets/lab.css">
+  <link rel="stylesheet" href="/assets/annotations.css">
+  <link rel="stylesheet" href="/assets/neural_activity.css">
+  <script type="importmap">{"imports":{"three":"/assets/vendor/three.module.js","three/addons/":"/assets/vendor/"}}</script>
+  <link rel="stylesheet" href="/assets/workbench.css?v=behavior-20261016">
+</head>
+<body class="workbench">
+  <header class="topbar wb-topbar">
+    <div class="wb-brand"><span class="wb-mark">F</span><div><h1>果蝇实验场</h1><span>第三方感觉与行为 Demo</span></div></div>
+    <nav class="wb-window-menu" aria-label="打开观测窗口">
+      <button data-window="map">场地地图</button><button data-window="raster">放电栅格</button><button data-window="classes">大类曲线</button><button data-window="types">类型曲线</button><button data-window="activity">活动总览</button><button data-window="identity">神经元查询</button>
+    </nav>
+    <div class="header-actions"><span class="status" id="status" role="status">连接仿真…</span><button id="pause" class="wb-primary">暂停</button><button id="stop">结束并保存</button><button id="wb-reset" title="恢复默认布局，不改变仿真或参数">重置布局</button></div>
+  </header>
+  <main class="wb-layout">
+    <aside class="wb-observers" aria-label="观测面板">
+      <div class="wb-dock-title"><span>观测</span><span class="tag">实际模型数据</span></div>
+      <div class="wb-observer-scroll">
+        <details class="wb-observer" open><summary>复眼视觉<span>LEFT / RIGHT</span></summary>
+        <section class="panel retina-panel">
+          <div class="retina-wrap"><img id="retina" alt="左右复眼经过鱼眼变换和小眼采样后的实际视觉输入"><div id="retinaWaiting">等待第一帧</div></div>
+          <div class="eye-labels"><span>LEFT / 左眼</span><span>RIGHT / 右眼</span></div>
+          <div class="caption" id="retinaInfo">每眼 721 小眼 · 灰度显示</div>
+        </section>
+        </details>
+        <details class="wb-observer" open><summary>脑部解剖与活动<span id="morphCount">加载形态…</span></summary>
+        <section class="panel brain-panel">
+          <div id="brainCanvas" aria-label="FlyWire 神经元骨架和配准脑区模板，可拖动旋转"></div>
+          <div class="brain-controls"><label>脑区 <select id="region"><option value="all">全部脑区</option><option value="ME">视髓 ME</option><option value="LO">视叶 LO</option><option value="AL">触角叶 AL</option><option value="MB">蘑菇体 MB</option><option value="CX">中央复合体</option></select></label><label><input type="checkbox" id="neuronsOnly">仅神经元</label><button id="brainReset">复位视角</button></div>
+          <details class="wb-observer-notes"><summary>图例与显示说明</summary>
+          <div class="brain-legend"><span><i class="swatch mint"></i>有本块放电</span><span><i class="swatch gray"></i>静默骨架</span><span><i class="swatch" style="background:#efb76b"></i>选中骨架</span><span><i class="swatch blue"></i>脑区模板</span></div>
+          <p class="caption" id="brainInfo">脑区模板是静态解剖；仅已匹配 ID 的骨架按实际放电着色。</p>
+          <a class="caption" href="#neuralActivityPanel">按大类或具体类型筛选活动与骨架 ↓</a>
+          </details>
+          <div class="caption" id="neuronReadout">
+            <div id="neuronActivityCount">等待活动数据</div>
+            <ul class="neuron-activity-list" aria-label="本块放电的骨架，最多显示三个"><li></li><li></li><li></li></ul>
+          </div>
+        </section>
+        </details>
+      </div>
+      <div class="wb-dock-foot"><a href="/brain" target="_blank" rel="noopener">独立脑活动页 ↗</a><button data-window="about">项目说明</button></div>
+    </aside>
+    <section class="wb-stage" aria-label="三维实验场">
+      <div class="world" id="world">
+        <div id="worldCanvas" aria-label="MuJoCo 实际姿态的三维果蝇与实验场"></div>
+        <div class="wb-viewport-head"><div><span class="live-dot"></span> 身体与环境 <span id="cameraLabel">跟随镜头</span></div><div class="buttons"><button id="follow" class="active">跟随</button><button id="overview">全景</button><button id="fullscreen" title="全屏三维场景">全屏</button></div></div>
+        <div class="world-tools glass"><div class="clock"><span id="time">0.00</span><small>模型秒</small><span id="speed" class="speed">—</span></div><div id="behavior" class="behavior">等待脑模型就绪</div></div>
+        <div class="scene-message glass" id="sceneMessage" role="status">正在加载真实身体网格…</div>
+        <div class="world-foot glass">拖动旋转 · 滚轮缩放 · 右键平移</div>
+      </div>
+    <section class="metrics" aria-label="实验指标">
+      <div><span>距最近有效食物</span><strong id="distance">—</strong><small id="firstFood">尚未接触食物</small></div>
+      <div><span>足部食物接触</span><strong id="foodTime">—</strong><small>模型时间累计</small></div>
+      <div><span>实际运动路程</span><strong id="path">—</strong><small id="contacts">碰撞片段 —</small></div>
+      <div><span>累计参与放电</span><strong id="activeNeurons">—</strong><small id="networkSize">138,639 个脑模型节点</small></div>
+      <div><span>脑模型放电总数</span><strong id="spikes">—</strong><small>累计数，不代表同时活跃</small></div>
+    </section>
+    </section>
+    <aside class="wb-inspector" aria-label="分类调整项">
+      <div class="wb-dock-title"><span>属性与反馈</span><span class="tag">本轮实验</span></div>
+      <div class="wb-tabs" role="tablist" aria-label="调整项分类"><button id="tab-brain" role="tab" aria-controls="inspector-brain" data-inspector="brain" aria-selected="true">脑模型</button><button id="tab-senses" role="tab" aria-controls="inspector-senses" data-inspector="senses" aria-selected="false" tabindex="-1">感官</button><button id="tab-behavior" role="tab" aria-controls="inspector-behavior" data-inspector="behavior" aria-selected="false" tabindex="-1">行为</button><button id="tab-arena" role="tab" aria-controls="inspector-arena" data-inspector="arena" aria-selected="false" tabindex="-1">场景</button></div>
+      <div class="wb-inspector-scroll">
+        <div id="inspector-brain" role="tabpanel" aria-labelledby="tab-brain" data-inspector-pane="brain"><section class="panel brain-settings-panel" id="brainSettingsPanel" aria-label="脑刺激与反馈调整"></section></div>
+        <div id="inspector-senses" role="tabpanel" aria-labelledby="tab-senses" data-inspector-pane="senses" hidden>
+      <section class="panel signals-panel"><div class="panel-head"><h2>感觉输入与运动输出</h2><span class="tag" id="bodyState">—</span></div>
+        <details class="wb-fold" open><summary>主要感觉与运动读数</summary>
+        <div class="switches"><label><input id="vision" type="checkbox" checked>视觉</label><label><input id="odor" type="checkbox" checked>气味</label><label><input id="contact" type="checkbox" checked>避障</label><label><input id="taste" type="checkbox" checked>糖味</label></div>
+        <dl class="readings"><dt>视觉风险 左 / 右（工程值）</dt><dd id="visionRisk">—</dd><dt>视觉转向贡献</dt><dd id="visionTurn">—</dd><dt>视觉输入模型时间</dt><dd id="visionTime">—</dd><dt>触角气味 左 / 右</dt><dd id="odorValues">—</dd><dt>P9 刺激 通道 A / B</dt><dd id="p9Input">—</dd><dt>P9 实际放电率 A / B</dt><dd id="p9Actual">—</dd><dt>最终 CPG 左 / 右驱动</dt><dd id="motorDrive">—</dd><dt>实体接触力</dt><dd id="force">—</dd><dt>糖 GRN 本块放电</dt><dd id="sugar">—</dd></dl>
+        </details><details class="wb-fold"><summary>环境感觉与反馈开关</summary>
+        <section id="multisensoryPanel" class="multisensory-panel"></section></details>
+      </section>
+        </div>
+        <div id="inspector-behavior" role="tabpanel" aria-labelledby="tab-behavior" data-inspector-pane="behavior" hidden><section id="behaviorSettingsPanel" aria-label="行为与学习调整"></section></div>
+        <div id="inspector-arena" role="tabpanel" aria-labelledby="tab-arena" data-inspector-pane="arena" hidden><div class="wb-arena-actions"><button data-window="map">打开场地地图</button><button id="moveFood">移动主要食物</button></div><div id="arenaTools"></div></div>
+      </div>
+      <div id="message" role="status" class="caption wb-feedback"></div>
+    </aside>
+  </main>
+  <footer class="wb-statusbar"><span><i class="live-dot"></i> LIF 脑 · 工程导航</span><span>场地 50 × 50 mm</span><div id="directory" title="当前实验记录目录">等待实验记录目录</div><button data-window="rate">总放电率图</button></footer>
+  <div id="wb-windows" aria-label="可拖动观测窗口">
+    <section class="wb-float" id="window-map" data-floating="map" data-title="场地与轨迹" hidden><div class="wb-window-body map-panel"><div class="caption">点击选择元素；在右侧“场景”中编辑属性。虚线圈表示作用范围。</div><div class="wb-map-fit"><canvas id="arena" aria-label="可编辑多感官觅食场地图，点击选择或放置元素"></canvas></div></div></section>
+    <section class="wb-float" id="window-activity" data-floating="activity" data-title="全脑活动 · 筛选与统计" hidden><div class="wb-window-body"><section id="neuralActivityPanel" aria-label="全脑分类活动"></section></div></section>
+    <section class="wb-float" id="window-identity" data-floating="identity" data-title="神经元身份与类型" hidden><div class="wb-window-body"><section id="annotationsPanel" class="annotation-panel" aria-label="神经元类型查询"></section></div></section>
+    <section class="wb-float" id="window-rate" data-floating="rate" data-title="脑模型总放电率" hidden><div class="wb-window-body wb-rate-body">
+        <div class="chart-title">脑模型总放电率 <span id="rate">—</span></div><canvas id="rateChart" aria-label="按模型时间计算的每秒放电次数"></canvas>
+    </div></section>
+    <section class="wb-float" id="window-about" data-floating="about" data-title="项目说明与操作" hidden><div class="wb-window-body wb-about"><h2>本地果蝇实验场</h2><p id="appVersion">0.1.0-alpha.1 · Alpha Demo · 尚未公开发布</p><p>MuJoCo 身体与实际复眼、FlyWire 连接组上的简化 LIF 脑、工程感觉与运动策略，另有外置气味偏好学习；LIF 连接权重保持原样。</p><p>顶部按钮打开观测窗口；拖动标题栏移动，右下角调整尺寸；“−”折叠，“×”收起。右侧分类展开调整项，修改后应用到本轮。</p><p>地图中的造型是非碰撞辨识标记；气味、光照、温湿度含简化代理场。活动图使用实际放电事件，静态脑区模板不表示活动。</p><p>重置布局只恢复窗口和面板，不重置实验或脑参数。</p><p>第三方实验项目，无担保；程序 GPL-3.0-or-later，数据另有许可，未获上游背书。<a href="/licenses" target="_blank" rel="noopener">许可与来源 ↗</a></p><a href="/assets/morphology_sources.json" target="_blank" rel="noopener">形态数据来源 ↗</a></div></section>
+  </div>
+  <script src="/assets/workbench.js?v=behavior-20261016"></script>
+  <script src="/assets/annotations.js"></script>
+  <script type="module" src="/assets/neural_activity.js?v=recovery-20261016"></script>
+  <script type="module" src="/assets/behavior_controls.js?v=behavior-20261016"></script>
+  <script type="module" src="/assets/brain_controls.js?v=behavior-20261016"></script>
+  <script type="module" src="/assets/arena_tools.js?v=behavior-20261016"></script>
+  <script type="module" src="/assets/lab.js?v=alpha-0.1.0-20261016"></script>
+</body>
+</html>

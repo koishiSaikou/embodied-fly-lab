@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "components": [
+    {
+      "path": "flygym",
+      "repository": "https://github.com/NeLy-EPFL/flygym",
+      "commit": "38c8ec61034cd59bc5ba0de20688d4a3c0000d60",
+      "copy_policy": "上游 Git 受控文件的普通副本，不含其 .git 与忽略的构建输出；不是子模块。",
+      "license_file": "flygym/LICENSE",
+      "source_files": 236,
+      "license_expression": "Apache-2.0"
+    },
+    {
+      "path": "brain-model",
+      "repository": "https://github.com/eonsystemspbc/fly-brain",
+      "commit": "a3db62f9436074e485c0278290c2164ed6150808",
+      "copy_policy": "保留本项目实际使用的 code/benchmark.py 与 code/run_pytorch.py、原始 LICENSE/README 和小型数据；不代表上游完整多后端工程。",
+      "license_file": "brain-model/LICENSE",
+      "license_expression": "GPL-2.0-or-later"
+    },
+    {
+      "path": "downloads/annotations",
+      "repository": "https://github.com/flyconnectome/flywire_annotations",
+      "commit": "a83b2776d60d5764cef36b927f5f9679c16c47a2",
+      "version": "v3.2.0",
+      "copy_policy": "原始 TSV 和原 README/字段说明仅作本地参考；公开仓库保留自行编写的来源说明、引用与链接。数据派生表另按 FlyWire 公开规则说明。",
+      "data_license_basis": "FlyWire public-release CC-BY-NC-4.0; no separate repository-wide documentation grant located"
+    }
+  ],
+  "omitted_empty_git_checkout": "fly-brain/ 在原目录仅包含 .git，实际运行代码已在 brain-model/；不复制重复历史。"
+}

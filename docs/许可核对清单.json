@@ -1,0 +1,353 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-10-16T07:45:17.498764+00:00",
+  "status": "审查及声明整理完成；适用范围和未独立确认事项见报告，不是无争议保证",
+  "own_code_license": "GPL-3.0-or-later",
+  "owner_choice": "维护者在本次会话中明确选择，2026-10-16",
+  "license_files": [
+    {
+      "path": "许可证.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "brain-model/LICENSE",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    {
+      "path": "flygym/LICENSE",
+      "sha256": "4e89fc37e50d41ea81616b413b23db4e8db395898930490fced1fa7d1eae863c"
+    },
+    {
+      "path": "web/vendor/three.LICENSE",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "licenses/CC-BY-4.0许可证.txt",
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "licenses/CC-BY-NC-4.0许可证.txt",
+      "sha256": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0"
+    },
+    {
+      "path": "licenses/fafbseg许可证.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "licenses/FlyBody许可证.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "licenses/uv-LICENSE-MIT.txt",
+      "sha256": "860e3d7a86b84e6a7012c7a635fc64df475cebc6cce34dfeb73a5982ec58176c"
+    },
+    {
+      "path": "licenses/uv-LICENSE-APACHE.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ],
+  "upstream_exact_file_comparisons": [
+    {
+      "path": "brain-model/code/run_pytorch.py",
+      "sha256": "699655db7a56045271ba467268be153d0a3318d4cc4cecc0a13f33e69ce79667",
+      "upstream_sha256": "699655db7a56045271ba467268be153d0a3318d4cc4cecc0a13f33e69ce79667",
+      "identical": true
+    },
+    {
+      "path": "brain-model/code/benchmark.py",
+      "sha256": "e18dae9072baf9ee0f0581282641c58864fdc138c6e75b718a542eb27d272874",
+      "upstream_sha256": "e18dae9072baf9ee0f0581282641c58864fdc138c6e75b718a542eb27d272874",
+      "identical": true
+    },
+    {
+      "path": "web/vendor/three.core.js",
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "upstream_sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "identical": true
+    },
+    {
+      "path": "web/vendor/three.module.js",
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "upstream_sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "identical": true
+    },
+    {
+      "path": "web/vendor/OrbitControls.js",
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+      "upstream_sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+      "identical": true
+    },
+    {
+      "path": "web/vendor/three.LICENSE",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "upstream_sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "identical": true
+    }
+  ],
+  "data_files": [
+    {
+      "path": "brain-model/data/2025_Completeness_783.csv",
+      "sha256": "52b0ac6094cd32c546f8d4c341e094376f48f4e791f8db9b166de5dff8199ea4",
+      "license_scope": "FlyWire-derived data; morphology.json also contains separately attributed VFB template shapes"
+    },
+    {
+      "path": "brain-model/data/neuron_annotations.parquet",
+      "sha256": "feb97008a7791e34e32943cc404435b3682ba47659d3037575dfdbaa1fb7c132",
+      "license_scope": "FlyWire-derived data; morphology.json also contains separately attributed VFB template shapes"
+    },
+    {
+      "path": "brain-model/data/annotations_outside_model.csv",
+      "sha256": "cfe9c944edb1c40456e54d70ea41465f57c7eac7274d4deb15fa6b5ba8a6b259",
+      "license_scope": "FlyWire-derived data; morphology.json also contains separately attributed VFB template shapes"
+    },
+    {
+      "path": "brain-model/data/unknown_neuron_types.csv",
+      "sha256": "8c163751cb427f13f506f10166e40bbe6b5f16946f3e2c437d5c538022e3c988",
+      "license_scope": "FlyWire-derived data; morphology.json also contains separately attributed VFB template shapes"
+    },
+    {
+      "path": "brain-model/data/annotation_report.json",
+      "sha256": "77e5dec49a0f89ecfe58ba970db8b3e46cce12af9644136424c8e1962c3a2a3b",
+      "license_scope": "FlyWire-derived data; morphology.json also contains separately attributed VFB template shapes"
+    },
+    {
+      "path": "web/activity_catalog.json",
+      "sha256": "56df17fa464ad1fd0a07f97932c43ae0ed424d5a527ace2476f9f3a3800483c8",
+      "license_scope": "FlyWire-derived data; morphology.json also contains separately attributed VFB template shapes"
+    },
+    {
+      "path": "web/morphology.json",
+      "sha256": "4a350c09ff0c6315d1691bfd265cdb89f710795ce212f6e7757b84dd87805914",
+      "license_scope": "FlyWire-derived data; morphology.json also contains separately attributed VFB template shapes"
+    },
+    {
+      "path": "web/morphology_sources.json",
+      "sha256": "53d509a814e71b142e81454c1cc023469f5881c08e9f4c5654d61ebf5672cf20",
+      "license_scope": "FlyWire-derived data; morphology.json also contains separately attributed VFB template shapes"
+    }
+  ],
+  "roi_archive": {
+    "url": "https://raw.githubusercontent.com/navis-org/fafbseg-py/d0da95123ee606e204ae2c702e7bc78538646fbd/fafbseg/data/JFRC2NP.surf.fw.zip",
+    "sha256": "75637dc4aee119211ab20788da0cb6c5a0495cc4bdaf9ae09cd17a7a44cf34b1",
+    "bytes": 1081524,
+    "matches_existing_archive": true
+  },
+  "vfb_commit": "0f79bb86d199d54785fe6ad21cbd42ea373d9013",
+  "fafbseg_commit": "d0da95123ee606e204ae2c702e7bc78538646fbd",
+  "published_data_basis": [
+    {
+      "url": "https://flywire.ai/guidelines",
+      "conclusion": "官方公布的公开数据许可为 CC-BY-NC-4.0"
+    },
+    {
+      "url": "https://edit.flywire.ai/principles.html",
+      "conclusion": "公开版本的数据 NC 说明"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/a83b2776d60d5764cef36b927f5f9679c16c47a2/README.md",
+      "conclusion": "确认 FAFB v783 数据产品和五项引用；未给独立代码/文档许可。NC 依据采用 FlyWire 公开数据规则，不虚构仓库 LICENSE。"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/VirtualFlyBrain/DrosAdultBRAINdomains/0f79bb86d199d54785fe6ad21cbd42ea373d9013/LICENSE-NOTES.md",
+      "conclusion": "基础 BrainName 标签/形状 CC-BY-4.0，明确 JRC2018 例外及来源署名"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/navis-org/fafbseg-py/d0da95123ee606e204ae2c702e7bc78538646fbd/fafbseg/data/README.md",
+      "conclusion": "归档网格源于 FlyWire neuropil_mesh_v141_v6，记录分发层，不把其软件许可替代原始数据许可。"
+    }
+  ],
+  "captured_download_evidence": [
+    {
+      "key": "zenodo_template",
+      "url": "https://zenodo.org/api/records/10567",
+      "status": "unavailable",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "zenodo_connectivity",
+      "url": "https://zenodo.org/api/records/10676866",
+      "status": "unavailable",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "zenodo_skeletons",
+      "url": "https://zenodo.org/api/records/10877326",
+      "status": "unavailable",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "key": "annotation_tree",
+      "url": "https://api.github.com/repos/flyconnectome/flywire_annotations/git/trees/a83b2776d60d5764cef36b927f5f9679c16c47a2?recursive=1",
+      "status": "unavailable",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "key": "fafbseg_tree",
+      "url": "https://api.github.com/repos/navis-org/fafbseg-py/git/trees/master?recursive=1",
+      "status": "unavailable",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "key": "brain_pytorch",
+      "url": "https://raw.githubusercontent.com/eonsystemspbc/fly-brain/a3db62f9436074e485c0278290c2164ed6150808/code/run_pytorch.py",
+      "final_url": "https://raw.githubusercontent.com/eonsystemspbc/fly-brain/a3db62f9436074e485c0278290c2164ed6150808/code/run_pytorch.py",
+      "bytes": 22859,
+      "sha256": "699655db7a56045271ba467268be153d0a3318d4cc4cecc0a13f33e69ce79667",
+      "status": "retrieved"
+    },
+    {
+      "key": "brain_benchmark",
+      "url": "https://raw.githubusercontent.com/eonsystemspbc/fly-brain/a3db62f9436074e485c0278290c2164ed6150808/code/benchmark.py",
+      "final_url": "https://raw.githubusercontent.com/eonsystemspbc/fly-brain/a3db62f9436074e485c0278290c2164ed6150808/code/benchmark.py",
+      "bytes": 19369,
+      "sha256": "e18dae9072baf9ee0f0581282641c58864fdc138c6e75b718a542eb27d272874",
+      "status": "retrieved"
+    },
+    {
+      "key": "gpl3",
+      "url": "https://www.gnu.org/licenses/gpl-3.0.txt",
+      "final_url": "https://www.gnu.org/licenses/gpl-3.0.txt",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "status": "retrieved"
+    },
+    {
+      "key": "cc_by_nc4",
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/legalcode.txt",
+      "final_url": "https://creativecommons.org/licenses/by-nc/4.0/legalcode.txt",
+      "bytes": 19347,
+      "sha256": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+      "status": "retrieved"
+    },
+    {
+      "key": "three_license",
+      "url": "https://raw.githubusercontent.com/mrdoob/three.js/r180/LICENSE",
+      "final_url": "https://raw.githubusercontent.com/mrdoob/three.js/r180/LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "status": "retrieved"
+    },
+    {
+      "key": "three_core",
+      "url": "https://raw.githubusercontent.com/mrdoob/three.js/r180/build/three.core.js",
+      "final_url": "https://raw.githubusercontent.com/mrdoob/three.js/r180/build/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "status": "retrieved"
+    },
+    {
+      "key": "three_module",
+      "url": "https://raw.githubusercontent.com/mrdoob/three.js/r180/build/three.module.js",
+      "final_url": "https://raw.githubusercontent.com/mrdoob/three.js/r180/build/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "status": "retrieved"
+    },
+    {
+      "key": "three_orbit",
+      "url": "https://raw.githubusercontent.com/mrdoob/three.js/r180/examples/jsm/controls/OrbitControls.js",
+      "final_url": "https://raw.githubusercontent.com/mrdoob/three.js/r180/examples/jsm/controls/OrbitControls.js",
+      "bytes": 38703,
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+      "status": "retrieved"
+    },
+    {
+      "key": "fafbseg_readme",
+      "url": "https://raw.githubusercontent.com/navis-org/fafbseg-py/d0da95123ee606e204ae2c702e7bc78538646fbd/fafbseg/data/README.md",
+      "status": "retrieved",
+      "bytes": 504,
+      "sha256": "889171ff60eef0d9cf19b6cb065a0842bffbebed19abf4a81b0713a8a6f5702e"
+    },
+    {
+      "key": "fafbseg_license",
+      "url": "https://raw.githubusercontent.com/navis-org/fafbseg-py/d0da95123ee606e204ae2c702e7bc78538646fbd/LICENSE",
+      "status": "retrieved",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "key": "vfb_notes",
+      "url": "https://raw.githubusercontent.com/VirtualFlyBrain/DrosAdultBRAINdomains/0f79bb86d199d54785fe6ad21cbd42ea373d9013/LICENSE-NOTES.md",
+      "status": "retrieved",
+      "bytes": 2806,
+      "sha256": "c76e334badadeaa17da8673ed2675630220e71ad90465da0785aa8a344996182"
+    },
+    {
+      "key": "vfb_license",
+      "url": "https://raw.githubusercontent.com/VirtualFlyBrain/DrosAdultBRAINdomains/0f79bb86d199d54785fe6ad21cbd42ea373d9013/LICENSE",
+      "status": "retrieved",
+      "bytes": 18659,
+      "sha256": "5eebefd3682e32d661f307a28539b304e5e52fb1eb33ba214e61d7a57663e4f0"
+    },
+    {
+      "key": "vfb_metadata",
+      "url": "https://raw.githubusercontent.com/VirtualFlyBrain/DrosAdultBRAINdomains/0f79bb86d199d54785fe6ad21cbd42ea373d9013/.zenodo.json",
+      "status": "unavailable",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>"
+    },
+    {
+      "key": "flybody_license",
+      "url": "https://raw.githubusercontent.com/TuragaLab/flybody/main/LICENSE",
+      "status": "retrieved",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "key": "cc_by4",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+      "status": "retrieved",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "key": "annotation_license_probe",
+      "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/a83b2776d60d5764cef36b927f5f9679c16c47a2/LICENSE",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "key": "annotation_license_md_probe",
+      "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/a83b2776d60d5764cef36b927f5f9679c16c47a2/LICENSE.md",
+      "status": "unavailable",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "excluded_private_documents": [
+    {
+      "path": "downloads/annotations/README_v3.2.0.md",
+      "source_path": "downloads/annotations/README_v3.2.0.md",
+      "sha256": "bf9cb228d4520641f96b82e299673846d73404fb69970f39d1b387eec25dbf87",
+      "reason": "原文档未定位独立转载授权；只在本地保留，公开使用自写说明及链接。"
+    },
+    {
+      "path": "downloads/annotations/columns_v3.2.0.md",
+      "source_path": "downloads/annotations/columns_v3.2.0.md",
+      "sha256": "49e884a1273105427ded3c110d48266702a3f90148006cf02c1a0fa50919eb71",
+      "reason": "原文档未定位独立转载授权；只在本地保留，公开使用自写说明及链接。"
+    }
+  ],
+  "dependencies": {
+    "count": 76,
+    "record": "docs/依赖许可清单.json",
+    "scope": "只读取既有安装元数据；外部 wheels/runtime/CUDA/FFmpeg 不在源码再分发范围"
+  },
+  "remaining_scope_questions": [
+    "Zenodo API 403，网页 Rights 未解析出完整机器可读字段；不推断其与网站规则差异授予整个混合包商业使用权。",
+    "v3.2.0 注释的 Git 仓库未发现独立文档授权；原文档不纳入公开候选。",
+    "转换网格由基础 VFB 数据经 FlyWire/fafbseg 分发；保留全链和两层声明，未取得额外商业整包确认。",
+    "未来包含二进制运行包时需重新核对实际 DLL、runtime、FFmpeg、CUDA 和对应源代码义务。"
+  ],
+  "tests_run": false,
+  "simulation_started": false,
+  "dependencies_installed": false,
+  "delivery_rebuilt": false,
+  "published": false,
+  "user_release_preferences": {
+    "long_run_protection": "deferred",
+    "order": [
+      "license_and_sources",
+      "version_and_docs"
+    ],
+    "new_tests": "not requested; do not run"
+  }
+}

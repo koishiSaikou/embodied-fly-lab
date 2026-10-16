@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>果蝇实验场 · 全脑分类活动 · 0.1.0-alpha.1</title>
+<link rel="stylesheet" href="/assets/annotations.css">
+<link rel="stylesheet" href="/assets/neural_activity.css">
+<style>
+:root{color-scheme:dark;--bg:#10171e;--panel:#19232c;--line:#2b3b47;--text:#e5edf0;--muted:#94a9b5;--mint:#83ddbe}*{box-sizing:border-box}body{margin:0;background:var(--bg);font:14px/1.6 "Segoe UI","Microsoft YaHei",sans-serif;color:var(--text)}main{max-width:1920px;margin:auto;padding:24px 28px}.page-heading{display:flex;justify-content:space-between;align-items:center;gap:16px}h1{font-size:25px;margin:0}h2{font-size:15px;margin:0}.eyebrow{font-size:11px;color:var(--mint);letter-spacing:2px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:18px;min-width:0}.panel-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.caption,footer{font-size:11px;color:var(--muted)}a{color:var(--mint)}button{font:inherit;color:var(--text);background:#283b46;border:1px solid #4b626c;border-radius:6px;padding:6px 11px;cursor:pointer}button:disabled{opacity:.45}input,select{font:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--mint);outline-offset:3px}footer{margin-top:18px}@media(max-width:700px){main{padding:16px}.page-heading{align-items:start;flex-direction:column}.panel{padding:12px}}
+</style>
+</head>
+<body><main>
+<header class="page-heading"><div><div class="eyebrow">FLYWIRE / CLASSIFIED ACTIVITY</div><h1>果蝇全脑活动</h1></div><a href="/">返回实验场</a></header>
+<section id="neuralActivityPanel" class="panel" aria-label="全脑分类活动"></section>
+<section id="annotationsPanel" class="panel annotation-panel" aria-label="神经元身份查询"></section>
+<footer>所有统计来自模型实际采集的放电事件。类型分类不代表已经实现相应生物功能；分类显示不改变 LIF、权重或行为策略。 <a href="/licenses" target="_blank" rel="noopener">许可与来源</a> · 第三方 Demo，无担保。</footer>
+</main>
+<script src="/assets/annotations.js"></script>
+<script type="module" src="/assets/neural_activity.js?v=recovery-20261016"></script>
+</body></html>

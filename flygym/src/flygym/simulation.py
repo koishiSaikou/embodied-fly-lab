@@ -1,0 +1,762 @@
+from collections import defaultdict
+from time import perf_counter_ns
+from typing import Any, Literal
+
+import mujoco as mj
+import numpy as np
+from jaxtyping import Float
+
+from flygym.anatomy import BodySegment
+from flygym.compose.fly import ActuatorType
+from flygym.compose.world import BaseWorld
+from flygym.rendering import Renderer
+from flygym.utils.profiling import print_perf_report
+
+
+class Simulation:
+    """CPU-based single-world physics simulation.
+
+    Wraps a compiled MuJoCo model and provides methods for stepping physics,
+    reading state, and writing control inputs.
+
+    Args:
+        world: A fully configured world with at least one fly attached.
+        timestep: Physics timestep in seconds. If None, the model's compiled-in
+            timestep (from ``mujoco_globals.yaml``) is used.
+
+    Attributes:
+        world: The world used to construct this simulation.
+        renderer: The attached `Renderer`, or None if not set.
+        mj_model: Compiled MuJoCo model.
+        mj_data: Associated MuJoCo data.
+    """
+
+    def __init__(self, world: BaseWorld, *, timestep: float | None = None) -> None:
+        if len(world.fly_lookup) == 0:
+            raise ValueError("The world must contain at least one fly.")
+        self.renderer = None
+        self.world = world
+        self.mj_model, self.mj_data = world.compile()
+        if timestep is not None:
+            self.mj_model.opt.timestep = timestep
+        self._neutral_keyframe_id = mj.mj_name2id(
+            self.mj_model, mj.mjtObj.mjOBJ_KEY, "neutral"
+        )
+        mj.mj_resetDataKeyframe(self.mj_model, self.mj_data, self._neutral_keyframe_id)
+
+        # Map internal IDs in the compiled MuJoCo model. This allows users to read from
+        # or write to body/joint/actuator in orders defined by Fly objects.
+        self._map_internal_bodyids()
+        self._map_internal_geom_ids()
+        self._map_internal_ground_geom_ids()
+        self._map_internal_qposqveladrs()
+        self._map_internal_actuator_ids()
+        self._map_internal_adhesionactuator_ids()
+        self._map_internal_tendonactuator_ids()
+        self._map_internal_jointids()
+        self._map_internal_groundcontactsensor_ids()
+        self._map_internal_site_ids()
+        self._map_internal_eye_camera_ids()
+
+        self.eye_renderer = None
+        self.retina = None
+
+        # For performance profiling
+        self._curr_step = 0
+        self._frames_rendered = 0
+        self._total_physics_time_ns = 0
+        self._total_render_time_ns = 0
+
+    def reset(self) -> None:
+        """Reset simulation and renderer to the neutral keyframe."""
+        # Reset physics
+        mj.mj_resetDataKeyframe(self.mj_model, self.mj_data, self._neutral_keyframe_id)
+
+        # Reset renderers
+        if self.renderer is not None:
+            self.renderer.reset()
+        # The eye renderer doesn't have to be reset as it's stateless (it's the plain
+        # MuJoCo renderer, not our flygym.rendering.Renderer)
+
+        # Stuff for performance profiling
+        self._curr_step = 0
+        self._frames_rendered = 0
+        self._total_physics_time_ns = 0
+        self._total_render_time_ns = 0
+
+    def step(self) -> None:
+        """Advance physics by one timestep."""
+        mj.mj_step(self.mj_model, self.mj_data)
+
+    def step_with_profile(self) -> None:
+        """Advance physics by one timestep, accumulating timing data for profiling."""
+        physics_start_ns = perf_counter_ns()
+        self.step()
+        physics_finish_ns = perf_counter_ns()
+        self._total_physics_time_ns += physics_finish_ns - physics_start_ns
+        self._curr_step += 1
+
+    def set_renderer(
+        self,
+        cameras: str | mj.MjsCamera | list[str | mj.MjsCamera],
+        *,
+        camera_res: tuple[int, int] = (240, 320),
+        playback_speed: float = 0.2,
+        output_fps: int = 25,
+        buffer_frames: bool = True,
+        scene_option: mj.MjvOption | None = None,
+        **kwargs: Any,
+    ) -> Renderer:
+        """Attach a renderer to this simulation.
+
+        Args:
+            cameras: Camera(s) to render. Can be a camera name, MJCF camera element,
+                or a sequence of either.
+            camera_res: ``(height, width)`` in pixels.
+            playback_speed: Video playback speed relative to real time.
+            output_fps: Output video frame rate.
+            buffer_frames: If True, store rendered frames in memory.
+            scene_option: MuJoCo scene options. Uses defaults if None.
+            **kwargs: Passed to ``mujoco.Renderer``.
+
+        Returns:
+            The created `Renderer` instance.
+        """
+        self.renderer = Renderer(
+            self.mj_model,
+            cameras,
+            camera_res=camera_res,
+            playback_speed=playback_speed,
+            output_fps=output_fps,
+            buffer_frames=buffer_frames,
+            scene_option=scene_option,
+            **kwargs,
+        )
+        return self.renderer
+
+    def render_as_needed(self) -> bool:
+        """Render a frame if enough simulation time has elapsed since the last render.
+
+        Returns:
+            True if a frame was rendered, False otherwise.
+        """
+        return self.renderer.render_as_needed(self.mj_data)
+
+    def render_as_needed_with_profile(self) -> bool:
+        """Like `render_as_needed`, but also accumulates render timing data."""
+        render_start_ns = perf_counter_ns()
+        render_done = self.render_as_needed()
+        render_finish_ns = perf_counter_ns()
+        self._total_render_time_ns += render_finish_ns - render_start_ns
+        if render_done:
+            self._frames_rendered += 1
+        return render_done
+
+    def get_joint_angles(self, fly_name: str) -> Float[np.ndarray, "n_jointdofs"]:  # noqa: F821
+        """Get current joint angles ordered by the fly's skeleton.
+
+        Args:
+            fly_name: Name of the fly.
+
+        Returns:
+            Joint angles in radians, shape ``(n_jointdofs,)``, ordered as in
+            ``fly.get_jointdofs_order()``.
+        """
+        internal_ids = self._intern_qposadrs_by_fly[fly_name]
+        return self.mj_data.qpos[internal_ids]
+
+    def get_joint_velocities(self, fly_name: str) -> Float[np.ndarray, "n_jointdofs"]:  # noqa: F821
+        """Get current joint angular velocities ordered by the fly's skeleton.
+
+        Args:
+            fly_name: Name of the fly.
+
+        Returns:
+            Joint velocities in radians per second, shape ``(n_jointdofs,)``, ordered
+            as in ``fly.get_jointdofs_order()``.
+        """
+        internal_ids = self._intern_qveladrs_by_fly[fly_name]
+        return self.mj_data.qvel[internal_ids]
+
+    def get_body_positions(self, fly_name: str) -> Float[np.ndarray, "n_bodies 3"]:
+        """Get global 3D positions of all body segments.
+
+        Args:
+            fly_name: Name of the fly.
+
+        Returns:
+            Body positions in mm, shape ``(n_bodies, 3)``, ordered as in
+            ``fly.get_bodysegs_order()``.
+        """
+        internal_ids = self._internal_bodyids_by_fly[fly_name]
+        return self.mj_data.xpos[internal_ids, :]
+
+    def get_body_rotations(self, fly_name: str) -> Float[np.ndarray, "n_bodies 4"]:
+        """Get global orientations of all body segments as quaternions (w, x, y, z).
+
+        Args:
+            fly_name: Name of the fly.
+
+        Returns:
+            Body quaternions, shape ``(n_bodies, 4)``, ordered as in
+            ``fly.get_bodysegs_order()``.
+        """
+        internal_ids = self._internal_bodyids_by_fly[fly_name]
+        return self.mj_data.xquat[internal_ids, :]
+
+    def get_actuator_forces(
+        self, fly_name: str, actuator_type: ActuatorType
+    ) -> Float[np.ndarray, "n_actuators"]:  # noqa: F821
+        """Get actuator forces for the given actuator type.
+
+        Args:
+            fly_name: Name of the fly.
+            actuator_type: Type of actuator to query.
+
+        Returns:
+            Actuator forces, shape ``(n_actuators,)``, ordered as in
+            ``fly.get_actuated_jointdofs_order(actuator_type)``.
+        """
+        internal_ids = self._intern_actuatorids_by_type_by_fly[actuator_type][fly_name]
+        return self.mj_data.actuator_force[internal_ids]
+
+    def get_ground_contact_info(
+        self, fly_name: str
+    ) -> tuple[
+        Float[np.ndarray, "6"],  # contact/no contact flag
+        Float[np.ndarray, "6 3"],  # force (in contact frame)
+        Float[np.ndarray, "6 3"],  # torque (in contact frame)
+        Float[np.ndarray, "6 3"],  # pos (in global frame)
+        Float[np.ndarray, "6 3"],  # normal (in global frame)
+        Float[np.ndarray, "6 3"],  # tangent (in global frame)
+    ]:
+        """Get ground contact information for all six legs.
+
+        Args:
+            fly_name: Name of the fly.
+
+        Returns:
+            A 6-tuple, one entry per leg ordered as in ``fly.get_legs_order()``:
+
+            - ``contact_found``: shape ``(6,)`` — raw ``found`` channel from the
+                MuJoCo contact sensor.
+            - ``forces``: shape ``(6, 3)`` — contact force in contact frame.
+            - ``torques``: shape ``(6, 3)`` — contact torque in contact frame.
+            - ``positions``: shape ``(6, 3)`` — contact position in global frame.
+            - ``normals``: shape ``(6, 3)`` — contact normal in global frame.
+            - ``tangents``: shape ``(6, 3)`` — contact tangent in global frame.
+        """
+        internal_ids = self._intern_groundcontactsensorids_by_fly[fly_name]
+        sensor_data = self.mj_data.sensordata[internal_ids]
+        # Reshape (6 legs * 16 dims per sensor,) to (6 legs, 16 dim per sensor)
+        sensor_data = sensor_data.reshape(6, 16)
+        contact_found = sensor_data[:, 0]
+        forces = sensor_data[:, 1:4]
+        torques = sensor_data[:, 4:7]
+        positions = sensor_data[:, 7:10]
+        normals = sensor_data[:, 10:13]
+        tangents = sensor_data[:, 13:]
+        return contact_found, forces, torques, positions, normals, tangents
+
+    def get_bodysegment_contact_forces(
+        self,
+        fly_name: str,
+        body_segments: list[BodySegment | str],
+        *,
+        ground_only: bool = True,
+    ) -> Float[np.ndarray, "n_bodysegments 3"]:
+        """Get net world-frame contact forces on selected body segments.
+
+        Args:
+            fly_name: Name of the fly.
+            body_segments: Body segments to query, ordered as desired in the output.
+            ground_only: If True, include only contacts with world ground geoms.
+
+        Returns:
+            Net force vectors in MuJoCo world coordinates, one row per requested body
+            segment.
+        """
+        requested_segments = [
+            seg if isinstance(seg, BodySegment) else BodySegment(seg)
+            for seg in body_segments
+        ]
+        geom_ids_by_segment = self._internal_geomid_by_bodyseg_by_fly[fly_name]
+        requested_geom_to_output = {
+            geom_ids_by_segment[seg]: i for i, seg in enumerate(requested_segments)
+        }
+        forces = np.zeros((len(requested_segments), 3), dtype=float)
+
+        ncon = self.mj_data.ncon
+        if ncon == 0:
+            return forces
+
+        # Vectorised filtering: find relevant contact indices without a Python loop.
+        contacts = self.mj_data.contact
+        geom1_arr = contacts.geom1[:ncon]
+        geom2_arr = contacts.geom2[:ncon]
+        exclude_arr = contacts.exclude[:ncon].astype(bool)
+
+        requested_geom_arr = np.array(
+            list(requested_geom_to_output.keys()), dtype=np.int32
+        )
+        geom1_requested = np.isin(geom1_arr, requested_geom_arr)
+        geom2_requested = np.isin(geom2_arr, requested_geom_arr)
+        active = (geom1_requested | geom2_requested) & ~exclude_arr
+
+        if ground_only:
+            ground_arr = self._internal_ground_geom_ids
+            geom1_is_ground = np.isin(geom1_arr, ground_arr)
+            geom2_is_ground = np.isin(geom2_arr, ground_arr)
+            active &= (geom1_requested & geom2_is_ground) | (
+                geom2_requested & geom1_is_ground
+            )
+
+        contact_wrench = np.zeros(6, dtype=float)
+        for contact_id in np.where(active)[0]:
+            mj.mj_contactForce(
+                self.mj_model, self.mj_data, int(contact_id), contact_wrench
+            )
+            frame = contacts.frame[contact_id].reshape(3, 3)
+            world_force = frame.T @ contact_wrench[:3]
+
+            g1, g2 = int(geom1_arr[contact_id]), int(geom2_arr[contact_id])
+            if g1 in requested_geom_to_output:
+                forces[requested_geom_to_output[g1]] -= world_force
+            if g2 in requested_geom_to_output:
+                forces[requested_geom_to_output[g2]] += world_force
+
+        return forces
+
+    def get_site_positions(self, fly_name: str) -> Float[np.ndarray, "n_sites 3"]:
+        """Get global 3D positions of anatomical-joint sites.
+
+        Args:
+            fly_name: Name of the fly.
+
+        Returns:
+            Site positions in mm, shape ``(n_sites, 3)``, ordered as in
+            ``fly.get_sites_order()``.
+        """
+        internal_ids = self._internal_siteids_by_fly[fly_name]
+        return self.mj_data.site_xpos[internal_ids, :]
+
+    def set_actuator_inputs(
+        self,
+        fly_name: str,
+        actuator_type: ActuatorType,
+        inputs: Float[np.ndarray, "n_actuators"],  # noqa: F821
+    ) -> None:
+        """Set control inputs for the given actuator type.
+
+        Args:
+            fly_name: Name of the fly.
+            actuator_type: Type of actuator to control.
+            inputs: Control inputs, shape ``(n_actuators,)``, ordered as in
+                ``fly.get_actuated_jointdofs_order(actuator_type)``.
+        """
+        internal_ids = self._intern_actuatorids_by_type_by_fly[actuator_type][fly_name]
+        if len(inputs) != len(internal_ids):
+            raise ValueError(
+                f"Expected {len(internal_ids)} inputs for actuator type "
+                f"'{actuator_type.name}', but got {len(inputs)}"
+            )
+        self.mj_data.ctrl[internal_ids] = inputs
+
+    def set_leg_adhesion_states(
+        self, fly_name: str, leg_to_adhesion_state: Float[np.ndarray, "6"]
+    ) -> None:
+        """Set adhesion states for each leg.
+
+        Args:
+            fly_name: Name of the fly.
+            leg_to_adhesion_state: Adhesion control per leg, shape ``(6,)``, ordered as
+                in ``fly.get_legs_order()``. Values should be in the range ``[0, 1]``.
+        """
+        internal_ids = self._intern_adhesionactuatorids_by_fly[fly_name]
+        if len(leg_to_adhesion_state) != len(internal_ids):
+            raise ValueError(
+                "Unexpected number of adhesion states: "
+                f"expected {len(internal_ids)}, got {len(leg_to_adhesion_state)}"
+            )
+        self.mj_data.ctrl[internal_ids] = leg_to_adhesion_state
+
+    def set_tendon_actuator_inputs(
+        self,
+        fly_name: str,
+        inputs: Float[np.ndarray, "n_tendon_actuators"],  # noqa: F821
+    ) -> None:
+        """Set control inputs for tendon actuators.
+
+        Args:
+            fly_name: Name of the fly.
+            inputs: Control inputs, shape ``(n_tendon_actuators,)``, ordered as in
+                ``fly.get_actuated_jointdofs_order(ActuatorType.TENDON)``.
+        """
+        # Flies without tendon actuators have no entry in the lookup, so default to
+        # an empty id array: the length check below then turns an empty input into a
+        # clean no-op and a non-empty one into a clear "expected 0" error.
+        internal_ids = self._intern_tendonactuatorids_by_fly.get(
+            fly_name, np.empty(0, dtype=np.int32)
+        )
+        if len(inputs) != len(internal_ids):
+            raise ValueError(
+                f"Expected {len(internal_ids)} tendon actuator inputs, but got "
+                f"{len(inputs)}"
+            )
+        self.mj_data.ctrl[internal_ids] = inputs
+
+    def get_raw_vision(self, fly_name: str) -> Float[np.ndarray, "2 height width 3"]:
+        """Render the fly's eye cameras and return fisheye-corrected frames.
+
+        Certain body parts are invisible to the eye cameras to avoid self-occlusion, as
+        configured in `flygym/assets/model/neuromechfly/vision.yaml`. These geoms are assigned to
+        geom group 2, which _is_ rendered by the MuJoCo renderer by default, but the eye
+        renderer within FlyGym is configured to ignore this geom group.
+
+        Args:
+            fly_name: Name of the fly to query.
+
+        Returns:
+            An array of shape (2, height, width, 3) containing the RGB images from the
+            fly's two eyes. The first dimension corresponds to the left and right eye,
+            in that order.
+        """
+        try:
+            internal_eye_camera_ids = self._intern_eye_camera_ids_by_fly[fly_name]
+        except KeyError:
+            raise ValueError(
+                f"Fly '{fly_name}' does not have any eye cameras defined. "
+                "Make sure to call fly.add_vision() when constructing the fly."
+            )
+
+        # Lazy-construct Retina and eye renderer only if user queries visual input
+        if self.retina is None:
+            from flygym.vision.retina import Retina
+
+            self.retina = Retina()
+
+        if self.eye_renderer is None:
+            self.eye_renderer = mj.Renderer(
+                self.mj_model,
+                height=self.retina.nrows,
+                width=self.retina.ncols,
+            )
+            # Make eye renderer apply option to ignore geoms in group 2, which includes
+            # body segments that should not be rendered by the eye cameras to avoid
+            # self-occlusion. Disable group 1 as well because markers for eye positions
+            # belong to group 1.
+            self.eye_renderer_scene_option = mj.MjvOption()
+            self.eye_renderer_scene_option.geomgroup[1] = 0
+            self.eye_renderer_scene_option.geomgroup[2] = 0
+
+        # Render each eye camera and apply fisheye correction
+        frames = []
+        for cam_id in internal_eye_camera_ids:
+            self.eye_renderer.update_scene(
+                self.mj_data, cam_id, scene_option=self.eye_renderer_scene_option
+            )
+            raw_frame = self.eye_renderer.render()
+            fish_img = self.retina.correct_fisheye(raw_frame)
+            frames.append(fish_img)
+        return np.array(frames)
+
+    def get_ommatidia_readouts(
+        self, fly_name: str
+    ) -> Float[np.ndarray, "n_cameras n_ommatidia 2"]:
+        """Convert the rendered eye frames into ommatidia readouts.
+
+        Args:
+            fly_name: Name of the fly to query.
+
+        Returns:
+            A float32 array with shape ``(2, n_ommatidia, 2)`` containing
+            the yellow/pale channel readings for each eye camera. The first dimension
+            corresponds to the left and right eyes, in that order. The last
+            dimension corresponds to the yellow- and pale-type ommatidia, in that
+            order. Zero values indicate that the ommatidium is of the other type.
+            For example, if `readouts[0, 5, 0]` is 0, it means that the 5th ommatidium
+            is of pale type, and the user should look at `readouts[0, 5, 1]` instead.
+        """
+        raw_vision = self.get_raw_vision(fly_name)
+        ommatidia_readouts = np.array(
+            [self.retina.raw_image_to_hex_pxls(image) for image in raw_vision],
+            dtype=np.float32,
+        )
+        return ommatidia_readouts
+
+    def warmup(self, duration_s: float = 0.05) -> None:
+        """Step the simulation for a short period to settle initialization transients.
+
+        Call after `reset` and before the main simulation loop to allow the fly to
+        settle onto the ground.
+
+        Args:
+            duration_s: Duration of the warmup period in seconds.
+        """
+        n_steps = int(duration_s / self.mj_model.opt.timestep)
+        for _ in range(n_steps):
+            self.step()
+
+    def _map_internal_bodyids(self) -> None:
+        internal_bodyids_by_fly = defaultdict(list)
+
+        for fly_name, fly in self.world.fly_lookup.items():
+            for bodyseg, mjcf_body_element in fly.bodyseg_to_mjcfbody.items():
+                internal_body_id = mj.mj_name2id(
+                    self.mj_model,
+                    mj.mjtObj.mjOBJ_BODY,
+                    mjcf_body_element.name,
+                )
+                internal_bodyids_by_fly[fly_name].append(internal_body_id)
+
+        self._internal_bodyids_by_fly = {
+            k: np.array(v, dtype=np.int32) for k, v in internal_bodyids_by_fly.items()
+        }
+
+    def _map_internal_geom_ids(self) -> None:
+        internal_geomids_by_bodyseg_by_fly = {}
+
+        for fly_name, fly in self.world.fly_lookup.items():
+            internal_geomids_by_bodyseg_by_fly[fly_name] = {}
+            for bodyseg, mjcf_geom_elements in fly.bodyseg_to_mjcfgeom.items():
+                for mjcf_geom_element in mjcf_geom_elements:
+                    internal_geom_id = mj.mj_name2id(
+                        self.mj_model,
+                        mj.mjtObj.mjOBJ_GEOM,
+                        mjcf_geom_element.name,
+                    )
+                    internal_geomids_by_bodyseg_by_fly[fly_name][bodyseg] = (
+                        internal_geom_id
+                    )
+
+        self._internal_geomid_by_bodyseg_by_fly = internal_geomids_by_bodyseg_by_fly
+
+    def _map_internal_ground_geom_ids(self) -> None:
+        internal_ground_geom_ids = []
+        for ground_geom in getattr(self.world, "ground_geoms", []):
+            internal_ground_geom_ids.append(
+                mj.mj_name2id(
+                    self.mj_model,
+                    mj.mjtObj.mjOBJ_GEOM,
+                    ground_geom.name,
+                )
+            )
+        self._internal_ground_geom_ids = np.array(
+            internal_ground_geom_ids, dtype=np.int32
+        )
+
+    def _map_internal_jointids(self) -> None:
+        internal_jointids_by_fly = defaultdict(list)
+
+        for fly_name, fly in self.world.fly_lookup.items():
+            for jointdof, mjcf_joint_element in fly.jointdof_to_mjcfjoint.items():
+                internal_joint_id = mj.mj_name2id(
+                    self.mj_model,
+                    mj.mjtObj.mjOBJ_JOINT,
+                    mjcf_joint_element.name,
+                )
+                internal_jointids_by_fly[fly_name].append(internal_joint_id)
+
+        self._internal_jointids_by_fly = {
+            k: np.array(v, dtype=np.int32) for k, v in internal_jointids_by_fly.items()
+        }
+
+    def _map_internal_qposqveladrs(self) -> None:
+        internal_qposadrs_by_fly = defaultdict(list)
+        internal_qveladrs_by_fly = defaultdict(list)
+
+        for fly_name, fly in self.world.fly_lookup.items():
+            for jointdof, mjcf_joint_element in fly.jointdof_to_mjcfjoint.items():
+                internal_joint_id = mj.mj_name2id(
+                    self.mj_model,
+                    mj.mjtObj.mjOBJ_JOINT,
+                    mjcf_joint_element.name,
+                )
+                qposadr = self.mj_model.jnt_qposadr[internal_joint_id]
+                qveladr = self.mj_model.jnt_dofadr[internal_joint_id]
+                internal_qposadrs_by_fly[fly_name].append(qposadr)
+                internal_qveladrs_by_fly[fly_name].append(qveladr)
+
+        self._intern_qposadrs_by_fly = {
+            k: np.array(v, dtype=np.int32) for k, v in internal_qposadrs_by_fly.items()
+        }
+        self._intern_qveladrs_by_fly = {
+            k: np.array(v, dtype=np.int32) for k, v in internal_qveladrs_by_fly.items()
+        }
+
+    def _map_internal_actuator_ids(self) -> None:
+        internal_actuatorids_by_fly_by_type = defaultdict(lambda: defaultdict(list))
+
+        for fly_name, fly in self.world.fly_lookup.items():
+            for actuator_ty, actuators in fly.jointdof_to_mjcfactuator_by_type.items():
+                for jointdof, actuator_element in actuators.items():
+                    internal_actuator_id = mj.mj_name2id(
+                        self.mj_model,
+                        mj.mjtObj.mjOBJ_ACTUATOR,
+                        actuator_element.name,
+                    )
+                    internal_actuatorids_by_fly_by_type[actuator_ty][fly_name].append(
+                        internal_actuator_id
+                    )
+
+        self._intern_actuatorids_by_type_by_fly = {
+            actuator_ty: {
+                fly_name: np.array(ids, dtype=np.int32)
+                for fly_name, ids in ids_by_fly.items()
+            }
+            for actuator_ty, ids_by_fly in internal_actuatorids_by_fly_by_type.items()
+        }
+
+    def _map_internal_tendonactuator_ids(self) -> None:
+        internal_tendonactuatorids_by_fly = defaultdict(list)
+        for fly_name, fly in self.world.fly_lookup.items():
+            if len(fly.jointdof_to_mjcfactuator_by_type[ActuatorType.TENDON]) == 0:
+                continue  # This fly doesn't have any tendon actuators
+            for jointdof, actuator_element in fly.jointdof_to_mjcfactuator_by_type[
+                ActuatorType.TENDON
+            ].items():
+                internal_actuator_id = mj.mj_name2id(
+                    self.mj_model,
+                    mj.mjtObj.mjOBJ_ACTUATOR,
+                    actuator_element.name,
+                )
+                internal_tendonactuatorids_by_fly[fly_name].append(internal_actuator_id)
+        self._intern_tendonactuatorids_by_fly = {
+            fly_name: np.array(ids, dtype=np.int32)
+            for fly_name, ids in internal_tendonactuatorids_by_fly.items()
+        }
+
+    def _map_internal_adhesionactuator_ids(self) -> None:
+        internal_adhesionactuatorids_by_fly = defaultdict(list)
+        for fly_name, fly in self.world.fly_lookup.items():
+            if len(fly.leg_to_adhesionactuator) == 0:
+                continue  # This fly doesn't have leg adhesion actuators
+            for leg in fly.get_legs_order():
+                actuator_element = fly.leg_to_adhesionactuator[leg]
+                internal_actuator_id = mj.mj_name2id(
+                    self.mj_model,
+                    mj.mjtObj.mjOBJ_ACTUATOR,
+                    actuator_element.name,
+                )
+                internal_adhesionactuatorids_by_fly[fly_name].append(
+                    internal_actuator_id
+                )
+        self._intern_adhesionactuatorids_by_fly = {
+            fly_name: np.array(ids, dtype=np.int32)
+            for fly_name, ids in internal_adhesionactuatorids_by_fly.items()
+        }
+
+    def _map_internal_groundcontactsensor_ids(self) -> None:
+        if self.world.legpos_to_groundcontactsensors_by_fly is None:
+            self._intern_groundcontactsensorids_by_fly = None
+            return
+
+        self._intern_groundcontactsensorids_by_fly = {}
+
+        for fly_name, fly in self.world.fly_lookup.items():
+            indices_thisfly = []
+            sensors_by_leg = self.world.legpos_to_groundcontactsensors_by_fly.get(
+                fly_name, {}
+            )
+            for leg in fly.get_legs_order():
+                sensor = sensors_by_leg.get(leg)
+                if sensor is None:
+                    continue
+                internal_id = mj.mj_name2id(
+                    self.mj_model, mj.mjtObj.mjOBJ_SENSOR, sensor.name
+                )
+                start_idx = self.mj_model.sensor_adr[internal_id]
+                sensor_dim = self.mj_model.sensor_dim[internal_id]
+                # Sensor should be 16-dim: found (1), force (3), torque (3), pos (3),
+                # normal (3), tangent (3)
+                assert sensor_dim == 16, "unexpected ground contact sensor dimension"
+                indices_thisfly.extend(list(range(start_idx, start_idx + sensor_dim)))
+            indices_arr = np.array(indices_thisfly, dtype=np.int32)
+            self._intern_groundcontactsensorids_by_fly[fly_name] = indices_arr
+
+    def _map_internal_site_ids(self) -> None:
+        internal_siteids_by_fly = {
+            fly_name: [] for fly_name in self.world.fly_lookup.keys()
+        }
+
+        for fly_name, fly in self.world.fly_lookup.items():
+            for _, mjcf_site_element in fly.anatomicaljoint_to_mjcfsites.items():
+                internal_site_id = mj.mj_name2id(
+                    self.mj_model,
+                    mj.mjtObj.mjOBJ_SITE,
+                    mjcf_site_element.name,
+                )
+                internal_siteids_by_fly[fly_name].append(internal_site_id)
+
+        self._internal_siteids_by_fly = {
+            k: np.array(v, dtype=np.int32) for k, v in internal_siteids_by_fly.items()
+        }
+
+    def _map_internal_eye_camera_ids(self):
+        internal_eye_camera_ids_by_fly = defaultdict(list)
+
+        for fly_name, fly in self.world.fly_lookup.items():
+            for eye_camera_element in fly.eyecameraname_to_mjcfcamera.values():
+                internal_eye_camera_id = mj.mj_name2id(
+                    self.mj_model,
+                    mj.mjtObj.mjOBJ_CAMERA,
+                    eye_camera_element.name,
+                )
+                internal_eye_camera_ids_by_fly[fly_name].append(internal_eye_camera_id)
+
+        self._intern_eye_camera_ids_by_fly = {
+            k: np.array(v, dtype=np.int32)
+            for k, v in internal_eye_camera_ids_by_fly.items()
+        }
+
+    @property
+    def time(self) -> float:
+        """Current simulation time in seconds."""
+        return self.mj_data.time
+
+    def print_performance_report(
+        self, show_in_notebook: bool | Literal["auto"] = "auto"
+    ) -> None:
+        """Print a summary of physics and rendering performance.
+
+        Requires that `step_with_profile` and `render_as_needed_with_profile` were
+        used during the simulation loop.
+
+        Args:
+            show_in_notebook: If True, render the report as an HTML table suitable for
+                display in a Jupyter notebook. If "auto", will attempt to detect if
+                we're in a notebook environment and choose accordingly.
+        """
+        print_perf_report(
+            n_steps=self._curr_step,
+            n_frames_rendered=self._frames_rendered,
+            total_physics_time_ns=self._total_physics_time_ns,
+            total_render_time_ns=self._total_render_time_ns,
+            timestep=self.timestep,
+            show_in_notebook=show_in_notebook,
+        )
+
+    @property
+    def timestep(self) -> float:
+        """Simulation timestep in seconds."""
+        return self.mj_model.opt.timestep
+
+    def close(self):
+        """Clean up resources allocated by the simulation.
+
+        This method is idempotent (safe to call multiple times).
+        """
+
+        # Use getattr to handle cases where attributes may not exist
+        renderer = getattr(self, "renderer", None)
+        if renderer is not None:
+            renderer.close()
+        eye_renderer = getattr(self, "eye_renderer", None)
+        if eye_renderer is not None:
+            eye_renderer.close()
+
+        # Clear references to help GC and make close idempotent
+        self.renderer = None
+        self.eye_renderer = None
+        # Don't destruct self.retina and self.eye_renderer_scene_option: they can be
+        # reused and retina init requires some IO ops.

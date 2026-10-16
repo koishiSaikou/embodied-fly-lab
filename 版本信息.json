@@ -1,0 +1,19 @@
+{
+  "name": "果蝇感觉与行为实验场",
+  "version": "0.1.0-alpha.1",
+  "release_tag": "v0.1.0-alpha.1",
+  "release_status": "unpublished-demo",
+  "source_commit": null,
+  "report_schema_version": 1,
+  "code_license": "GPL-3.0-or-later",
+  "data_release": "FlyWire FAFB v783",
+  "annotation_version": "v3.2.0",
+  "annotation_commit": "a83b2776d60d5764cef36b927f5f9679c16c47a2",
+  "brain_source_commit": "a3db62f9436074e485c0278290c2164ed6150808",
+  "flygym_version": "2.1.0",
+  "flygym_source_commit": "38c8ec61034cd59bc5ba0de20688d4a3c0000d60",
+  "platform_scope": "Windows x64; NVIDIA CUDA for the brain; desktop landscape; ASCII project path",
+  "biological_scope": "Uniform LIF on a connectome; engineered sensation/control/needs and external odor-value memory; no complete VNC or whole-brain synaptic learning",
+  "repository_url": "https://github.com/koishiSaikou/embodied-fly-lab",
+  "publication_note": "0.1.0-alpha.1 源码 Demo；unpublished-demo 表示 GitHub Release 尚未创建。实际提交由 Git 历史记录，source_commit 不预写自身 SHA。旧交付包未更新。"
+}

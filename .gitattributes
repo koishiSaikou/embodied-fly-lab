@@ -1,0 +1,3 @@
+# Preserve exact snapshot bytes in commits, clones and source archives.
+# In particular, Windows CMD entrypoints must retain their CRLF line endings.
+* -text

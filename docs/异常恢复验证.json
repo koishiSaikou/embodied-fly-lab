@@ -1,0 +1,197 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-16T07:00:15.584563+00:00",
+  "scope": "独立源码目录，多感官 Habitat 的脑通信与异常收尾；旧 Coupled/Activity 通信、长期资源增长未在本项实现。",
+  "unit_tests": {
+    "recovery": 10,
+    "startup_regression": 13,
+    "source_installer_regression": 12,
+    "total": 35
+  },
+  "unit_command": ".venv/Scripts/python.exe -X utf8 -B -m unittest discover -s tests -p test_*.py -q",
+  "live": {
+    "status": "passed",
+    "cases": [
+      {
+        "case": "startup_stall",
+        "status": "passed",
+        "exit_code": 1,
+        "body_seconds": 0.0,
+        "last_brain_ms": 0.0,
+        "real_cuda": false,
+        "synthetic_failure": true,
+        "pause_checked": false,
+        "manual_restart_checked": false,
+        "directory": "E:\\workspace\\FlyWire-GitHub\\output\\habitat\\recovery_startup_stall_20261016_145052_995365"
+      },
+      {
+        "case": "step_stall",
+        "status": "passed",
+        "exit_code": 1,
+        "body_seconds": 0.0,
+        "last_brain_ms": 0.0,
+        "real_cuda": false,
+        "synthetic_failure": true,
+        "pause_checked": false,
+        "manual_restart_checked": false,
+        "directory": "E:\\workspace\\FlyWire-GitHub\\output\\habitat\\recovery_step_stall_20261016_145052_995365"
+      },
+      {
+        "case": "step_exit",
+        "status": "passed",
+        "exit_code": 1,
+        "body_seconds": 0.0,
+        "last_brain_ms": 0.0,
+        "real_cuda": false,
+        "synthetic_failure": true,
+        "pause_checked": false,
+        "manual_restart_checked": false,
+        "directory": "E:\\workspace\\FlyWire-GitHub\\output\\habitat\\recovery_step_exit_20261016_145052_995365"
+      },
+      {
+        "case": "bad_json",
+        "status": "passed",
+        "exit_code": 1,
+        "body_seconds": 0.0,
+        "last_brain_ms": 0.0,
+        "real_cuda": false,
+        "synthetic_failure": true,
+        "pause_checked": false,
+        "manual_restart_checked": false,
+        "directory": "E:\\workspace\\FlyWire-GitHub\\output\\habitat\\recovery_bad_json_20261016_145052_995365"
+      },
+      {
+        "case": "finalize_fault",
+        "status": "passed",
+        "exit_code": 1,
+        "body_seconds": 0.04,
+        "last_brain_ms": 40.0,
+        "real_cuda": true,
+        "synthetic_failure": true,
+        "pause_checked": false,
+        "manual_restart_checked": false,
+        "directory": "E:\\workspace\\FlyWire-GitHub\\output\\habitat\\recovery_finalize_fault_20261016_145052_995365"
+      },
+      {
+        "case": "real",
+        "status": "passed",
+        "exit_code": 0,
+        "body_seconds": 0.060000000000000005,
+        "last_brain_ms": 60.0,
+        "real_cuda": true,
+        "synthetic_failure": false,
+        "pause_checked": true,
+        "manual_restart_checked": true,
+        "directory": "E:\\workspace\\FlyWire-GitHub\\output\\habitat\\recovery_real_20261016_145052_995365"
+      }
+    ]
+  },
+  "live_record": "output/recovery/20261016_145052_995365/report.json",
+  "startup_regression": {
+    "status": "passed",
+    "browser_calls": [
+      {
+        "url": "http://127.0.0.1:8480/",
+        "scene_ready": true,
+        "status": "loading"
+      }
+    ],
+    "headless_browser_ready": true,
+    "restart_browser_calls": 1,
+    "default_port_fallback": true,
+    "fallback_url": "http://127.0.0.1:8473/",
+    "no_browser": true,
+    "finite_cmd_exit_code": 0,
+    "ctrl_c": {
+      "status": "passed",
+      "exit_code": 130,
+      "report_status": "interrupted",
+      "model_seconds": 0.12000000000000001,
+      "console_processes": 8,
+      "isolated_console": true,
+      "remaining_children": [],
+      "loading": false,
+      "batch": false
+    },
+    "startup_ctrl_c": {
+      "status": "passed",
+      "exit_code": 130,
+      "report_status": "interrupted",
+      "model_seconds": 0.0,
+      "console_processes": 6,
+      "isolated_console": true,
+      "remaining_children": [],
+      "loading": true,
+      "batch": false
+    },
+    "batch_ctrl_c": {
+      "status": "passed",
+      "exit_code": 130,
+      "report_status": "interrupted",
+      "model_seconds": 0.12000000000000001,
+      "console_processes": 9,
+      "isolated_console": true,
+      "remaining_children": [],
+      "loading": false,
+      "batch": true
+    },
+    "original_services_modified": false
+  },
+  "startup_record": "output/startup/20261016_145251_711572/report.json",
+  "browser": {
+    "status": "passed",
+    "own_test_urls": [
+      "http://127.0.0.1:8510/",
+      "http://127.0.0.1:8511/"
+    ],
+    "scenarios": [
+      "实际 CUDA 运行后，注入渲染关闭与报告保存失败，显示最后成功数据",
+      "合成脑启动超时，尚无第一块活动时仍显示错误、日志位置和重开按钮",
+      "点击网页重开按钮，得到新的目录；同一故障再次出现时如实报错",
+      "分类图表显示异常停止及最后成功时间窗；没有继续更新的误导提示"
+    ],
+    "layouts": [
+      {
+        "width": 1366,
+        "height": 768,
+        "document_width": 1366,
+        "document_height": 768,
+        "neural_readout_height": 76
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "document_width": 1920,
+        "document_height": 1080,
+        "neural_readout_height": 76
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "document_width": 2560,
+        "document_height": 1440,
+        "neural_readout_height": 76
+      }
+    ],
+    "layout_method": "1366 使用窗口尺寸；1920/2560 使用 Chrome DevTools 桌面 viewport emulation，确认实际 innerWidth/innerHeight。",
+    "console_warnings_or_errors": 0,
+    "pause_disabled_on_error": true,
+    "explicit_restart_enabled_after_cleanup": true,
+    "screenshot_exported": false,
+    "reason": "浏览器工具仅允许向其配置的工作目录导出；本项目未导出截图，使用 DOM 尺寸与真实界面状态验证。",
+    "probes_closed": true
+  },
+  "defaults": {
+    "brain_startup_timeout_wall_seconds": 300,
+    "brain_step_timeout_wall_seconds": 30
+  },
+  "limitations": [
+    "磁盘完全不可写时不能保证诊断文件存在；控制台和存活网页仍尝试保留信息。",
+    "没有实现膜电位检查点恢复；手动重开是新实验。",
+    "渲染、系统磁盘调用、编码器等任意 OS/驱动阻塞不受本次脑请求期限约束。",
+    "本次为本机短测及故障注入，不代表其他机器、长时资源边界或生物有效性验证。"
+  ],
+  "original_project_modified": false,
+  "delivery_package_rebuilt": false,
+  "github_pushed": false
+}

@@ -1,0 +1,2367 @@
+{
+  "schema_version": 1,
+  "purpose": "Current source candidate inventory; original checksum evidence retained across intentional edits.",
+  "created_at_utc": "2026-10-16T04:40:27.810279+00:00",
+  "source_name": "FlyWire",
+  "copied_files": 337,
+  "excluded_self_and_reports": [
+    "仓库文件清单.json",
+    "docs/仓库整理验证.json"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 158,
+      "sha256": "7c44d05322b063cd5dd7ddf5baadf55bd4c41c82729b8c9f53a9dfad5ebfacb7"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 1073,
+      "sha256": "002a33c94213a9ff070c3ae97dd7775bdec0c0db438328692bf8ba532b10daaa"
+    },
+    {
+      "path": "activity_monitor.html",
+      "bytes": 2382,
+      "sha256": "ed23d09570b5d18e72dd97381e7ea792688d6dc65783c0e1e893c018995e8667",
+      "original_source_path": "activity_monitor.html",
+      "original_sha256": "3b3a71282700ace9da57685ed4603346ba2ccf3b187559bdcec73463b0ad2464",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "activity_monitor.py",
+      "bytes": 8521,
+      "sha256": "4adabf30d1eef9f4fc1c8785da7d54a1cd55e393f08f1c3730a863ef1d405e45",
+      "original_source_path": "activity_monitor.py",
+      "original_sha256": "8d19f12034592f0b174dd3928731bb14e3c661638ba58c6b69a377bad6395a13",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 76,
+      "sha256": "8431734759e49457267ddeedfa74e15e141c39965cb779dfbac8acaf6afba5e5",
+      "source_path": "AGENTS.md"
+    },
+    {
+      "path": "AI协作约定.md",
+      "bytes": 7532,
+      "sha256": "b70bf45e6ee7ea27bcac9efda66c5abc7618ecc72edef75593b42ac4579bbc87",
+      "original_source_path": "AI协作约定.md",
+      "original_sha256": "d8cff74292294ea8dcf7b87b793feec6345557bd2313ff0d3253177537b653b3",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "arena_appearance.py",
+      "bytes": 4765,
+      "sha256": "bee671e02c4d43c2bee263e2100361262eb680fcbd945629202c34f26b3b8216",
+      "source_path": "arena_appearance.py"
+    },
+    {
+      "path": "arena_elements.py",
+      "bytes": 8628,
+      "sha256": "ae6b018d5e021c797a03636d2f6253afd93e824d85d9314c79b5a6d400a1418d",
+      "source_path": "arena_elements.py"
+    },
+    {
+      "path": "behavior_model.py",
+      "bytes": 16429,
+      "sha256": "b59db49cfc746fc15060ec5c5a2cd5c211fe98e10c44ddad4c724e392f5a71fc",
+      "source_path": "behavior_model.py"
+    },
+    {
+      "path": "brain-model/code/benchmark.py",
+      "bytes": 19369,
+      "sha256": "e18dae9072baf9ee0f0581282641c58864fdc138c6e75b718a542eb27d272874",
+      "source_path": "brain-model/code/benchmark.py"
+    },
+    {
+      "path": "brain-model/code/run_pytorch.py",
+      "bytes": 22859,
+      "sha256": "699655db7a56045271ba467268be153d0a3318d4cc4cecc0a13f33e69ce79667",
+      "source_path": "brain-model/code/run_pytorch.py"
+    },
+    {
+      "path": "brain-model/data/2025_Completeness_783.csv",
+      "bytes": 3465987,
+      "sha256": "52b0ac6094cd32c546f8d4c341e094376f48f4e791f8db9b166de5dff8199ea4",
+      "source_path": "brain-model/data/2025_Completeness_783.csv"
+    },
+    {
+      "path": "brain-model/data/annotation_report.json",
+      "bytes": 187582,
+      "sha256": "77e5dec49a0f89ecfe58ba970db8b3e46cce12af9644136424c8e1962c3a2a3b",
+      "source_path": "brain-model/data/annotation_report.json"
+    },
+    {
+      "path": "brain-model/data/annotations_outside_model.csv",
+      "bytes": 12469,
+      "sha256": "cfe9c944edb1c40456e54d70ea41465f57c7eac7274d4deb15fa6b5ba8a6b259",
+      "source_path": "brain-model/data/annotations_outside_model.csv"
+    },
+    {
+      "path": "brain-model/data/neuron_annotations.parquet",
+      "bytes": 8030416,
+      "sha256": "feb97008a7791e34e32943cc404435b3682ba47659d3037575dfdbaa1fb7c132",
+      "source_path": "brain-model/data/neuron_annotations.parquet"
+    },
+    {
+      "path": "brain-model/data/unknown_neuron_types.csv",
+      "bytes": 78386,
+      "sha256": "8c163751cb427f13f506f10166e40bbe6b5f16946f3e2c437d5c538022e3c988",
+      "source_path": "brain-model/data/unknown_neuron_types.csv"
+    },
+    {
+      "path": "brain-model/LICENSE",
+      "bytes": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "source_path": "brain-model/LICENSE"
+    },
+    {
+      "path": "brain-model/README.md",
+      "bytes": 17409,
+      "sha256": "ff087abb20b98a4ad11716277f7b55cef3ebccadccb07c7c9c883cad3a0f07b3",
+      "source_path": "brain-model/README.md"
+    },
+    {
+      "path": "brain_client.py",
+      "bytes": 9787,
+      "sha256": "28add1192f572600a4ef4af9088a8c221ec1e6174f97d70fb09adff791266359"
+    },
+    {
+      "path": "brain_controls.py",
+      "bytes": 4077,
+      "sha256": "8849cc2138623441d0cc757727cc72e9d3802833aea0dc0f74dc2ada1fcb9e70",
+      "source_path": "brain_controls.py"
+    },
+    {
+      "path": "brain_worker.py",
+      "bytes": 10551,
+      "sha256": "f7145eb3e61d8aed966583e05e7f823e8dfcfd251e81fe8ded60d3513dfd9228",
+      "original_source_path": "brain_worker.py",
+      "original_sha256": "2699ee682433ef55658385021ad4974389eae2d0daaeca2b801c90ff7c0964d3",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "build_windows_package.py",
+      "bytes": 11873,
+      "sha256": "92a257ff457da3e465a2b57e76d625b1a1b31e1cb0bb3e84f27f1f63ca6bd7e2",
+      "original_source_path": "build_windows_package.py",
+      "original_sha256": "fed1241a8620026d915a28e43c7874a7c436d179f93bcf1dc39be9facf90d8da",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "calibrate_habitat.py",
+      "bytes": 1682,
+      "sha256": "ad75716d8cc5761b81d78235dc1e64310afdc1602dd738eeabda237b685f134b",
+      "source_path": "calibrate_habitat.py"
+    },
+    {
+      "path": "Check-Environment.cmd",
+      "bytes": 65,
+      "sha256": "2cb99cb10537a13c7fc8d9c8d3e9f35aab5f73760d3b836220e0a893ac76338f"
+    },
+    {
+      "path": "delivery/bootstrap.py",
+      "bytes": 5340,
+      "sha256": "e4e0079eba0387d4dbe0e8747de098afb94373c203a6916ecdf9df5897e43a27",
+      "source_path": "delivery/bootstrap.py"
+    },
+    {
+      "path": "delivery/common.py",
+      "bytes": 1453,
+      "sha256": "6045183dd2e197baccaa372eb1729b5b147d9a2232c7f3532d123bed66f515fa",
+      "source_path": "delivery/common.py"
+    },
+    {
+      "path": "delivery/doctor.py",
+      "bytes": 5053,
+      "sha256": "fe47c1f6020eb1306816b387780021e3e29fcb44db5570d812a6cbb36e5124dd",
+      "original_source_path": "delivery/doctor.py",
+      "original_sha256": "ba2051bd9135eb14d892bc6cffef24e3c1994208b5690d993b0a787961042ae3",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "delivery/launch.py",
+      "bytes": 378,
+      "sha256": "25f28dc0733794aaa32faee8e2b7a3ec43de87e64d4c59c2acda51933a5101c7",
+      "original_source_path": "delivery/launch.py",
+      "original_sha256": "8d8ce4f8eda764fd3e0593a551394883a9a59eaf300317bc8ebafc796670921b",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "delivery/smoke_test.py",
+      "bytes": 5437,
+      "sha256": "d2ce92c8d5219c7264ad33306954051ec14d7316986d24f90f24930d7ad09940",
+      "source_path": "delivery/smoke_test.py"
+    },
+    {
+      "path": "docs/AI二次开发文档.md",
+      "bytes": 37579,
+      "sha256": "2ae3b20700effade91d75d7f72869e33487adb15fb7d05a71a11237d520834c1",
+      "original_source_path": "docs/AI二次开发文档.md",
+      "original_sha256": "f2b6fb845e3e84e58df1cb5fe4ab066b85a2cdaf12d76f3c95771bd72afb1ca3",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "docs/上游组件清单.json",
+      "bytes": 1586,
+      "sha256": "6d454d887059e70b636efcb2d3f85f1b052f0dd826119e41d0d2513da0994870"
+    },
+    {
+      "path": "docs/下载说明.md",
+      "bytes": 2346,
+      "sha256": "55c21a27e890f3808414941011c0bed38dabd14c7d313fb103cde95c871b8fa1",
+      "original_source_path": "docs/下载说明.md",
+      "original_sha256": "9212c9cb1e7ae6d411aa090e499f9915fabca2a7b60925c7a5fe454a692f399e",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "docs/交付包说明.md",
+      "bytes": 2552,
+      "sha256": "f2334f9da6117893b2c050c43a9963aa82bc4a635bde6a29a77aadfe3f14af1d",
+      "original_source_path": "docs/交付包说明.md",
+      "original_sha256": "c60f391627d04f0366a326d66349167d47fbfc60d2d048bb37721cfcaaa96ec8",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "docs/仓库整理说明.md",
+      "bytes": 5660,
+      "sha256": "0d1435352c2a66f0099c4cb32a8a297f02ae69efdba0b799516889f40fd2c3dc"
+    },
+    {
+      "path": "docs/依赖许可清单.json",
+      "bytes": 71966,
+      "sha256": "17173ea17902580d5211ee2772a6878b695b4f758393c00411e708b9d2526c39"
+    },
+    {
+      "path": "docs/功能同步记录.json",
+      "bytes": 26563,
+      "sha256": "c2bd936621661875f0aed2fceb5a1444a518ffbda13a71abfb34cda8749d04c8"
+    },
+    {
+      "path": "docs/功能同步验证.json",
+      "bytes": 7418,
+      "sha256": "334706d844676c9c51b65b73b11614779f4d6e599a4b8877725f54fe16d1d7da"
+    },
+    {
+      "path": "docs/历史交付包操作说明.md",
+      "bytes": 15500,
+      "sha256": "050474d43233def09ddd9a52d1afcc2e180c0b64e50afae006003d893488a2ec"
+    },
+    {
+      "path": "docs/发布步骤.md",
+      "bytes": 2443,
+      "sha256": "ad26bb9bef579df04fb46c04e6e7f79ed7ae4c2ccd9931c03923a987100362bd"
+    },
+    {
+      "path": "docs/启动与停止说明.md",
+      "bytes": 6293,
+      "sha256": "c5f4ea67a95afedd0d6317515221722471becdb93d358f739462b69ada3028b5"
+    },
+    {
+      "path": "docs/启动验证记录.json",
+      "bytes": 4043,
+      "sha256": "62f5229f965b2a1c6c298abe1db852a35929e0778c5554100935e0101189420d"
+    },
+    {
+      "path": "docs/场景与多感官说明.md",
+      "bytes": 6417,
+      "sha256": "96ae6b8291c37ba87198cc63def34b4056bc1aa01a9c98a8a178a59a0fab21a6",
+      "source_path": "docs/场景与多感官说明.md"
+    },
+    {
+      "path": "docs/工作台布局说明.md",
+      "bytes": 4044,
+      "sha256": "966d61704c2a403ff82b639ab3e5f5c052a781b56b4b2864b6286a8916b2e4d3",
+      "source_path": "docs/工作台布局说明.md"
+    },
+    {
+      "path": "docs/已知限制.md",
+      "bytes": 2000,
+      "sha256": "ade778b521208c6661b17fd170180a296130827a7bc97c5261d8f566211df3c9"
+    },
+    {
+      "path": "docs/异常处理与恢复说明.md",
+      "bytes": 4754,
+      "sha256": "2e3eeebd5355030c7109a55f491e11b1d4ac6cf39fa3b2649efcccce6100b474"
+    },
+    {
+      "path": "docs/异常恢复验证.json",
+      "bytes": 6860,
+      "sha256": "8cf28fdec565e4ef67a4bbf4c4c1ac29f902b4b20577dd45081f2f4f998e835c"
+    },
+    {
+      "path": "docs/快速开始.md",
+      "bytes": 1613,
+      "sha256": "b24331276dcbdc0809c091c30390fd68af1b050b3384c05c2b942f33e2225aed"
+    },
+    {
+      "path": "docs/操作说明.md",
+      "bytes": 2737,
+      "sha256": "77be353e4601df1150229d84f9c96a5c6602332db33ee5ad43cdd444cec741af",
+      "original_source_path": "docs/操作说明.md",
+      "original_sha256": "ee2b0f66541fac610b9ad578d84ea466269eb02f69c1141658be94b54d8ab790",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "docs/源码安装说明.md",
+      "bytes": 7643,
+      "sha256": "d68bb1fca134529c9dad1da8491a54d5f83c7ba0d86cfb2b49972ffc73016d42"
+    },
+    {
+      "path": "docs/源码安装验证.json",
+      "bytes": 1704,
+      "sha256": "73c53022e24879eda0d9e5aadcad622b8d868ad12f11e5343870c9d6d5d15eee"
+    },
+    {
+      "path": "docs/行为与感官驱动说明.md",
+      "bytes": 5921,
+      "sha256": "4a53d08c906528305b4bdb90465f87649195a98afdd20bc24f1c4cca45081750",
+      "source_path": "docs/行为与感官驱动说明.md"
+    },
+    {
+      "path": "docs/许可与版本整理记录.json",
+      "bytes": 1660,
+      "sha256": "0c94c861552f41bd34a5b84882da74c77d18e87c09fa036fee4fcc72a0d1afe9"
+    },
+    {
+      "path": "docs/许可核对报告.md",
+      "bytes": 3079,
+      "sha256": "4207a147a5606d718c6299c0d9650c1b93905a793b9358860094d247307a381b"
+    },
+    {
+      "path": "docs/许可核对清单.json",
+      "bytes": 15884,
+      "sha256": "64c34f02f2a403857f3cc40fa2e774cf4eb70b5f7a624cb9af7219eedcd1bfbd"
+    },
+    {
+      "path": "docs/项目详情.md",
+      "bytes": 8814,
+      "sha256": "4a8d114dc2965152a35c60a5f38842171917eb06faf3f50e2ea41b6d7fe713f3",
+      "source_path": "docs/项目详情.md"
+    },
+    {
+      "path": "docs/首个测试版发布检查.md",
+      "bytes": 12852,
+      "sha256": "8c6be8637c9d9c06bd2ed482c06bf549ba112261bbd23f71a8c92a20373ab6c3",
+      "original_source_path": "docs/首个测试版发布检查.md",
+      "original_sha256": "2744de0268b5dbf7a7ffa303ac9d5da15828637a7977b689c2ca4fec956a810c",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "docs/首次发布说明.md",
+      "bytes": 2539,
+      "sha256": "3cd4a16acc55083ff20cda8b01235350bd44e5a4062de9407a100de46d8d35e0"
+    },
+    {
+      "path": "docs/验证记录.md",
+      "bytes": 13697,
+      "sha256": "136950bb478607c7db1e1bd8932c9f5adf757f2fb857a3685f14a2dacb95f3ca",
+      "source_path": "docs/验证记录.md"
+    },
+    {
+      "path": "download_torch.py",
+      "bytes": 3448,
+      "sha256": "21ad10b3ceb7b72aafb30f2f7d7879884b46f088c7be8938cbff4b6dda73bb0e",
+      "source_path": "download_torch.py"
+    },
+    {
+      "path": "experiment_recovery.py",
+      "bytes": 1137,
+      "sha256": "62cba4e9cbddb33b841f94d5287c4fa32f7359052ec2b231b3ea1b9688958783"
+    },
+    {
+      "path": "flygym/.dockerignore",
+      "bytes": 10024,
+      "sha256": "da0b95a9aafbc552826889417f542602610c8b11f48800ea2b3422c179084a1c",
+      "source_path": "flygym/.dockerignore"
+    },
+    {
+      "path": "flygym/.gitattributes",
+      "bytes": 102,
+      "sha256": "f5279e52e6896a80f8ba00ac4804d06885fedc4b7bc15eebec2bf9fe2d73bf95",
+      "source_path": "flygym/.gitattributes"
+    },
+    {
+      "path": "flygym/.github/workflows/tests.yml",
+      "bytes": 2842,
+      "sha256": "05f7254fc45f2f3c70e6640690b164972798c3e75c34ed8e9bcfbfe7e0f096d9",
+      "source_path": "flygym/.github/workflows/tests.yml"
+    },
+    {
+      "path": "flygym/.gitignore",
+      "bytes": 9207,
+      "sha256": "e2aa8a9586a73272c3aee2f0a09fa5be13842e28b526f5485d072c6822139027",
+      "source_path": "flygym/.gitignore"
+    },
+    {
+      "path": "flygym/.python-version",
+      "bytes": 6,
+      "sha256": "73880611a18bf211ab229c2a2d93ec11a622693e79532c0b797b91fd056704dc",
+      "source_path": "flygym/.python-version"
+    },
+    {
+      "path": "flygym/Dockerfile",
+      "bytes": 614,
+      "sha256": "8dc366f9669952a79893f9fbb6deae6ca44cd7f9dc29e5f9fa0493d2a9ccc4d0",
+      "source_path": "flygym/Dockerfile"
+    },
+    {
+      "path": "flygym/docs/changelog.md",
+      "bytes": 15241,
+      "sha256": "02f32628121c261a03dfb3b4b080d3bb4d49ff600aa65ddb8a053c00d7e54fcd",
+      "source_path": "flygym/docs/changelog.md"
+    },
+    {
+      "path": "flygym/docs/citation.md",
+      "bytes": 2367,
+      "sha256": "729a322f3302bbe70955f80b8af0e03cadab12b00dd3748c04c64de9461ad5d9",
+      "source_path": "flygym/docs/citation.md"
+    },
+    {
+      "path": "flygym/docs/CNAME",
+      "bytes": 18,
+      "sha256": "1526634c36cc84541fb31c45e201b43837ed84d550ef8195fc05bf87864a8498",
+      "source_path": "flygym/docs/CNAME"
+    },
+    {
+      "path": "flygym/docs/contributing.md",
+      "bytes": 4053,
+      "sha256": "5902ddac2079d85a9fbedf6b6d49193873f16a9c9e9985e0d5198376bbed20a6",
+      "source_path": "flygym/docs/contributing.md"
+    },
+    {
+      "path": "flygym/docs/contributors.md",
+      "bytes": 1596,
+      "sha256": "18b82a0c594061421301aca4f3ec58b4c02dd544ecae4d15e59129cb13254c3c",
+      "source_path": "flygym/docs/contributors.md"
+    },
+    {
+      "path": "flygym/docs/gen_ref_pages.py",
+      "bytes": 1703,
+      "sha256": "939ba2566a03edcefa72d2aaa15a62884d0dbd6959d3509db4376af4cd762046",
+      "source_path": "flygym/docs/gen_ref_pages.py"
+    },
+    {
+      "path": "flygym/docs/index.md",
+      "bytes": 5053,
+      "sha256": "af7e330fb5cf1fdf2ad566598846e876b797f8f139dda9a876c2a888254e6094",
+      "source_path": "flygym/docs/index.md"
+    },
+    {
+      "path": "flygym/docs/installation.md",
+      "bytes": 7376,
+      "sha256": "79cb7fe4325b7057e1f2bc6cfcae9d072ee7fa90641b0455ef03661d5baf76ff",
+      "source_path": "flygym/docs/installation.md"
+    },
+    {
+      "path": "flygym/docs/migration.md",
+      "bytes": 2799,
+      "sha256": "87fadafbb700b3069b6a6b46b0ff27fd506dd4d89ba6e78636a51f0e67cc89c7",
+      "source_path": "flygym/docs/migration.md"
+    },
+    {
+      "path": "flygym/docs/outreach.md",
+      "bytes": 7045,
+      "sha256": "ea8d1b64b728e44e18ee987f9ff366ee0db0ae4b39f32d7855fba6a6615a9394",
+      "source_path": "flygym/docs/outreach.md"
+    },
+    {
+      "path": "flygym/docs/SUMMARY.md",
+      "bytes": 3342,
+      "sha256": "d97cf27924fc60268798d28ebda348bf4cfa829a7c53c277d4fd389427fef678",
+      "source_path": "flygym/docs/SUMMARY.md"
+    },
+    {
+      "path": "flygym/docs/tutorials/6_muscle_imitation.md",
+      "bytes": 11977,
+      "sha256": "6db47cb2d242552c4655244a97dd9c428093574dd3899909051b2807de096748",
+      "source_path": "flygym/docs/tutorials/6_muscle_imitation.md"
+    },
+    {
+      "path": "flygym/docs/tutorials/7_performance_profiling.md",
+      "bytes": 4031,
+      "sha256": "fff06ed5e37bdbd923a748ed83f7b8d3aea3799d9c691c43492b3a2fb0809520",
+      "source_path": "flygym/docs/tutorials/7_performance_profiling.md"
+    },
+    {
+      "path": "flygym/docs/tutorials/index.md",
+      "bytes": 768,
+      "sha256": "718151fe3c589f636870740cbcc06c93fabeea9899abeb122d9934f4dcd33070",
+      "source_path": "flygym/docs/tutorials/index.md"
+    },
+    {
+      "path": "flygym/docs/video_tutorials/captions/1_general_introduction.en.vtt",
+      "bytes": 13118,
+      "sha256": "5d799d26b3714acfd3f2bac45f5e07b5589bf9661d80dd60f9d327e34d96258a",
+      "source_path": "flygym/docs/video_tutorials/captions/1_general_introduction.en.vtt"
+    },
+    {
+      "path": "flygym/docs/video_tutorials/captions/2_body_model.en.vtt",
+      "bytes": 6600,
+      "sha256": "92da0e4a61b0a2ab78a97a03df1ea7ae4fec110ee8a1573e6dc9d05c4ffa9c99",
+      "source_path": "flygym/docs/video_tutorials/captions/2_body_model.en.vtt"
+    },
+    {
+      "path": "flygym/docs/video_tutorials/captions/3_installing_flygym.en.vtt",
+      "bytes": 14935,
+      "sha256": "344e8b9dab14cfc1648dd3bf30f827b5249121e6568c5321a23e6637e765c73e",
+      "source_path": "flygym/docs/video_tutorials/captions/3_installing_flygym.en.vtt"
+    },
+    {
+      "path": "flygym/docs/video_tutorials/captions/4_composing_models_and_scenes.en.vtt",
+      "bytes": 24512,
+      "sha256": "2c708832dcec8ce79574445d1c586a2504f2228aacb415c9a30f2d5bd2dc635e",
+      "source_path": "flygym/docs/video_tutorials/captions/4_composing_models_and_scenes.en.vtt"
+    },
+    {
+      "path": "flygym/docs/video_tutorials/captions/5_replaying_behavior_from_experimental_recordings.en.vtt",
+      "bytes": 20406,
+      "sha256": "5b295a521da49ac8fa1f4a24ad53e7a9aefa9330eec5d2d23da408d99af49a48",
+      "source_path": "flygym/docs/video_tutorials/captions/5_replaying_behavior_from_experimental_recordings.en.vtt"
+    },
+    {
+      "path": "flygym/docs/video_tutorials/captions/6_gpu_accelerated_simulation.en.vtt",
+      "bytes": 37964,
+      "sha256": "e8e42a5767dbbdb3c5dcb2f1da0105cd7ac44ca1ccd8898d0deef0bfd93f1c95",
+      "source_path": "flygym/docs/video_tutorials/captions/6_gpu_accelerated_simulation.en.vtt"
+    },
+    {
+      "path": "flygym/docs/video_tutorials/captions/7_profiling_simulation_performance.en.vtt",
+      "bytes": 9203,
+      "sha256": "d26f3a0f540acbfc7e859d274f99452f6dadb7829e6d0f4b69cb90880e502763",
+      "source_path": "flygym/docs/video_tutorials/captions/7_profiling_simulation_performance.en.vtt"
+    },
+    {
+      "path": "flygym/docs/video_tutorials/index.md",
+      "bytes": 7064,
+      "sha256": "2a1b95792e818764f2cc4cc39929c947e688594005a1175f1c6237c37b99a315",
+      "source_path": "flygym/docs/video_tutorials/index.md"
+    },
+    {
+      "path": "flygym/LICENSE",
+      "bytes": 11563,
+      "sha256": "4e89fc37e50d41ea81616b413b23db4e8db395898930490fced1fa7d1eae863c",
+      "source_path": "flygym/LICENSE"
+    },
+    {
+      "path": "flygym/properdocs.yml",
+      "bytes": 1841,
+      "sha256": "41ffe47e4b8908f0a5d76d33174dc27c1a23d5925bc9c56b1782199bb007e841",
+      "source_path": "flygym/properdocs.yml"
+    },
+    {
+      "path": "flygym/pyproject.toml",
+      "bytes": 5790,
+      "sha256": "3f8c068ee6ef96c0b2934728bb71e7595023821754862daa2f2c31ef2343c595",
+      "source_path": "flygym/pyproject.toml"
+    },
+    {
+      "path": "flygym/README.md",
+      "bytes": 4167,
+      "sha256": "faa37e4856a1555a4c278187bc7a65873c243ca82a0303ff65107f0779a16747",
+      "source_path": "flygym/README.md"
+    },
+    {
+      "path": "flygym/scripts/dev/build_wasm_game_assets.py",
+      "bytes": 18885,
+      "sha256": "0e087d09bb8149a87706df322eaf0b61c7d3cdd14b2b8a44270efd6001342263",
+      "source_path": "flygym/scripts/dev/build_wasm_game_assets.py"
+    },
+    {
+      "path": "flygym/scripts/dev/build_wasm_viewer_assets.py",
+      "bytes": 12113,
+      "sha256": "c8177e7c2376386953a1605b269e20fa34b9a36742e53e3aa70914d15eaebdb1",
+      "source_path": "flygym/scripts/dev/build_wasm_viewer_assets.py"
+    },
+    {
+      "path": "flygym/scripts/dev/compute_flybody_eye_cam_orientation_offset.py",
+      "bytes": 7658,
+      "sha256": "27af6cc79b61ded6950be7899cfef5d82e2e71fbc76b04d35773b715711dc89b",
+      "source_path": "flygym/scripts/dev/compute_flybody_eye_cam_orientation_offset.py"
+    },
+    {
+      "path": "flygym/scripts/dev/convert_neutral_pose_from_norotation_rigging.py",
+      "bytes": 11917,
+      "sha256": "ff765858a9768ce6972a33c7bbc520482ad2773dedb37e781823773f7fd5da9d",
+      "source_path": "flygym/scripts/dev/convert_neutral_pose_from_norotation_rigging.py"
+    },
+    {
+      "path": "flygym/scripts/dev/convert_pose_to_all_axis_orders.py",
+      "bytes": 4085,
+      "sha256": "d7872e46fff741a6520d6c027624671bdc0a74e55ffa5c336bbb3a4bbfdcde34",
+      "source_path": "flygym/scripts/dev/convert_pose_to_all_axis_orders.py"
+    },
+    {
+      "path": "flygym/scripts/dev/gen_compound_eye.py",
+      "bytes": 6331,
+      "sha256": "e9f9628f39f736b0881b1548fd970616f69eb4b9ac3a712dbd68d997cf02070f",
+      "source_path": "flygym/scripts/dev/gen_compound_eye.py"
+    },
+    {
+      "path": "flygym/scripts/dev/gen_doc_pages.py",
+      "bytes": 1675,
+      "sha256": "50e27c41027035b71033f9b9d07c741f353ed0f570e8a998bd270113083aece3",
+      "source_path": "flygym/scripts/dev/gen_doc_pages.py"
+    },
+    {
+      "path": "flygym/scripts/dev/get_configs_from_flygym1.py",
+      "bytes": 2448,
+      "sha256": "1fcd0c60054e535e03b1589cdea98db60b04eb93c9ccfa17c9b69569cb8e6f5d",
+      "source_path": "flygym/scripts/dev/get_configs_from_flygym1.py"
+    },
+    {
+      "path": "flygym/scripts/dev/make_demo_video.py",
+      "bytes": 3136,
+      "sha256": "f17c9a4592f0286c97696261f7e8127acbcc7c3d11461827a12483907296ee39",
+      "source_path": "flygym/scripts/dev/make_demo_video.py"
+    },
+    {
+      "path": "flygym/scripts/dev/plot_benchmark_results.py",
+      "bytes": 1581,
+      "sha256": "5b910864d58dc1a78364cc451936d1d7d7519a02ee0a69786d3563b8a922f139",
+      "source_path": "flygym/scripts/dev/plot_benchmark_results.py"
+    },
+    {
+      "path": "flygym/scripts/dev/properdocs_hooks.py",
+      "bytes": 4530,
+      "sha256": "45dc03bb6eec39ea292e498e58accb6548cd18a4911f0c5abf5a191aa2e2e689",
+      "source_path": "flygym/scripts/dev/properdocs_hooks.py"
+    },
+    {
+      "path": "flygym/scripts/dev/push_doc_site.sh",
+      "bytes": 2139,
+      "sha256": "b908e1b2806360bc84cc18748578baa184bb80e66efdd05877c49c600a844d2c",
+      "source_path": "flygym/scripts/dev/push_doc_site.sh"
+    },
+    {
+      "path": "flygym/scripts/dev/README.md",
+      "bytes": 155,
+      "sha256": "0a3a44f61e2ac8640bee114a07a6a40d4a595f62d68c034d5f7bf0772396300a",
+      "source_path": "flygym/scripts/dev/README.md"
+    },
+    {
+      "path": "flygym/scripts/dev/run_all_notebooks.sh",
+      "bytes": 1206,
+      "sha256": "46f3d93446908d32ee203fa9fc8dfb32900a7cfd468ef0a0dcacb279d8e8530e",
+      "source_path": "flygym/scripts/dev/run_all_notebooks.sh"
+    },
+    {
+      "path": "flygym/scripts/dev/run_gpu_benchmark.py",
+      "bytes": 967,
+      "sha256": "b7217898c1ef6cac23d696a2ac8c9a0e1aeefce194eb415cf00a0b6443825c41",
+      "source_path": "flygym/scripts/dev/run_gpu_benchmark.py"
+    },
+    {
+      "path": "flygym/scripts/dev/simplify_meshes.py",
+      "bytes": 10839,
+      "sha256": "7a2b9af2183eb5dca078e39707abd2f67ec51911d80353b88ceb5eea9f6d1964",
+      "source_path": "flygym/scripts/dev/simplify_meshes.py"
+    },
+    {
+      "path": "flygym/scripts/launch_flybody_interactive_viewer.py",
+      "bytes": 2053,
+      "sha256": "308bb77e06dc47876ebe4c9895c96078e63633c4ac07c0424c1aa1c2bb7fdaca",
+      "source_path": "flygym/scripts/launch_flybody_interactive_viewer.py"
+    },
+    {
+      "path": "flygym/scripts/launch_interactive_viewer.py",
+      "bytes": 1839,
+      "sha256": "de88c0fd36d51daf4a93e0195a199bed85b856e143a93a2349c4025532cff956",
+      "source_path": "flygym/scripts/launch_interactive_viewer.py"
+    },
+    {
+      "path": "flygym/scripts/link_libpython_dylib_macos.sh",
+      "bytes": 1072,
+      "sha256": "12e0acc4be2cc98d72c3921b04d15074dca1d0fb0e20f835474b909d214244ff",
+      "source_path": "flygym/scripts/link_libpython_dylib_macos.sh"
+    },
+    {
+      "path": "flygym/scripts/replay_behavior_cpu.py",
+      "bytes": 20520,
+      "sha256": "84b99992b82743d0d5d069d360bfea1bfa935163e0b7fe56859cafbef8102eda",
+      "source_path": "flygym/scripts/replay_behavior_cpu.py"
+    },
+    {
+      "path": "flygym/scripts/replay_behavior_gpu.py",
+      "bytes": 16622,
+      "sha256": "67445addf1fe9cbae0d0415be392620b578f9f60ed706cd5d37d87f2b07f66a4",
+      "source_path": "flygym/scripts/replay_behavior_gpu.py"
+    },
+    {
+      "path": "flygym/src/flygym/__init__.py",
+      "bytes": 760,
+      "sha256": "9fabb62c9539b705d93d4d0817b7186710bcab33efdb5831ca6ccd88f1552fbb",
+      "source_path": "flygym/src/flygym/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym/anatomy.py",
+      "bytes": 20929,
+      "sha256": "540851354511c07c171917e5f0c0d6458385934264b01c7ab4ced2c8baf43766",
+      "source_path": "flygym/src/flygym/anatomy.py"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/flybody/actuators.yaml",
+      "bytes": 3697,
+      "sha256": "778e1920d1e45ec89daeedd9530c84974c6e7dd7630fd334410b2632c9e687c1",
+      "source_path": "flygym/src/flygym/assets/model/flybody/actuators.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/flybody/all_geom_suffixes.yaml",
+      "bytes": 1499,
+      "sha256": "627c1ac29b4ca8c48f8845463ae98209e8b1c574439b097a4960874c53550ca0",
+      "source_path": "flygym/src/flygym/assets/model/flybody/all_geom_suffixes.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/flybody/fruitfly.xml",
+      "bytes": 68688,
+      "sha256": "ea3752d193c92eb5a2ea8fabfc8e9254be50a6714700401cfdf5435aa1f86945",
+      "source_path": "flygym/src/flygym/assets/model/flybody/fruitfly.xml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/flybody/joints.yaml",
+      "bytes": 10998,
+      "sha256": "81a0cbd815ef1db7b5a5cf5356a3548a61b9366f5be6239993181aa80ca216b6",
+      "source_path": "flygym/src/flygym/assets/model/flybody/joints.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/flybody/mujoco_globals.yaml",
+      "bytes": 547,
+      "sha256": "1a9a45dbabb123ecc91f3cba2dfa3ed6e6ba55abf9442723f03b3e7c46968e53",
+      "source_path": "flygym/src/flygym/assets/model/flybody/mujoco_globals.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/flybody/pose/flight/yaw_roll_pitch.yaml",
+      "bytes": 1621,
+      "sha256": "6f2e790ee4fd89a7fd686fe0d6a752854762e5b1c0374c5cc8c91107990525d8",
+      "source_path": "flygym/src/flygym/assets/model/flybody/pose/flight/yaw_roll_pitch.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/flybody/pose/neutral/yaw_roll_pitch.yaml",
+      "bytes": 155,
+      "sha256": "5a352446b310f4ca0c26c2cd0819a85d156cdbf5dc7c5f192b4ccc5f60138de2",
+      "source_path": "flygym/src/flygym/assets/model/flybody/pose/neutral/yaw_roll_pitch.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/flybody/rigging.yaml",
+      "bytes": 24687,
+      "sha256": "42b146439c2ac47481af7adc7a593903643a2ec74b12d34ddf80a8f5a2a202fc",
+      "source_path": "flygym/src/flygym/assets/model/flybody/rigging.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/flybody/vision.yaml",
+      "bytes": 885,
+      "sha256": "9c978ebad9df06cce663b2fdab6a3915b90e0ce7ac1ea51f7b4a875abc6fd0c8",
+      "source_path": "flygym/src/flygym/assets/model/flybody/vision.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/flybody/visuals.yaml",
+      "bytes": 983,
+      "sha256": "f8fc6a3cca5477740de2f7b21b8eaa8bfe59494296e95f569435d0604e7949ec",
+      "source_path": "flygym/src/flygym/assets/model/flybody/visuals.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/musculoskeletal/best_combined_arm_damping_stiff_cvt3.xml",
+      "bytes": 50218,
+      "sha256": "388ae76c99d685c16371223f0f60f88d3592d5b3c140e695dad63af221ca4e11",
+      "source_path": "flygym/src/flygym/assets/model/musculoskeletal/best_combined_arm_damping_stiff_cvt3.xml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/compound_eye.npz",
+      "bytes": 27591,
+      "sha256": "51afb29664ac1f4ef05535f417ae37ed8a625911c99995720ca382799eef36b3",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/compound_eye.npz"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/legacy/flygym1_config.yaml",
+      "bytes": 7535,
+      "sha256": "52b1de323014f316b5d4245f2b08bfcf18bad855afc49fcd2465edeccdfa4100",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/legacy/flygym1_config.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/legacy/flygym1_deepfly3d_rollyawpitch.xml",
+      "bytes": 47920,
+      "sha256": "e5ba761199e6c896cf6d9d45b198eb453f467dfeec9b47af10626aa65ea7f3c5",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/legacy/flygym1_deepfly3d_rollyawpitch.xml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/legacy/flygym1_seqikpy_yawpitchroll.xml",
+      "bytes": 47916,
+      "sha256": "b274108e3e187ca1438ddea3c5e1944187809c56cfcad3a18f1a05c93b63bc7a",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/legacy/flygym1_seqikpy_yawpitchroll.xml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen12.stl",
+      "bytes": 100084,
+      "sha256": "656b60100c06b0a8eb2dfbd201b12cac5eb31ffec6bf9c6c4ff3f97d14376371",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen12.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen3.stl",
+      "bytes": 100084,
+      "sha256": "264af5ede95bfcb11720219b31c76141a0921394f7c46e7fb7fb6b7066880f3b",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen3.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen4.stl",
+      "bytes": 99984,
+      "sha256": "662bbc3af32a987511af04e437d02c40e99840960809f5020abe9ec91b226ca4",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen4.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen5.stl",
+      "bytes": 99984,
+      "sha256": "87d1de98ad39ba52c096e0fd3b4860ae3a0aadeb4be46cac824e9b2501be6c48",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen5.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen6.stl",
+      "bytes": 99984,
+      "sha256": "748dda76a46554fd1743113eaafdf0dc2d10546095f5420406745e0eb47f87fb",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_abdomen6.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_haustellum.stl",
+      "bytes": 99984,
+      "sha256": "babceb7a6adf0c88e8de6ce9810c32b397d3d1cdd073c0b1bea1df9d8c6ac4e9",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_haustellum.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_head.stl",
+      "bytes": 99984,
+      "sha256": "39c51acbdf5957af95e294fa485cd7602103ca83bf451e95e29d251bd43765b6",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_head.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_rostrum.stl",
+      "bytes": 100084,
+      "sha256": "4ed0fa33c5867013482011e2ff656b71189f2b29dfb0bda2b0797961d95d12e4",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_rostrum.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_thorax.stl",
+      "bytes": 100084,
+      "sha256": "b7fac1a3bcbad2100d063bae2ae6e81217e808f3c32564763ee7e43ec3904969",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/c_thorax.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_arista.stl",
+      "bytes": 100084,
+      "sha256": "6201af1cbe213ee6e259a6d89df65080f9cb9d806e6526cbcc7c5f1ae793f97c",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_arista.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_eye.stl",
+      "bytes": 100084,
+      "sha256": "08ce40c3264c9ab87703b6c013eae39d1bc48fa3e4cf02aec06d529c94e70daf",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_eye.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_funiculus.stl",
+      "bytes": 26584,
+      "sha256": "d2a6d35751922fb8b1ce07b269bc432f33d7f8f6d243b2dd1801e021b91d8156",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_funiculus.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_haltere.stl",
+      "bytes": 41284,
+      "sha256": "13d77fcca66fca90db5cf00b33a7369ae80366fe39974df3667e709882e64ed6",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_haltere.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_pedicel.stl",
+      "bytes": 100084,
+      "sha256": "6de0f06e57c78f8738f67c0c52b85e74cb105789497a4183944e90211d3a4bf4",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_pedicel.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_wing.stl",
+      "bytes": 100034,
+      "sha256": "142f77f15008fd75e1490b546bb859cf98c056121f1abd65acea2052c4e7764c",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/l_wing.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_coxa.stl",
+      "bytes": 100084,
+      "sha256": "bff053bfee772796dae2b396aa0e3be12919b7fb1ee33b5fde369bec00944b64",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_coxa.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus1.stl",
+      "bytes": 89584,
+      "sha256": "29085dda732699c4a3110458303adf2eec667f7db6e42166d408c260ae6acf5e",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus1.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus2.stl",
+      "bytes": 89884,
+      "sha256": "996735c15a7e8e0c022babf5500224fa6e23de0e277305279d4b6787d56335d8",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus2.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus3.stl",
+      "bytes": 100084,
+      "sha256": "166044083a5a4a0e8b7db91cdd71ef0ea0e3feb18f1630955156de14931d9495",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus3.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus4.stl",
+      "bytes": 100034,
+      "sha256": "c90d8c6ebd0e2384a45524944e4fb2e02ba413be26ee04bc5030b2afb5876943",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus4.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus5.stl",
+      "bytes": 100084,
+      "sha256": "93b048052461fa756a767608418ec90e537435a1ff282f2a393faa45ba60ae73",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tarsus5.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tibia.stl",
+      "bytes": 85534,
+      "sha256": "8138fe5f1fc52588dca6677bb338d39451813ac96159f78d6cf677eba73f3862",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_tibia.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_trochanterfemur.stl",
+      "bytes": 80984,
+      "sha256": "50e4e7baf2852a369f0dda2a2c9708a68c45893b3019a79dd74799e8e2ea64c9",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lf_trochanterfemur.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_coxa.stl",
+      "bytes": 100084,
+      "sha256": "ad3a10789b8bd5e0f3db2667a1fe373ffdb83cfc876b34d60508e9e34a51366d",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_coxa.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus1.stl",
+      "bytes": 38934,
+      "sha256": "61af16259215525e092d61426b874c7855485a9c7cfa91eecfc2fe99281a2dc6",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus1.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus2.stl",
+      "bytes": 98684,
+      "sha256": "da796bc3ad5d355b9e941aeeb6ad96c7fb00dee7421995605dcc81cd6fd7af12",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus2.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus3.stl",
+      "bytes": 100084,
+      "sha256": "08280c942abf91279e86414d064f39cae2b46ba9f62845252a9763d0839fabe5",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus3.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus4.stl",
+      "bytes": 99984,
+      "sha256": "623f9059236af1327770f6f8e5e4fb8dc87930c49f5559c36d3d4245f51f7678",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus4.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus5.stl",
+      "bytes": 100084,
+      "sha256": "1b86c811928d0a6e04c693b9a213f06c0f7a037584252fc8f35d408be1bf87e8",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tarsus5.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tibia.stl",
+      "bytes": 37484,
+      "sha256": "2853873ade9abeb35da5f1a6c822d223bbe19a50d8ed77921bb77743b4782a60",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_tibia.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_trochanterfemur.stl",
+      "bytes": 100084,
+      "sha256": "8e6b7ee8c4f6c388b64250086acc952c10abd469ac7bf0fb7015c2837e53d423",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lh_trochanterfemur.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_coxa.stl",
+      "bytes": 100084,
+      "sha256": "01a6f4f4147b7cd308f0a1db79786694632c9fe5a3425b5e3454a7fa7624897b",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_coxa.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus1.stl",
+      "bytes": 46284,
+      "sha256": "b7f50bfe1e75dfa65110a4f80e0216858a7a75712115b04605f344c8e837b1ae",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus1.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus2.stl",
+      "bytes": 77884,
+      "sha256": "2dbb000ae11ef58de0023ccbdbfc8f1c5ff7b7517824a58d3e204f3ee00770c4",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus2.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus3.stl",
+      "bytes": 92884,
+      "sha256": "8f1814f0054382e037279f04d0bb998e36ccaabd57ec418d35dd6f7e47bd51bb",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus3.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus4.stl",
+      "bytes": 100084,
+      "sha256": "3f2881bd6f1fdb445bf01c00cac53c9a1b30388cd3fdc1b327704c60f138bf03",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus4.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus5.stl",
+      "bytes": 49384,
+      "sha256": "3e9a76e4c0c4e829705271846f93a3aa056a0e87bc99996519722eeb841c1b70",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tarsus5.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tibia.stl",
+      "bytes": 33884,
+      "sha256": "dc1ad6da6db91ba703150e6150f59a498f9dbd311b1ec0678da3f896c421dab5",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_tibia.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_trochanterfemur.stl",
+      "bytes": 41384,
+      "sha256": "9619105028e5006d891b12dfced77aafa3c41a599edbf49d14691907ce2eb502",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/lm_trochanterfemur.stl"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/simplification_metadata.csv",
+      "bytes": 4138,
+      "sha256": "c53fde57f8faac6a99b3289280c1cf2bcd5e6e547692435dbcb115d8c52cf971",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/meshes/simplified_max2000faces/simplification_metadata.csv"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/mujoco_globals.yaml",
+      "bytes": 883,
+      "sha256": "deeff4d7d653f4de1ac238c061f4ab20d8fe60fd804ae3c8b3d66ec55a1ea8af",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/mujoco_globals.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/pose/_manual_specs/neutral.yaml",
+      "bytes": 1444,
+      "sha256": "d7d0fd4b577823d9c381b271a0b1df6aa402b77c710e640b5e7e566bc8bd831d",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/pose/_manual_specs/neutral.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/pitch_roll_yaw.yaml",
+      "bytes": 1230,
+      "sha256": "9537f75b67d460f56b04dc4e38bc545089982d2ca766d19bbce7fd9f2b190b3e",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/pitch_roll_yaw.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/pitch_yaw_roll.yaml",
+      "bytes": 1227,
+      "sha256": "ca484d430fc43238ebc9c48d87059ca825f39291c15c9f2e9a211522acf267a5",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/pitch_yaw_roll.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/roll_pitch_yaw.yaml",
+      "bytes": 1175,
+      "sha256": "8cfcf774b7460d9a6d8a95ad0987b9d19100ebda0b76d730ee0279c40485db67",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/roll_pitch_yaw.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/roll_yaw_pitch.yaml",
+      "bytes": 1169,
+      "sha256": "2daf6e3728bc078d7e3bc1e801943f51002c36002dcdbd43751bbcb99a4c4d09",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/roll_yaw_pitch.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/yaw_pitch_roll.yaml",
+      "bytes": 1223,
+      "sha256": "8b822438e12333b5d671ee32f5b6a554fa64a4b1accd9abd08199b2d49e2a2ef",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/yaw_pitch_roll.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/yaw_roll_pitch.yaml",
+      "bytes": 1170,
+      "sha256": "be52cacf6588c3c7447f7641b510ee7ec25b4c4e6483b8b611a1430bcef141e6",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/pose/neutral/yaw_roll_pitch.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/rigging.yaml",
+      "bytes": 6701,
+      "sha256": "c7cf0fa8c44ff2d806f18d9b857904de209cd6b9dbae950ab0c1484f5e7968a2",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/rigging.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/vision/ommatidia_id_map.npy",
+      "bytes": 460928,
+      "sha256": "270baa562cd56b74c91fd3d0a218548aaf41c00df3401ebf521a0461adadf21d",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/vision/ommatidia_id_map.npy"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/vision/pale_mask.npy",
+      "bytes": 849,
+      "sha256": "1489f64d82dbf35d488448d0a86afa7314be1f29a58ffc7ce4c454a5d492bb3f",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/vision/pale_mask.npy"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/vision.yaml",
+      "bytes": 908,
+      "sha256": "e470fbb022ea17cf39ffee899d711c756a64c0d2f19df3a0ab98f7758f1f3256",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/vision.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/assets/model/neuromechfly/visuals.yaml",
+      "bytes": 4748,
+      "sha256": "c1251686cb5f87572e074b233e87593aa875cd03963924c66a24523386cd1545",
+      "source_path": "flygym/src/flygym/assets/model/neuromechfly/visuals.yaml"
+    },
+    {
+      "path": "flygym/src/flygym/compose/__init__.py",
+      "bytes": 1350,
+      "sha256": "f1240abceb08cbcc2fecb49a9dae49478606512e78131b43d07a994e79e37e0c",
+      "source_path": "flygym/src/flygym/compose/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/base.py",
+      "bytes": 4293,
+      "sha256": "22e5e386936349decbce9f2a85b6b8cf030d9d2883d47b2b21ecce1a6af8bb44",
+      "source_path": "flygym/src/flygym/compose/base.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/fly/__init__.py",
+      "bytes": 877,
+      "sha256": "f9cb7bc8f23f7af1d9261f9b23e7f1d0ef2ddcfb1b4d087a95c1fcaa6afa2a8d",
+      "source_path": "flygym/src/flygym/compose/fly/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/fly/base_fly.py",
+      "bytes": 38349,
+      "sha256": "f3ce703ea0cae20bc08a195a1958c8df8b6842670e8b03260cc698e3063e3608",
+      "source_path": "flygym/src/flygym/compose/fly/base_fly.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/fly/flybody.py",
+      "bytes": 41299,
+      "sha256": "b296dc65d913c86cfd1eccdeed04274554f9ffbcf8eb757724e06fa40271c76c",
+      "source_path": "flygym/src/flygym/compose/fly/flybody.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/fly/musculoskeletal.py",
+      "bytes": 24480,
+      "sha256": "126b5e06d9a304df15aa9ffa4e7740df8a85f93c1db31799dc2775dc552c16fe",
+      "source_path": "flygym/src/flygym/compose/fly/musculoskeletal.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/fly/neuromechfly.py",
+      "bytes": 5289,
+      "sha256": "d0975ab75b9cbec0cd5cde30361eb1f249edc38de22242fee06107e84d5cdfa7",
+      "source_path": "flygym/src/flygym/compose/fly/neuromechfly.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/physics.py",
+      "bytes": 7648,
+      "sha256": "89b1c8bdbba054f9349670d7e59dc4727e2a671bbbccef4754db74f767ee6344",
+      "source_path": "flygym/src/flygym/compose/physics.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/pose.py",
+      "bytes": 6342,
+      "sha256": "dbf5485cacd6266fbb287b819bb39860adf5a021604058ca4ee40093f5bf0d49",
+      "source_path": "flygym/src/flygym/compose/pose.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/world/__init__.py",
+      "bytes": 473,
+      "sha256": "282a2ab76f38ac5a60e015f5a1ba315553a5d1318e09f4693a4a9a43a4885218",
+      "source_path": "flygym/src/flygym/compose/world/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/world/base_world.py",
+      "bytes": 16253,
+      "sha256": "2350e127c64890a28a9bd54b606e3fe59efd4aac71b050daf3afd248d7a45357",
+      "source_path": "flygym/src/flygym/compose/world/base_world.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/world/complex_terrain.py",
+      "bytes": 9298,
+      "sha256": "dc395a14b0a08c8f9b97582668917daf72b14c805aea406c330d146a76197f60",
+      "source_path": "flygym/src/flygym/compose/world/complex_terrain.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/world/flat_ground.py",
+      "bytes": 1993,
+      "sha256": "6d60d16080dd478b2cfa2fa29020fa7e820097096e5e97592138a5d3ef231a89",
+      "source_path": "flygym/src/flygym/compose/world/flat_ground.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/world/musculoskeletal.py",
+      "bytes": 4103,
+      "sha256": "27206eb48e657e069daa2c57ae98052f971e3f6e5ef4ec6f45d902e6eb3d5884",
+      "source_path": "flygym/src/flygym/compose/world/musculoskeletal.py"
+    },
+    {
+      "path": "flygym/src/flygym/compose/world/tethered_world.py",
+      "bytes": 1998,
+      "sha256": "f5805422b0cc830d967e82b88a17147df6bfcf67a36bbf953e4333350f82fff7",
+      "source_path": "flygym/src/flygym/compose/world/tethered_world.py"
+    },
+    {
+      "path": "flygym/src/flygym/flybody/__init__.py",
+      "bytes": 185,
+      "sha256": "b3ceb479b3807eeef8bf81e9515222eb7ad666330f29183b1ca7139ef114436b",
+      "source_path": "flygym/src/flygym/flybody/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym/flybody/anatomy_flybody.py",
+      "bytes": 14336,
+      "sha256": "f24cabaa1371ada8ce41cb9b6e166968f53bfcceabb73ace3abccb8eaea8e912",
+      "source_path": "flygym/src/flygym/flybody/anatomy_flybody.py"
+    },
+    {
+      "path": "flygym/src/flygym/flybody/parse_flybody.py",
+      "bytes": 30867,
+      "sha256": "f8c832b4fa17c0ea3ed5948cec8547783b5ec1af10857d6af6d5e21ddc08f761",
+      "source_path": "flygym/src/flygym/flybody/parse_flybody.py"
+    },
+    {
+      "path": "flygym/src/flygym/rendering.py",
+      "bytes": 19449,
+      "sha256": "885d7a9543ee3dc2dd238c41239da3decadf6beccedfe3f5f9a886956fceddf5",
+      "source_path": "flygym/src/flygym/rendering.py"
+    },
+    {
+      "path": "flygym/src/flygym/simulation.py",
+      "bytes": 31927,
+      "sha256": "5daeec0de1f88ba7abb62c0c5bc3fa027fa3c78ac8140aab7f0b62f40bfdb070",
+      "source_path": "flygym/src/flygym/simulation.py"
+    },
+    {
+      "path": "flygym/src/flygym/utils/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_path": "flygym/src/flygym/utils/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym/utils/api1to2.py",
+      "bytes": 2106,
+      "sha256": "820c726f9f3e23ac22155a011d919a2327af00c3d2a042a542a584827f305680",
+      "source_path": "flygym/src/flygym/utils/api1to2.py"
+    },
+    {
+      "path": "flygym/src/flygym/utils/assets_lazy_loading.py",
+      "bytes": 9911,
+      "sha256": "b626cde10234683c64a3a184fdf66b64c6955cd35b7cf771fa25f69599778862",
+      "source_path": "flygym/src/flygym/utils/assets_lazy_loading.py"
+    },
+    {
+      "path": "flygym/src/flygym/utils/exceptions.py",
+      "bytes": 152,
+      "sha256": "5c0a661aeed209e28866caa2cd2e775ebc46e88bef8a29eabb3e8dea9f3614b0",
+      "source_path": "flygym/src/flygym/utils/exceptions.py"
+    },
+    {
+      "path": "flygym/src/flygym/utils/math.py",
+      "bytes": 5906,
+      "sha256": "8a57a9623928add383bf58f790162557f5e504b7a77ff20af03148036d1b34db",
+      "source_path": "flygym/src/flygym/utils/math.py"
+    },
+    {
+      "path": "flygym/src/flygym/utils/mjcf.py",
+      "bytes": 14777,
+      "sha256": "c7e987fc920a9bbc11381d405d01e856594b9d18a04ba69b0d0d8bc227759969",
+      "source_path": "flygym/src/flygym/utils/mjcf.py"
+    },
+    {
+      "path": "flygym/src/flygym/utils/plot.py",
+      "bytes": 636,
+      "sha256": "27889e9b833626ff3ed3a24d02f10e1198a64cc6ee5648a7d4ea206e89f05177",
+      "source_path": "flygym/src/flygym/utils/plot.py"
+    },
+    {
+      "path": "flygym/src/flygym/utils/pose_conversion.py",
+      "bytes": 7045,
+      "sha256": "3cc18b452a083976136245aa4a7a6c95ed369fb7349bc8d39f629e410350182f",
+      "source_path": "flygym/src/flygym/utils/pose_conversion.py"
+    },
+    {
+      "path": "flygym/src/flygym/utils/profiling.py",
+      "bytes": 9529,
+      "sha256": "8ec84e4a21d9f79171227d7100d900a1fa61be580cb4c41b0b5c226212984ea8",
+      "source_path": "flygym/src/flygym/utils/profiling.py"
+    },
+    {
+      "path": "flygym/src/flygym/utils/video.py",
+      "bytes": 1246,
+      "sha256": "28d1b476efdb6c6dc5eb2a4d8a07cf9059a940e8864c138f45b9f59a1e6a95fa",
+      "source_path": "flygym/src/flygym/utils/video.py"
+    },
+    {
+      "path": "flygym/src/flygym/vision/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_path": "flygym/src/flygym/vision/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym/vision/retina.py",
+      "bytes": 11529,
+      "sha256": "36c7367e0a38d1b9453c58b003cf723a60e9011229b698c96f5e54d6cfa813d2",
+      "source_path": "flygym/src/flygym/vision/retina.py"
+    },
+    {
+      "path": "flygym/src/flygym/warp/__init__.py",
+      "bytes": 175,
+      "sha256": "29863db563f1e66722907d2ff407fbbaaea9e41a38e134ebd62d214daaa0c740",
+      "source_path": "flygym/src/flygym/warp/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym/warp/rendering.py",
+      "bytes": 17931,
+      "sha256": "3fd7114cd4355cd6d632b01569c848fc208c51b671ca16ce3e0e33ceb4efaf0e",
+      "source_path": "flygym/src/flygym/warp/rendering.py"
+    },
+    {
+      "path": "flygym/src/flygym/warp/simulation.py",
+      "bytes": 16984,
+      "sha256": "a2c3888a6c9af7ed92f3ea16333acaff694cc4e12e9d630c5908ea85a604625b",
+      "source_path": "flygym/src/flygym/warp/simulation.py"
+    },
+    {
+      "path": "flygym/src/flygym/warp/utils.py",
+      "bytes": 7767,
+      "sha256": "f6ecc96e96784b9da9c95232b552299ba2ac8a2c64485efcf4c46d7a3a22adaa",
+      "source_path": "flygym/src/flygym/warp/utils.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_path": "flygym/src/flygym_demo/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/ball_flybody_data/assets/ball_flybody_clip.npz",
+      "bytes": 19998,
+      "sha256": "f04c7e019e1049eb7eeb808abda971555c4d44542d7a3038b207aa02c8517cb0",
+      "source_path": "flygym/src/flygym_demo/ball_flybody_data/assets/ball_flybody_clip.npz"
+    },
+    {
+      "path": "flygym/src/flygym_demo/benchmark/__init__.py",
+      "bytes": 361,
+      "sha256": "5caf83464d6e9df10ce297aab212ac9a6e79ac8729ed547336dec1b368d5a2d0",
+      "source_path": "flygym/src/flygym_demo/benchmark/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/benchmark/time_gpu_simulation.py",
+      "bytes": 6579,
+      "sha256": "6b1a1faeebe8549953b42f3fe8fd94b5dae6cdea75f2b1d729f102621f59915f",
+      "source_path": "flygym/src/flygym_demo/benchmark/time_gpu_simulation.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/__init__.py",
+      "bytes": 1174,
+      "sha256": "46847f3f60ae8e228f48ec6ac920826348b4476dfe8d0098b3da4a78d5e5073c",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/assets/flybody_step_selection.json",
+      "bytes": 562,
+      "sha256": "e57a1f09339aee0bd87b9078be183de164f7a418f697dd13ef747ddfa12eddd9",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/assets/flybody_step_selection.json"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/assets/single_steps_flybody.meta.json",
+      "bytes": 1332,
+      "sha256": "1236bc2f968e0fc160111d5f160a60bbd35242a82733df4eba76edb60e3a675f",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/assets/single_steps_flybody.meta.json"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/assets/single_steps_flybody.npz",
+      "bytes": 28186,
+      "sha256": "25c4d9ae6fa2adf7f4e30c696b8c07f8810721e352feb17e462b094defe2736b",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/assets/single_steps_flybody.npz"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/assets/single_steps_untethered.pkl",
+      "bytes": 18024,
+      "sha256": "1e5b28bb6b3f50ac95a04773ea37af28d05e26d03bd90fdba57fa1b3eacfaf8c",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/assets/single_steps_untethered.pkl"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/build_flybody_preprogrammed_steps.ipynb",
+      "bytes": 16666,
+      "sha256": "47bc9894c7e3d2d7efad2fe75140d820b03eda6f1e17741a2ef4a71f0db05850",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/build_flybody_preprogrammed_steps.ipynb"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/common.py",
+      "bytes": 3516,
+      "sha256": "cb7c203e98b24d57d899f10a2a45d04f9209d43f7ffdad47cff6a80f6df2a8cd",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/common.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/cpg_controller.py",
+      "bytes": 6528,
+      "sha256": "0194acbd7c27529a3be3875d016aa0a64a8ec6918407671740063d59c1fd18f3",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/cpg_controller.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/flybody_step_extraction.py",
+      "bytes": 18827,
+      "sha256": "99873703c11d0d645241a41bd54cfae8f6427d43a2a99522628453046ba63589",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/flybody_step_extraction.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/hybrid_controller.py",
+      "bytes": 12138,
+      "sha256": "0ddde60be46033110cda032d18221d21078f346a008503de88b4ce74b8e63727",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/hybrid_controller.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/preprogrammed.py",
+      "bytes": 12912,
+      "sha256": "ca012ee5caf38b96390489012d0d6074877caa340a7523b79fcc8e17a8f0e3d4",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/preprogrammed.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/rule_based_controller.py",
+      "bytes": 6767,
+      "sha256": "434a86b70dc5b7639a1cb7736a9069bde1c2f66b6cbdb74ee32987f3005ca8fc",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/rule_based_controller.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/complex_terrain/turning_controller.py",
+      "bytes": 1195,
+      "sha256": "d56e877fc2c9233bedd93ff15559af149d971b243d26b7c48f5e45ef8a93901d",
+      "source_path": "flygym/src/flygym_demo/complex_terrain/turning_controller.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/muscle_imitation/__init__.py",
+      "bytes": 2081,
+      "sha256": "005a2bcde0c256cb9b1e6005f596388d6a5bb746afe182bbd1896ad4e4fa86e2",
+      "source_path": "flygym/src/flygym_demo/muscle_imitation/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/muscle_imitation/__main__.py",
+      "bytes": 5612,
+      "sha256": "b358634180eb49d7043b6b984f0ceb78df88944763f35c9fef0d5aaedf9c84ef",
+      "source_path": "flygym/src/flygym_demo/muscle_imitation/__main__.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/muscle_imitation/assets/mocap/qpos/0002.npy",
+      "bytes": 12728,
+      "sha256": "aa7e3e72325d7d76a17863057cbaba9259a346d66e41b7d820411570d5e00a42",
+      "source_path": "flygym/src/flygym_demo/muscle_imitation/assets/mocap/qpos/0002.npy"
+    },
+    {
+      "path": "flygym/src/flygym_demo/muscle_imitation/assets/mocap/qvel/0002.npy",
+      "bytes": 12728,
+      "sha256": "c472a3e03ed25a614efcb90e54641e41a031d23024092d99f44b4448b581dd12",
+      "source_path": "flygym/src/flygym_demo/muscle_imitation/assets/mocap/qvel/0002.npy"
+    },
+    {
+      "path": "flygym/src/flygym_demo/muscle_imitation/assets/mocap/xipos/0002.npy",
+      "bytes": 21728,
+      "sha256": "3f73c47ee4692b0ebf9a760869d1ea05af6c8bbd5795320fb2edb38f53c5c20c",
+      "source_path": "flygym/src/flygym_demo/muscle_imitation/assets/mocap/xipos/0002.npy"
+    },
+    {
+      "path": "flygym/src/flygym_demo/muscle_imitation/assets/mocap/xivel/0002.npy",
+      "bytes": 43328,
+      "sha256": "3eb99125864b8ecdf05286c72301eb1954ae9d9e2e113b350b6ca1c02f6e8d61",
+      "source_path": "flygym/src/flygym_demo/muscle_imitation/assets/mocap/xivel/0002.npy"
+    },
+    {
+      "path": "flygym/src/flygym_demo/muscle_imitation/data.py",
+      "bytes": 6798,
+      "sha256": "7ce15c262330fad9555296ff453e5a6e62827d302da108888a9f806fda2f323a",
+      "source_path": "flygym/src/flygym_demo/muscle_imitation/data.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/muscle_imitation/env.py",
+      "bytes": 16088,
+      "sha256": "39f94e0488bf6fa958d6d418a1484d07d334319202c69bbb41a8eaf5edc87415",
+      "source_path": "flygym/src/flygym_demo/muscle_imitation/env.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/muscle_imitation/fly.py",
+      "bytes": 2276,
+      "sha256": "836f2738391e00960e878268c41a7c2dba158ed698f85580b539a5589de8dd7c",
+      "source_path": "flygym/src/flygym_demo/muscle_imitation/fly.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/muscle_imitation/record.py",
+      "bytes": 4066,
+      "sha256": "ddfbec3aff56a64ccc72230626cfd5382abb7e341615fb3ad1f6803dba504185",
+      "source_path": "flygym/src/flygym_demo/muscle_imitation/record.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/muscle_imitation/train.py",
+      "bytes": 4921,
+      "sha256": "5ade080e4c0ee25937d6bdfc58dbcabc72b6dcaa16de92512a765f2ac5c971c3",
+      "source_path": "flygym/src/flygym_demo/muscle_imitation/train.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/spotlight_data/__init__.py",
+      "bytes": 73,
+      "sha256": "ae30b3c6a83fb31f0d4747597a96f34833596aec0802641b34cd62d5d45d9031",
+      "source_path": "flygym/src/flygym_demo/spotlight_data/__init__.py"
+    },
+    {
+      "path": "flygym/src/flygym_demo/spotlight_data/assets/spotlight_behavior_clip.npz",
+      "bytes": 528912,
+      "sha256": "6688dcffe1428e88cec0169513f4980abe6e0836ffe467f0ff6da4465db83a09",
+      "source_path": "flygym/src/flygym_demo/spotlight_data/assets/spotlight_behavior_clip.npz"
+    },
+    {
+      "path": "flygym/src/flygym_demo/spotlight_data/preprocessing.py",
+      "bytes": 5898,
+      "sha256": "82227cbdfaed1243ea7c2095ccb689fb4a7768a447fb326ea025d68f7cfbcf23",
+      "source_path": "flygym/src/flygym_demo/spotlight_data/preprocessing.py"
+    },
+    {
+      "path": "flygym/tests/conftest.py",
+      "bytes": 6082,
+      "sha256": "25fe4ae44891803ab625da65cb8732ca46d4a3f3097464c018436e811599ab92",
+      "source_path": "flygym/tests/conftest.py"
+    },
+    {
+      "path": "flygym/tests/core/test_anatomy.py",
+      "bytes": 41840,
+      "sha256": "5510002fbef6c8cd5171debc68bd4ea47604da4b3cb63380fb1845aa364da788",
+      "source_path": "flygym/tests/core/test_anatomy.py"
+    },
+    {
+      "path": "flygym/tests/core/test_assets.py",
+      "bytes": 10192,
+      "sha256": "ca10088e0686a69fc1c5d6b8aa57ecd734c0fb06cbb413c98e2e5349517fe52a",
+      "source_path": "flygym/tests/core/test_assets.py"
+    },
+    {
+      "path": "flygym/tests/core/test_compose.py",
+      "bytes": 37528,
+      "sha256": "395349db9e0d606d6da4aa5a556e8fa9e50ffbb37969a048198e37b3942fc686",
+      "source_path": "flygym/tests/core/test_compose.py"
+    },
+    {
+      "path": "flygym/tests/core/test_musculoskeletal.py",
+      "bytes": 11530,
+      "sha256": "6426d9a55f3947f3307c3f89154fdfd53b9c3f816af616e62f280f2f5fe26d94",
+      "source_path": "flygym/tests/core/test_musculoskeletal.py"
+    },
+    {
+      "path": "flygym/tests/core/test_packaging.py",
+      "bytes": 7821,
+      "sha256": "4f9b09b61c7c78948608d3934ca2b194b8effd7e76dbcd54f6b8f81a966d79b4",
+      "source_path": "flygym/tests/core/test_packaging.py"
+    },
+    {
+      "path": "flygym/tests/core/test_parse_flybody.py",
+      "bytes": 19669,
+      "sha256": "3c7f2f4621d135c3f420ac95e5035dac15840d91082934cfd86f74a17f0abfb9",
+      "source_path": "flygym/tests/core/test_parse_flybody.py"
+    },
+    {
+      "path": "flygym/tests/core/test_physics.py",
+      "bytes": 5755,
+      "sha256": "c31d61f1db9450279dc013c7445bfd5938de0d890b6317520ce9c11a72e86311",
+      "source_path": "flygym/tests/core/test_physics.py"
+    },
+    {
+      "path": "flygym/tests/core/test_pose.py",
+      "bytes": 11034,
+      "sha256": "5f540916cfd16a7ff53aa01ebb7cb32f623d9d1147854b8efe89489c4a465278",
+      "source_path": "flygym/tests/core/test_pose.py"
+    },
+    {
+      "path": "flygym/tests/core/test_rendering.py",
+      "bytes": 11831,
+      "sha256": "f1fd64216169da019d83126449c0b3f3fa16aa6a824474095c5f70076178ea76",
+      "source_path": "flygym/tests/core/test_rendering.py"
+    },
+    {
+      "path": "flygym/tests/core/test_simulation.py",
+      "bytes": 20687,
+      "sha256": "a9e545f7cc649ac1e67c3ac673d34d1d034c0774f6525d8cc86e6ed51eac53ca",
+      "source_path": "flygym/tests/core/test_simulation.py"
+    },
+    {
+      "path": "flygym/tests/core/test_utils.py",
+      "bytes": 19571,
+      "sha256": "7b85ddd1f1dac23c75a16dbbbf0715a8fd3f3b62aba8f46e6832e1cb9b6c524d",
+      "source_path": "flygym/tests/core/test_utils.py"
+    },
+    {
+      "path": "flygym/tests/core/test_vision.py",
+      "bytes": 24259,
+      "sha256": "b82a172a43729fe623cf582644d332cb6aee96df193ec346e5905d8f1dbcf62d",
+      "source_path": "flygym/tests/core/test_vision.py"
+    },
+    {
+      "path": "flygym/tests/examples/test_complex_terrain_locomotion.py",
+      "bytes": 4487,
+      "sha256": "ff1d2995d7d24dcc7888167ada0636299cef77fc94db07cf1a909a84efafa95a",
+      "source_path": "flygym/tests/examples/test_complex_terrain_locomotion.py"
+    },
+    {
+      "path": "flygym/tests/examples/test_flybody_step_extraction.py",
+      "bytes": 13605,
+      "sha256": "b3bbba5d753b877d9634cefca6e5f8ba8e29177b27d8b19acc9f56f67281804b",
+      "source_path": "flygym/tests/examples/test_flybody_step_extraction.py"
+    },
+    {
+      "path": "flygym/tests/examples/test_motion_snippet.py",
+      "bytes": 6821,
+      "sha256": "3b48351019a9681df7fc37944beec8bb41665c6cd43bb4590ca809bf5449bda4",
+      "source_path": "flygym/tests/examples/test_motion_snippet.py"
+    },
+    {
+      "path": "flygym/tests/examples/test_muscle_imitation.py",
+      "bytes": 8721,
+      "sha256": "f815f8ad839c4a682b4a6691ded01906b86269e7ab2dccfe52d176c80161e7d0",
+      "source_path": "flygym/tests/examples/test_muscle_imitation.py"
+    },
+    {
+      "path": "flygym/tests/README.md",
+      "bytes": 50,
+      "sha256": "cf4b771810b4c614f6db50314f5647bfdffcaf730ad9276d6cea01e557799bda",
+      "source_path": "flygym/tests/README.md"
+    },
+    {
+      "path": "flygym/tests/tutorials/conftest.py",
+      "bytes": 2134,
+      "sha256": "828152311cec7ea8f9d6700510f82ff093afb232a5f1e071e7a229ca339c6f6c",
+      "source_path": "flygym/tests/tutorials/conftest.py"
+    },
+    {
+      "path": "flygym/tests/tutorials/test_tutorials.py",
+      "bytes": 1632,
+      "sha256": "07201361bce1e96b74f58bb9fc800e32b312f5a543ddfece2a9bb1f232e6769b",
+      "source_path": "flygym/tests/tutorials/test_tutorials.py"
+    },
+    {
+      "path": "flygym/tests/warp/conftest.py",
+      "bytes": 2713,
+      "sha256": "7c0c48fd284c0f0fae42423cc8f9a2a7e89c60b2d3396cb8943c39ff0b59bbdc",
+      "source_path": "flygym/tests/warp/conftest.py"
+    },
+    {
+      "path": "flygym/tests/warp/test_rendering.py",
+      "bytes": 12752,
+      "sha256": "f14679361b0a4a54b145564c4fd00cdc8bfb022b76892579a12b5effac4c96aa",
+      "source_path": "flygym/tests/warp/test_rendering.py"
+    },
+    {
+      "path": "flygym/tests/warp/test_simulation.py",
+      "bytes": 13842,
+      "sha256": "dde7f92dc65840d0078cc67e84ab021ba249ae3b4c5d30a3c25b3529ce12929f",
+      "source_path": "flygym/tests/warp/test_simulation.py"
+    },
+    {
+      "path": "flygym/tests/warp/test_utils.py",
+      "bytes": 15017,
+      "sha256": "d778a8f57758a0ff2d8b42c10b2a3b45b831dec8ea16508351deb782815cdd5d",
+      "source_path": "flygym/tests/warp/test_utils.py"
+    },
+    {
+      "path": "flygym/tutorials/1a_basic_model_composition.ipynb",
+      "bytes": 24265,
+      "sha256": "68be10cabea93b131c0caaf75dee60746efa25ec5297bb1931203329a03b289f",
+      "source_path": "flygym/tutorials/1a_basic_model_composition.ipynb"
+    },
+    {
+      "path": "flygym/tutorials/1b_advanced_model_composition.ipynb",
+      "bytes": 38915,
+      "sha256": "91616a33ce14a0f9ef0596592e76b0f5ff542b902893d560cdb6762355f1b6c3",
+      "source_path": "flygym/tutorials/1b_advanced_model_composition.ipynb"
+    },
+    {
+      "path": "flygym/tutorials/2_replaying_experimental_recordings.ipynb",
+      "bytes": 25621,
+      "sha256": "30177e2c3e37170720705da9de2bf3214c65240d48216daba220d0d2367b75a8",
+      "source_path": "flygym/tutorials/2_replaying_experimental_recordings.ipynb"
+    },
+    {
+      "path": "flygym/tutorials/3_gpu_accelerated_simulation.ipynb",
+      "bytes": 33805,
+      "sha256": "280c8af1c4f9f8bccd5e06e9659649b10a3eb60ea161eba2cf1fed17761c2a4a",
+      "source_path": "flygym/tutorials/3_gpu_accelerated_simulation.ipynb"
+    },
+    {
+      "path": "flygym/tutorials/4a_cpg_controller.ipynb",
+      "bytes": 10811,
+      "sha256": "65df7361ee995c6f35c2f42b88d170254df3d626e495cb690ccedf24a46a7a94",
+      "source_path": "flygym/tutorials/4a_cpg_controller.ipynb"
+    },
+    {
+      "path": "flygym/tutorials/4b_rule_based_controller.ipynb",
+      "bytes": 16239,
+      "sha256": "046c1e740fb670331f2b70ea4f13de7862ac8853244ae03413ae13853a315fa7",
+      "source_path": "flygym/tutorials/4b_rule_based_controller.ipynb"
+    },
+    {
+      "path": "flygym/tutorials/4c_hybrid_controller.ipynb",
+      "bytes": 8665,
+      "sha256": "091680cd2ec8dded35ab6fce196a277ab7a8bd19620ddd8b62d562fe22834b37",
+      "source_path": "flygym/tutorials/4c_hybrid_controller.ipynb"
+    },
+    {
+      "path": "flygym/tutorials/4d_turning_controller.ipynb",
+      "bytes": 8906,
+      "sha256": "0846c33a878add03f05aac9c2f060ccd7a44cdbb2e99664a2dd2836803b10b6e",
+      "source_path": "flygym/tutorials/4d_turning_controller.ipynb"
+    },
+    {
+      "path": "flygym/tutorials/5a_replaying_experimental_flybody_onball.ipynb",
+      "bytes": 14342,
+      "sha256": "5265f80653dff7e45d50b38ca7de67e181cc24bd52c401124373a49c25d9a4d8",
+      "source_path": "flygym/tutorials/5a_replaying_experimental_flybody_onball.ipynb"
+    },
+    {
+      "path": "flygym/tutorials/5b_using_flybody_model.ipynb",
+      "bytes": 13263,
+      "sha256": "66746dca5a8aa2ba1a221fcd7fdf3728d205d23db9e3de550c60292ebd7d7773",
+      "source_path": "flygym/tutorials/5b_using_flybody_model.ipynb"
+    },
+    {
+      "path": "flygym/uv.lock",
+      "bytes": 526563,
+      "sha256": "71ea678148ac786bf0df9b4156f1948d5604a18cf9d79d2f0697956ae1c3483f",
+      "source_path": "flygym/uv.lock"
+    },
+    {
+      "path": "flygym/wasm/game/.gitignore",
+      "bytes": 338,
+      "sha256": "0a9f385296e57ea360af72b58d5ba7bfbbb7b3a4617e48661c42fdf015279ba1",
+      "source_path": "flygym/wasm/game/.gitignore"
+    },
+    {
+      "path": "flygym/wasm/game/game.html",
+      "bytes": 6634,
+      "sha256": "fffc34aca344e2271ad41cf559b76cb7b04c3161d40a1054758e5e3d384cb2fa",
+      "source_path": "flygym/wasm/game/game.html"
+    },
+    {
+      "path": "flygym/wasm/game/game.js",
+      "bytes": 30044,
+      "sha256": "762ee573cadfac3c31e31d68cb3ff3a77b3627028607d00e85cba01046fd59e5",
+      "source_path": "flygym/wasm/game/game.js"
+    },
+    {
+      "path": "flygym/wasm/game/README.md",
+      "bytes": 4981,
+      "sha256": "87d490055d13bdfb7dd23f66401f8acb3f1f402c69be6f93abb693aaf382af39",
+      "source_path": "flygym/wasm/game/README.md"
+    },
+    {
+      "path": "flygym/wasm/README.md",
+      "bytes": 3132,
+      "sha256": "48aff6c449a6e69d45b17f5e9403470dd7d2792d52520916e4ea12fba00d88d9",
+      "source_path": "flygym/wasm/README.md"
+    },
+    {
+      "path": "flygym/wasm/shared/.gitignore",
+      "bytes": 343,
+      "sha256": "8a3545f96dff0b674b131367b2895191ed75af8d6e02a3ff9158bf1edfe6b223",
+      "source_path": "flygym/wasm/shared/.gitignore"
+    },
+    {
+      "path": "flygym/wasm/shared/scene.js",
+      "bytes": 10031,
+      "sha256": "50a48b8a48168df0bd42b053bc060e1fd4d80ff0297f60a0f0ec1d2022dccd59",
+      "source_path": "flygym/wasm/shared/scene.js"
+    },
+    {
+      "path": "flygym/wasm/viewer/.gitignore",
+      "bytes": 419,
+      "sha256": "48629ce6249baf06fee5612e63aca97df0e0299fe94e111f1547a9da133121ff",
+      "source_path": "flygym/wasm/viewer/.gitignore"
+    },
+    {
+      "path": "flygym/wasm/viewer/README.md",
+      "bytes": 2585,
+      "sha256": "dcafd0f5e1d1a3e2fbcf8474b883eca2b3f77921c14f4b7d94ac2b7864c11b1c",
+      "source_path": "flygym/wasm/viewer/README.md"
+    },
+    {
+      "path": "flygym/wasm/viewer/viewer.html",
+      "bytes": 8472,
+      "sha256": "c90a1b028bda104c0498b1a31678c1fd2de4584c6689325d3e9f9975980ac15c",
+      "source_path": "flygym/wasm/viewer/viewer.html"
+    },
+    {
+      "path": "flygym/wasm/viewer/viewer.js",
+      "bytes": 26186,
+      "sha256": "13df16aba5518b2566a5def0722c1c05768a91caae2efdf87cd9e3e0bd50888f",
+      "source_path": "flygym/wasm/viewer/viewer.js"
+    },
+    {
+      "path": "grooming_motor.py",
+      "bytes": 4127,
+      "sha256": "9315fa7f0e0796849d96ddd043357beba79a2c4b5d07ac8c6fa17d586c7228e9",
+      "source_path": "grooming_motor.py"
+    },
+    {
+      "path": "habitat.html",
+      "bytes": 14000,
+      "sha256": "47aac660f3fb891ba241490f7b178b1b7195ab2589789859d2e30ea2616cf59f",
+      "source_path": "habitat.html"
+    },
+    {
+      "path": "habitat.py",
+      "bytes": 33852,
+      "sha256": "62f7f9620c6da27afa9590dd8fde5b06c8b2aa9702f28136ea039d0ccee3f1df",
+      "original_source_path": "habitat.py",
+      "original_sha256": "b901d61ff9f759d68f2373652655c9769e43207ec8be8985605013b59c5d5028",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "habitat_monitor.py",
+      "bytes": 8331,
+      "sha256": "f7768827478302044f09ad4bebbbf83087d106c486c12ad747b8951135a9a648",
+      "original_source_path": "habitat_monitor.py",
+      "original_sha256": "cd1a5d282a06e71c51c451276df345aa582f627acbc5a339edd63d2157bee011",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "habitat_visuals.py",
+      "bytes": 4292,
+      "sha256": "0be8713b5f99db246b3837a918d520bf030d5c0b0cd89ab4b4d8643da418be04",
+      "source_path": "habitat_visuals.py"
+    },
+    {
+      "path": "habitat_world.py",
+      "bytes": 19302,
+      "sha256": "2df363ddf881515248ffb6fb16938b9fab793302b50431d52ba44fa082fd5d65",
+      "source_path": "habitat_world.py"
+    },
+    {
+      "path": "launcher.py",
+      "bytes": 8988,
+      "sha256": "a935a6329272088f1c1db318e263e188ff0afc67cd33ecaa262378a13e1a8b9c"
+    },
+    {
+      "path": "licenses/CC-BY-4.0许可证.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    {
+      "path": "licenses/CC-BY-NC-4.0许可证.txt",
+      "bytes": 19347,
+      "sha256": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0"
+    },
+    {
+      "path": "licenses/fafbseg许可证.txt",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "licenses/FlyBody许可证.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "licenses/uv-LICENSE-APACHE.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "source_path": "licenses/uv-LICENSE-APACHE.txt"
+    },
+    {
+      "path": "licenses/uv-LICENSE-MIT.txt",
+      "bytes": 1077,
+      "sha256": "860e3d7a86b84e6a7012c7a635fc64df475cebc6cce34dfeb73a5982ec58176c",
+      "source_path": "licenses/uv-LICENSE-MIT.txt"
+    },
+    {
+      "path": "neuron_annotations.py",
+      "bytes": 3800,
+      "sha256": "5aefd6dff078ff3aadced1ba504919d95e62663db9171ab8bbc5c432238628fa",
+      "source_path": "neuron_annotations.py"
+    },
+    {
+      "path": "play_fly.py",
+      "bytes": 12693,
+      "sha256": "3201b7bb0b6772d3658a088a1a0a6d10aa9a446724166309bed05cd741d10f7f",
+      "original_source_path": "play_fly.py",
+      "original_sha256": "d30486d93581d59924c820fdd0d52a1e88ab2808d2469d8d5149d2f4fd06b534",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "prepare_activity_catalog.py",
+      "bytes": 2861,
+      "sha256": "b71defc19e985949f4472c83b8cdc4e8ee0936291906b6d41fe3aee0ebbadab1",
+      "source_path": "prepare_activity_catalog.py"
+    },
+    {
+      "path": "prepare_annotations.py",
+      "bytes": 6787,
+      "sha256": "0eedfd763c4e06590d44f5c753928ae511f152679fc13df03279d26042e8f15b",
+      "source_path": "prepare_annotations.py"
+    },
+    {
+      "path": "prepare_morphology.py",
+      "bytes": 9633,
+      "sha256": "59de54f6fd519ea1861f358ffc83e87a8a75015bad3ea9796cb46adcb77b9839",
+      "original_source_path": "prepare_morphology.py",
+      "original_sha256": "c16572e899dd045d1426c8570eeee72725905965adb0248f6fd33c674eb0487d",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "project_info.py",
+      "bytes": 449,
+      "sha256": "882887724070f6c04fca7e979870fc6d484d481851edc5a6c68170a9536711cb"
+    },
+    {
+      "path": "requirements/body-win-x64.lock.txt",
+      "bytes": 6781,
+      "sha256": "9f871f0cc262f8e1d969e0c486c979fae4c919b3fe8b9c96e6da988f515fbf1c"
+    },
+    {
+      "path": "requirements/brain-win-x64.lock.txt",
+      "bytes": 1917,
+      "sha256": "127feaca38d5e363e56c4501e9354cc8d110d5701c196fd751bfc62331f52345"
+    },
+    {
+      "path": "requirements/依赖来源.json",
+      "bytes": 33243,
+      "sha256": "9af056bf285c4b4a04cf873cccb2c9add64b362b23272dd50360498de4e266ed"
+    },
+    {
+      "path": "requirements-body-installed.txt",
+      "bytes": 1256,
+      "sha256": "e47de4d11a24d08bf880dfb7161f10fc233e337299874a8ccb5f0ee64562b76b",
+      "source_path": "requirements-body-installed.txt"
+    },
+    {
+      "path": "requirements-brain-installed.txt",
+      "bytes": 394,
+      "sha256": "67e146db0214a3aaefd61254007164e6746fce4f3414bea0918119dfc84641f6",
+      "source_path": "requirements-brain-installed.txt"
+    },
+    {
+      "path": "Setup.cmd",
+      "bytes": 1294,
+      "sha256": "76aa31795b47cba2b9bf4a257b329582c3ddecfc097e24d76792e6bec838d18a"
+    },
+    {
+      "path": "Start-Activity.cmd",
+      "bytes": 68,
+      "sha256": "487fd76e711fa77a7d666d823d7e030282c6d87ee8b9a37d06f3275d9857f3a5",
+      "original_source_path": "Start-Activity.cmd",
+      "original_sha256": "72cad7a86a5bec960a4fd321c3813ddf3b038505717b3f89b5e800940788a31b",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "Start-Body.cmd",
+      "bytes": 64,
+      "sha256": "66732bada4c563804318c63806707deee1f5adbfd5874fe6258b9dd809f01108",
+      "original_source_path": "Start-Body.cmd",
+      "original_sha256": "edf039cc981f1af6e20cbfffbc73448f04004977e8f97617e02990cb58bb5efa",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "Start-Brain.cmd",
+      "bytes": 65,
+      "sha256": "89c8d07a4d0a096f1d5aa2b69b254c975f5e80a9b0d506d8292c05f3395b907e",
+      "original_source_path": "Start-Brain.cmd",
+      "original_sha256": "a3918d282e5cc41569543dfebea8f31f54f1b28d682f2f50f2da77eade5e4ac4",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "Start-Coupled.cmd",
+      "bytes": 67,
+      "sha256": "05f510f98d3a27b8e5dcb8f3f26ee7b87d8d4fb30a7015f9227d1b08f813ec31",
+      "original_source_path": "Start-Coupled.cmd",
+      "original_sha256": "ddf0f18f40141c6ff63e30445782517db87776120d1d238dbcadb5b4b91eeef3",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "Start-Habitat.cmd",
+      "bytes": 67,
+      "sha256": "21a6980d8c0f2ebfd6a77dd423f8ef0d422f9540478268fdcbdd499d78ece4e3",
+      "original_source_path": "Start-Habitat.cmd",
+      "original_sha256": "7490a538ee4a228a8a6b574bcf5cf83e74812e349c974d6d9b4d13162c31013c",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "Start.cmd",
+      "bytes": 780,
+      "sha256": "33b96f93fc82d3d16d54069186fe9fb1199a5892b57fc6ce5d9859b9a1b3971c"
+    },
+    {
+      "path": "startup_support.py",
+      "bytes": 2178,
+      "sha256": "0afbec40e41b9dad726c17eaf1803f77e3fc50f98fdfb9eea79ea2d52c6a879d"
+    },
+    {
+      "path": "tests/arena_live_check.py",
+      "bytes": 7508,
+      "sha256": "2582d40515cf5a227ede6b677cf0f455d3536e6b3bea0f0a4ae5572afd083ce2",
+      "source_path": "output/arena_live_check.py"
+    },
+    {
+      "path": "tests/behavior_live_check.py",
+      "bytes": 7316,
+      "sha256": "a1805ff8049bce9001bfb4f13b297f461703af4851eb335947ea0d3db2f521bc",
+      "source_path": "output/behavior_live_check.py"
+    },
+    {
+      "path": "tests/brain_controls_live_check.py",
+      "bytes": 5217,
+      "sha256": "62c772ee600c80c6350b252d7c6d7bef9529ab681b8272156df41afaaa911d4e",
+      "source_path": "output/brain_controls_live_check.py"
+    },
+    {
+      "path": "tests/continuous_check.py",
+      "bytes": 5028,
+      "sha256": "99c8254ee1df49eedacea962c73f39f54359f1a607f3c5ac46f0285493f761ac",
+      "source_path": "output/continuous_check.py"
+    },
+    {
+      "path": "tests/recovery_live_check.py",
+      "bytes": 8244,
+      "sha256": "bee68f137184b5134085b5483e2690d8937211cdabd8bbeb61a50ca09cb777ac"
+    },
+    {
+      "path": "tests/startup_live_check.py",
+      "bytes": 12079,
+      "sha256": "ba4a0c4c76f42216029faf425cae77b5d16ef0cc17ba8fc49bef1f644846d3be"
+    },
+    {
+      "path": "tests/test_recovery.py",
+      "bytes": 8470,
+      "sha256": "8a8907e048d5c40639a6383b18c61d199afc5e51daebcda5a71233b1ee9d5111"
+    },
+    {
+      "path": "tests/test_repository_sync.py",
+      "bytes": 2191,
+      "sha256": "14f21a6e15c4f489b1e3f58da252f3d49b5b9e00f7860bf18d5c9757ccec9e3b"
+    },
+    {
+      "path": "tests/test_source_setup.py",
+      "bytes": 6893,
+      "sha256": "3b5015bcc435a0d766d7fc08267fb2b9beb4ee9afa006b7276c50a7fedbbccf7"
+    },
+    {
+      "path": "tests/test_startup.py",
+      "bytes": 9744,
+      "sha256": "36509c2f21204ac3101473643807c306eddfb65819a764a46ce4c64d15f781a6"
+    },
+    {
+      "path": "tests/transmitter_controls_live_check.py",
+      "bytes": 5624,
+      "sha256": "88e05ff76aa987c3366a9a081f778be8e5a0a9403ff8c7e0ac5d7ee6a8671a0a",
+      "source_path": "output/transmitter_controls_live_check.py"
+    },
+    {
+      "path": "tests/workbench_live_check.py",
+      "bytes": 7628,
+      "sha256": "b345f79af6c6f2b17b3ebe6afbfab018add227e35b12d00bf518a673aa3b5712",
+      "source_path": "output/workbench_live_check.py"
+    },
+    {
+      "path": "tools/check_source.py",
+      "bytes": 1091,
+      "sha256": "d6022c0ad2e8d0b885ad272057ad6219390c7b99c4d0c3a8f0b283ae6dd139b6"
+    },
+    {
+      "path": "tools/refresh_repository_inventory.py",
+      "bytes": 1678,
+      "sha256": "8e1193f305ab9828c9ad0668f4701eb9617cbd8956958db71fbeb9bb2f077915"
+    },
+    {
+      "path": "tools/setup_source.py",
+      "bytes": 15254,
+      "sha256": "34eac5e67511310a1b09a3603adb37058f0a394e8c3527ba58782577fc2abcad"
+    },
+    {
+      "path": "tools/verify_repository.py",
+      "bytes": 12270,
+      "sha256": "9063d0d23b39feb7c6f774b65f69fd8b616b227e98d4d44f6c53738e6b5091df"
+    },
+    {
+      "path": "transmitter_modulation.py",
+      "bytes": 4708,
+      "sha256": "f127176b9b322518e739b1af45e4aafc3007228066f4dde6237832e099bee19e",
+      "source_path": "transmitter_modulation.py"
+    },
+    {
+      "path": "verify_activity_groups.mjs",
+      "bytes": 5653,
+      "sha256": "75ca5fa3d91da9159c3781ba764dbbde138577d5e91eddfe7e601e9772992ea0",
+      "source_path": "verify_activity_groups.mjs"
+    },
+    {
+      "path": "verify_annotation_dynamics.py",
+      "bytes": 2085,
+      "sha256": "470bab7695d893f4792f9f71f42585da88faa6046b7af73d943d8212d610a4d8",
+      "source_path": "verify_annotation_dynamics.py"
+    },
+    {
+      "path": "verify_annotations.py",
+      "bytes": 5471,
+      "sha256": "ec9255e56900ba51bf0e5073926daf11f2488e5100801515ead2c7c6bb2d87ae",
+      "source_path": "verify_annotations.py"
+    },
+    {
+      "path": "verify_arena.py",
+      "bytes": 6656,
+      "sha256": "b213de6e13d20ea2590834cc73b6f1008e1960f6a9bc3220cd46c83df0230d9b",
+      "source_path": "verify_arena.py"
+    },
+    {
+      "path": "verify_arena_map.mjs",
+      "bytes": 534,
+      "sha256": "ee547f795265c7f5b514775656f266b8b6aceebe75ae48154baa8e482d35684a",
+      "source_path": "verify_arena_map.mjs"
+    },
+    {
+      "path": "verify_behavior.py",
+      "bytes": 9984,
+      "sha256": "aa3565653722efcb9a00e47515f8e5d973ae85fb0fe08e54643baf060507e094",
+      "source_path": "verify_behavior.py"
+    },
+    {
+      "path": "verify_brain_controls.py",
+      "bytes": 2698,
+      "sha256": "72bb15f383fd2d1e6e2e814876ed6f8950dffdb8073a688a577476a26eb29077",
+      "source_path": "verify_brain_controls.py"
+    },
+    {
+      "path": "verify_transmitter_modulation.py",
+      "bytes": 5005,
+      "sha256": "27b871c3d6befc9b94dd8ff10cd177758740ba8c279dc29e48d41c315a98f656",
+      "source_path": "verify_transmitter_modulation.py"
+    },
+    {
+      "path": "verify_weight_cache.py",
+      "bytes": 2166,
+      "sha256": "8123dc00973fe83421a5526b3706bef368b3e8a63793bac2b05e7267af104851",
+      "source_path": "verify_weight_cache.py"
+    },
+    {
+      "path": "visual_navigation.py",
+      "bytes": 2477,
+      "sha256": "f84de8af3bbdd6a66107cf76a138ec70dd836fcdf7e5abfbc7576a784b44d59f",
+      "source_path": "visual_navigation.py"
+    },
+    {
+      "path": "web/activity_catalog.json",
+      "bytes": 4323305,
+      "sha256": "56df17fa464ad1fd0a07f97932c43ae0ed424d5a527ace2476f9f3a3800483c8",
+      "source_path": "web/activity_catalog.json"
+    },
+    {
+      "path": "web/annotations.css",
+      "bytes": 1511,
+      "sha256": "5b9630c2355e794f9a19dcfe7c7c2565e14b5534232877cf1859c3572c17d193",
+      "source_path": "web/annotations.css"
+    },
+    {
+      "path": "web/annotations.js",
+      "bytes": 7916,
+      "sha256": "e918f50179da5090f7d2c21dac4d2f00700ec7a996b2eda54de5b9eeb610df2c",
+      "source_path": "web/annotations.js"
+    },
+    {
+      "path": "web/arena_tools.js",
+      "bytes": 13119,
+      "sha256": "685455c9341ef588135ccb0dbe8cd26326660839532635357741844b75758681",
+      "source_path": "web/arena_tools.js"
+    },
+    {
+      "path": "web/behavior_controls.js",
+      "bytes": 9374,
+      "sha256": "f83c44f931e27ec4c3505033e5e960fbc86d5b89ee3c9d74de8a653d64eeb858",
+      "source_path": "web/behavior_controls.js"
+    },
+    {
+      "path": "web/brain_controls.js",
+      "bytes": 8128,
+      "sha256": "883842bc01bd9115fb7b2eb57059c39aff131d2f7db0a63e8f2710c347c07081",
+      "source_path": "web/brain_controls.js"
+    },
+    {
+      "path": "web/index.html",
+      "bytes": 12306,
+      "sha256": "dc0d80289e8e8e34d9492b941d09ce1e340ab6e6e3f2b42199ffe5ed2f4437c4",
+      "original_source_path": "web/index.html",
+      "original_sha256": "2f8b6e3a035b7bfa5c467e7638e2a0d20b60b2c19f3e7128db3732d179d02347",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "web/lab.css",
+      "bytes": 11114,
+      "sha256": "773077da9f084f4769fc5f6907d681bf7923b0fbab0304244e3c7858b8bd233d",
+      "source_path": "web/lab.css"
+    },
+    {
+      "path": "web/lab.js",
+      "bytes": 25930,
+      "sha256": "223e05c773866cb9a0005de1c992786e7bee518888030c1e887f3f25a7fe9df3",
+      "original_source_path": "web/lab.js",
+      "original_sha256": "53ef8f4da119ecfd471a714bd6cf751f021920aa525cfe0db08b0cfdce358aab",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "web/morphology.json",
+      "bytes": 3085241,
+      "sha256": "4a350c09ff0c6315d1691bfd265cdb89f710795ce212f6e7757b84dd87805914",
+      "source_path": "web/morphology.json"
+    },
+    {
+      "path": "web/morphology_sources.json",
+      "bytes": 10818,
+      "sha256": "53d509a814e71b142e81454c1cc023469f5881c08e9f4c5654d61ebf5672cf20",
+      "original_source_path": "web/morphology_sources.json",
+      "original_sha256": "c0bbc79e8dbfdf38f16accd35cc552c90ea9482c26345f216e88ab8c817fa762",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "web/neural_activity.css",
+      "bytes": 3892,
+      "sha256": "6fa06656a9341843aee12880f409ac109294a5b5f9d4842c43e0b9b65268ff46",
+      "source_path": "web/neural_activity.css"
+    },
+    {
+      "path": "web/neural_activity.js",
+      "bytes": 18999,
+      "sha256": "ff7b7ad7958885728c17464bb46b3cd6d2be71eccd026f8b1f9936b592c6cecd",
+      "original_source_path": "web/neural_activity.js",
+      "original_sha256": "6a41bac5f859dae37036209c2b6c27daecc6f663870835d40086b49851adaec9",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "web/neural_activity_core.js",
+      "bytes": 4544,
+      "sha256": "f5b475f6ebbbb68cc703aef1ac3176966b3fbd575b2b78a942326c244265051d",
+      "source_path": "web/neural_activity_core.js"
+    },
+    {
+      "path": "web/vendor/OrbitControls.js",
+      "bytes": 38703,
+      "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
+      "source_path": "web/vendor/OrbitControls.js"
+    },
+    {
+      "path": "web/vendor/three.core.js",
+      "bytes": 1403455,
+      "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+      "source_path": "web/vendor/three.core.js"
+    },
+    {
+      "path": "web/vendor/three.LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+      "source_path": "web/vendor/three.LICENSE"
+    },
+    {
+      "path": "web/vendor/three.module.js",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+      "source_path": "web/vendor/three.module.js"
+    },
+    {
+      "path": "web/workbench.css",
+      "bytes": 17295,
+      "sha256": "203e79808d5b76753c03c83452fc709334f490cba185f23c5b116ebb8e0442b3",
+      "source_path": "web/workbench.css"
+    },
+    {
+      "path": "web/workbench.js",
+      "bytes": 10507,
+      "sha256": "6e98d6351101dbd47221f35e46698ee6f29de3e6fc425bce57926b8ac2317b95",
+      "source_path": "web/workbench.js"
+    },
+    {
+      "path": "web/许可与来源.html",
+      "bytes": 90920,
+      "sha256": "c93eba39231d617e1c5383c36b266466c714ed5eb998fb92974a73c314101011"
+    },
+    {
+      "path": "下载记录.md",
+      "bytes": 1947,
+      "sha256": "84ebf3462cc031e3063b3719daa8c48fb8bc3548ac8470e72b14bfe40c760f83",
+      "source_path": "下载记录.md"
+    },
+    {
+      "path": "仓库说明.md",
+      "bytes": 2422,
+      "sha256": "bf0ad249e2f1423f1d4d9e84acf6c5f061c26b61c08b769e2d3031199b5337ac"
+    },
+    {
+      "path": "外部资源清单.json",
+      "bytes": 10929,
+      "sha256": "fce2a3ff7960563dbd619426fbbae40331c5192eb6a0e7b136981bd2c71b261b"
+    },
+    {
+      "path": "引用文献.md",
+      "bytes": 3554,
+      "sha256": "702bd047ff54ecb28ead0b4dac918be995c8516ef4f869dda80e178ef72db548"
+    },
+    {
+      "path": "数据使用与署名.md",
+      "bytes": 4487,
+      "sha256": "6114bcf3a4913ad8433422d614d79bc224a05ef45e60805991069deb916e4424"
+    },
+    {
+      "path": "版本与更新记录.md",
+      "bytes": 2085,
+      "sha256": "b04e291ac6cac4c3e4ac96c5e9c8908ca7b2580847ee8c25ce66bbe7868d5326"
+    },
+    {
+      "path": "版本信息.json",
+      "bytes": 1099,
+      "sha256": "fe6a174192d63566a13354f0ab4ed1aa635728d3ec5e165f06c436f055de4d8b"
+    },
+    {
+      "path": "环境仿真说明.md",
+      "bytes": 14841,
+      "sha256": "9ae058af3a5a8b06e2df97ddc29b00e40f2233217b47d95674860e5aaa8223aa",
+      "source_path": "环境仿真说明.md"
+    },
+    {
+      "path": "神经元注释说明.md",
+      "bytes": 6346,
+      "sha256": "01887f56697a26861e7cc3fb0e766076dfa66a53739de00dde3dd214dfa3fa01",
+      "source_path": "神经元注释说明.md"
+    },
+    {
+      "path": "第三方许可与来源.md",
+      "bytes": 4020,
+      "sha256": "0c6c1ff740bece31f738700c5d42f11896eb36dbb338631084f6348421a257af",
+      "original_source_path": "第三方许可与来源.md",
+      "original_sha256": "048ac8ecd7ad4474d1c51befd267bcde0c6f794e5d515b979945e67e017a439d",
+      "modified_in_release_copy": true
+    },
+    {
+      "path": "脑活动监视说明.md",
+      "bytes": 5561,
+      "sha256": "b51468a9e88f1426737757a5bd776c784393774c6c709e1384a8976b57cc5251",
+      "source_path": "脑活动监视说明.md"
+    },
+    {
+      "path": "许可证.txt",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "许可说明.md",
+      "bytes": 1890,
+      "sha256": "a2a568384518e9528ffec6845496b893327e2af18843cc0fd7c71267190b767f"
+    },
+    {
+      "path": "项目说明.md",
+      "bytes": 2447,
+      "sha256": "223c0ea8b36f8378ce9048fc3208890e292d2fe45f019888f4b0f1ad887c2cbb",
+      "original_source_path": "项目说明.md",
+      "original_sha256": "3aebc9694ed3a84d115dc3827148058128cf9fe12c25f547f6b8bf81cd44e89b",
+      "modified_in_release_copy": true
+    }
+  ],
+  "updated_at_utc": "2026-10-16T08:11:26.739013+00:00",
+  "excluded_originals": [
+    {
+      "path": "downloads/annotations/README_v3.2.0.md",
+      "source_path": "downloads/annotations/README_v3.2.0.md",
+      "sha256": "bf9cb228d4520641f96b82e299673846d73404fb69970f39d1b387eec25dbf87",
+      "reason": "原文档未定位独立转载授权；只在本地保留，公开使用自写说明及链接。"
+    },
+    {
+      "path": "downloads/annotations/columns_v3.2.0.md",
+      "source_path": "downloads/annotations/columns_v3.2.0.md",
+      "sha256": "49e884a1273105427ded3c110d48266702a3f90148006cf02c1a0fa50919eb71",
+      "reason": "原文档未定位独立转载授权；只在本地保留，公开使用自写说明及链接。"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-16T04:40:27.756598+00:00",
+  "download_implemented": true,
+  "notes": [
+    "本清单记录原件大小和 SHA256。Setup.cmd 会验证必需输入；--resource-dir 可校验后复制已有下载。",
+    "默认手动准备大型文件；--download-data 仅允许连接表下载，PyTorch 始终手动提供。",
+    "path 相对于仓库根目录；保留文件名与神经元字符串 ID。",
+    "来源与使用范围见第三方说明和 web/morphology_sources.json；清单不是新的许可授权。"
+  ],
+  "resources": [
+    {
+      "path": "brain-model/data/2025_Connectivity_783.parquet",
+      "url": "https://raw.githubusercontent.com/eonsystemspbc/fly-brain/a3db62f9436074e485c0278290c2164ed6150808/data/2025_Connectivity_783.parquet",
+      "version": "a3db62f9436074e485c0278290c2164ed6150808",
+      "bytes": 100804642,
+      "sha256": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347",
+      "need": "required_for_brain",
+      "in_repository": false,
+      "reason": "原连接表，单独下载；不占用 Git 历史。"
+    },
+    {
+      "path": "downloads/torch-2.11.0+cu128-cp312-cp312-win_amd64.whl",
+      "url": "https://download-r2.pytorch.org/whl/cu128/torch-2.11.0%2Bcu128-cp312-cp312-win_amd64.whl",
+      "version": "torch 2.11.0+cu128; cp312; Windows x64",
+      "bytes": 2753189216,
+      "sha256": "7c78215c3af4f62e63f2b2e360f1722fc719b0853c7ac22666483d9810613a4c",
+      "need": "required_for_gpu_install",
+      "in_repository": false,
+      "reason": "从官方单独下载，保留既有人工下载方式。"
+    },
+    {
+      "path": "downloads/annotations/flywire_v783_annotations_v3.2.0.tsv",
+      "url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/a83b2776d60d5764cef36b927f5f9679c16c47a2/supplemental_files/Supplemental_file1_neuron_annotations.tsv",
+      "version": "v3.2.0 / a83b2776d60d5764cef36b927f5f9679c16c47a2",
+      "bytes": 31720298,
+      "sha256": "b214970b55d2fbe0853bba536fdcb9e28730f4eb7ab06f600491df795da683cd",
+      "need": "optional_rebuild_annotations",
+      "in_repository": false,
+      "reason": "已包含导入后的模型顺序表；只有重新导入注释或运行原始表校验时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940627652358.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940627652358",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 484560,
+      "sha256": "ebd860733a029c901035378f1702c82d5af96c384ad491afd4bab7596192b66f",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940635872101.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940635872101",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 360792,
+      "sha256": "dc7689dca401a84de6f46015c05f43fb71806b6048af8f4b81e9c1d97395a96a",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940624963786.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940624963786",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 14856,
+      "sha256": "a3ade47158e9421e9209b7e34096a74145005f46e17e50b03a1e5c1b065ba8ad",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940630233916.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940630233916",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 18432,
+      "sha256": "bce522bf364b05ea4d82219630d8e75b38ac94cefc3066b8b835a9c97214d8fe",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940637568838.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940637568838",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 15528,
+      "sha256": "937dfd3903257b6f1827a5fc15758118aa7d8115459977aa9cb51d838b76a3be",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940638202345.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940638202345",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 19152,
+      "sha256": "c397611fee833ad89d5862af846920e079e33eb9e1b9761a1b399220f8777775",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940617937543.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940617937543",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 17856,
+      "sha256": "3db31ea7fdded274b88909a93e225e61d3b76c5ed284406e42ad6fadc484210d",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940621754367.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940621754367",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 13248,
+      "sha256": "63b40c25b7d7cd012400e684e559c4c347371a2a2e735d667519d139da96d670",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940611875570.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940611875570",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 18720,
+      "sha256": "59e7fc0a999918898ed49b676beb771d6b8cca069339ce74e4d24c5c2e2b74ea",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940629176663.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940629176663",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 15264,
+      "sha256": "e051837d4791ab22c4290c8671e0695477a2b6a318f9418aefa3aeb3b2469a9e",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940628853239.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940628853239",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 18624,
+      "sha256": "fe870699be1a8ff1a0dc0bdb5685c03a2587339fad1ac8a642d1be9a1ccf03ba",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940612670570.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940612670570",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 19560,
+      "sha256": "8d37bf0b7395853712c7f1a54841ca6b5697856d86fee022e7d5348a1b51266d",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940616885538.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940616885538",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 17856,
+      "sha256": "c6fdcc8ae58c93a7265cf44cfc104d1d2f08fa72983b63c3369c3322d60b921f",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940639332736.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940639332736",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 16608,
+      "sha256": "6f6468c466499b0d40d8c81ba59fd6ce6f79d555604dd1c7497cd203b363e567",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940632889389.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940632889389",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 14592,
+      "sha256": "432004b8fb913637dc85c21b9ec036214618d794e862c6a71775c12a71cdfb41",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/720575940639198653.skel",
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940639198653",
+      "version": "FlyWire FAFB public v783",
+      "bytes": 18744,
+      "sha256": "9b757e13a84bffc3402462f265182311230de33da3f4ad72a31d480f8f8012da",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "已包含网页形态；只有重新生成骨架时需要。"
+    },
+    {
+      "path": "downloads/morphology/neuropils.zip",
+      "url": "https://raw.githubusercontent.com/navis-org/fafbseg-py/d0da95123ee606e204ae2c702e7bc78538646fbd/fafbseg/data/JFRC2NP.surf.fw.zip",
+      "version": "d0da95123ee606e204ae2c702e7bc78538646fbd",
+      "bytes": 1081524,
+      "sha256": "75637dc4aee119211ab20788da0cb6c5a0495cc4bdaf9ae09cd17a7a44cf34b1",
+      "need": "optional_rebuild_morphology",
+      "in_repository": false,
+      "reason": "上游地址为可变分支；须匹配本清单校验值，若不一致应停止而非替换。模板许可仍待发布前核对。"
+    }
+  ],
+  "automatic_download_scope": [
+    "required_for_brain"
+  ],
+  "manual_torch_download": true
+}

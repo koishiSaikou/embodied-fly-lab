@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-16T05:02:33.336688+00:00",
+  "scope": "Independent source checkout installation; original project and old delivery kits preserved.",
+  "installation": {
+    "body_python": "3.13.15",
+    "brain_python": "3.12.14",
+    "uv": "0.12.18",
+    "body_locked_dependencies": 68,
+    "brain_locked_dependencies": 18,
+    "mode_tested": "offline with verified existing wheels/data copied into this checkout; no old venv copied",
+    "editable_flygym": "local flygym/src",
+    "body_only_without_brain_data": true,
+    "repeat_install": true
+  },
+  "pypi": {
+    "verified_wheel_filename_and_sha256": 77,
+    "total": 77,
+    "direct_links": "requirements/依赖来源.json"
+  },
+  "cuda": {
+    "available": true,
+    "kernel": "passed",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU"
+  },
+  "smoke": {
+    "status": "passed",
+    "body_frames": 13,
+    "nodes": 138639,
+    "weighted_edges": 15091983,
+    "baseline_spikes": 0,
+    "stimulated_spikes": 104,
+    "coupled_model_seconds": 0.04,
+    "minimum_upright": 0.9995964887152036,
+    "port": 8480
+  },
+  "entrypoint": {
+    "status": "passed",
+    "path_with_spaces": true,
+    "no_existing_venv": true,
+    "bootstrap_python_discovery": true
+  },
+  "unit_tests": 12,
+  "limitations": [
+    "No separate physical computer tested",
+    "No long-duration stability claim",
+    "No clean-cache online bulk installation claimed; PyPI identities and hashes independently checked"
+  ],
+  "original_project_modified": false,
+  "delivery_packages_rebuilt": false,
+  "git_pushed": false,
+  "subsequent_startup_validation": "docs/启动验证记录.json"
+}

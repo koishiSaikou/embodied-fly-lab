@@ -1,0 +1,49 @@
+# Project-local Python runtimes and environments
+/.venv/
+/.brain-venv/
+/_runtime/
+/_tools/
+/.installation.json
+/.env
+/.env.*
+!/.env.example
+# Caches, build products, delivery kits and experiment output
+/.cache/
+/.package-cache/
+/.package-test/
+/.repository-audit/
+/output/
+/dist/
+/build/
+/vendor/wheels/
+/bundle-manifest.json
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+node_modules/
+# External downloads: preserve only upstream annotation documentation
+/downloads/*
+!/downloads/annotations/
+/downloads/annotations/*
+!/downloads/annotations/*.md
+# Local reference documents have no independently located documentation grant.
+/downloads/annotations/README_v3.2.0.md
+/downloads/annotations/columns_v3.2.0.md
+# Large source table and rebuildable brain matrix caches
+/brain-model/data/2025_Connectivity_783.parquet
+/brain-model/data/weight_*.pkl
+# Do not ignore upstream .pkl/.npy/.npz assets: some are required at runtime
+*.whl
+*.download
+*.part
+*.log
+/MUJOCO_LOG.TXT
+# Local editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini

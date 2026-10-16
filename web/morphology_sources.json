@@ -1,0 +1,255 @@
+{
+  "dataset": "FlyWire FAFB public v783",
+  "coordinate_space": "FAFB14.1; nm converted to um, common translation only",
+  "skeleton_format": "Neuroglancer precomputed; radius attribute omitted from line display",
+  "skeleton_license": "FlyWire public release CC BY-NC 4.0; retain upstream attribution",
+  "citation": "Dorkenwald et al. 2024, Neuronal wiring diagram of an adult brain; Schlegel et al. 2024, Whole-brain annotation and multi-connectome cell typing of Drosophila",
+  "access_method_reference": "https://fafbseg-py.readthedocs.io/en/latest/source/tutorials/flywire_neurons.html",
+  "roi_source": "https://raw.githubusercontent.com/navis-org/fafbseg-py/d0da95123ee606e204ae2c702e7bc78538646fbd/fafbseg/data/JFRC2NP.surf.fw.zip",
+  "roi_origin": "JFRC2 neuropil templates transformed into FAFB14.1 by fafbseg; anatomical reference, not measured activity",
+  "roi_original_reference": "https://github.com/VirtualFlyBrain/DrosAdultBRAINdomains/tree/0f79bb86d199d54785fe6ad21cbd42ea373d9013",
+  "roi_distribution_license": "fafbseg software/distribution GPL-3.0; not a replacement for original data rights",
+  "roi_sha256": "75637dc4aee119211ab20788da0cb6c5a0495cc4bdaf9ae09cd17a7a44cf34b1",
+  "neurons": [
+    {
+      "id": "720575940627652358",
+      "tensor_index": 83620,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940627652358",
+      "sha256": "ebd860733a029c901035378f1702c82d5af96c384ad491afd4bab7596192b66f",
+      "vertices": 20190,
+      "edges": 20189
+    },
+    {
+      "id": "720575940635872101",
+      "tensor_index": 119032,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940635872101",
+      "sha256": "dc7689dca401a84de6f46015c05f43fb71806b6048af8f4b81e9c1d97395a96a",
+      "vertices": 15033,
+      "edges": 15032
+    },
+    {
+      "id": "720575940624963786",
+      "tensor_index": 69093,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940624963786",
+      "sha256": "a3ade47158e9421e9209b7e34096a74145005f46e17e50b03a1e5c1b065ba8ad",
+      "vertices": 619,
+      "edges": 618
+    },
+    {
+      "id": "720575940630233916",
+      "tensor_index": 97602,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940630233916",
+      "sha256": "bce522bf364b05ea4d82219630d8e75b38ac94cefc3066b8b835a9c97214d8fe",
+      "vertices": 768,
+      "edges": 767
+    },
+    {
+      "id": "720575940637568838",
+      "tensor_index": 122795,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940637568838",
+      "sha256": "937dfd3903257b6f1827a5fc15758118aa7d8115459977aa9cb51d838b76a3be",
+      "vertices": 647,
+      "edges": 646
+    },
+    {
+      "id": "720575940638202345",
+      "tensor_index": 124291,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940638202345",
+      "sha256": "c397611fee833ad89d5862af846920e079e33eb9e1b9761a1b399220f8777775",
+      "vertices": 798,
+      "edges": 797
+    },
+    {
+      "id": "720575940617937543",
+      "tensor_index": 32863,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940617937543",
+      "sha256": "3db31ea7fdded274b88909a93e225e61d3b76c5ed284406e42ad6fadc484210d",
+      "vertices": 744,
+      "edges": 743
+    },
+    {
+      "id": "720575940621754367",
+      "tensor_index": 51107,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940621754367",
+      "sha256": "63b40c25b7d7cd012400e684e559c4c347371a2a2e735d667519d139da96d670",
+      "vertices": 552,
+      "edges": 551
+    },
+    {
+      "id": "720575940611875570",
+      "tensor_index": 12494,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940611875570",
+      "sha256": "59e7fc0a999918898ed49b676beb771d6b8cca069339ce74e4d24c5c2e2b74ea",
+      "vertices": 780,
+      "edges": 779
+    },
+    {
+      "id": "720575940629176663",
+      "tensor_index": 92298,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940629176663",
+      "sha256": "e051837d4791ab22c4290c8671e0695477a2b6a318f9418aefa3aeb3b2469a9e",
+      "vertices": 636,
+      "edges": 635
+    },
+    {
+      "id": "720575940628853239",
+      "tensor_index": 90589,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940628853239",
+      "sha256": "fe870699be1a8ff1a0dc0bdb5685c03a2587339fad1ac8a642d1be9a1ccf03ba",
+      "vertices": 776,
+      "edges": 775
+    },
+    {
+      "id": "720575940612670570",
+      "tensor_index": 14842,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940612670570",
+      "sha256": "8d37bf0b7395853712c7f1a54841ca6b5697856d86fee022e7d5348a1b51266d",
+      "vertices": 815,
+      "edges": 814
+    },
+    {
+      "id": "720575940616885538",
+      "tensor_index": 28825,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940616885538",
+      "sha256": "c6fdcc8ae58c93a7265cf44cfc104d1d2f08fa72983b63c3369c3322d60b921f",
+      "vertices": 744,
+      "edges": 743
+    },
+    {
+      "id": "720575940639332736",
+      "tensor_index": 126873,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940639332736",
+      "sha256": "6f6468c466499b0d40d8c81ba59fd6ce6f79d555604dd1c7497cd203b363e567",
+      "vertices": 692,
+      "edges": 691
+    },
+    {
+      "id": "720575940632889389",
+      "tensor_index": 110469,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940632889389",
+      "sha256": "432004b8fb913637dc85c21b9ec036214618d794e862c6a71775c12a71cdfb41",
+      "vertices": 608,
+      "edges": 607
+    },
+    {
+      "id": "720575940639198653",
+      "tensor_index": 126600,
+      "url": "https://flyem.mrc-lmb.cam.ac.uk/flyconnectome/flywire_skeletons_783/720575940639198653",
+      "sha256": "9b757e13a84bffc3402462f265182311230de33da3f4ad72a31d480f8f8012da",
+      "vertices": 781,
+      "edges": 780
+    }
+  ],
+  "failures": [],
+  "limits": "Only this small subset is rendered. No inferred activity is assigned to unannotated brain regions. Skeleton line geometry is downsampled for display.",
+  "annotation_source": {
+    "materialization": 783,
+    "annotation_version": "v3.2.0",
+    "annotation_commit": "a83b2776d60d5764cef36b927f5f9679c16c47a2",
+    "source_url": "https://raw.githubusercontent.com/flyconnectome/flywire_annotations/a83b2776d60d5764cef36b927f5f9679c16c47a2/supplemental_files/Supplemental_file1_neuron_annotations.tsv",
+    "source_sha256": "b214970b55d2fbe0853bba536fdcb9e28730f4eb7ab06f600491df795da683cd",
+    "model_nodes": 138639,
+    "matched_rows": 138625,
+    "unmatched_rows": 14,
+    "typed_nodes": 137147,
+    "unknown_type_nodes": 1492,
+    "matched_without_cell_type": 1478,
+    "source_only_rows": 623,
+    "field_coverage": {
+      "supervoxel_id": 138625,
+      "root_id": 138639,
+      "pos_x": 138625,
+      "pos_y": 138625,
+      "pos_z": 138625,
+      "soma_x": 118086,
+      "soma_y": 118086,
+      "soma_z": 118086,
+      "nucleus_id": 107063,
+      "flow": 138625,
+      "super_class": 138625,
+      "cell_class": 106903,
+      "cell_sub_class": 25767,
+      "supertype": 33844,
+      "cell_type": 137147,
+      "hemibrain_type": 33267,
+      "ito_lee_hemilineage": 37535,
+      "hartenstein_hemilineage": 34800,
+      "top_nt": 138346,
+      "top_nt_conf": 138346,
+      "known_nt": 87286,
+      "known_nt_source": 87286,
+      "side": 138625,
+      "nerve": 9575,
+      "vfb_id": 138624,
+      "fbbt_id": 28895,
+      "status": 657,
+      "dimorphism": 138625,
+      "matching_notes": 374,
+      "fru_dsx": 3308,
+      "synonyms": 2463
+    },
+    "usable_side_nodes": 138595,
+    "p9_channels": [
+      {
+        "channel": "A",
+        "root_id": "720575940627652358",
+        "cell_type": "DNp09",
+        "upstream_channel_name": "left",
+        "annotation_side": "right"
+      },
+      {
+        "channel": "B",
+        "root_id": "720575940635872101",
+        "cell_type": "DNp09",
+        "upstream_channel_name": "right",
+        "annotation_side": "left"
+      }
+    ],
+    "warnings": [
+      "P9 upstream channel names disagree with annotation anatomical side. Preserve A/B motor order; do not swap.",
+      "Labels only. Uniform LIF equations, original connection signs/weights and sensory/motor mappings are unchanged.",
+      "top_nt is a prediction; known_nt and known_nt_source are retained separately and may contain multiple entries.",
+      "Hierarchy is not a per-neuropil innervation map. pos/soma are 4x4x40 nm voxel coordinates.",
+      "No annotation row or empty cell_type remains unknown; hemibrain_type is not substituted for cell_type."
+    ],
+    "available": true,
+    "super_classes": [
+      "ascending",
+      "central",
+      "descending",
+      "endocrine",
+      "motor",
+      "optic",
+      "sensory",
+      "sensory_ascending",
+      "visual_centrifugal",
+      "visual_projection"
+    ],
+    "predicted_transmitters": [
+      "acetylcholine",
+      "dopamine",
+      "gaba",
+      "glutamate",
+      "octopamine",
+      "serotonin"
+    ]
+  },
+  "roi_source_commit": "d0da95123ee606e204ae2c702e7bc78538646fbd",
+  "roi_template_image_reference": "https://doi.org/10.5281/zenodo.10567",
+  "roi_original_license": "CC-BY-4.0 for underlying BrainName labels/shapes; retain upstream exceptions and attribution",
+  "roi_license_notes": "https://raw.githubusercontent.com/VirtualFlyBrain/DrosAdultBRAINdomains/0f79bb86d199d54785fe6ad21cbd42ea373d9013/LICENSE-NOTES.md",
+  "roi_distribution_notes": "https://raw.githubusercontent.com/navis-org/fafbseg-py/d0da95123ee606e204ae2c702e7bc78538646fbd/fafbseg/data/README.md",
+  "roi_distribution_data_source": "precomputed://gs://flywire_neuropil_meshes/neuropils/neuropil_mesh_v141_v6",
+  "roi_attribution": [
+    "Arnim Jenett",
+    "Kazunori Shinomiya",
+    "Kei Ito",
+    "Virtual Fly Brain",
+    "Ito et al. 2014; 10.1016/j.neuron.2013.12.017",
+    "Jenett et al. 2012; 10.1016/j.celrep.2012.09.011",
+    "fafbseg contributors and FlyWire mesh distribution"
+  ],
+  "mixed_file_notice": "morphology.json combines FlyWire-derived skeletons/annotations and template shapes; do not apply a single code license to the whole file. See 数据使用与署名.md.",
+  "local_modifications": "Unit conversion, common translation, rounding and skeleton downsampling; static anatomy is not activity.",
+  "license_review_date": "2026-10-16"
+}

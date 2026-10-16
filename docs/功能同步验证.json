@@ -1,0 +1,194 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-16T07:18:17.022311+00:00",
+  "policy": "功能/运行改动同步现有 FlyWire；仓库整理、源码安装/依赖锁和发布配置留在 FlyWire-GitHub；不自动更新旧交付包。",
+  "active_directory_name": "FlyWire",
+  "prepared_directory_name": "FlyWire-GitHub",
+  "distinct_synchronized_files": 29,
+  "backup_directories": [
+    "output/code_sync_backup/20261016_151056_703480",
+    "output/code_sync_backup/20261016_151551_264839"
+  ],
+  "changes": [
+    "统一启动器/浏览器就绪后打开/端口冲突处理/启动日志/参数传递和保存退出",
+    "脑首次加载及单步等待期限、异常收尾、错误网页和显式手动新一轮",
+    "Windows 已退出进程的缓冲管道关闭错误处理；只有进程已退出、线程已结束且句柄已关闭才忽略刷新错误",
+    "兼容仍在运行的旧后端 finished 状态，防止刷新新前端后不能重开",
+    "现有目录无源码安装器时，诊断直接用 delivery/doctor.py --all --source"
+  ],
+  "active_unit_tests": {
+    "discovered": 25,
+    "passed": 23,
+    "skipped": 2,
+    "skip_reasons": [
+      "本机原目录没有 Git 元数据，跳过 Git CRLF 过滤验证",
+      "本机原目录没有 _tools/uv.exe，跳过便携 uv 创建空格测试环境；准备目录此前及本次测试通过"
+    ]
+  },
+  "preparation_unit_tests": {
+    "discovered": 39,
+    "passed": 39,
+    "skipped": 0
+  },
+  "active_live": {
+    "status": "passed",
+    "cases": [
+      {
+        "case": "startup_stall",
+        "status": "passed",
+        "exit_code": 1,
+        "body_seconds": 0.0,
+        "last_brain_ms": 0.0,
+        "real_cuda": false,
+        "synthetic_failure": true,
+        "pause_checked": false,
+        "manual_restart_checked": false,
+        "directory": "E:\\workspace\\FlyWire\\output\\habitat\\recovery_startup_stall_20261016_151615_827164"
+      },
+      {
+        "case": "step_stall",
+        "status": "passed",
+        "exit_code": 1,
+        "body_seconds": 0.0,
+        "last_brain_ms": 0.0,
+        "real_cuda": false,
+        "synthetic_failure": true,
+        "pause_checked": false,
+        "manual_restart_checked": false,
+        "directory": "E:\\workspace\\FlyWire\\output\\habitat\\recovery_step_stall_20261016_151615_827164"
+      },
+      {
+        "case": "step_exit",
+        "status": "passed",
+        "exit_code": 1,
+        "body_seconds": 0.0,
+        "last_brain_ms": 0.0,
+        "real_cuda": false,
+        "synthetic_failure": true,
+        "pause_checked": false,
+        "manual_restart_checked": false,
+        "directory": "E:\\workspace\\FlyWire\\output\\habitat\\recovery_step_exit_20261016_151615_827164"
+      },
+      {
+        "case": "bad_json",
+        "status": "passed",
+        "exit_code": 1,
+        "body_seconds": 0.0,
+        "last_brain_ms": 0.0,
+        "real_cuda": false,
+        "synthetic_failure": true,
+        "pause_checked": false,
+        "manual_restart_checked": false,
+        "directory": "E:\\workspace\\FlyWire\\output\\habitat\\recovery_bad_json_20261016_151615_827164"
+      },
+      {
+        "case": "finalize_fault",
+        "status": "passed",
+        "exit_code": 1,
+        "body_seconds": 0.04,
+        "last_brain_ms": 40.0,
+        "real_cuda": true,
+        "synthetic_failure": true,
+        "pause_checked": false,
+        "manual_restart_checked": false,
+        "directory": "E:\\workspace\\FlyWire\\output\\habitat\\recovery_finalize_fault_20261016_151615_827164"
+      },
+      {
+        "case": "real",
+        "status": "passed",
+        "exit_code": 0,
+        "body_seconds": 0.060000000000000005,
+        "last_brain_ms": 60.0,
+        "real_cuda": true,
+        "synthetic_failure": false,
+        "pause_checked": true,
+        "manual_restart_checked": true,
+        "directory": "E:\\workspace\\FlyWire\\output\\habitat\\recovery_real_20261016_151615_827164"
+      }
+    ]
+  },
+  "active_live_record": "output/recovery/20261016_151615_827164/report.json",
+  "native_cmd": {
+    "record": "output/launch/20261016_071309_733692_habitat.json",
+    "exit_code": 0,
+    "url": "http://127.0.0.1:8473/",
+    "report": "output/habitat/sync_cmd_20261016_1514/report.json",
+    "model_seconds": 0.04
+  },
+  "diagnostics": {
+    "record": "output/launch/20261016_071421_882425_check.json",
+    "exit_code": 0,
+    "both_environments": true,
+    "real_cuda_kernel": true
+  },
+  "frontend_compatibility": {
+    "old_finished_can_restart": true,
+    "new_saving_cannot_restart": true,
+    "error_without_first_chunk_can_restart_after_cleanup": true,
+    "loading_clears_previous_error": true
+  },
+  "initial_failure": {
+    "record": "output/habitat/recovery_real_20261016_151118_766370/report.json",
+    "observed": "故意结束脑进程后 Windows stdin.close 刷新已断开的管道返回 EINVAL，误阻止重开。",
+    "resolved": true,
+    "followup_live_record": "output/recovery/20261016_151615_827164/report.json",
+    "regression_test": "test_dead_worker_buffered_stdin_flush_does_not_block_recovery"
+  },
+  "scope": {
+    "existing_python_environments_reused": true,
+    "source_installers_copied": false,
+    "existing_experiments_controlled_or_stopped": false,
+    "brain_tables_weights_or_historical_output_copied": false,
+    "delivery_package_rebuilt": false,
+    "github_pushed": false
+  },
+  "activation": "现用后端代码在下次启动生效；未主动停止已有实验。",
+  "subsequent_license_and_version_update": {
+    "recorded_at_utc": "2026-10-16T07:54:09.396550+00:00",
+    "status": "源码、许可与文档整理及同步完成；未运行测试",
+    "version": "0.1.0-alpha.1",
+    "release_status": "unpublished-demo",
+    "source_commit": null,
+    "code_license": "GPL-3.0-or-later",
+    "license_review": "docs/许可核对报告.md",
+    "file_evidence": "docs/许可核对清单.json",
+    "latest_sync_files": 36,
+    "backup_directory": "output/code_sync_backup/20261016_155409_352213",
+    "no_simulation_tests": true,
+    "no_gpu_or_performance_tests": true,
+    "no_new_tests": true,
+    "static_source_and_license_comparison_only": true,
+    "no_installation": true,
+    "no_old_output_changes": true,
+    "long_run_protection": "deferred_by_user",
+    "delivery_package_rebuilt": false,
+    "git_pushed": false,
+    "actual_git_commit_or_tag_created": false,
+    "old_test_records_not_latest_coverage": true,
+    "notes": [
+      "静态元数据整理并不证明修改后的程序已通过功能测试。",
+      "数据与第三方组件按各自条件，未声称完全无版权争议。",
+      "后端变动下次正常启动生效；未停止任何已有实验。"
+    ],
+    "final_metadata_sync": {
+      "backup_directory": "output/code_sync_backup/20261016_155951_652907",
+      "files": [
+        "brain_worker.py",
+        "delivery/doctor.py",
+        "版本与更新记录.md"
+      ]
+    },
+    "application_identity_in": [
+      "web_state",
+      "habitat_config_report",
+      "body_report",
+      "brain_metadata",
+      "diagnostics",
+      "launch_log"
+    ],
+    "release_preparation_documents": [
+      "docs/首次发布说明.md",
+      "docs/发布步骤.md"
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-16T05:32:50.324098+00:00",
+  "unit_tests": 13,
+  "source_installer_regression_tests": 12,
+  "live": {
+    "status": "passed",
+    "browser_calls": [
+      {
+        "url": "http://127.0.0.1:8480/",
+        "scene_ready": true,
+        "status": "loading"
+      }
+    ],
+    "headless_browser_ready": true,
+    "restart_browser_calls": 1,
+    "default_port_fallback": true,
+    "fallback_url": "http://127.0.0.1:8473/",
+    "no_browser": true,
+    "finite_cmd_exit_code": 0,
+    "ctrl_c": {
+      "status": "passed",
+      "exit_code": 130,
+      "report_status": "interrupted",
+      "model_seconds": 0.12000000000000001,
+      "console_processes": 8,
+      "isolated_console": true,
+      "remaining_children": [],
+      "loading": false
+    },
+    "startup_ctrl_c": {
+      "status": "passed",
+      "exit_code": 130,
+      "report_status": "interrupted",
+      "model_seconds": 0.0,
+      "console_processes": 6,
+      "isolated_console": true,
+      "remaining_children": [],
+      "loading": true
+    },
+    "original_services_modified": false,
+    "batch_ctrl_c": {
+      "status": "passed",
+      "exit_code": 130,
+      "report_status": "interrupted",
+      "model_seconds": 0.12000000000000001,
+      "console_processes": 9,
+      "isolated_console": true,
+      "remaining_children": [],
+      "loading": false,
+      "batch": true
+    }
+  },
+  "source_dynamics_and_annotation_files_unchanged": {
+    "brain_worker.py": true,
+    "brain-model/code/run_pytorch.py": true,
+    "brain-model/code/benchmark.py": true,
+    "brain-model/data/2025_Completeness_783.csv": true,
+    "brain-model/data/neuron_annotations.parquet": true
+  },
+  "evidence": "output/startup/20261016_132543_282925",
+  "browser_test": "OS browser.open was intercepted; callback queried the actual ready HTTP scene. No desktop browser was started by this test.",
+  "console_test": "Real Ctrl+C in verified isolated hidden Windows consoles, including actual Start-Habitat.cmd; no unrelated process was signalled.",
+  "limitations": [
+    "No different physical Windows computer tested",
+    "No long-duration stability claim",
+    "Brain-response deadlines and all disk/render cleanup failures remain pending"
+  ],
+  "original_project_modified": false,
+  "delivery_packages_rebuilt": false,
+  "git_pushed": false,
+  "recovery_change_regression": {
+    "checked_at_utc": "2026-10-16T07:00:15.584563+00:00",
+    "record": "output/startup/20261016_145251_711572/report.json",
+    "result": {
+      "status": "passed",
+      "browser_calls": [
+        {
+          "url": "http://127.0.0.1:8480/",
+          "scene_ready": true,
+          "status": "loading"
+        }
+      ],
+      "headless_browser_ready": true,
+      "restart_browser_calls": 1,
+      "default_port_fallback": true,
+      "fallback_url": "http://127.0.0.1:8473/",
+      "no_browser": true,
+      "finite_cmd_exit_code": 0,
+      "ctrl_c": {
+        "status": "passed",
+        "exit_code": 130,
+        "report_status": "interrupted",
+        "model_seconds": 0.12000000000000001,
+        "console_processes": 8,
+        "isolated_console": true,
+        "remaining_children": [],
+        "loading": false,
+        "batch": false
+      },
+      "startup_ctrl_c": {
+        "status": "passed",
+        "exit_code": 130,
+        "report_status": "interrupted",
+        "model_seconds": 0.0,
+        "console_processes": 6,
+        "isolated_console": true,
+        "remaining_children": [],
+        "loading": true,
+        "batch": false
+      },
+      "batch_ctrl_c": {
+        "status": "passed",
+        "exit_code": 130,
+        "report_status": "interrupted",
+        "model_seconds": 0.12000000000000001,
+        "console_processes": 9,
+        "isolated_console": true,
+        "remaining_children": [],
+        "loading": false,
+        "batch": true
+      },
+      "original_services_modified": false
+    }
+  }
+}

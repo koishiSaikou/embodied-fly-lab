@@ -1,0 +1,1977 @@
+{
+  "recorded_at_utc": "2026-10-16T07:35:41.271579+00:00",
+  "scope": "只读取准备目录既有安装元数据；未安装、未导入运行模型、未执行测试。",
+  "dependency_count": 76,
+  "dependencies": [
+    {
+      "name": "absl-py",
+      "version": "2.5.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "Apache-2.0",
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": [
+        "Changelog, https://github.com/abseil/abseil-py/blob/main/CHANGELOG.md",
+        "Documentation, https://abseil.io/docs/python/",
+        "Issues, https://github.com/abseil/abseil-py/issues",
+        "Source, https://github.com/abseil/abseil-py"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "MIT",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/fastapi/annotated-doc",
+        "Documentation, https://github.com/fastapi/annotated-doc",
+        "Repository, https://github.com/fastapi/annotated-doc",
+        "Issues, https://github.com/fastapi/annotated-doc/issues",
+        "Changelog, https://github.com/fastapi/annotated-doc/release-notes.md"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "MIT",
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/annotated-types/annotated-types",
+        "Source, https://github.com/annotated-types/annotated-types",
+        "Changelog, https://github.com/annotated-types/annotated-types/releases"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "MIT",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Documentation, https://anyio.readthedocs.io/en/latest/",
+        "Changelog, https://anyio.readthedocs.io/en/stable/versionhistory.html",
+        "Source code, https://github.com/agronholm/anyio",
+        "Issue tracker, https://github.com/agronholm/anyio/issues"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "asttokens",
+      "version": "3.0.2",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "Apache 2.0"
+      ],
+      "license_classifiers": [],
+      "project_urls": [
+        "Documentation, https://asttokens.readthedocs.io/en/latest/index.html",
+        "Issue Tracker, https://github.com/gristlabs/asttokens/issues"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "62fb8a3a9621dc2388174caaabe9c2317b694bb9a1d46c98bcf5655b68f51be3"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Changes, https://click.palletsprojects.com/page/changes/",
+        "Chat, https://discord.gg/pallets",
+        "Documentation, https://click.palletsprojects.com/",
+        "Donate, https://palletsprojects.com/donate",
+        "Source, https://github.com/pallets/click/"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "cloudpickle",
+      "version": "3.1.2",
+      "profiles": [
+        "body",
+        "brain"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "BSD-3-Clause"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "3029ea34173e9fdc233ad315dc6b100bd1ea71f529b1c1af97664a272fdc55f5"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/tartley/colorama"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "contourpy",
+      "version": "1.4.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/contourpy/contourpy",
+        "Changelog, https://contourpy.readthedocs.io/en/latest/changelog.html",
+        "Documentation, https://contourpy.readthedocs.io",
+        "Repository, https://github.com/contourpy/contourpy"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "0e55e86a8fbf3e9b482ae8dc9e111e1b0dc09a7d300e7f480dda68c1125ed614"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "Copyright (c) 2015, matplotlib project"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "homepage, https://matplotlib.org/cycler/",
+        "repository, https://github.com/matplotlib/cycler"
+      ],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "f1218143d766da3fea66f13396b7f15df46a83303f29bf96ba6e98eb4d42f408"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "etils",
+      "version": "1.14.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": [
+        "changelog, https://github.com/google/etils/blob/main/CHANGELOG.md",
+        "documentation, https://etils.readthedocs.io",
+        "homepage, https://github.com/google/etils",
+        "repository, https://github.com/google/etils"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "executing",
+      "version": "2.3.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/alexmojaki/executing",
+        "Repository, https://github.com/alexmojaki/executing"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "a476a2cb0ef4c41450340a577a28b91ac4c7f669136b2ee148047fabd5fc4181"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "fastapi",
+      "version": "0.143.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "MIT",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/fastapi/fastapi",
+        "Documentation, https://fastapi.tiangolo.com/",
+        "Repository, https://github.com/fastapi/fastapi",
+        "Issues, https://github.com/fastapi/fastapi/issues",
+        "Changelog, https://fastapi.tiangolo.com/release-notes/"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "flygym",
+      "version": "2.1.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "Apache-2.0",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "homepage, https://neuromechfly.org/",
+        "repository, https://github.com/NeLy-EPFL/flygym",
+        "documentation, https://neuromechfly.org/",
+        "Bug Tracker, https://github.com/NeLy-EPFL/flygym/issues"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "4e89fc37e50d41ea81616b413b23db4e8db395898930490fced1fa7d1eae863c"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "fonttools",
+      "version": "4.67.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT"
+      ],
+      "license_classifiers": [],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "22bef80697ecfaa17f97e62b9a26dfa12820be05583e8dd12ad169b241274c99"
+        },
+        {
+          "path": "licenses/LICENSE.external",
+          "sha256": "b082a5f86775b2641f01bccb8b9c82908481de5f502bb254b1e13bfc2a9f303d"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "fsspec",
+      "version": "2026.9.0",
+      "profiles": [
+        "body",
+        "brain"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Changelog, https://filesystem-spec.readthedocs.io/en/latest/changelog.html",
+        "Documentation, https://filesystem-spec.readthedocs.io/en/latest/",
+        "Homepage, https://github.com/fsspec/filesystem_spec"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "glfw",
+      "version": "2.10.2",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "83e675a7714eb01db1ed75cedcf349ab9dd9630782f81c08161cb58cc67ca1ca"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Changelog, https://github.com/kjd/idna/blob/master/HISTORY.md",
+        "Issue tracker, https://github.com/kjd/idna/issues",
+        "Source, https://github.com/kjd/idna"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "ImageIO",
+      "version": "2.38.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "BSD-2-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "homepage, https://github.com/imageio/imageio",
+        "download, http://pypi.python.org/pypi/imageio",
+        "source, https://github.com/imageio/imageio",
+        "documentation, https://imageio.readthedocs.io"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c453cf1368bb9e009e4d7e5334fc78511e665316a612ef54ee4fe1245678fe2c"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "imageio-ffmpeg",
+      "version": "0.6.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "BSD-2-Clause"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "eca73421d0c905a92e952a553d4d58919c5a507c2c2c76e3c0cf9ba408c299e4"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "ipython",
+      "version": "9.17.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://ipython.org",
+        "Documentation, https://ipython.readthedocs.io/",
+        "Funding, https://jupyter.org/about#donate",
+        "Source, https://github.com/ipython/ipython",
+        "Tracker, https://github.com/ipython/ipython/issues"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/COPYING.rst",
+          "sha256": "8387aac32433e5b121c355aa9e6ce2b9a399da7edd59ab94b19d4f5326b1ced0"
+        },
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "e0e390748ed440ab893ca1f135a88a920aaf5409dbb90a5b427c75c5e51268fb"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "ipython_pygments_lexers",
+      "version": "1.1.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Source, https://github.com/ipython/ipython-pygments-lexers"
+      ],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "b1d0dbc0fa79774d34b8e2d0aec91d50d8caf05f7b40fc22c3010a4bd9ad2bf9"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "jaxtyping",
+      "version": "0.3.7",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT License"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "repository, https://github.com/patrick-kidger/jaxtyping"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "2ef67751f7ae1fa8d1765c494d591767fa68dc1e12ab043dd0fbbfbc1ffda5bc"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "jedi",
+      "version": "0.20.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Documentation, https://jedi.readthedocs.io/en/latest/"
+      ],
+      "license_files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "78e60cd0b8f28694f30195482c33d76908d846b0d15278deb7332aa22ba8e412"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "joblib",
+      "version": "1.6.0",
+      "profiles": [
+        "body",
+        "brain"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://joblib.readthedocs.io",
+        "Source, https://github.com/joblib/joblib"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "42612911c1872c5e4b43f6ae0e8ee59467cd350332241cf72ce90640264fae6a"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "========================="
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "homepage, https://github.com/nucleic/kiwi",
+        "documentation, https://kiwisolver.readthedocs.io/en/latest/",
+        "repository, https://github.com/nucleic/kiwi",
+        "changelog, https://github.com/nucleic/kiwi/blob/main/releasenotes.rst"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "b24c2bf6185f31a124ad6bacccae3071bdc7ad7882de00b00110aa62abb76a15"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "llvmlite",
+      "version": "0.50.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "BSD-2-Clause AND Apache-2.0 WITH LLVM-exception",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Source, https://github.com/numba/llvmlite"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "7d6aa93e52a7ae9a995ff6a40c0ea5628311cdf1bd8dcd29c8ce9181f4af3a81"
+        },
+        {
+          "path": "licenses/LICENSE.thirdparty",
+          "sha256": "7b564c7af9ab446d245ba66adc8cda2f61d1d162f842899557499e80b715993a"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "loguru",
+      "version": "0.7.3",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Changelog, https://github.com/Delgan/loguru/blob/master/CHANGELOG.rst",
+        "Documentation, https://loguru.readthedocs.io/en/stable/index.html",
+        "Homepage, https://github.com/Delgan/loguru"
+      ],
+      "license_files": [],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.2",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "License agreement for matplotlib versions 1.3.0 and later"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: Python Software Foundation License"
+      ],
+      "project_urls": [
+        "Homepage, https://matplotlib.org",
+        "Download, https://matplotlib.org/stable/install/index.html",
+        "Documentation, https://matplotlib.org",
+        "Source Code, https://github.com/matplotlib/matplotlib",
+        "Bug Tracker, https://github.com/matplotlib/matplotlib/issues",
+        "Forum, https://discourse.matplotlib.org/",
+        "Donate, https://numfocus.org/donate-to-matplotlib"
+      ],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "822e8e528147569a41975592aee19c11992ab667ba50451cd929031d5fc74491"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "matplotlib-inline",
+      "version": "0.2.2",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/ipython/matplotlib-inline"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "8521b036c6448e0e0aa7213d4713b6fdee0f4c64c9f320450f77346bf5c0e8e4"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "mediapy",
+      "version": "1.2.7",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": [
+        "homepage, https://github.com/google/mediapy",
+        "repository, https://github.com/google/mediapy"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "mujoco",
+      "version": "3.9.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "Apache-2.0",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/google-deepmind/mujoco",
+        "Documentation, https://mujoco.readthedocs.io/en/3.9.0",
+        "Repository, https://github.com/google-deepmind/mujoco",
+        "Changelog, https://mujoco.readthedocs.io/en/3.9.0/changelog.html"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "path": "licenses/LICENSES_THIRD_PARTY.md",
+          "sha256": "3484318d20a14ba73e517295dbcb8c194a5611720e920c11b3fc0aeb06b1c47f"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "numba",
+      "version": "0.68.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "BSD"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "5f7ae5e48a0a107a9d86a9ef6c18dcce68e55959855d39380050deaea366631c"
+        },
+        {
+          "path": "licenses/LICENSES.third-party",
+          "sha256": "e5ea3f50f1c1aa518a86903b85dfd40c4765589998eb683b9382d111d91bb9ee"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "profiles": [
+        "body",
+        "brain"
+      ],
+      "license_expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "homepage, https://numpy.org",
+        "documentation, https://numpy.org/doc/",
+        "source, https://github.com/numpy/numpy",
+        "download, https://pypi.org/project/numpy/#files",
+        "tracker, https://github.com/numpy/numpy/issues",
+        "release notes, https://numpy.org/doc/stable/release"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "a804dff0ead9fadc5293456410bcbfc32bf024be9c4513459663fb7b442d2341"
+        },
+        {
+          "path": "licenses/numpy/ma/LICENSE",
+          "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7"
+        },
+        {
+          "path": "licenses/numpy/random/LICENSE.md",
+          "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a"
+        },
+        {
+          "path": "licenses/numpy/_core/src/highway/LICENSE",
+          "sha256": "d208152e2777ffd0126eacc1bd21c0320d69e4e6b622d21a2a12a47e8ef73763"
+        },
+        {
+          "path": "licenses/numpy/_core/src/multiarray/dragon4_LICENSE.txt",
+          "sha256": "b0fd592d4ead563148e3977e7b589169d46a5ef2ff133c755a81af880a3fc919"
+        },
+        {
+          "path": "licenses/numpy/_core/src/umath/svml/LICENSE",
+          "sha256": "585483905b13d4b42f800c55ba99e89d6e2e33ccd5f503e201c07531d148ff41"
+        },
+        {
+          "path": "licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md",
+          "sha256": "a732977853530066790c42817087f4829b518dd98d340c916acbfd227e39d3cb"
+        },
+        {
+          "path": "licenses/numpy/_core/src/common/pythoncapi-compat/COPYING",
+          "sha256": "aea41976c720f91bd19725c16916a1ace40eb1ea42620d340e587a5de4bbcea0"
+        },
+        {
+          "path": "licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt",
+          "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150"
+        },
+        {
+          "path": "licenses/numpy/random/src/distributions/LICENSE.md",
+          "sha256": "cf5619f25b112d5ce7c896efffc8e610bcb345dfadcc19f2c1460aa48fff2c9e"
+        },
+        {
+          "path": "licenses/numpy/random/src/mt19937/LICENSE.md",
+          "sha256": "92c10699884321f1c2947fe2a70ab23b0fbf1507f756d89dd08f38c61fc3d4fa"
+        },
+        {
+          "path": "licenses/numpy/random/src/pcg64/LICENSE.md",
+          "sha256": "41190663b77bee5302386495a07b7eabfbfa571aa0ae2f11da6764162062fc4f"
+        },
+        {
+          "path": "licenses/numpy/random/src/philox/LICENSE.md",
+          "sha256": "322ac46d870c8aeead6c53adcccc839296fb3c8e456eae155081297daf7f8013"
+        },
+        {
+          "path": "licenses/numpy/random/src/sfc64/LICENSE.md",
+          "sha256": "28cad82ce1379dc529df30da78ec012d7d0d1d576b03ddcb93388aee53659f59"
+        },
+        {
+          "path": "licenses/numpy/random/src/splitmix64/LICENSE.md",
+          "sha256": "454ec7350e478e037061850b67395753b425b1cb0a34bbc26290b020bf89d763"
+        },
+        {
+          "path": "licenses/numpy/linalg/lapack_lite/LICENSE.txt",
+          "sha256": "19060ef465e1797d682ee0fc3081bd25ab1395e995e43d25c9d13c95d9a3cd6b"
+        },
+        {
+          "path": "licenses/numpy/fft/pocketfft/LICENSE.md",
+          "sha256": "8db000e158c162e7249787852d8c69764706502ccee725c06641b31c1e95c8af"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.45.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "Apache-2.0",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-api",
+        "Repository, https://github.com/open-telemetry/opentelemetry-python"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Documentation, https://packaging.pypa.io/",
+        "Source, https://github.com/pypa/packaging"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        },
+        {
+          "path": "licenses/LICENSE.APACHE",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "licenses/LICENSE.BSD",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "pandas",
+      "version": "3.0.6",
+      "profiles": [
+        "body",
+        "brain"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "BSD 3-Clause License"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "homepage, https://pandas.pydata.org",
+        "documentation, https://pandas.pydata.org/docs/",
+        "repository, https://github.com/pandas-dev/pandas"
+      ],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "9850f6b5bdef7346503065807b878deb8058b976c5c329f4c4d23bf4796ce9ae"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "parso",
+      "version": "0.8.7",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "fa67973073753d17624caf8684d5ee816d70c89d912c5bca7ca0f08e7b150edb"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "pillow",
+      "version": "12.3.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "MIT-CMU",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Release notes, https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+        "Changelog, https://github.com/python-pillow/Pillow/releases",
+        "Documentation, https://pillow.readthedocs.io",
+        "Funding, https://tidelift.com/subscription/pkg/pypi-pillow?utm_source=pypi-pillow&utm_medium=pypi",
+        "Homepage, https://python-pillow.github.io",
+        "Mastodon, https://fosstodon.org/@pillow",
+        "Source, https://github.com/python-pillow/Pillow"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "4f7866a74802c6326f81faff59a56546b6aec2b10b91973e0e9308de95e79857"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "prompt_toolkit",
+      "version": "3.0.53",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/prompt-toolkit/python-prompt-toolkit",
+        "Documentation, https://python-prompt-toolkit.readthedocs.io/en/stable/"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "303574d9bdd85c757d6025017942bf17baeedf2778f62bd7f425d07d880f4c4a"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "psutil",
+      "version": "7.2.2",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "BSD-3-Clause"
+      ],
+      "license_classifiers": [],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "c7adc4d5d1337a548b967421f1fbe258b93033a0417708fd6f4e38f8ecbceb80"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "pure_eval",
+      "version": "0.2.4",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "a476a2cb0ef4c41450340a577a28b91ac4c7f669136b2ee148047fabd5fc4181"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "pyarrow",
+      "version": "26.0.0",
+      "profiles": [
+        "body",
+        "brain"
+      ],
+      "license_expression": "Apache-2.0",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://arrow.apache.org/",
+        "Documentation, https://arrow.apache.org/docs/python",
+        "Repository, https://github.com/apache/arrow",
+        "Issues, https://github.com/apache/arrow/issues"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "2a255e0ef5946efdb2e01a4861460ce4a3333734666d256e75f9c1731a5097da"
+        },
+        {
+          "path": "licenses/NOTICE.txt",
+          "sha256": "2ccca1e730e671f55b8028facf2261a6f74b561a4d96a2ccd743be19c5619236"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "pydantic",
+      "version": "2.14.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "MIT",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/pydantic/pydantic",
+        "Documentation, https://pydantic.dev/docs/validation/latest/get-started/",
+        "Funding, https://github.com/sponsors/samuelcolvin",
+        "Source, https://github.com/pydantic/pydantic",
+        "Changelog, https://pydantic.dev/docs/validation/latest/get-started/changelog/"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.50.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "MIT",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Funding, https://github.com/sponsors/samuelcolvin",
+        "Homepage, https://github.com/pydantic",
+        "Source, https://github.com/pydantic/pydantic/tree/main/pydantic-core"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "BSD-2-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://pygments.org",
+        "Documentation, https://pygments.org/docs",
+        "Source, https://github.com/pygments/pygments",
+        "Bug Tracker, https://github.com/pygments/pygments/issues",
+        "Changelog, https://github.com/pygments/pygments/blob/master/CHANGES"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "PyOpenGL",
+      "version": "3.1.10",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Homepage, https://mcfletch.github.io/pyopengl/",
+        "Download, https://pypi.org/project/PyOpenGL/",
+        "Source, https://github.com/mcfletch/pyopengl",
+        "Documentation, https://mcfletch.github.io/pyopengl/documentation/index.html"
+      ],
+      "license_files": [],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "MIT",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Documentation, https://pyparsing-docs.readthedocs.io/en/latest/",
+        "Homepage, https://github.com/pyparsing/pyparsing/",
+        "Source, https://github.com/pyparsing/pyparsing.git"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "a5425f9dc14ac74d4c5f0b679e941f2442e32cca7452a4418d5b1a49893ebe4e"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "profiles": [
+        "body",
+        "brain"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "Dual License"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License",
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": [
+        "Documentation, https://dateutil.readthedocs.io/en/stable/",
+        "Source, https://github.com/dateutil/dateutil"
+      ],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.3",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Bug Tracker, https://github.com/yaml/pyyaml/issues",
+        "CI, https://github.com/yaml/pyyaml/actions",
+        "Documentation, https://pyyaml.org/wiki/PyYAMLDocumentation",
+        "Mailing lists, http://lists.sourceforge.net/lists/listinfo/yaml-core",
+        "Source Code, https://github.com/yaml/pyyaml"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers."
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "homepage, https://scipy.org/",
+        "documentation, https://docs.scipy.org/doc/scipy/",
+        "source, https://github.com/scipy/scipy",
+        "download, https://github.com/scipy/scipy/releases",
+        "tracker, https://github.com/scipy/scipy/issues"
+      ],
+      "license_files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "f0f5c56b298ec9795df1199edc328a987242716d14a1bde6813112e22dc15f99"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "setuptools",
+      "version": "81.0.0",
+      "profiles": [
+        "body",
+        "brain"
+      ],
+      "license_expression": "MIT",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Source, https://github.com/pypa/setuptools",
+        "Documentation, https://setuptools.pypa.io/",
+        "Changelog, https://setuptools.pypa.io/en/stable/history.html"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "profiles": [
+        "body",
+        "brain"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "stack-data",
+      "version": "0.6.3",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "a476a2cb0ef4c41450340a577a28b91ac4c7f669136b2ee148047fabd5fc4181"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "starlette",
+      "version": "1.8.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/Kludex/starlette",
+        "Documentation, https://starlette.dev/",
+        "Changelog, https://starlette.dev/release-notes/",
+        "Funding, https://github.com/sponsors/Kludex",
+        "Source, https://github.com/Kludex/starlette"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "tabulate",
+      "version": "0.9.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/astanin/python-tabulate"
+      ],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "cdfab50d37d8ead06468fb76a3abafcd05c16749ec8a18eebfa50fd48c7cb2d2"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "tqdm",
+      "version": "4.70.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MPL-2.0 AND MIT"
+      ],
+      "license_classifiers": [],
+      "project_urls": [
+        "homepage, https://tqdm.github.io",
+        "repository, https://github.com/tqdm/tqdm",
+        "changelog, https://tqdm.github.io/releases",
+        "wiki, https://github.com/tqdm/tqdm/wiki"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENCE",
+          "sha256": "fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "traitlets",
+      "version": "5.16.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "BSD 3-Clause License"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/ipython/traitlets",
+        "Documentation, https://traitlets.readthedocs.io",
+        "Source, https://github.com/ipython/traitlets",
+        "Tracker, https://github.com/ipython/traitlets/issues"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "2f51727d9063b54856773cb51388bdb79f2936ee4a1b692ef553d8c4201311ab"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "trimesh",
+      "version": "4.12.2",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "The MIT License (MIT)"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "homepage, https://github.com/mikedh/trimesh",
+        "documentation, https://trimesh.org"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "fe27b5ef8710676cc85255da28a32f394e2ef3f4ce47075a1c732a9ea1d7bd03"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "profiles": [
+        "body",
+        "brain"
+      ],
+      "license_expression": "PSF-2.0",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Bug Tracker, https://github.com/python/typing_extensions/issues",
+        "Changes, https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+        "Documentation, https://typing-extensions.readthedocs.io/",
+        "Home, https://github.com/python/typing_extensions",
+        "Q & A, https://github.com/python/typing/discussions",
+        "Repository, https://github.com/python/typing_extensions"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "MIT",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/pydantic/typing-inspection",
+        "Documentation, https://pydantic.github.io/typing-inspection/dev/",
+        "Source, https://github.com/pydantic/typing-inspection",
+        "Changelog, https://github.com/pydantic/typing-inspection/blob/main/HISTORY.md"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.5",
+      "profiles": [
+        "body",
+        "brain"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "Apache-2.0"
+      ],
+      "license_classifiers": [],
+      "project_urls": [
+        "Bug Reports, https://github.com/python/tzdata/issues",
+        "Source, https://github.com/python/tzdata",
+        "Documentation, https://tzdata.python.org"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "df58f69ea88683035d720b5375bcef0cf5aeaa98a1d098d572e0992c378deb46"
+        },
+        {
+          "path": "licenses/licenses/LICENSE_APACHE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.54.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Changelog, https://uvicorn.dev/release-notes",
+        "Funding, https://github.com/sponsors/Kludex",
+        "Homepage, https://uvicorn.dev/",
+        "Source, https://github.com/Kludex/uvicorn"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "wadler_lindig",
+      "version": "0.1.7",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "Apache License"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: Apache Software License"
+      ],
+      "project_urls": [
+        "repository, https://github.com/patrick-kidger/wadler_lindig"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "wcwidth",
+      "version": "0.9.2",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Homepage, https://github.com/jquast/wcwidth"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "dff08668b8cfca00ec90011eb318e450c3719fcd40893bf375781a6beef7143a"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "websockets",
+      "version": "16.1.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://github.com/python-websockets/websockets",
+        "Changelog, https://websockets.readthedocs.io/en/stable/project/changelog.html",
+        "Documentation, https://websockets.readthedocs.io/",
+        "Funding, https://tidelift.com/subscription/pkg/pypi-websockets?utm_source=pypi-websockets&utm_medium=referral&utm_campaign=readme",
+        "Tracker, https://github.com/python-websockets/websockets/issues"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "0f44514998aca209d3482d10204a8adf2aa4296ff157a36a5c0922f2280632d3"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "win32_setctime",
+      "version": "1.2.0",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "MIT license"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "2f2d766c4cef27a40d4b3c17d3e02e5b5b9ddffba2544a93f99ffafe05778518"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "zipp",
+      "version": "4.1.1",
+      "profiles": [
+        "body"
+      ],
+      "license_expression": "MIT",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Source, https://github.com/jaraco/zipp"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "filelock",
+      "version": "4.2.0",
+      "profiles": [
+        "brain"
+      ],
+      "license_expression": "MIT",
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: MIT License"
+      ],
+      "project_urls": [
+        "Documentation, https://py-filelock.readthedocs.io",
+        "Homepage, https://github.com/tox-dev/py-filelock",
+        "Source, https://github.com/tox-dev/py-filelock",
+        "Tracker, https://github.com/tox-dev/py-filelock/issues"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "Jinja2",
+      "version": "3.1.6",
+      "profiles": [
+        "brain"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Changes, https://jinja.palletsprojects.com/changes/",
+        "Chat, https://discord.gg/pallets",
+        "Documentation, https://jinja.palletsprojects.com/",
+        "Donate, https://palletsprojects.com/donate",
+        "Source, https://github.com/pallets/jinja/"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "MarkupSafe",
+      "version": "3.0.4",
+      "profiles": [
+        "brain"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Donate, https://palletsprojects.com/donate",
+        "Documentation, https://markupsafe.palletsprojects.com/",
+        "Changes, https://markupsafe.palletsprojects.com/page/changes/",
+        "Source, https://github.com/pallets/markupsafe/",
+        "Chat, https://discord.gg/pallets"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "4631ec0db5fd90a547e336817264c6798214338146f8ac94b4a57f96ee8c9ec4"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "mpmath",
+      "version": "1.3.0",
+      "profiles": [
+        "brain"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "BSD"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Source, https://github.com/fredrik-johansson/mpmath",
+        "Tracker, https://github.com/fredrik-johansson/mpmath/issues",
+        "Documentation, http://mpmath.org/doc/current/"
+      ],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "networkx",
+      "version": "3.7",
+      "profiles": [
+        "brain"
+      ],
+      "license_expression": "BSD-3-Clause",
+      "license_header_first_line": [],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://networkx.org/",
+        "Bug Tracker, https://github.com/networkx/networkx/issues",
+        "Documentation, https://networkx.org/documentation/stable/",
+        "Source Code, https://github.com/networkx/networkx"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "6025f323ea29dc2f0ee0abd9523bf910186f55b0e148e6ebf646c55566278e2e"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "sympy",
+      "version": "1.14.0",
+      "profiles": [
+        "brain"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "BSD"
+      ],
+      "license_classifiers": [
+        "License :: OSI Approved :: BSD License"
+      ],
+      "project_urls": [
+        "Source, https://github.com/sympy/sympy"
+      ],
+      "license_files": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    },
+    {
+      "name": "torch",
+      "version": "2.11.0+cu128",
+      "profiles": [
+        "brain"
+      ],
+      "license_expression": null,
+      "license_header_first_line": [
+        "BSD-3-Clause"
+      ],
+      "license_classifiers": [],
+      "project_urls": [
+        "Homepage, https://pytorch.org",
+        "Repository, https://github.com/pytorch/pytorch",
+        "Documentation, https://pytorch.org/docs",
+        "Issue Tracker, https://github.com/pytorch/pytorch/issues",
+        "Forum, https://discuss.pytorch.org"
+      ],
+      "license_files": [
+        {
+          "path": "LICENSE",
+          "sha256": "3e289336d947fdf82f085f2a5ca757088084dd67d6530d46b4f02eb07461bb13"
+        },
+        {
+          "path": "NOTICE",
+          "sha256": "1c3dec6c0342c7ed9e12af59b296c7bb1d394af5cf881db74191cc8299efce5c"
+        }
+      ],
+      "source_repository_redistributes_wheel": false,
+      "note": "安装元数据只用于记录；含 native/捆绑依赖的二进制若以后随包再分发，须另核每个发行文件及其自带声明。"
+    }
+  ]
+}
