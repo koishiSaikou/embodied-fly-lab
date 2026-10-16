@@ -383,8 +383,8 @@
     },
     {
       "path": "docs/首次发布说明.md",
-      "bytes": 6995,
-      "sha256": "7229dae48e0a16765874d2e696ef21f52ccfb4516d3c129725f865d72cda9ad7"
+      "bytes": 6914,
+      "sha256": "c15bf043834341f1efe39d04b0e24d76e15f32e678cf6fa88e38e5c3edc9d1b1"
     },
     {
       "path": "docs/验证记录.md",
@@ -2403,7 +2403,7 @@
       "modified_in_release_copy": true
     }
   ],
-  "updated_at_utc": "2026-10-16T08:38:41.751340+00:00",
+  "updated_at_utc": "2026-10-16T08:40:43.752565+00:00",
   "excluded_originals": [
     {
       "path": "downloads/annotations/README_v3.2.0.md",
