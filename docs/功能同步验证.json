@@ -208,5 +208,22 @@
     "release_created_at_record_time": false,
     "delivery_built_at_record_time": false,
     "binary_review": "docs/运行包许可与来源.md"
+  },
+  "subsequent_intro_documentation_update": {
+    "prepared_at_utc": "2026-10-16T08:38:41.462105+00:00",
+    "scope": "Chinese repository README, overview, documentation index and Release body only",
+    "application_changed": false,
+    "tests_run": false,
+    "delivery_rebuilt": false,
+    "tag_moved": false,
+    "release_source_commit": "03fbcb8f0954993622d5380aff3d5d306b87012e",
+    "backup_directory": "output/code_sync_backup/20261016_163841_454496",
+    "synced_files": [
+      "项目说明.md",
+      "docs/项目概述.md",
+      "docs/文档导航.md",
+      "docs/项目详情.md",
+      "docs/AI二次开发文档.md"
+    ]
   }
 }

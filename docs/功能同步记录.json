@@ -712,6 +712,49 @@
         }
       ],
       "tests_run": false
+    },
+    {
+      "synchronized_at_utc": "2026-10-16T08:38:41.462076+00:00",
+      "authorization": "维护者要求仓库和 Release 补充介绍、说明文档和概述；同步中文项目介绍和导航，修正文档中的历史发布状态，无程序修改或重打包。",
+      "backup_directory": "output/code_sync_backup/20261016_163841_454496",
+      "files": [
+        {
+          "path": "项目说明.md",
+          "before_sha256": "a411070de2192e9c2d9e0ac339bd5b5bee0f55291ae8f9aec15832213cd701fb",
+          "after_sha256": "577bf9b61f391293df92fb418f997c58552d716184b04113baa31a837621681f",
+          "backup": "output/code_sync_backup/20261016_163841_454496/项目说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/项目概述.md",
+          "before_sha256": null,
+          "after_sha256": "eb87d39b8ada11d64af3e3e9145828054d6ff19ae846f97dadd285f84b3a14cb",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/文档导航.md",
+          "before_sha256": null,
+          "after_sha256": "b16cb0534a8ce0e831bcdc69e3c87ba0d4c743027536c54044ded34baac0cd87",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/项目详情.md",
+          "before_sha256": "4a8d114dc2965152a35c60a5f38842171917eb06faf3f50e2ea41b6d7fe713f3",
+          "after_sha256": "f7de175a3740946a95b7eace4829e49a1efe9c34dc34ea1bde4ea62d4d2dc598",
+          "backup": "output/code_sync_backup/20261016_163841_454496/docs/项目详情.md",
+          "same_as_preparation_copy": false
+        },
+        {
+          "path": "docs/AI二次开发文档.md",
+          "before_sha256": "382982bba49bc32b7e3cc0f35592c67ca52edd4c66113224408aca638fa8c268",
+          "after_sha256": "c87765f6f393a6008788b41226489ddb0e020de8f1256c63246f057bbfda9a50",
+          "backup": "output/code_sync_backup/20261016_163841_454496/docs/AI二次开发文档.md",
+          "same_as_preparation_copy": false
+        }
+      ],
+      "tests_run": false
     }
   ]
 }

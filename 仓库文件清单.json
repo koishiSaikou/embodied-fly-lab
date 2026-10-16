@@ -202,8 +202,8 @@
     },
     {
       "path": "docs/AI二次开发文档.md",
-      "bytes": 38190,
-      "sha256": "54f7712297fd65028a49b5c7d58c731a83657cc17d3e4400682a14045ab0b4e0",
+      "bytes": 38453,
+      "sha256": "87142774411a1d58a80bafc8cfaeb6f6cf00deb277232e0b4b2c3f94c1db9811",
       "original_source_path": "docs/AI二次开发文档.md",
       "original_sha256": "f2b6fb845e3e84e58df1cb5fe4ab066b85a2cdaf12d76f3c95771bd72afb1ca3",
       "modified_in_release_copy": true
@@ -241,13 +241,13 @@
     },
     {
       "path": "docs/功能同步记录.json",
-      "bytes": 35003,
-      "sha256": "30f13e582aa20689c68a598bdfde02b3e89975a329a10cd3b46b5861c1cbde81"
+      "bytes": 37138,
+      "sha256": "068dec37dd62c6f6cd382a38e9a8061f247dfa38422547e7964cbeff287ded4e"
     },
     {
       "path": "docs/功能同步验证.json",
-      "bytes": 8100,
-      "sha256": "ae9bdc97c7033a8169a37d1788688b54a28545644b717660d048c1113d5bf41e"
+      "bytes": 8761,
+      "sha256": "9b8838956a984afeb29831b7138c320db4c9990dfa111db922d1f3449500d29b"
     },
     {
       "path": "docs/历史交付包操作说明.md",
@@ -310,6 +310,11 @@
       "modified_in_release_copy": true
     },
     {
+      "path": "docs/文档导航.md",
+      "bytes": 3288,
+      "sha256": "b16cb0534a8ce0e831bcdc69e3c87ba0d4c743027536c54044ded34baac0cd87"
+    },
+    {
       "path": "docs/测试版发布准备.json",
       "bytes": 608,
       "sha256": "eb43caa601283a1a6a1f8602aaa562b7e1e5ac62ff780d8588e9a94b4fd87b3b"
@@ -356,10 +361,17 @@
       "sha256": "09026fce0321a1bba866f0484a903fc024a22e10f696494014caa240d7dc0fa3"
     },
     {
+      "path": "docs/项目概述.md",
+      "bytes": 3177,
+      "sha256": "eb87d39b8ada11d64af3e3e9145828054d6ff19ae846f97dadd285f84b3a14cb"
+    },
+    {
       "path": "docs/项目详情.md",
-      "bytes": 8814,
-      "sha256": "4a8d114dc2965152a35c60a5f38842171917eb06faf3f50e2ea41b6d7fe713f3",
-      "source_path": "docs/项目详情.md"
+      "bytes": 8823,
+      "sha256": "2937d77bc0d7aa0dde24ca03176a926027fcc58ce68ecaeff204abb2dc9b320e",
+      "original_source_path": "docs/项目详情.md",
+      "original_sha256": "4a8d114dc2965152a35c60a5f38842171917eb06faf3f50e2ea41b6d7fe713f3",
+      "modified_in_release_copy": true
     },
     {
       "path": "docs/首个测试版发布检查.md",
@@ -371,8 +383,8 @@
     },
     {
       "path": "docs/首次发布说明.md",
-      "bytes": 3306,
-      "sha256": "593f8d759572ab3e341535b45196ffb3435045d91cff523abf16b7b5d01d6079"
+      "bytes": 6995,
+      "sha256": "7229dae48e0a16765874d2e696ef21f52ccfb4516d3c129725f865d72cda9ad7"
     },
     {
       "path": "docs/验证记录.md",
@@ -1939,6 +1951,11 @@
       "sha256": "882887724070f6c04fca7e979870fc6d484d481851edc5a6c68170a9536711cb"
     },
     {
+      "path": "README.md",
+      "bytes": 7718,
+      "sha256": "577bf9b61f391293df92fb418f997c58552d716184b04113baa31a837621681f"
+    },
+    {
       "path": "requirements/body-win-x64.lock.txt",
       "bytes": 6781,
       "sha256": "9f871f0cc262f8e1d969e0c486c979fae4c919b3fe8b9c96e6da988f515fbf1c"
@@ -2379,14 +2396,14 @@
     },
     {
       "path": "项目说明.md",
-      "bytes": 2885,
-      "sha256": "a411070de2192e9c2d9e0ac339bd5b5bee0f55291ae8f9aec15832213cd701fb",
+      "bytes": 7718,
+      "sha256": "577bf9b61f391293df92fb418f997c58552d716184b04113baa31a837621681f",
       "original_source_path": "项目说明.md",
       "original_sha256": "3aebc9694ed3a84d115dc3827148058128cf9fe12c25f547f6b8bf81cd44e89b",
       "modified_in_release_copy": true
     }
   ],
-  "updated_at_utc": "2026-10-16T08:24:48.053048+00:00",
+  "updated_at_utc": "2026-10-16T08:38:41.751340+00:00",
   "excluded_originals": [
     {
       "path": "downloads/annotations/README_v3.2.0.md",
