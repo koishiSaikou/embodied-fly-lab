@@ -1647,6 +1647,134 @@
       ],
       "tests_run": true,
       "scope": "Read-only mushroom-body observer; tiny CPU, pure logic and synthetic archive checks only"
+    },
+    {
+      "synchronized_at_utc": "2026-10-18T07:24:48.372556+00:00",
+      "authorization": "维护者明确要求提交推送、更新README/新Release，并追加要求运行包一并更新。",
+      "backup_directory": "output/code_sync_backup/20261018_152448_336955",
+      "files": [
+        {
+          "path": "版本信息.json",
+          "before_sha256": "fa4228a1b23bc587c577f0e24ee49c0ca6d05934a1c916723ebc172c9957b466",
+          "after_sha256": "42ad2e644b564aa3b08c118fe2334ba5d6724afe5a15ce604dd4db89898f8e37",
+          "backup": "output/code_sync_backup/20261018_152448_336955/版本信息.json",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "项目说明.md",
+          "before_sha256": "8af2755760866a149d113abe72aaf7ac5141e2468c1f53f61493ecf7aeb38178",
+          "after_sha256": "bfce3c42bc9d6c513ad7a8891a7a816a3c6d5ef47fafb9ab08367b8d500f2dcc",
+          "backup": "output/code_sync_backup/20261018_152448_336955/项目说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "版本与更新记录.md",
+          "before_sha256": "d37a2788f09c90eb04c1aa7ef58ce5d7464017e7c26e7c68ae843a3d164f0b9a",
+          "after_sha256": "4a8f2e7e3d492bef04c39e4bcc1fecfde7585bf1ca830911ad96142ee30fa880",
+          "backup": "output/code_sync_backup/20261018_152448_336955/版本与更新记录.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/index.html",
+          "before_sha256": "4f5e1fb044bb24a5f2f7ed09bd200d5d898d982d13c2dd4e1e867a969bf0f9cd",
+          "after_sha256": "a0e1a1130b9400d5e935ba241cdf129611ddd065ad5608c32063865af50758f4",
+          "backup": "output/code_sync_backup/20261018_152448_336955/web/index.html",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "activity_monitor.html",
+          "before_sha256": "ed23d09570b5d18e72dd97381e7ea792688d6dc65783c0e1e893c018995e8667",
+          "after_sha256": "d0d5ee4c5fee31c22c20d4aac3fcc418ed684a542338476344c6178f63321f0e",
+          "backup": "output/code_sync_backup/20261018_152448_336955/activity_monitor.html",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/许可与来源.html",
+          "before_sha256": "266ea4a6be046f16b3a1076710c33e4b59184b8e5742f2e1eb1f2c0fcd1cff19",
+          "after_sha256": "9a7f4d97e2466c212801a7bad49e8f80fbab966d44c858ee9321985b118c32e2",
+          "backup": "output/code_sync_backup/20261018_152448_336955/web/许可与来源.html",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/交付包说明.md",
+          "before_sha256": "74828fe40445dc37a2c400d58c3e0668a8a4a694c43624d0da07be8f2e5bb39b",
+          "after_sha256": "3487da576e18ff1490699d0c05ed99ec9c365fb3907c0733ea86bd995fd8bb4a",
+          "backup": "output/code_sync_backup/20261018_152448_336955/docs/交付包说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/快速开始.md",
+          "before_sha256": "b24331276dcbdc0809c091c30390fd68af1b050b3384c05c2b942f33e2225aed",
+          "after_sha256": "4b25601d427ee9ed28b39f5f3dcac23f73a6f89933e6b7b11f839072b6d316b6",
+          "backup": "output/code_sync_backup/20261018_152448_336955/docs/快速开始.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/操作说明.md",
+          "before_sha256": "0be87a8095ce4b4ca0c68db0bdb635dbf5c50bc6626640153e350ba609f1f12d",
+          "after_sha256": "3829823155d97a7c62763ef54303260d8c56b9677e8dd68767e8c3e4244b625c",
+          "backup": "output/code_sync_backup/20261018_152448_336955/docs/操作说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/启动与停止说明.md",
+          "before_sha256": "83dc111a6ca3342b057f455fe134ef4ad9e031c8344aa41adf70760eb11e1c00",
+          "after_sha256": "7ef2e78175f4af69f4f35b763114879abdf076b7be34ce3c1722f864226023a1",
+          "backup": "output/code_sync_backup/20261018_152448_336955/docs/启动与停止说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/项目概述.md",
+          "before_sha256": "eb87d39b8ada11d64af3e3e9145828054d6ff19ae846f97dadd285f84b3a14cb",
+          "after_sha256": "5556be51cee14abff752b0a51607f7134dfe187ef3340eec754b8f054d5d54b7",
+          "backup": "output/code_sync_backup/20261018_152448_336955/docs/项目概述.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/文档导航.md",
+          "before_sha256": "63dc94c788d87b4853e360c405ee49060246cf212b198dbd2769154408e7afda",
+          "after_sha256": "422e612402ed1c97e3f3b6038909204aea46b50b7ec9853bb1b09fb81a49015a",
+          "backup": "output/code_sync_backup/20261018_152448_336955/docs/文档导航.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/已知限制.md",
+          "before_sha256": "2f664d34b042e49dfd59f731cfa92c276f44a2c501fa9f9dad2f167a487b6121",
+          "after_sha256": "77d0eec776564389621fb7080f832635db211ab048c9ebddfc422a0d79f57933",
+          "backup": "output/code_sync_backup/20261018_152448_336955/docs/已知限制.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/运行包许可与来源.md",
+          "before_sha256": "09026fce0321a1bba866f0484a903fc024a22e10f696494014caa240d7dc0fa3",
+          "after_sha256": "4c20cb3bba579399acb7f8c9ddb565992fec585f3bc60a49a7a05c408d77d42e",
+          "backup": "output/code_sync_backup/20261018_152448_336955/docs/运行包许可与来源.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/测试版更新说明.md",
+          "before_sha256": null,
+          "after_sha256": "ec9c97a9d2b1d27bc91e497a1cc971518f50d37972046ee319e95d1636e4e1bb",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/AI二次开发文档.md",
+          "before_sha256": "aa64d40cd9628a978350b6dfdb8f578d7f02652197300991bcd9097ede96f5d7",
+          "after_sha256": "5ea66082bee8bbce26e9a673d07443dae373aef550c20bea5533a4202004472c",
+          "backup": "output/code_sync_backup/20261018_152448_336955/docs/AI二次开发文档.md",
+          "same_as_preparation_copy": false
+        },
+        {
+          "path": "AI协作约定.md",
+          "before_sha256": "21cf55ca83594a1ce041216da2cafb75e204d47d75233766cb9a66a4a4f015b0",
+          "after_sha256": "cc462f1d60e0fcea11e4083f9dce8dd36bd1b5bcd4ba75c6a3e9e73dd90c7f91",
+          "backup": "output/code_sync_backup/20261018_152448_336955/AI协作约定.md",
+          "same_as_preparation_copy": false
+        }
+      ],
+      "tests_run": false,
+      "scope": "alpha.2 version/README/release docs only; static source bookkeeping"
     }
   ]
 }

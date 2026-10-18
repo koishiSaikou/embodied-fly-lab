@@ -1,7 +1,7 @@
 {
   "name": "果蝇感觉与行为实验场",
-  "version": "0.1.0-alpha.1",
-  "release_tag": "v0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
+  "release_tag": "v0.1.0-alpha.2",
   "release_status": "demo-prerelease",
   "source_commit": null,
   "report_schema_version": 1,
@@ -13,8 +13,8 @@
   "flygym_version": "2.1.0",
   "flygym_source_commit": "38c8ec61034cd59bc5ba0de20688d4a3c0000d60",
   "platform_scope": "Windows x64; NVIDIA CUDA for the brain; desktop landscape; ASCII project path",
-  "biological_scope": "Uniform LIF on a connectome; engineered sensation/control/needs and external odor-value memory; no complete VNC or whole-brain synaptic learning",
+  "biological_scope": "Uniform connectome LIF; engineered sensorimotor control; separate external odor-value memory and optional local KC-to-MBON LTD; no complete VNC or whole-brain learning",
   "repository_url": "https://github.com/koishiSaikou/embodied-fly-lab",
-  "publication_note": "0.1.0-alpha.1 公开测试 Demo（Pre-release），提供源码及更新后的 Windows 运行包。源码 JSON 不预写自身 SHA；运行包清单记录实际构建提交。",
-  "release_url": "https://github.com/koishiSaikou/embodied-fly-lab/releases/tag/v0.1.0-alpha.1"
+  "publication_note": "0.1.0-alpha.2 公开测试 Demo（Pre-release），提供源码与对应Windows运行包；包内记录实际构建提交，保留alpha.1历史版本。",
+  "release_url": "https://github.com/koishiSaikou/embodied-fly-lab/releases/tag/v0.1.0-alpha.2"
 }

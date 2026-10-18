@@ -465,5 +465,39 @@
       "simulation_started": false,
       "scope": "原项目自身环境纯标准库观察器/关键源码摘要导入及脑Python语法检查；未加载神经或身体仿真。"
     }
+  },
+  "alpha2_release_preparation_20261018": {
+    "prepared_at_utc": "2026-10-18T07:24:48.372522+00:00",
+    "version": "0.1.0-alpha.2",
+    "authorization": "维护者明确要求提交推送、更新README/新Release，并追加要求运行包一并更新。",
+    "status": "源码功能提交dd9c186已推送；alpha.2版本/说明同步就绪，等待干净提交构建与发布",
+    "feature_commit": "dd9c186",
+    "synced_files": [
+      "版本信息.json",
+      "项目说明.md",
+      "版本与更新记录.md",
+      "web/index.html",
+      "activity_monitor.html",
+      "web/许可与来源.html",
+      "docs/交付包说明.md",
+      "docs/快速开始.md",
+      "docs/操作说明.md",
+      "docs/启动与停止说明.md",
+      "docs/项目概述.md",
+      "docs/文档导航.md",
+      "docs/已知限制.md",
+      "docs/运行包许可与来源.md",
+      "docs/测试版更新说明.md",
+      "docs/AI二次开发文档.md",
+      "AI协作约定.md"
+    ],
+    "backup_directory": "output/code_sync_backup/20261018_152448_336955",
+    "relative_doc_links": 100,
+    "application_tests_run": false,
+    "simulation_started": false,
+    "installation_executed": false,
+    "old_packages_preserved": true,
+    "release_created_at_record_time": false,
+    "delivery_built_at_record_time": false
   }
 }

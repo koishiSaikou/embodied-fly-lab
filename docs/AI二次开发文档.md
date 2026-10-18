@@ -7,7 +7,7 @@
 
 当前 Demo 发布范围（2026-10-16）：新增代码已由维护者选为 GPL-3.0-or-later；第三方与数据保留自己的条件。许可入口为 /licenses，静态页 web/许可与来源.html；来源清单 web/morphology_sources.json 和 prepare_morphology.py 使用同一固定来源与署名信息。不要再次用旧的未定位许可的原注释文档生成公开说明。当前模型/积分/学习机制未在本轮改变。
 
-版本身份来自根目录 版本信息.json，通过 project_info.py 按进程冻结后用于页面状态、启动日志、配置和新报告 project 字段。旧记录不补写版本。当前为 0.1.0-alpha.1 Pre-release；源码 source_commit 保持 null，运行包记录实际构建提交。原样保存依赖锁和模型顺序。
+版本身份来自根目录 版本信息.json，通过 project_info.py 按进程冻结后用于页面状态、启动日志、配置和新报告 project 字段。旧记录不补写版本。当前为 0.1.0-alpha.2 Pre-release；源码 source_commit 保持 null，运行包记录实际构建提交。原样保存依赖锁和模型顺序。
 
 维护者明确将长时内存/磁盘保护暂缓，并要求此次 Demo 不新增/运行测试；本轮仅做来源/文本/文件静态核对，不执行仿真、安装、GPU 或 CI，也不能把此前验证当作最新修改的测试保证。维护者随后已授权公开源码、创建 Release 并更新 Windows 交付包；这些步骤已完成。当前请求只补充介绍和文档，不自动重建 ZIP 或改动已发布标签。
 
@@ -324,3 +324,8 @@ After modifying source, the original release manifest will no longer match. Keep
 ## 0.1.0-alpha.1 运行包补充
 
 维护者已授权本次 Pre-release 和运行包更新；未来更新仍需请求。运行包含独立 Python、连接表和普通依赖，PyTorch 与 imageio-ffmpeg wheel 由接收方按 docs/下载说明.md 另行补齐。delivery/外部依赖.json 记录录像 wheel 的固定 URL、大小和哈希；bootstrap 在创建环境前校验。构建在 GitHub 准备目录进行，只从已提交的干净源码生成，实际提交写入包内版本信息与清单；不改写源码提交自身的 source_commit。本轮未运行安装、仿真、GPU 或性能测试。
+
+
+## 0.1.0-alpha.2 发布授权与交付（2026-10-18）
+
+维护者已明确要求先提交推送功能，再更新README与新Release，并另行要求运行包一并更新；这替代前述开发阶段“未提交/不重建”的本次限制。版本统一为alpha.2，旧alpha.1保留。只从干净提交构建，source_commit在源码JSON仍为null，运行包身份/清单写实际构建提交；不安装或启动应用验收。运行包新增全部保存/干预/学习/观察器模块与中文文档；两个外部wheel获取方式和既有许可保持。未来提交/打包仍按后续用户请求，不推定为永久授权。
