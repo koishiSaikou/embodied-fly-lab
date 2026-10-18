@@ -8,14 +8,18 @@
   <link rel="stylesheet" href="/assets/neural_activity.css">
   <script type="importmap">{"imports":{"three":"/assets/vendor/three.module.js","three/addons/":"/assets/vendor/"}}</script>
   <link rel="stylesheet" href="/assets/workbench.css?v=behavior-20261016">
+  <link rel="stylesheet" href="/assets/experiment_io.css?v=20261017">
+  <link rel="stylesheet" href="/assets/neural_intervention.css?v=20261017">
+  <link rel="stylesheet" href="/assets/mb_learning.css?v=20261018">
+  <link rel="stylesheet" href="/assets/mb_observer.css?v=20261018">
 </head>
 <body class="workbench">
   <header class="topbar wb-topbar">
     <div class="wb-brand"><span class="wb-mark">F</span><div><h1>果蝇实验场</h1><span>第三方感觉与行为 Demo</span></div></div>
     <nav class="wb-window-menu" aria-label="打开观测窗口">
-      <button data-window="map">场地地图</button><button data-window="raster">放电栅格</button><button data-window="classes">大类曲线</button><button data-window="types">类型曲线</button><button data-window="activity">活动总览</button><button data-window="identity">神经元查询</button>
+      <button data-window="map">场地地图</button><button data-window="raster">放电栅格</button><button data-window="classes">大类曲线</button><button data-window="types">类型曲线</button><button data-window="activity">活动总览</button><button data-window="identity">神经元查询</button><button data-window="mb-observer">学习观察器</button>
     </nav>
-    <div class="header-actions"><span class="status" id="status" role="status">连接仿真…</span><button id="pause" class="wb-primary">暂停</button><button id="stop">结束并保存</button><button id="wb-reset" title="恢复默认布局，不改变仿真或参数">重置布局</button></div>
+    <div class="header-actions"><span class="status" id="status" role="status">连接仿真…</span><button id="pause" class="wb-primary">暂停</button><button id="stop">结束并保存</button><button id="saveAs" disabled title="结束本轮、完成保存后，另存一份到选择的目录">另存到…</button><a class="eio-import-link" href="/records?import=1" target="_blank" rel="noopener" title="导入实验包，查看配置后选择新开实验">导入实验</a><button id="wb-reset" title="恢复默认布局，不改变仿真或参数">重置布局</button></div>
   </header>
   <main class="wb-layout">
     <aside class="wb-observers" aria-label="观测面板">
@@ -64,7 +68,7 @@
     </section>
     <aside class="wb-inspector" aria-label="分类调整项">
       <div class="wb-dock-title"><span>属性与反馈</span><span class="tag">本轮实验</span></div>
-      <div class="wb-tabs" role="tablist" aria-label="调整项分类"><button id="tab-brain" role="tab" aria-controls="inspector-brain" data-inspector="brain" aria-selected="true">脑模型</button><button id="tab-senses" role="tab" aria-controls="inspector-senses" data-inspector="senses" aria-selected="false" tabindex="-1">感官</button><button id="tab-behavior" role="tab" aria-controls="inspector-behavior" data-inspector="behavior" aria-selected="false" tabindex="-1">行为</button><button id="tab-arena" role="tab" aria-controls="inspector-arena" data-inspector="arena" aria-selected="false" tabindex="-1">场景</button></div>
+      <div class="wb-tabs" role="tablist" aria-label="调整项分类"><button id="tab-brain" role="tab" aria-controls="inspector-brain" data-inspector="brain" aria-selected="true">脑模型</button><button id="tab-senses" role="tab" aria-controls="inspector-senses" data-inspector="senses" aria-selected="false" tabindex="-1">感官</button><button id="tab-behavior" role="tab" aria-controls="inspector-behavior" data-inspector="behavior" aria-selected="false" tabindex="-1">行为</button><button id="tab-arena" role="tab" aria-controls="inspector-arena" data-inspector="arena" aria-selected="false" tabindex="-1">场景</button><button id="tab-intervention" role="tab" aria-controls="inspector-intervention" data-inspector="intervention" aria-selected="false" tabindex="-1">神经干预</button><button id="tab-mb-learning" role="tab" aria-controls="inspector-mb-learning" data-inspector="mb-learning" aria-selected="false" tabindex="-1">局部学习</button></div>
       <div class="wb-inspector-scroll">
         <div id="inspector-brain" role="tabpanel" aria-labelledby="tab-brain" data-inspector-pane="brain"><section class="panel brain-settings-panel" id="brainSettingsPanel" aria-label="脑刺激与反馈调整"></section></div>
         <div id="inspector-senses" role="tabpanel" aria-labelledby="tab-senses" data-inspector-pane="senses" hidden>
@@ -78,26 +82,33 @@
         </div>
         <div id="inspector-behavior" role="tabpanel" aria-labelledby="tab-behavior" data-inspector-pane="behavior" hidden><section id="behaviorSettingsPanel" aria-label="行为与学习调整"></section></div>
         <div id="inspector-arena" role="tabpanel" aria-labelledby="tab-arena" data-inspector-pane="arena" hidden><div class="wb-arena-actions"><button data-window="map">打开场地地图</button><button id="moveFood">移动主要食物</button></div><div id="arenaTools"></div></div>
+        <div id="inspector-intervention" role="tabpanel" aria-labelledby="tab-intervention" data-inspector-pane="intervention" hidden><section id="neuralInterventionPanel" class="ni-panel" aria-label="定时神经刺激与静默"></section></div>
+        <div id="inspector-mb-learning" role="tabpanel" aria-labelledby="tab-mb-learning" data-inspector-pane="mb-learning" hidden><button data-window="mb-observer" class="mbo-open">打开学习时序与前后对比</button><section id="mbLearningPanel" class="mbl-panel" aria-label="蘑菇体 KC 到 MBON 局部突触学习"></section></div>
       </div>
       <div id="message" role="status" class="caption wb-feedback"></div>
     </aside>
   </main>
-  <footer class="wb-statusbar"><span><i class="live-dot"></i> LIF 脑 · 工程导航</span><span>场地 50 × 50 mm</span><div id="directory" title="当前实验记录目录">等待实验记录目录</div><button data-window="rate">总放电率图</button></footer>
+  <footer class="wb-statusbar"><span><i class="live-dot"></i> LIF 脑 · 工程导航</span><span>场地 50 × 50 mm</span><a href="/records" target="_blank" rel="noopener">实验记录 · 导入与分享 ↗</a><div id="directory" title="当前实验记录目录">等待实验记录目录</div><button data-window="rate">总放电率图</button></footer>
   <div id="wb-windows" aria-label="可拖动观测窗口">
+    <section class="wb-float" id="window-mb-observer" data-floating="mb-observer" data-title="蘑菇体学习观察器 · 模型时间与前后比较" hidden><div class="wb-window-body mbo-body" id="mbObserverPanel"></div></section>
     <section class="wb-float" id="window-map" data-floating="map" data-title="场地与轨迹" hidden><div class="wb-window-body map-panel"><div class="caption">点击选择元素；在右侧“场景”中编辑属性。虚线圈表示作用范围。</div><div class="wb-map-fit"><canvas id="arena" aria-label="可编辑多感官觅食场地图，点击选择或放置元素"></canvas></div></div></section>
     <section class="wb-float" id="window-activity" data-floating="activity" data-title="全脑活动 · 筛选与统计" hidden><div class="wb-window-body"><section id="neuralActivityPanel" aria-label="全脑分类活动"></section></div></section>
     <section class="wb-float" id="window-identity" data-floating="identity" data-title="神经元身份与类型" hidden><div class="wb-window-body"><section id="annotationsPanel" class="annotation-panel" aria-label="神经元类型查询"></section></div></section>
     <section class="wb-float" id="window-rate" data-floating="rate" data-title="脑模型总放电率" hidden><div class="wb-window-body wb-rate-body">
         <div class="chart-title">脑模型总放电率 <span id="rate">—</span></div><canvas id="rateChart" aria-label="按模型时间计算的每秒放电次数"></canvas>
     </div></section>
-    <section class="wb-float" id="window-about" data-floating="about" data-title="项目说明与操作" hidden><div class="wb-window-body wb-about"><h2>本地果蝇实验场</h2><p id="appVersion">0.1.0-alpha.1 · Alpha Demo · 公开测试版</p><p>MuJoCo 身体与实际复眼、FlyWire 连接组上的简化 LIF 脑、工程感觉与运动策略，另有外置气味偏好学习；LIF 连接权重保持原样。</p><p>顶部按钮打开观测窗口；拖动标题栏移动，右下角调整尺寸；“−”折叠，“×”收起。右侧分类展开调整项，修改后应用到本轮。</p><p>地图中的造型是非碰撞辨识标记；气味、光照、温湿度含简化代理场。活动图使用实际放电事件，静态脑区模板不表示活动。</p><p>重置布局只恢复窗口和面板，不重置实验或脑参数。</p><p>第三方实验项目，无担保；程序 GPL-3.0-or-later，数据另有许可，未获上游背书。<a href="/licenses" target="_blank" rel="noopener">许可与来源 ↗</a></p><a href="/assets/morphology_sources.json" target="_blank" rel="noopener">形态数据来源 ↗</a></div></section>
+    <section class="wb-float" id="window-about" data-floating="about" data-title="项目说明与操作" hidden><div class="wb-window-body wb-about"><h2>本地果蝇实验场</h2><p id="appVersion">0.1.0-alpha.1 · Alpha Demo · 公开测试版</p><p>MuJoCo 身体与实际复眼、FlyWire 连接组上的简化 LIF 脑、工程感觉与运动策略，另有外置气味偏好学习。原始连接与模型文件不改；可选局部 KC → MBON 临时因子学习，在运行内存中调整所选突触增益。</p><p>顶部按钮打开观测窗口；拖动标题栏移动，右下角调整尺寸；“−”折叠，“×”收起。右侧分类展开调整项，修改后应用到本轮。</p><p>地图中的造型是非碰撞辨识标记；气味、光照、温湿度含简化代理场。活动图使用实际放电事件，静态脑区模板不表示活动。</p><p>重置布局只恢复窗口和面板，不重置实验或脑参数。</p><p>第三方实验项目，无担保；程序 GPL-3.0-or-later，数据另有许可，未获上游背书。<a href="/licenses" target="_blank" rel="noopener">许可与来源 ↗</a></p><a href="/assets/morphology_sources.json" target="_blank" rel="noopener">形态数据来源 ↗</a></div></section>
   </div>
-  <script src="/assets/workbench.js?v=behavior-20261016"></script>
+  <script src="/assets/workbench.js?v=mb-learning-20261018"></script>
   <script src="/assets/annotations.js"></script>
   <script type="module" src="/assets/neural_activity.js?v=recovery-20261016"></script>
   <script type="module" src="/assets/behavior_controls.js?v=behavior-20261016"></script>
   <script type="module" src="/assets/brain_controls.js?v=behavior-20261016"></script>
   <script type="module" src="/assets/arena_tools.js?v=behavior-20261016"></script>
-  <script type="module" src="/assets/lab.js?v=prerelease-0.1.0-20261016"></script>
+  <script src="/assets/experiment_io.js?v=20261017"></script>
+  <script src="/assets/neural_intervention.js?v=20261017"></script>
+  <script src="/assets/mb_learning.js?v=20261018"></script>
+  <script src="/assets/mb_observer.js?v=20261018"></script>
+  <script type="module" src="/assets/lab.js?v=mb-learning-20261018"></script>
 </body>
 </html>

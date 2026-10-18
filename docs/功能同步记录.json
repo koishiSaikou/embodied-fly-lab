@@ -755,6 +755,898 @@
         }
       ],
       "tests_run": false
+    },
+    {
+      "synchronized_at_utc": "2026-10-17T01:39:31.160816+00:00",
+      "authorization": "维护者要求保存数据和配置、可本地查看、供他人导入复现；先前明确要求功能改动同步现有项目。保留原实验和旧发布包。",
+      "backup_directory": "output/code_sync_backup/20261017_093931_124163",
+      "files": [
+        {
+          "path": "habitat.py",
+          "before_sha256": "62f7f9620c6da27afa9590dd8fde5b06c8b2aa9702f28136ea039d0ccee3f1df",
+          "after_sha256": "a0098bdd6829f3e294e38a3de3fd572e07254bf30e778e1d8157f2dc2285c1eb",
+          "backup": "output/code_sync_backup/20261017_093931_124163/habitat.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "habitat_monitor.py",
+          "before_sha256": "f7768827478302044f09ad4bebbbf83087d106c486c12ad747b8951135a9a648",
+          "after_sha256": "6b791836bb2267ec9d0fcfc35e2a8588b32accf5b6c98934205fc71348081a17",
+          "backup": "output/code_sync_backup/20261017_093931_124163/habitat_monitor.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_store.py",
+          "before_sha256": null,
+          "after_sha256": "ded72faa2e7e6ae00c936b8925464479bf3190d70374f0bb1fafbdd776d747b4",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_profile.py",
+          "before_sha256": null,
+          "after_sha256": "97f2d3111a17871cd3584089a99ca1777ca30a50a9f28ca073b9798f126d2b6d",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_library.py",
+          "before_sha256": null,
+          "after_sha256": "ee44d214f5403eee55269ecbb50af827c1792f0867f1171ad8dd4699de7e6a91",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_viewer.py",
+          "before_sha256": null,
+          "after_sha256": "4bdebb79de27494827c0f524e0a4d5ace046034418405960526da922b44d8a4f",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "View-Records.cmd",
+          "before_sha256": null,
+          "after_sha256": "0fb11635204dd43567a431afccd4ef1a941c617299c4f2f998d3eac001bc009b",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/index.html",
+          "before_sha256": "6c306eecb8da483f497ab03aa59464beda4098ced8b51b996c8c432735062938",
+          "after_sha256": "cdd6c8ee49bc6ab3ab3307f81f79c1e639716b56bc801a2297a26d2ed2727df9",
+          "backup": "output/code_sync_backup/20261017_093931_124163/web/index.html",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/records.html",
+          "before_sha256": null,
+          "after_sha256": "97fa983a1be2328bd5a31853b45d2c9f26d8c7b41324ddf07c21a2bf6e5baae3",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/records.js",
+          "before_sha256": null,
+          "after_sha256": "7390da80f71eedff27a450dc1f69fd86eb88318289c936508f8bd0e017e43a35",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/records.css",
+          "before_sha256": null,
+          "after_sha256": "dd1334456d1d063fbc30ee75a1c7022897b0420135addfa735490f45123d27bd",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/实验保存与分享说明.md",
+          "before_sha256": null,
+          "after_sha256": "d5ca0ecc3b90fb1fe6142187897bc6ef54a8552182d5e75c1d8ea16355f02f6b",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/实验包格式.md",
+          "before_sha256": null,
+          "after_sha256": "69ea779bcde285dc66df8645b8f8dcfa0f69c6c7f24b61e04eaae11f4fc4b548",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "项目说明.md",
+          "before_sha256": "577bf9b61f391293df92fb418f997c58552d716184b04113baa31a837621681f",
+          "after_sha256": "0a44531d5de02b096c027ddb2a6d734d8fc1177f4c65d57e0cf8f90a0ed0691f",
+          "backup": "output/code_sync_backup/20261017_093931_124163/项目说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "版本与更新记录.md",
+          "before_sha256": "fc7bd9964be2725e0c42ea63daba9d8be54d2817824728ed8a4b55cc58c1e044",
+          "after_sha256": "e7eff00054946be62de27eac5a81deab1b9f119f277b2778933c8ba0120721b0",
+          "backup": "output/code_sync_backup/20261017_093931_124163/版本与更新记录.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/操作说明.md",
+          "before_sha256": "50d8f2ce496246a2096cda4321c64038290cceb7edfd3ed3a7c0117950de62e5",
+          "after_sha256": "623aec131a15d5005088d18b1f911f878e36aae85027fd5108a6211a553dab55",
+          "backup": "output/code_sync_backup/20261017_093931_124163/docs/操作说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/文档导航.md",
+          "before_sha256": "b16cb0534a8ce0e831bcdc69e3c87ba0d4c743027536c54044ded34baac0cd87",
+          "after_sha256": "9c279590ae5133613ccbe1dc526d805c10515bb6aa827a17838c630b5c88638e",
+          "backup": "output/code_sync_backup/20261017_093931_124163/docs/文档导航.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/异常处理与恢复说明.md",
+          "before_sha256": "fe7ee0b14cccb2f526fe413243bfcd1b3b66ac5ea924624c38bb154ae0d014e1",
+          "after_sha256": "9db028e38442879d273ad0e9bbc678d4baf6e5179a757d9e0708dc922b8814f4",
+          "backup": "output/code_sync_backup/20261017_093931_124163/docs/异常处理与恢复说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/启动与停止说明.md",
+          "before_sha256": "47805c8b36af7fabfb88f939262b088e5d9027bc70129a1190683f92bc2fbcad",
+          "after_sha256": "587730b8f820559d9b7e3f841a3686e4ac196cfa902e19ca3ed64f610ca3fbb7",
+          "backup": "output/code_sync_backup/20261017_093931_124163/docs/启动与停止说明.md",
+          "same_as_preparation_copy": false
+        },
+        {
+          "path": "docs/AI二次开发文档.md",
+          "before_sha256": "c87765f6f393a6008788b41226489ddb0e020de8f1256c63246f057bbfda9a50",
+          "after_sha256": "a3e270e55dbb35281874b54e19aaa82fd5f4e19f5e7994a1fe27c81b545f7767",
+          "backup": "output/code_sync_backup/20261017_093931_124163/docs/AI二次开发文档.md",
+          "same_as_preparation_copy": false
+        },
+        {
+          "path": "AI协作约定.md",
+          "before_sha256": "23f11eeff565bad4969335d1c6a261aa92f5c817743bbb654e851d22f8605948",
+          "after_sha256": "a5cff15a35913ae93dcd6deada5f4bb07fa0852da7827c813aeb7a9793ef7e05",
+          "backup": "output/code_sync_backup/20261017_093931_124163/AI协作约定.md",
+          "same_as_preparation_copy": false
+        }
+      ],
+      "tests_run": false
+    },
+    {
+      "synchronized_at_utc": "2026-10-17T01:40:38.745146+00:00",
+      "authorization": "保存分享功能的静态审阅收尾：刷新当前记录详情，禁用运行中记录导出/复现，补充状态中文。",
+      "backup_directory": "output/code_sync_backup/20261017_094038_741536",
+      "files": [
+        {
+          "path": "web/records.js",
+          "before_sha256": "7390da80f71eedff27a450dc1f69fd86eb88318289c936508f8bd0e017e43a35",
+          "after_sha256": "506fd1925fd9e0ddf4c3933ec64ff618ab33543f22a96999dce2e6bce45742bd",
+          "backup": "output/code_sync_backup/20261017_094038_741536/web/records.js",
+          "same_as_preparation_copy": true
+        }
+      ],
+      "tests_run": false
+    },
+    {
+      "synchronized_at_utc": "2026-10-17T01:51:50.426622+00:00",
+      "authorization": "维护者要求保存按钮旁支持指定目录，确保导入运行；保持未提交、未推送并同步现有项目。",
+      "backup_directory": "output/code_sync_backup/20261017_095150_377118",
+      "files": [
+        {
+          "path": "habitat.py",
+          "before_sha256": "a0098bdd6829f3e294e38a3de3fd572e07254bf30e778e1d8157f2dc2285c1eb",
+          "after_sha256": "7d9abc96c105283947f41c1b6d02284a791acd27dce4e844616fb81cc9d0570f",
+          "backup": "output/code_sync_backup/20261017_095150_377118/habitat.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "habitat_monitor.py",
+          "before_sha256": "6b791836bb2267ec9d0fcfc35e2a8588b32accf5b6c98934205fc71348081a17",
+          "after_sha256": "e957cfcd46d06442b1f1eed7ac95af77f2919a2503ebd99082623fc3da4595d5",
+          "backup": "output/code_sync_backup/20261017_095150_377118/habitat_monitor.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_library.py",
+          "before_sha256": "ee44d214f5403eee55269ecbb50af827c1792f0867f1171ad8dd4699de7e6a91",
+          "after_sha256": "2a8d085f5a76057911a22a17597d0961fc772c12f3a376dbd3f1a776f6708a43",
+          "backup": "output/code_sync_backup/20261017_095150_377118/experiment_library.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_store.py",
+          "before_sha256": "ded72faa2e7e6ae00c936b8925464479bf3190d70374f0bb1fafbdd776d747b4",
+          "after_sha256": "f796390e83a0d04543ca8a865da2adb8e85357db4d2be5099dd45720afa4243f",
+          "backup": "output/code_sync_backup/20261017_095150_377118/experiment_store.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_profile.py",
+          "before_sha256": "97f2d3111a17871cd3584089a99ca1777ca30a50a9f28ca073b9798f126d2b6d",
+          "after_sha256": "8eec1672f44fe008a147a84acff3d05a53c2a36375326e35e2e3bec875175d79",
+          "backup": "output/code_sync_backup/20261017_095150_377118/experiment_profile.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_destination.py",
+          "before_sha256": null,
+          "after_sha256": "7657334374bbef4a4f79a692636477cb41c9bb6b0ff71de91d0e8f69782fb349",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/index.html",
+          "before_sha256": "cdd6c8ee49bc6ab3ab3307f81f79c1e639716b56bc801a2297a26d2ed2727df9",
+          "after_sha256": "737408a9e7ea5fbba6d0fea25a32be63364d8e06ed69de75b957acd9171bc230",
+          "backup": "output/code_sync_backup/20261017_095150_377118/web/index.html",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/lab.js",
+          "before_sha256": "1c4bede841b5db8311fad52ff1fd01c5df2005eb0de9dccd3ff78e0f6cad474f",
+          "after_sha256": "746f15a383838a73050167b1878d1019939175e38dc2dab436879512be82c9ed",
+          "backup": "output/code_sync_backup/20261017_095150_377118/web/lab.js",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/records.html",
+          "before_sha256": "97fa983a1be2328bd5a31853b45d2c9f26d8c7b41324ddf07c21a2bf6e5baae3",
+          "after_sha256": "26b75fb7c2ef0ec5ae77663a7bce12a2dac80a1440b5cc92ef4019af6e49da1c",
+          "backup": "output/code_sync_backup/20261017_095150_377118/web/records.html",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/records.js",
+          "before_sha256": "506fd1925fd9e0ddf4c3933ec64ff618ab33543f22a96999dce2e6bce45742bd",
+          "after_sha256": "a8d4a4273fd427a96f1698c87d837506fd532b41e5d20f4927380cab2039b639",
+          "backup": "output/code_sync_backup/20261017_095150_377118/web/records.js",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/experiment_io.js",
+          "before_sha256": null,
+          "after_sha256": "9eb4dd2d347f7d887a6bb05199ebd0bfe298b5f43fbb880fb53b450a21f470cc",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/experiment_io.css",
+          "before_sha256": null,
+          "after_sha256": "7e11ae19fed6267dc8ca9e938f220f3be649895fe214aecee6fc5f434cdde9de",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/实验保存与分享说明.md",
+          "before_sha256": "d5ca0ecc3b90fb1fe6142187897bc6ef54a8552182d5e75c1d8ea16355f02f6b",
+          "after_sha256": "d50af77970e8739d0232c26936add213a171920f6b4e5cc4ad6cff2e7c9928ac",
+          "backup": "output/code_sync_backup/20261017_095150_377118/docs/实验保存与分享说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/实验包格式.md",
+          "before_sha256": "69ea779bcde285dc66df8645b8f8dcfa0f69c6c7f24b61e04eaae11f4fc4b548",
+          "after_sha256": "9e7df4d2035e5e4240cafe7968a0bc2944dfe5bf993430a905e70a71af6ccd1a",
+          "backup": "output/code_sync_backup/20261017_095150_377118/docs/实验包格式.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/操作说明.md",
+          "before_sha256": "623aec131a15d5005088d18b1f911f878e36aae85027fd5108a6211a553dab55",
+          "after_sha256": "e4f8da2431d453102f64a79f2b287a03e94ee825b6cddb3cb96f75bfadf7ebee",
+          "backup": "output/code_sync_backup/20261017_095150_377118/docs/操作说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/指定目录保存与导入验证.json",
+          "before_sha256": null,
+          "after_sha256": "2872d3f15a6ea2ac6128a68ac54cf3a93b72c19eece924affa4a50febdd6a791",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "项目说明.md",
+          "before_sha256": "0a44531d5de02b096c027ddb2a6d734d8fc1177f4c65d57e0cf8f90a0ed0691f",
+          "after_sha256": "b6ad4fc7ea8ded99a0227e7737224598a311a401e9b6fad0d8e8bae45e7782a9",
+          "backup": "output/code_sync_backup/20261017_095150_377118/项目说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "版本与更新记录.md",
+          "before_sha256": "e7eff00054946be62de27eac5a81deab1b9f119f277b2778933c8ba0120721b0",
+          "after_sha256": "80ca8ed96d271f41b89ef10c70f6f06f83e0797a4baa167b4ea09f887c39bc13",
+          "backup": "output/code_sync_backup/20261017_095150_377118/版本与更新记录.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/启动与停止说明.md",
+          "before_sha256": "587730b8f820559d9b7e3f841a3686e4ac196cfa902e19ca3ed64f610ca3fbb7",
+          "after_sha256": "83dc111a6ca3342b057f455fe134ef4ad9e031c8344aa41adf70760eb11e1c00",
+          "backup": "output/code_sync_backup/20261017_095150_377118/docs/启动与停止说明.md",
+          "same_as_preparation_copy": false
+        },
+        {
+          "path": "docs/AI二次开发文档.md",
+          "before_sha256": "a3e270e55dbb35281874b54e19aaa82fd5f4e19f5e7994a1fe27c81b545f7767",
+          "after_sha256": "acddc4846590a002a82303d125088439f8d681120c9b1f5e692d38b8922b38f1",
+          "backup": "output/code_sync_backup/20261017_095150_377118/docs/AI二次开发文档.md",
+          "same_as_preparation_copy": false
+        },
+        {
+          "path": "AI协作约定.md",
+          "before_sha256": "a5cff15a35913ae93dcd6deada5f4bb07fa0852da7827c813aeb7a9793ef7e05",
+          "after_sha256": "b07a1caa7e174af2b46cefac9363104952a14a557879f4a47ddcb36b38626537",
+          "backup": "output/code_sync_backup/20261017_095150_377118/AI协作约定.md",
+          "same_as_preparation_copy": false
+        }
+      ],
+      "tests_run": true,
+      "scope": "isolated save/import/short-run only"
+    },
+    {
+      "synchronized_at_utc": "2026-10-17T02:42:05.516305+00:00",
+      "authorization": "维护者要求先做虚拟神经干预；按既有要求将功能改动备份并同步现有项目，保持未提交、未推送，不更新交付包。",
+      "backup_directory": "output/code_sync_backup/20261017_104205_469215",
+      "files": [
+        {
+          "path": "habitat.py",
+          "before_sha256": "7d9abc96c105283947f41c1b6d02284a791acd27dce4e844616fb81cc9d0570f",
+          "after_sha256": "c6a00703aa219f16b5c42581256e4f2bfe952803c706bc31cd498e6db62c9578",
+          "backup": "output/code_sync_backup/20261017_104205_469215/habitat.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "habitat_monitor.py",
+          "before_sha256": "e957cfcd46d06442b1f1eed7ac95af77f2919a2503ebd99082623fc3da4595d5",
+          "after_sha256": "8d299cc8a84e8af8e95a10b6097672b8ba4d562fc39e4dd62339d0fa9ac4b9d9",
+          "backup": "output/code_sync_backup/20261017_104205_469215/habitat_monitor.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "brain_client.py",
+          "before_sha256": "28add1192f572600a4ef4af9088a8c221ec1e6174f97d70fb09adff791266359",
+          "after_sha256": "de469e2638cecc53a4f846c2e39409d6da35fd56c8d71db8a61c2b36defc2458",
+          "backup": "output/code_sync_backup/20261017_104205_469215/brain_client.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "brain_worker.py",
+          "before_sha256": "f7145eb3e61d8aed966583e05e7f823e8dfcfd251e81fe8ded60d3513dfd9228",
+          "after_sha256": "505590464a4320c194f738c550edbdcf8567e3690194ed95ea8c9dfa300d12fc",
+          "backup": "output/code_sync_backup/20261017_104205_469215/brain_worker.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_profile.py",
+          "before_sha256": "8eec1672f44fe008a147a84acff3d05a53c2a36375326e35e2e3bec875175d79",
+          "after_sha256": "3bcd4653ee71719fb054e90ec37e16c2642ee3477d599e635ff041e2b34a43ac",
+          "backup": "output/code_sync_backup/20261017_104205_469215/experiment_profile.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "neural_intervention.py",
+          "before_sha256": null,
+          "after_sha256": "5afcefdeb899b9a2612ce35de6307d9ed54e70ad1ffdf9d1d12cf6c27ddf3750",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "neural_intervention_runtime.py",
+          "before_sha256": null,
+          "after_sha256": "23303fd2f0ab694ae3fd4ad5afb28586828b5ce642d66ecbec9f7ddf5f77834d",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/index.html",
+          "before_sha256": "737408a9e7ea5fbba6d0fea25a32be63364d8e06ed69de75b957acd9171bc230",
+          "after_sha256": "6807af67786ba562067993cd400ae80e9aa1f8dd478b17554ecf2161d96ee5e1",
+          "backup": "output/code_sync_backup/20261017_104205_469215/web/index.html",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/lab.js",
+          "before_sha256": "746f15a383838a73050167b1878d1019939175e38dc2dab436879512be82c9ed",
+          "after_sha256": "57b608e0dbe85dc147fe613ad2e6b8ce638f393ec1840d3a012fc739b39c3b65",
+          "backup": "output/code_sync_backup/20261017_104205_469215/web/lab.js",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/workbench.js",
+          "before_sha256": "6e98d6351101dbd47221f35e46698ee6f29de3e6fc425bce57926b8ac2317b95",
+          "after_sha256": "7f3ba4090850ecd3db90cd8d7aec0b08851716cec440c6e59e0cf539e8c47511",
+          "backup": "output/code_sync_backup/20261017_104205_469215/web/workbench.js",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/records.js",
+          "before_sha256": "a8d4a4273fd427a96f1698c87d837506fd532b41e5d20f4927380cab2039b639",
+          "after_sha256": "d5fc98d44470b1a4360e1973bf5dcadb2d91bdd9d6ca7118b77fa2d2d248215c",
+          "backup": "output/code_sync_backup/20261017_104205_469215/web/records.js",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/neural_intervention.js",
+          "before_sha256": null,
+          "after_sha256": "df7ec8da34e75a894afec63a150d380c73fe08f405e07ef74bf4a4ca744f8362",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/neural_intervention.css",
+          "before_sha256": null,
+          "after_sha256": "4618edddd458977d764964850777bbe3d63b9bc8dc731cb864cb95c10b3a99e3",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/虚拟神经干预说明.md",
+          "before_sha256": null,
+          "after_sha256": "ef5f9de8da1bb1a2622a6e47d2468bf79f9e3a30092e6c7f8a279cd61663e195",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/神经干预验证记录.json",
+          "before_sha256": null,
+          "after_sha256": "bec82cbee67530e67649e75d8fe0987566a6cbc92e76e5a53fa71b057d746c49",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/操作说明.md",
+          "before_sha256": "e4f8da2431d453102f64a79f2b287a03e94ee825b6cddb3cb96f75bfadf7ebee",
+          "after_sha256": "1753cddb33a39d350f9c5654c4528aa5e7e400ec49e9dae5f86c5af05e371a42",
+          "backup": "output/code_sync_backup/20261017_104205_469215/docs/操作说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/文档导航.md",
+          "before_sha256": "9c279590ae5133613ccbe1dc526d805c10515bb6aa827a17838c630b5c88638e",
+          "after_sha256": "e46cec1e195d5c383a7fc8da9054a99418c625d0f9af03552ee7e6778a3861e0",
+          "backup": "output/code_sync_backup/20261017_104205_469215/docs/文档导航.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/实验保存与分享说明.md",
+          "before_sha256": "d50af77970e8739d0232c26936add213a171920f6b4e5cc4ad6cff2e7c9928ac",
+          "after_sha256": "66e1e1c1fae85741bdc2e74c0123de13a8579edbe10846f05f99bfbfb39cdd70",
+          "backup": "output/code_sync_backup/20261017_104205_469215/docs/实验保存与分享说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "版本与更新记录.md",
+          "before_sha256": "80ca8ed96d271f41b89ef10c70f6f06f83e0797a4baa167b4ea09f887c39bc13",
+          "after_sha256": "8c71c6e113c445adeeb146a031e00f56130ccb22d8aeab1dfcdb25ae3de79e90",
+          "backup": "output/code_sync_backup/20261017_104205_469215/版本与更新记录.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "项目说明.md",
+          "before_sha256": "b6ad4fc7ea8ded99a0227e7737224598a311a401e9b6fad0d8e8bae45e7782a9",
+          "after_sha256": "a2f7c711a1bdc3baa5e828ff0c83c771b71d5a8ad6745af625496d2cce30bad7",
+          "backup": "output/code_sync_backup/20261017_104205_469215/项目说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/AI二次开发文档.md",
+          "before_sha256": "acddc4846590a002a82303d125088439f8d681120c9b1f5e692d38b8922b38f1",
+          "after_sha256": "e3ce091841cecea0278f716caf706106aaf191eb6bbf672cf8f67fbc847184dd",
+          "backup": "output/code_sync_backup/20261017_104205_469215/docs/AI二次开发文档.md",
+          "same_as_preparation_copy": false
+        },
+        {
+          "path": "AI协作约定.md",
+          "before_sha256": "b07a1caa7e174af2b46cefac9363104952a14a557879f4a47ddcb36b38626537",
+          "after_sha256": "74318cd59c61afd80fbf0dbd6e5550e516eb6594031762b8229e81b294c28a0f",
+          "backup": "output/code_sync_backup/20261017_104205_469215/AI协作约定.md",
+          "same_as_preparation_copy": false
+        }
+      ],
+      "tests_run": true,
+      "scope": "8-node CPU numerical checks only; no full brain/GPU/body"
+    },
+    {
+      "synchronized_at_utc": "2026-10-18T06:30:01.873684+00:00",
+      "authorization": "维护者要求继续实现蘑菇体局部学习，并按既有要求备份同步原项目；保持未提交未推送、不更新交付包。",
+      "backup_directory": "output/code_sync_backup/20261018_143001_818785",
+      "files": [
+        {
+          "path": "mb_learning.py",
+          "before_sha256": null,
+          "after_sha256": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "mb_learning_runtime.py",
+          "before_sha256": null,
+          "after_sha256": "a8338f20b9f139a4ce2e974831f01d8e895a00c1a3c1646abd7f8399d8e295a8",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "mb_learning_catalog.py",
+          "before_sha256": null,
+          "after_sha256": "d73e4b5de4f0c3532ab13505346acb6a50f01d30b5e8b60d5d471b14eafedd35",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "brain_worker.py",
+          "before_sha256": "505590464a4320c194f738c550edbdcf8567e3690194ed95ea8c9dfa300d12fc",
+          "after_sha256": "8d223ae6445c35edabaa5a5473b5a53139c4b963b8526677957386e96f13896c",
+          "backup": "output/code_sync_backup/20261018_143001_818785/brain_worker.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "brain_client.py",
+          "before_sha256": "de469e2638cecc53a4f846c2e39409d6da35fd56c8d71db8a61c2b36defc2458",
+          "after_sha256": "3b8dbb18bd8593bf7001ab7da86973e7d55328fc4aff297258957a8d45ab55ca",
+          "backup": "output/code_sync_backup/20261018_143001_818785/brain_client.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "habitat.py",
+          "before_sha256": "c6a00703aa219f16b5c42581256e4f2bfe952803c706bc31cd498e6db62c9578",
+          "after_sha256": "6a6e21533ee0ef0fc185b6331aa1a4878062151a8308c0135fa5d4911c2fd264",
+          "backup": "output/code_sync_backup/20261018_143001_818785/habitat.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "habitat_monitor.py",
+          "before_sha256": "8d299cc8a84e8af8e95a10b6097672b8ba4d562fc39e4dd62339d0fa9ac4b9d9",
+          "after_sha256": "569fb20b3f4156d6f9893ae83414e563269d5d4c2e82701ed97ce0c83c8b35eb",
+          "backup": "output/code_sync_backup/20261018_143001_818785/habitat_monitor.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_store.py",
+          "before_sha256": "f796390e83a0d04543ca8a865da2adb8e85357db4d2be5099dd45720afa4243f",
+          "after_sha256": "031cbf9839cb776d47e2f5b3affbde3b4354d0aed88f5e3228b8e152f5cad870",
+          "backup": "output/code_sync_backup/20261018_143001_818785/experiment_store.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_profile.py",
+          "before_sha256": "3bcd4653ee71719fb054e90ec37e16c2642ee3477d599e635ff041e2b34a43ac",
+          "after_sha256": "ef9117a291035f93d590c9100dbeb814b500e91431c4d01116f403c0077c688d",
+          "backup": "output/code_sync_backup/20261018_143001_818785/experiment_profile.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "neural_intervention_runtime.py",
+          "before_sha256": "23303fd2f0ab694ae3fd4ad5afb28586828b5ce642d66ecbec9f7ddf5f77834d",
+          "after_sha256": "ffb03101a9d6e9f2ab5a885076db14260d4a343b26929d345b1227053ab7c6a3",
+          "backup": "output/code_sync_backup/20261018_143001_818785/neural_intervention_runtime.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/mb_learning.js",
+          "before_sha256": null,
+          "after_sha256": "4760e83f494f2a7e0736ef2f21529bdc52c163d2f55c6fccd7fe5faa693009a0",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/lab.js",
+          "before_sha256": "57b608e0dbe85dc147fe613ad2e6b8ce638f393ec1840d3a012fc739b39c3b65",
+          "after_sha256": "70544f14d1edc0186a723874ed4ed5ce9eb4362e3b9b7cc55d97c65da232f26f",
+          "backup": "output/code_sync_backup/20261018_143001_818785/web/lab.js",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/workbench.js",
+          "before_sha256": "7f3ba4090850ecd3db90cd8d7aec0b08851716cec440c6e59e0cf539e8c47511",
+          "after_sha256": "507fe5af8cac88a28780a34e1f30f2c3822206cb44d4899317807b22a33751ab",
+          "backup": "output/code_sync_backup/20261018_143001_818785/web/workbench.js",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/records.js",
+          "before_sha256": "d5fc98d44470b1a4360e1973bf5dcadb2d91bdd9d6ca7118b77fa2d2d248215c",
+          "after_sha256": "0b443efdc8ceab4d2cf10dfd9b2638b7b79d72dc10767cf9aac7a64ff65459f9",
+          "backup": "output/code_sync_backup/20261018_143001_818785/web/records.js",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/mb_learning.css",
+          "before_sha256": null,
+          "after_sha256": "f5ccc220e04621514e2c4dcf33bc551f482c1e4b83fb39cde4c4e6d4b89c9045",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/index.html",
+          "before_sha256": "6807af67786ba562067993cd400ae80e9aa1f8dd478b17554ecf2161d96ee5e1",
+          "after_sha256": "a5a05ad1b372a9f38ad9715fc13265af00426b8a44a61388d4fa375434f25951",
+          "backup": "output/code_sync_backup/20261018_143001_818785/web/index.html",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/蘑菇体局部学习说明.md",
+          "before_sha256": null,
+          "after_sha256": "4480133956fdb2c37744b50a92334ab0f23fecefad3efb56a5228540a369acbe",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/蘑菇体学习验证记录.json",
+          "before_sha256": null,
+          "after_sha256": "1e8361575c76fb0d22b94b30874ac46a267bf513ff78bc7cacac9143c376fa97",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/操作说明.md",
+          "before_sha256": "1753cddb33a39d350f9c5654c4528aa5e7e400ec49e9dae5f86c5af05e371a42",
+          "after_sha256": "f992bdba4ab480e5d39b0a502e5df54a8d1bcdb4ca7b86104eb72281a711b2a0",
+          "backup": "output/code_sync_backup/20261018_143001_818785/docs/操作说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/文档导航.md",
+          "before_sha256": "e46cec1e195d5c383a7fc8da9054a99418c625d0f9af03552ee7e6778a3861e0",
+          "after_sha256": "de2755a3d0877d75fb1c21bf0645cbae6ba93fb77a0151b8a64710a1f528b5fb",
+          "backup": "output/code_sync_backup/20261018_143001_818785/docs/文档导航.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/实验保存与分享说明.md",
+          "before_sha256": "66e1e1c1fae85741bdc2e74c0123de13a8579edbe10846f05f99bfbfb39cdd70",
+          "after_sha256": "a96d4c6559a9125ae4dfb2e614d038f2356da53c3991c20f2767ff4c29218b89",
+          "backup": "output/code_sync_backup/20261018_143001_818785/docs/实验保存与分享说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/实验包格式.md",
+          "before_sha256": "9e7df4d2035e5e4240cafe7968a0bc2944dfe5bf993430a905e70a71af6ccd1a",
+          "after_sha256": "30e11b27a91a503f56d76772b8a673d8fe84d1be4e806da1304713033d41906d",
+          "backup": "output/code_sync_backup/20261018_143001_818785/docs/实验包格式.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/项目详情.md",
+          "before_sha256": "f7de175a3740946a95b7eace4829e49a1efe9c34dc34ea1bde4ea62d4d2dc598",
+          "after_sha256": "0ebf84fe9976640b7ca0037fef9f67e67e6264049e89d492052025b25295c40e",
+          "backup": "output/code_sync_backup/20261018_143001_818785/docs/项目详情.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/已知限制.md",
+          "before_sha256": "4163092cdc5d35ba5cdfbacce099a1036b3b055de6b6999b8c8a0977c697b334",
+          "after_sha256": "2f664d34b042e49dfd59f731cfa92c276f44a2c501fa9f9dad2f167a487b6121",
+          "backup": "output/code_sync_backup/20261018_143001_818785/docs/已知限制.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "版本与更新记录.md",
+          "before_sha256": "8c71c6e113c445adeeb146a031e00f56130ccb22d8aeab1dfcdb25ae3de79e90",
+          "after_sha256": "fb9678ba8c74ca54901d7ef5981cca0fe57ffb7f84acf47d2c4bc85e9bfe4a6a",
+          "backup": "output/code_sync_backup/20261018_143001_818785/版本与更新记录.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "项目说明.md",
+          "before_sha256": "a2f7c711a1bdc3baa5e828ff0c83c771b71d5a8ad6745af625496d2cce30bad7",
+          "after_sha256": "3aac9da52e31413f7387a1a3aa70eb3ba99eafd5a15222b116da678874b68f56",
+          "backup": "output/code_sync_backup/20261018_143001_818785/项目说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/AI二次开发文档.md",
+          "before_sha256": "e3ce091841cecea0278f716caf706106aaf191eb6bbf672cf8f67fbc847184dd",
+          "after_sha256": "a75e0396135891ba54a0ba3f3682e7e7da6f8de483d74432b3b0d9efb9110455",
+          "backup": "output/code_sync_backup/20261018_143001_818785/docs/AI二次开发文档.md",
+          "same_as_preparation_copy": false
+        },
+        {
+          "path": "AI协作约定.md",
+          "before_sha256": "74318cd59c61afd80fbf0dbd6e5550e516eb6594031762b8229e81b294c28a0f",
+          "after_sha256": "4e6cf0475458c282fd9bb262f044f4b56b3b891bb1effc99df3fa974771dc0d1",
+          "backup": "output/code_sync_backup/20261018_143001_818785/AI协作约定.md",
+          "same_as_preparation_copy": false
+        }
+      ],
+      "tests_run": true,
+      "scope": "Optional KC→MBON local LTD; tiny CPU, method-level, read-only catalog and synthetic profile checks only"
+    },
+    {
+      "synchronized_at_utc": "2026-10-18T06:50:09.913238+00:00",
+      "authorization": "维护者认可并要求开始学习观察器；按既有要求备份同步原项目；保持未提交未推送、不更新交付包。",
+      "backup_directory": "output/code_sync_backup/20261018_145009_851179",
+      "files": [
+        {
+          "path": "mb_observer.py",
+          "before_sha256": null,
+          "after_sha256": "1f8617aa417c55a8153ad8a364e0ddfdbb74c520c6457ecffea2770d6c9e1189",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "mb_learning_runtime.py",
+          "before_sha256": "a8338f20b9f139a4ce2e974831f01d8e895a00c1a3c1646abd7f8399d8e295a8",
+          "after_sha256": "f98ef4a5b43181ff6bd44b789a92061b64dead86b450d138a86aa92d8906ba72",
+          "backup": "output/code_sync_backup/20261018_145009_851179/mb_learning_runtime.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "brain_worker.py",
+          "before_sha256": "8d223ae6445c35edabaa5a5473b5a53139c4b963b8526677957386e96f13896c",
+          "after_sha256": "6ebb3a42ab21e05fb66af26cf72dea3918e273b40efa5f3be06cf02cd5930897",
+          "backup": "output/code_sync_backup/20261018_145009_851179/brain_worker.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "habitat.py",
+          "before_sha256": "6a6e21533ee0ef0fc185b6331aa1a4878062151a8308c0135fa5d4911c2fd264",
+          "after_sha256": "d3154d0531c590bda915358d8bf144aa873a49779187c794f2bd3c05b8da5a19",
+          "backup": "output/code_sync_backup/20261018_145009_851179/habitat.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "habitat_monitor.py",
+          "before_sha256": "569fb20b3f4156d6f9893ae83414e563269d5d4c2e82701ed97ce0c83c8b35eb",
+          "after_sha256": "2366e35989d3b7bb251878760c9c8a326821f0cb6ae6b28607b444b4e9346ae2",
+          "backup": "output/code_sync_backup/20261018_145009_851179/habitat_monitor.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_store.py",
+          "before_sha256": "031cbf9839cb776d47e2f5b3affbde3b4354d0aed88f5e3228b8e152f5cad870",
+          "after_sha256": "7398bd8eda1cbae39adff45d77fecf325f1dbc13969124afbeddc7cdb7dfaf93",
+          "backup": "output/code_sync_backup/20261018_145009_851179/experiment_store.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "experiment_profile.py",
+          "before_sha256": "ef9117a291035f93d590c9100dbeb814b500e91431c4d01116f403c0077c688d",
+          "after_sha256": "f21ea67da791cc15f5b6ab70a59d5a66d0feb658dfffd716e135a30297f2874a",
+          "backup": "output/code_sync_backup/20261018_145009_851179/experiment_profile.py",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/mb_observer.js",
+          "before_sha256": null,
+          "after_sha256": "48edc3062a2af3d8884a1c6b8d268072ab94060128331d3cd0dc02b732a388ad",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/lab.js",
+          "before_sha256": "70544f14d1edc0186a723874ed4ed5ce9eb4362e3b9b7cc55d97c65da232f26f",
+          "after_sha256": "77f35d82b56ce52925c89b3bbe433f5ede4ef0a7a8cac1bf338251b59fe590f5",
+          "backup": "output/code_sync_backup/20261018_145009_851179/web/lab.js",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/workbench.js",
+          "before_sha256": "507fe5af8cac88a28780a34e1f30f2c3822206cb44d4899317807b22a33751ab",
+          "after_sha256": "338d84c1943e94a9e83ea87375822744068a3f831deb18458698013d71767a0c",
+          "backup": "output/code_sync_backup/20261018_145009_851179/web/workbench.js",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/records.js",
+          "before_sha256": "0b443efdc8ceab4d2cf10dfd9b2638b7b79d72dc10767cf9aac7a64ff65459f9",
+          "after_sha256": "897155e263f562a35d81ba5d34aad06f242d25eb12be024f766d3fd3913119ec",
+          "backup": "output/code_sync_backup/20261018_145009_851179/web/records.js",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/mb_observer.css",
+          "before_sha256": null,
+          "after_sha256": "9c14440e57f008db9ac5e4f09414efbb379d1a68efb6557b272ff62a9a48809b",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/mb_observer.html",
+          "before_sha256": null,
+          "after_sha256": "8cd98a4229026e7c40aedb6863a708cab98b815cdc362a4ec4113ff2ea7a7c41",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "web/index.html",
+          "before_sha256": "a5a05ad1b372a9f38ad9715fc13265af00426b8a44a61388d4fa375434f25951",
+          "after_sha256": "4f5e1fb044bb24a5f2f7ed09bd200d5d898d982d13c2dd4e1e867a969bf0f9cd",
+          "backup": "output/code_sync_backup/20261018_145009_851179/web/index.html",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/蘑菇体学习观察器说明.md",
+          "before_sha256": null,
+          "after_sha256": "4fe738eaad966410758ef8157ff2e4bf5e5165ff9216604505bc904bc55dc82f",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/学习观察器验证记录.json",
+          "before_sha256": null,
+          "after_sha256": "6bd13776f3332237910a84103e4642ef010561ebc7555a5c39869ec3ab80e423",
+          "backup": null,
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/操作说明.md",
+          "before_sha256": "f992bdba4ab480e5d39b0a502e5df54a8d1bcdb4ca7b86104eb72281a711b2a0",
+          "after_sha256": "0be87a8095ce4b4ca0c68db0bdb635dbf5c50bc6626640153e350ba609f1f12d",
+          "backup": "output/code_sync_backup/20261018_145009_851179/docs/操作说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/蘑菇体局部学习说明.md",
+          "before_sha256": "4480133956fdb2c37744b50a92334ab0f23fecefad3efb56a5228540a369acbe",
+          "after_sha256": "5a4d7e848ac225dd3a77034153a3ecbf36694e142fcc5a046d690fc6faad0569",
+          "backup": "output/code_sync_backup/20261018_145009_851179/docs/蘑菇体局部学习说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/实验保存与分享说明.md",
+          "before_sha256": "a96d4c6559a9125ae4dfb2e614d038f2356da53c3991c20f2767ff4c29218b89",
+          "after_sha256": "5db50b5db6b6c4e3cf4c2df3219071af1b515078b2ec628308c92d6dd6d2cfc0",
+          "backup": "output/code_sync_backup/20261018_145009_851179/docs/实验保存与分享说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/实验包格式.md",
+          "before_sha256": "30e11b27a91a503f56d76772b8a673d8fe84d1be4e806da1304713033d41906d",
+          "after_sha256": "1ca805d82d13a04b83d7609ccd0c79dff987d437c45aacf0508f0595a17043cd",
+          "backup": "output/code_sync_backup/20261018_145009_851179/docs/实验包格式.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/文档导航.md",
+          "before_sha256": "de2755a3d0877d75fb1c21bf0645cbae6ba93fb77a0151b8a64710a1f528b5fb",
+          "after_sha256": "63dc94c788d87b4853e360c405ee49060246cf212b198dbd2769154408e7afda",
+          "backup": "output/code_sync_backup/20261018_145009_851179/docs/文档导航.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/工作台布局说明.md",
+          "before_sha256": "966d61704c2a403ff82b639ab3e5f5c052a781b56b4b2864b6286a8916b2e4d3",
+          "after_sha256": "2009772e3dd9478d2a0aa570912ae8fe29e729b2a769d413ab32d68ec813cb59",
+          "backup": "output/code_sync_backup/20261018_145009_851179/docs/工作台布局说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/项目详情.md",
+          "before_sha256": "0ebf84fe9976640b7ca0037fef9f67e67e6264049e89d492052025b25295c40e",
+          "after_sha256": "eeb7803a9fbf191646cce845ac8c80f41c730fdfdcd5c09fba04379cd505e167",
+          "backup": "output/code_sync_backup/20261018_145009_851179/docs/项目详情.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "版本与更新记录.md",
+          "before_sha256": "fb9678ba8c74ca54901d7ef5981cca0fe57ffb7f84acf47d2c4bc85e9bfe4a6a",
+          "after_sha256": "d37a2788f09c90eb04c1aa7ef58ce5d7464017e7c26e7c68ae843a3d164f0b9a",
+          "backup": "output/code_sync_backup/20261018_145009_851179/版本与更新记录.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "项目说明.md",
+          "before_sha256": "3aac9da52e31413f7387a1a3aa70eb3ba99eafd5a15222b116da678874b68f56",
+          "after_sha256": "8af2755760866a149d113abe72aaf7ac5141e2468c1f53f61493ecf7aeb38178",
+          "backup": "output/code_sync_backup/20261018_145009_851179/项目说明.md",
+          "same_as_preparation_copy": true
+        },
+        {
+          "path": "docs/AI二次开发文档.md",
+          "before_sha256": "a75e0396135891ba54a0ba3f3682e7e7da6f8de483d74432b3b0d9efb9110455",
+          "after_sha256": "aa64d40cd9628a978350b6dfdb8f578d7f02652197300991bcd9097ede96f5d7",
+          "backup": "output/code_sync_backup/20261018_145009_851179/docs/AI二次开发文档.md",
+          "same_as_preparation_copy": false
+        },
+        {
+          "path": "AI协作约定.md",
+          "before_sha256": "4e6cf0475458c282fd9bb262f044f4b56b3b891bb1effc99df3fa974771dc0d1",
+          "after_sha256": "21cf55ca83594a1ce041216da2cafb75e204d47d75233766cb9a66a4a4f015b0",
+          "backup": "output/code_sync_backup/20261018_145009_851179/AI协作约定.md",
+          "same_as_preparation_copy": false
+        }
+      ],
+      "tests_run": true,
+      "scope": "Read-only mushroom-body observer; tiny CPU, pure logic and synthetic archive checks only"
     }
   ]
 }

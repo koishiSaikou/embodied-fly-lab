@@ -43,8 +43,8 @@
     },
     {
       "path": "AI协作约定.md",
-      "bytes": 7691,
-      "sha256": "5d0ab13a4f3e68e0b342bcf0bc48d167ab5c988b9a889bf9b825a3bc5744cfc2",
+      "bytes": 12114,
+      "sha256": "63f14d5bd3843bba83c77e3dd3dd1f80d5ceab5dc5f461f731a155a198f58e41",
       "original_source_path": "AI协作约定.md",
       "original_sha256": "d8cff74292294ea8dcf7b87b793feec6345557bd2313ff0d3253177537b653b3",
       "modified_in_release_copy": true
@@ -123,8 +123,8 @@
     },
     {
       "path": "brain_client.py",
-      "bytes": 9787,
-      "sha256": "28add1192f572600a4ef4af9088a8c221ec1e6174f97d70fb09adff791266359"
+      "bytes": 10798,
+      "sha256": "3b8dbb18bd8593bf7001ab7da86973e7d55328fc4aff297258957a8d45ab55ca"
     },
     {
       "path": "brain_controls.py",
@@ -134,16 +134,16 @@
     },
     {
       "path": "brain_worker.py",
-      "bytes": 10551,
-      "sha256": "f7145eb3e61d8aed966583e05e7f823e8dfcfd251e81fe8ded60d3513dfd9228",
+      "bytes": 16950,
+      "sha256": "6ebb3a42ab21e05fb66af26cf72dea3918e273b40efa5f3be06cf02cd5930897",
       "original_source_path": "brain_worker.py",
       "original_sha256": "2699ee682433ef55658385021ad4974389eae2d0daaeca2b801c90ff7c0964d3",
       "modified_in_release_copy": true
     },
     {
       "path": "build_windows_package.py",
-      "bytes": 14125,
-      "sha256": "14bfedbd85f417a7cca4106b675c1ac03f500a0f808d5444b34ad02c3ab7407e",
+      "bytes": 14198,
+      "sha256": "9dae4099d5b49c832c66a92085d9dabc0ca0a81fb4581350af2d414d7b87ca43",
       "original_source_path": "build_windows_package.py",
       "original_sha256": "fed1241a8620026d915a28e43c7874a7c436d179f93bcf1dc39be9facf90d8da",
       "modified_in_release_copy": true
@@ -202,8 +202,8 @@
     },
     {
       "path": "docs/AI二次开发文档.md",
-      "bytes": 38453,
-      "sha256": "87142774411a1d58a80bafc8cfaeb6f6cf00deb277232e0b4b2c3f94c1db9811",
+      "bytes": 47750,
+      "sha256": "dea3b43c2a3e4c931b2ce5e923fcec481a6ef30e113fa27e57d91835a82d336b",
       "original_source_path": "docs/AI二次开发文档.md",
       "original_sha256": "f2b6fb845e3e84e58df1cb5fe4ab066b85a2cdaf12d76f3c95771bd72afb1ca3",
       "modified_in_release_copy": true
@@ -241,13 +241,13 @@
     },
     {
       "path": "docs/功能同步记录.json",
-      "bytes": 37138,
-      "sha256": "068dec37dd62c6f6cd382a38e9a8061f247dfa38422547e7964cbeff287ded4e"
+      "bytes": 82808,
+      "sha256": "e853a073783d27d3307a6c260331a4e595814fea4bf66fc11f685e2bd0b21944"
     },
     {
       "path": "docs/功能同步验证.json",
-      "bytes": 8761,
-      "sha256": "9b8838956a984afeb29831b7138c320db4c9990dfa111db922d1f3449500d29b"
+      "bytes": 17422,
+      "sha256": "59d566c9a708e0bd68d2cfff6ec6dd038385c04aa9df81cf527dfa7394f47b74"
     },
     {
       "path": "docs/历史交付包操作说明.md",
@@ -261,8 +261,8 @@
     },
     {
       "path": "docs/启动与停止说明.md",
-      "bytes": 6550,
-      "sha256": "961468c1a62060141271be8d1d895f835ae07a2d54fba4434bd3f1ec8b176ae5"
+      "bytes": 7608,
+      "sha256": "96cd53cfb0c25356390b5e0c7048beae4e218cf58d55003ae166ccdedc736189"
     },
     {
       "path": "docs/启动验证记录.json",
@@ -276,20 +276,37 @@
       "source_path": "docs/场景与多感官说明.md"
     },
     {
+      "path": "docs/学习观察器验证记录.json",
+      "bytes": 55837,
+      "sha256": "6bd13776f3332237910a84103e4642ef010561ebc7555a5c39869ec3ab80e423"
+    },
+    {
+      "path": "docs/实验保存与分享说明.md",
+      "bytes": 10785,
+      "sha256": "5db50b5db6b6c4e3cf4c2df3219071af1b515078b2ec628308c92d6dd6d2cfc0"
+    },
+    {
+      "path": "docs/实验包格式.md",
+      "bytes": 6240,
+      "sha256": "1ca805d82d13a04b83d7609ccd0c79dff987d437c45aacf0508f0595a17043cd"
+    },
+    {
       "path": "docs/工作台布局说明.md",
-      "bytes": 4044,
-      "sha256": "966d61704c2a403ff82b639ab3e5f5c052a781b56b4b2864b6286a8916b2e4d3",
-      "source_path": "docs/工作台布局说明.md"
+      "bytes": 4513,
+      "sha256": "2009772e3dd9478d2a0aa570912ae8fe29e729b2a769d413ab32d68ec813cb59",
+      "original_source_path": "docs/工作台布局说明.md",
+      "original_sha256": "966d61704c2a403ff82b639ab3e5f5c052a781b56b4b2864b6286a8916b2e4d3",
+      "modified_in_release_copy": true
     },
     {
       "path": "docs/已知限制.md",
-      "bytes": 2067,
-      "sha256": "4163092cdc5d35ba5cdfbacce099a1036b3b055de6b6999b8c8a0977c697b334"
+      "bytes": 2379,
+      "sha256": "2f664d34b042e49dfd59f731cfa92c276f44a2c501fa9f9dad2f167a487b6121"
     },
     {
       "path": "docs/异常处理与恢复说明.md",
-      "bytes": 4754,
-      "sha256": "2e3eeebd5355030c7109a55f491e11b1d4ac6cf39fa3b2649efcccce6100b474"
+      "bytes": 5419,
+      "sha256": "9db028e38442879d273ad0e9bbc678d4baf6e5179a757d9e0708dc922b8814f4"
     },
     {
       "path": "docs/异常恢复验证.json",
@@ -302,17 +319,22 @@
       "sha256": "b24331276dcbdc0809c091c30390fd68af1b050b3384c05c2b942f33e2225aed"
     },
     {
+      "path": "docs/指定目录保存与导入验证.json",
+      "bytes": 2421,
+      "sha256": "2872d3f15a6ea2ac6128a68ac54cf3a93b72c19eece924affa4a50febdd6a791"
+    },
+    {
       "path": "docs/操作说明.md",
-      "bytes": 2803,
-      "sha256": "50d8f2ce496246a2096cda4321c64038290cceb7edfd3ed3a7c0117950de62e5",
+      "bytes": 5414,
+      "sha256": "0be87a8095ce4b4ca0c68db0bdb635dbf5c50bc6626640153e350ba609f1f12d",
       "original_source_path": "docs/操作说明.md",
       "original_sha256": "ee2b0f66541fac610b9ad578d84ea466269eb02f69c1141658be94b54d8ab790",
       "modified_in_release_copy": true
     },
     {
       "path": "docs/文档导航.md",
-      "bytes": 3288,
-      "sha256": "b16cb0534a8ce0e831bcdc69e3c87ba0d4c743027536c54044ded34baac0cd87"
+      "bytes": 4009,
+      "sha256": "63dc94c788d87b4853e360c405ee49060246cf212b198dbd2769154408e7afda"
     },
     {
       "path": "docs/测试版发布准备.json",
@@ -328,6 +350,31 @@
       "path": "docs/源码安装验证.json",
       "bytes": 1704,
       "sha256": "73c53022e24879eda0d9e5aadcad622b8d868ad12f11e5343870c9d6d5d15eee"
+    },
+    {
+      "path": "docs/神经干预验证记录.json",
+      "bytes": 1621,
+      "sha256": "bec82cbee67530e67649e75d8fe0987566a6cbc92e76e5a53fa71b057d746c49"
+    },
+    {
+      "path": "docs/蘑菇体学习观察器说明.md",
+      "bytes": 6920,
+      "sha256": "4fe738eaad966410758ef8157ff2e4bf5e5165ff9216604505bc904bc55dc82f"
+    },
+    {
+      "path": "docs/蘑菇体学习验证记录.json",
+      "bytes": 25320,
+      "sha256": "1e8361575c76fb0d22b94b30874ac46a267bf513ff78bc7cacac9143c376fa97"
+    },
+    {
+      "path": "docs/蘑菇体局部学习说明.md",
+      "bytes": 8238,
+      "sha256": "5a4d7e848ac225dd3a77034153a3ecbf36694e142fcc5a046d690fc6faad0569"
+    },
+    {
+      "path": "docs/虚拟神经干预说明.md",
+      "bytes": 6039,
+      "sha256": "ef5f9de8da1bb1a2622a6e47d2468bf79f9e3a30092e6c7f8a279cd61663e195"
     },
     {
       "path": "docs/行为与感官驱动说明.md",
@@ -367,8 +414,8 @@
     },
     {
       "path": "docs/项目详情.md",
-      "bytes": 8823,
-      "sha256": "2937d77bc0d7aa0dde24ca03176a926027fcc58ce68ecaeff204abb2dc9b320e",
+      "bytes": 9955,
+      "sha256": "eeb7803a9fbf191646cce845ac8c80f41c730fdfdcd5c09fba04379cd505e167",
       "original_source_path": "docs/项目详情.md",
       "original_sha256": "4a8d114dc2965152a35c60a5f38842171917eb06faf3f50e2ea41b6d7fe713f3",
       "modified_in_release_copy": true
@@ -399,9 +446,34 @@
       "source_path": "download_torch.py"
     },
     {
+      "path": "experiment_destination.py",
+      "bytes": 6675,
+      "sha256": "7657334374bbef4a4f79a692636477cb41c9bb6b0ff71de91d0e8f69782fb349"
+    },
+    {
+      "path": "experiment_library.py",
+      "bytes": 13020,
+      "sha256": "2a8d085f5a76057911a22a17597d0961fc772c12f3a376dbd3f1a776f6708a43"
+    },
+    {
+      "path": "experiment_profile.py",
+      "bytes": 21316,
+      "sha256": "f21ea67da791cc15f5b6ab70a59d5a66d0feb658dfffd716e135a30297f2874a"
+    },
+    {
       "path": "experiment_recovery.py",
       "bytes": 1137,
       "sha256": "62cba4e9cbddb33b841f94d5287c4fa32f7359052ec2b231b3ea1b9688958783"
+    },
+    {
+      "path": "experiment_store.py",
+      "bytes": 37441,
+      "sha256": "7398bd8eda1cbae39adff45d77fecf325f1dbc13969124afbeddc7cdb7dfaf93"
+    },
+    {
+      "path": "experiment_viewer.py",
+      "bytes": 1437,
+      "sha256": "4bdebb79de27494827c0f524e0a4d5ace046034418405960526da922b44d8a4f"
     },
     {
       "path": "flygym/.dockerignore",
@@ -1833,16 +1905,16 @@
     },
     {
       "path": "habitat.py",
-      "bytes": 33852,
-      "sha256": "62f7f9620c6da27afa9590dd8fde5b06c8b2aa9702f28136ea039d0ccee3f1df",
+      "bytes": 52088,
+      "sha256": "d3154d0531c590bda915358d8bf144aa873a49779187c794f2bd3c05b8da5a19",
       "original_source_path": "habitat.py",
       "original_sha256": "b901d61ff9f759d68f2373652655c9769e43207ec8be8985605013b59c5d5028",
       "modified_in_release_copy": true
     },
     {
       "path": "habitat_monitor.py",
-      "bytes": 8331,
-      "sha256": "f7768827478302044f09ad4bebbbf83087d106c486c12ad747b8951135a9a648",
+      "bytes": 13094,
+      "sha256": "2366e35989d3b7bb251878760c9c8a326821f0cb6ae6b28607b444b4e9346ae2",
       "original_source_path": "habitat_monitor.py",
       "original_sha256": "cd1a5d282a06e71c51c451276df345aa582f627acbc5a339edd63d2157bee011",
       "modified_in_release_copy": true
@@ -1912,6 +1984,36 @@
       "source_path": "licenses/uv-LICENSE-MIT.txt"
     },
     {
+      "path": "mb_learning.py",
+      "bytes": 9199,
+      "sha256": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57"
+    },
+    {
+      "path": "mb_learning_catalog.py",
+      "bytes": 3014,
+      "sha256": "d73e4b5de4f0c3532ab13505346acb6a50f01d30b5e8b60d5d471b14eafedd35"
+    },
+    {
+      "path": "mb_learning_runtime.py",
+      "bytes": 17742,
+      "sha256": "f98ef4a5b43181ff6bd44b789a92061b64dead86b450d138a86aa92d8906ba72"
+    },
+    {
+      "path": "mb_observer.py",
+      "bytes": 12140,
+      "sha256": "1f8617aa417c55a8153ad8a364e0ddfdbb74c520c6457ecffea2770d6c9e1189"
+    },
+    {
+      "path": "neural_intervention.py",
+      "bytes": 4746,
+      "sha256": "5afcefdeb899b9a2612ce35de6307d9ed54e70ad1ffdf9d1d12cf6c27ddf3750"
+    },
+    {
+      "path": "neural_intervention_runtime.py",
+      "bytes": 5892,
+      "sha256": "ffb03101a9d6e9f2ab5a885076db14260d4a343b26929d345b1227053ab7c6a3"
+    },
+    {
       "path": "neuron_annotations.py",
       "bytes": 3800,
       "sha256": "5aefd6dff078ff3aadced1ba504919d95e62663db9171ab8bbc5c432238628fa",
@@ -1952,8 +2054,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 7718,
-      "sha256": "577bf9b61f391293df92fb418f997c58552d716184b04113baa31a837621681f"
+      "bytes": 10436,
+      "sha256": "8af2755760866a149d113abe72aaf7ac5141e2468c1f53f61493ecf7aeb38178"
     },
     {
       "path": "requirements/body-win-x64.lock.txt",
@@ -2184,6 +2286,11 @@
       "source_path": "verify_weight_cache.py"
     },
     {
+      "path": "View-Records.cmd",
+      "bytes": 437,
+      "sha256": "0fb11635204dd43567a431afccd4ef1a941c617299c4f2f998d3eac001bc009b"
+    },
+    {
       "path": "visual_navigation.py",
       "bytes": 2477,
       "sha256": "f84de8af3bbdd6a66107cf76a138ec70dd836fcdf7e5abfbc7576a784b44d59f",
@@ -2226,9 +2333,19 @@
       "source_path": "web/brain_controls.js"
     },
     {
+      "path": "web/experiment_io.css",
+      "bytes": 3136,
+      "sha256": "7e11ae19fed6267dc8ca9e938f220f3be649895fe214aecee6fc5f434cdde9de"
+    },
+    {
+      "path": "web/experiment_io.js",
+      "bytes": 9199,
+      "sha256": "9eb4dd2d347f7d887a6bb05199ebd0bfe298b5f43fbb880fb53b450a21f470cc"
+    },
+    {
       "path": "web/index.html",
-      "bytes": 12308,
-      "sha256": "6c306eecb8da483f497ab03aa59464beda4098ced8b51b996c8c432735062938",
+      "bytes": 14527,
+      "sha256": "4f5e1fb044bb24a5f2f7ed09bd200d5d898d982d13c2dd4e1e867a969bf0f9cd",
       "original_source_path": "web/index.html",
       "original_sha256": "2f8b6e3a035b7bfa5c467e7638e2a0d20b60b2c19f3e7128db3732d179d02347",
       "modified_in_release_copy": true
@@ -2241,11 +2358,36 @@
     },
     {
       "path": "web/lab.js",
-      "bytes": 25997,
-      "sha256": "1c4bede841b5db8311fad52ff1fd01c5df2005eb0de9dccd3ff78e0f6cad474f",
+      "bytes": 26211,
+      "sha256": "77f35d82b56ce52925c89b3bbe433f5ede4ef0a7a8cac1bf338251b59fe590f5",
       "original_source_path": "web/lab.js",
       "original_sha256": "53ef8f4da119ecfd471a714bd6cf751f021920aa525cfe0db08b0cfdce358aab",
       "modified_in_release_copy": true
+    },
+    {
+      "path": "web/mb_learning.css",
+      "bytes": 3084,
+      "sha256": "f5ccc220e04621514e2c4dcf33bc551f482c1e4b83fb39cde4c4e6d4b89c9045"
+    },
+    {
+      "path": "web/mb_learning.js",
+      "bytes": 18308,
+      "sha256": "4760e83f494f2a7e0736ef2f21529bdc52c163d2f55c6fccd7fe5faa693009a0"
+    },
+    {
+      "path": "web/mb_observer.css",
+      "bytes": 4716,
+      "sha256": "9c14440e57f008db9ac5e4f09414efbb379d1a68efb6557b272ff62a9a48809b"
+    },
+    {
+      "path": "web/mb_observer.html",
+      "bytes": 778,
+      "sha256": "8cd98a4229026e7c40aedb6863a708cab98b815cdc362a4ec4113ff2ea7a7c41"
+    },
+    {
+      "path": "web/mb_observer.js",
+      "bytes": 25941,
+      "sha256": "48edc3062a2af3d8884a1c6b8d268072ab94060128331d3cd0dc02b732a388ad"
     },
     {
       "path": "web/morphology.json",
@@ -2282,6 +2424,31 @@
       "source_path": "web/neural_activity_core.js"
     },
     {
+      "path": "web/neural_intervention.css",
+      "bytes": 2616,
+      "sha256": "4618edddd458977d764964850777bbe3d63b9bc8dc731cb864cb95c10b3a99e3"
+    },
+    {
+      "path": "web/neural_intervention.js",
+      "bytes": 16824,
+      "sha256": "df7ec8da34e75a894afec63a150d380c73fe08f405e07ef74bf4a4ca744f8362"
+    },
+    {
+      "path": "web/records.css",
+      "bytes": 7401,
+      "sha256": "dd1334456d1d063fbc30ee75a1c7022897b0420135addfa735490f45123d27bd"
+    },
+    {
+      "path": "web/records.html",
+      "bytes": 3809,
+      "sha256": "26b75fb7c2ef0ec5ae77663a7bce12a2dac80a1440b5cc92ef4019af6e49da1c"
+    },
+    {
+      "path": "web/records.js",
+      "bytes": 31027,
+      "sha256": "897155e263f562a35d81ba5d34aad06f242d25eb12be024f766d3fd3913119ec"
+    },
+    {
       "path": "web/vendor/OrbitControls.js",
       "bytes": 38703,
       "sha256": "b97879c748170baadeb3fb84cea1ffdf4674e283dc06042f34e2acb95a76042c",
@@ -2313,9 +2480,11 @@
     },
     {
       "path": "web/workbench.js",
-      "bytes": 10507,
-      "sha256": "6e98d6351101dbd47221f35e46698ee6f29de3e6fc425bce57926b8ac2317b95",
-      "source_path": "web/workbench.js"
+      "bytes": 10651,
+      "sha256": "338d84c1943e94a9e83ea87375822744068a3f831deb18458698013d71767a0c",
+      "original_source_path": "web/workbench.js",
+      "original_sha256": "6e98d6351101dbd47221f35e46698ee6f29de3e6fc425bce57926b8ac2317b95",
+      "modified_in_release_copy": true
     },
     {
       "path": "web/许可与来源.html",
@@ -2350,8 +2519,8 @@
     },
     {
       "path": "版本与更新记录.md",
-      "bytes": 2310,
-      "sha256": "fc7bd9964be2725e0c42ea63daba9d8be54d2817824728ed8a4b55cc58c1e044"
+      "bytes": 5055,
+      "sha256": "d37a2788f09c90eb04c1aa7ef58ce5d7464017e7c26e7c68ae843a3d164f0b9a"
     },
     {
       "path": "版本信息.json",
@@ -2396,14 +2565,14 @@
     },
     {
       "path": "项目说明.md",
-      "bytes": 7718,
-      "sha256": "577bf9b61f391293df92fb418f997c58552d716184b04113baa31a837621681f",
+      "bytes": 10436,
+      "sha256": "8af2755760866a149d113abe72aaf7ac5141e2468c1f53f61493ecf7aeb38178",
       "original_source_path": "项目说明.md",
       "original_sha256": "3aebc9694ed3a84d115dc3827148058128cf9fe12c25f547f6b8bf81cd44e89b",
       "modified_in_release_copy": true
     }
   ],
-  "updated_at_utc": "2026-10-16T08:40:43.752565+00:00",
+  "updated_at_utc": "2026-10-18T06:50:49.721475+00:00",
   "excluded_originals": [
     {
       "path": "downloads/annotations/README_v3.2.0.md",

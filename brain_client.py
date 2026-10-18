@@ -144,13 +144,15 @@ class BrainClient:
             if self.progress:
                 self.progress(None)
 
-    def advance(self, command, milliseconds, capture, smoothing_ms=100.0, transmitter_gains=None):
+    def advance(self, command, milliseconds, capture, smoothing_ms=100.0, transmitter_gains=None,
+                intervention=None,mb_learning=None):
         if self.closed or self.failed:
             raise self._error("脑通信已停止，须手动开始新一轮", "brain_step")
         self._writes.put(json.dumps({"rate_hz":command["p9_rate_hz"], "duration_ms":milliseconds,
                                     "sugar_rate_hz":command["sugar_rate_hz"], "capture_activity":capture,
                                     "drive_smoothing_ms":smoothing_ms,
-                                    "transmitter_gains":transmitter_gains}) + "\n")
+                                    "transmitter_gains":transmitter_gains,
+                                    "intervention":intervention,"mb_learning":mb_learning}) + "\n")
         result = self._response("brain_step", self.step_timeout)
         try:
             stamp = result["brain_time_ms"]
@@ -167,6 +169,19 @@ class BrainClient:
         except (KeyError, TypeError, ValueError, AttributeError) as error:
             raise self._error(f"脑响应字段无效：{error}", "brain_step") from error
         self.last_brain_time_ms = stamp
+        return result
+
+    def learning_state(self,control=None,include_memory=False):
+        """Configure/reset/export local factors without advancing neural clocks."""
+        if self.closed or self.failed:raise self._error('脑通信已停止','brain_step')
+        payload={'mb_learning_export':bool(include_memory)}
+        if control is not None:payload['mb_learning_control']=control
+        if control is None and not include_memory:payload['mb_learning_export']=True
+        self._writes.put(json.dumps(payload)+'\n')
+        result=self._response('brain_step',self.step_timeout)
+        if result.get('error'):raise ValueError(result['error'])
+        if result.get('brain_time_ms')!=self.last_brain_time_ms or not isinstance(result.get('mb_learning'),dict):
+            raise self._error('局部学习控制响应无效或改变了脑时钟','brain_step')
         return result
 
     def close(self):

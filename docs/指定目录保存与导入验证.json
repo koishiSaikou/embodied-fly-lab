@@ -1,0 +1,54 @@
+{
+  "checked_at_utc": "2026-10-17T01:51:50.159731+00:00",
+  "status": "passed",
+  "authorization": "维护者要求保存到指定目录，并明确要求确保可以导入运行；本次仅验证这一闭环，不恢复全量/性能/长时测试。",
+  "scope": "本机 Windows、实际主程序/脑工作进程、隔离端口、单独记录目录；旧实验/已运行服务未控制或覆盖。",
+  "checks": [
+    "save-current rejects invalid destination before stop",
+    "full-brain source ends and writes portable ZIP to Unicode/space directory",
+    "default record retained; no incomplete destination files",
+    "HTTP ZIP import creates distinct record",
+    "imported raw trajectory preview works",
+    "initial/final configuration and external odor memory validated",
+    "HTTP save-to creates another unique ZIP without overwriting source package",
+    "actual full-brain imported initial mode completes via launcher",
+    "actual full-brain imported final mode completes via launcher",
+    "tampered ZIP rejected without a landed record"
+  ],
+  "runs": [
+    {
+      "label": "source",
+      "directory": "output/habitat/ioverify_20261017_094829_886658",
+      "status": "finished",
+      "model_seconds": 0.060000000000000005,
+      "brain_time_ms": 60.0
+    },
+    {
+      "label": "initial",
+      "directory": "output/habitat/20261017_094852_101606",
+      "status": "finished",
+      "model_seconds": 1.0,
+      "brain_time_ms": 1000.0
+    },
+    {
+      "label": "final",
+      "directory": "output/habitat/20261017_094923_073602",
+      "status": "finished",
+      "model_seconds": 1.0,
+      "brain_time_ms": 1000.0
+    }
+  ],
+  "raw_evidence": "output/experiment_io_verification/20261017_094829_886658/验证结果.json",
+  "tests_run": true,
+  "simulation_started": true,
+  "existing_experiments_touched": false,
+  "native_folder_picker_opened": false,
+  "manual_destination_path_verified": true,
+  "browser_interactions_automated": false,
+  "installation_run": false,
+  "performance_test_run": false,
+  "delivery_rebuilt": false,
+  "github_committed": false,
+  "github_pushed": false,
+  "limitations": "仅本机短闭环；未验证原生文件夹窗口的交互、其他电脑/浏览器、长时/磁盘耗尽。初次探测在模型0秒就停止，被验证脚本主动判为不足；调整为模型>=0.04秒再请求后全部通过。"
+}

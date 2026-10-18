@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "checked_at_utc": "2026-10-17T02:39:00.275582+00:00",
+  "scope": "8-node original TorchModel on CPU; no full connectome/GPU/body/service execution",
+  "checks": [
+    "no protocol: all five state tensors, counts and RNG exactly equal original model calls",
+    "scheduled silence: exactly 100 included steps, zero target spikes inside window, firing resumes afterward",
+    "silence clears previous target spike before recurrent sparse propagation and clamps recorded output",
+    "additional Poisson stimulation produces target spikes without baseline external input",
+    "added stimulus capped at 1000 Hz; original base-rate tensor remains unchanged",
+    "ordinary target stimulation retains its existing refractory interval",
+    "cancel changes no neural state or RNG and removes future intervention",
+    "half-open decimal time boundaries exact; late registration records actual first application separately",
+    "model-order exact ID/type selection, unknown/numeric IDs rejected; population mean includes silent targets"
+  ],
+  "checks_count": 9,
+  "full_brain_loaded": false,
+  "gpu_used": false,
+  "existing_experiments_touched": false,
+  "raw_evidence": "output/neural_intervention_verification/20261017_103900_275582/验证结果.json",
+  "limitations": "仅8节点原TorchModel的CPU数值检查，非完整连接组/CUDA/三维身体/浏览器集成或长时/性能验收。",
+  "tests_run": true,
+  "body_started": false,
+  "browser_interactions_automated": false,
+  "github_committed": false,
+  "github_pushed": false,
+  "delivery_rebuilt": false
+}

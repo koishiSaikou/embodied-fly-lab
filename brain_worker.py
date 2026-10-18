@@ -24,6 +24,10 @@ from run_pytorch import DT, MODEL_PARAMS, TorchModel, get_hash_tables, get_weigh
 from neuron_annotations import annotations
 from transmitter_modulation import TransmitterModulation, validate_gains
 from project_info import project_info
+from neural_intervention import UNSET
+from neural_intervention_runtime import NeuralInterventionRuntime
+from mb_learning import MBLearningControls, validate_controls, validate_cues, validate_teaching
+from mb_learning_runtime import MBLearningRuntime
 
 
 class Brain:
@@ -57,12 +61,61 @@ class Brain:
         if not self.annotations.rows:
             raise RuntimeError('Model-order annotations are required for transmitter controls')
         self.transmitters = TransmitterModulation(weights, self.annotations.rows)
+        self.intervention = NeuralInterventionRuntime(self.annotations.rows,DT,self.rates.device)
+        self.integration_steps = 0
+        self.mb_learning=None
+        self.mb_controls=MBLearningControls().snapshot()
+        self.mb_settings_revision=self.mb_reset_revision=0
+        self.mb_reward=0.
+        self.mb_observation_clock=None
+
+    def learning_summary(self):
+        result=self.mb_learning.summary() if self.mb_learning else dict(
+            controls=dict(self.mb_controls),initialized=False,edge_count=None,changed_edges=0,
+            min_factor=None,mean_factor=None,trained_seconds=0.,last_reward=0.,mbon_hz=[])
+        observation=result.get('observation')
+        if observation is not None:
+            # Revisions belong to the observed chunk, never a later paused edit.
+            clock=getattr(self,'mb_observation_clock',None)
+            result['observation']=dict(observation,**clock) if clock else None
+        return dict(result,initialized=self.mb_learning is not None,
+                    settings_revision=self.mb_settings_revision,reset_revision=self.mb_reset_revision,
+                    teaching_signal_requested=self.mb_reward,brain_time_ms=self.sim_ms)
+
+    @torch.no_grad()
+    def configure_learning(self,packet=None,include_memory=False):
+        if packet is not None:
+            keys={'controls','settings_revision','reset_revision','initial_memory','cue','reward'}
+            if not isinstance(packet,dict) or set(packet)-keys:raise ValueError('局部学习消息字段无效')
+            controls=validate_controls(packet.get('controls',self.mb_controls))
+            settings=packet.get('settings_revision',self.mb_settings_revision)
+            reset=packet.get('reset_revision',self.mb_reset_revision)
+            for value,current in ((settings,self.mb_settings_revision),(reset,self.mb_reset_revision)):
+                if type(value) is not int or not current<=value<=10**9:raise ValueError('局部学习修订号无效或倒退')
+            reward=validate_teaching(packet.get('reward',self.mb_reward))
+            validate_cues(packet.get('cue'))
+            memory=packet.get('initial_memory')
+            if memory is not None and self.mb_learning is not None:
+                raise ValueError('学习记忆只允许在新脑工作进程首次配置时载入')
+            runtime=self.mb_learning
+            if runtime is None and (controls['enabled'] or memory is not None or reset!=self.mb_reset_revision):
+                runtime=MBLearningRuntime(self.transmitters.base_weights,self.annotations.rows,controls)
+                if memory is not None:runtime.load_memory(memory)
+            elif runtime is not None:
+                runtime.configure(controls)
+            if runtime is not None and reset!=self.mb_reset_revision:runtime.reset()
+            self.mb_learning=runtime;self.mb_controls=controls
+            self.mb_settings_revision=settings;self.mb_reset_revision=reset;self.mb_reward=reward
+            self.model.weights=runtime.compose(self.transmitters.weights) if runtime else self.transmitters.weights
+        result=dict(brain_time_ms=self.sim_ms,mb_learning=self.learning_summary())
+        if include_memory:result['learning_memory']=self.mb_learning.export_memory() if self.mb_learning else None
+        return result
 
     # Keep no_grad, as in the upstream runner: CSR transpose on this build
     # requires tensor version counters that inference_mode removes.
     @torch.no_grad()
     def advance(self, rate_hz, duration_ms, capture_activity=False, sugar_rate_hz=0, drive_smoothing_ms=None,
-                transmitter_gains=None):
+                transmitter_gains=None, intervention=UNSET,mb_learning=UNSET):
         rates = np.asarray(rate_hz, dtype=float)
         if rates.shape != (2,) or not np.isfinite(rates).all() or np.any(rates < 0) or np.any(rates > 1000):
             raise ValueError("rate_hz must be two finite numbers in [0, 1000]")
@@ -78,9 +131,14 @@ class Brain:
         steps = max(1, round(duration_ms / DT))
         if capture_activity and steps > 1000:
             raise ValueError("Activity capture supports chunks up to 100 ms")
+        if intervention is not UNSET:self.intervention.update(intervention)
+        if mb_learning is not UNSET and mb_learning is not None:self.configure_learning(mb_learning)
         if transmitter_gains is not None:
             validate_gains(transmitter_gains, self.transmitters.gains)
-            self.model.weights = self.transmitters.apply(transmitter_gains)
+            self.transmitters.apply(transmitter_gains)
+        self.model.weights=self.mb_learning.compose(self.transmitters.weights) if self.mb_learning else self.transmitters.weights
+        if self.mb_learning:
+            self.mb_learning.begin_chunk(mb_learning.get('cue') if isinstance(mb_learning,dict) else None)
         if drive_smoothing_ms is not None:
             self.drive_smoothing_ms = float(drive_smoothing_ms)
         actual_ms = steps * DT
@@ -93,8 +151,15 @@ class Brain:
         trace = torch.empty((steps, self.size), dtype=torch.bool, device="cuda") if capture_activity else None
         torch.cuda.synchronize()
         started = time.perf_counter()
+        self.intervention.begin_chunk()
+        intervention_steps=0
         for step in range(steps):
-            self.state = self.model(self.rates, *self.state)
+            step_rates=self.mb_learning.input_rates(self.rates,self.state,self.model) if self.mb_learning else self.rates
+            if self.intervention.active(self.integration_steps+step):
+                self.state=self.intervention.step(self.model,step_rates,self.state,self.integration_steps+step)
+                intervention_steps+=1
+            else:
+                self.state = self.model(step_rates, *self.state)
             counts += self.state[2][0]
             if trace is not None:
                 trace[step] = self.state[2][0] > 0
@@ -102,6 +167,11 @@ class Brain:
         wall_seconds = time.perf_counter() - started
         self.total_counts += counts
         self.sim_ms += actual_ms
+        self.integration_steps += steps
+        if self.mb_learning:
+            self.mb_learning.observe(counts,actual_ms/1000,self.mb_reward)
+            self.mb_observation_clock=dict(start_ms=start_ms,end_ms=self.sim_ms,
+                settings_revision=self.mb_settings_revision,reset_revision=self.mb_reset_revision)
         self.wall_seconds += wall_seconds
         p9_hz = counts[self.p9_indices].cpu().numpy() / (actual_ms / 1000)
         # Smooth raw rates before saturation in habitat mode. Clipping each
@@ -123,6 +193,8 @@ class Brain:
             "sugar_spikes": int(counts[self.sugar_indices].sum().item()) if self.sugar_indices else 0,
             "drive_smoothing_ms": self.drive_smoothing_ms,
             "transmitter_gains": dict(self.transmitters.gains),
+            "intervention":self.intervention.summary(counts,actual_ms,self.integration_steps,intervention_steps),
+            "mb_learning":self.learning_summary(),
         }
         if trace is not None:
             spike_steps, neuron_indices = trace.nonzero(as_tuple=True)
@@ -161,6 +233,13 @@ class Brain:
             "dt_ms": DT,
             "drive_smoothing_ms": self.drive_smoothing_ms,
             "transmitter_modulation": self.transmitters.metadata(),
+            "mb_learning":dict(supported=True,defaults=MBLearningControls().snapshot(),
+                interpretation='Optional existing positive KC→MBON local LTD; external teaching and deterministic engineering odor→KC bridge; not full-brain or molecular learning'),
+            "neural_intervention":dict(supported=True,max_targets=10000,
+                input='Additional 0–1000 Hz Poisson drive, summed rate capped at 1000 Hz; existing ordinary-target refractory gate retained',
+                silence='Local voltage/conductance/incoming delay/spikes clamped; already queued currents elsewhere preserved',
+                timing='Absolute brain model time, included integration step timestamps in [start,end)',
+                interpretation='Virtual engineering intervention; not calibrated optogenetics or biological damage'),
             "sugar_grn_ids": [str(i) for i in self.sugar_ids],
             "annotations": self.annotations.summary,
             "p9_channel_ids": [str(i) for i in self.p9_ids],
@@ -194,11 +273,20 @@ def main():
         message = json.loads(line)
         if message.get("quit"):
             break
+        if 'mb_learning_control' in message or message.get('mb_learning_export'):
+            try:
+                result=brain.configure_learning(message.get('mb_learning_control'),bool(message.get('mb_learning_export')))
+            except (ValueError,TypeError,KeyError) as error:
+                result=dict(error=str(error),brain_time_ms=brain.sim_ms)
+            print(json.dumps(result),flush=True)
+            continue
+        options={"intervention":message['intervention']} if 'intervention' in message else {}
+        if 'mb_learning' in message:options['mb_learning']=message['mb_learning']
         print(json.dumps(brain.advance(message["rate_hz"], message.get("duration_ms", 20),
                                        message.get("capture_activity", False),
                                        message.get("sugar_rate_hz", 0),
                                        message.get("drive_smoothing_ms"),
-                                       message.get("transmitter_gains"))), flush=True)
+                                       message.get("transmitter_gains"),**options)), flush=True)
 
 
 if __name__ == "__main__":

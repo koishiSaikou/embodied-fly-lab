@@ -1,0 +1,1733 @@
+{
+  "checked_at_utc": "2026-10-18T06:50:09.541904+00:00",
+  "status": "小型CPU、纯逻辑和合成记录往返检查通过",
+  "checks_count": 89,
+  "checks": [
+    {
+      "scope": "25-node synthetic CPU telemetry and literal legacy-update comparison only",
+      "source_sha256": {
+        "mb_learning_runtime.py": "f98ef4a5b43181ff6bd44b789a92061b64dead86b450d138a86aa92d8906ba72",
+        "mb_learning.py": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57"
+      },
+      "limitations": [
+        "No full-brain/GPU/body/service validation",
+        "Artificial counts validate numerical telemetry; not biological learning or behavioral improvement"
+      ],
+      "details": {
+        "nodes": 25,
+        "selected_kc": 20,
+        "local_edges": 39,
+        "overlap_count": 2,
+        "observations": {
+          "disabled": {
+            "schema_version": 1,
+            "chunk_s": 0.2,
+            "controls": {
+              "enabled": false,
+              "plasticity_enabled": true,
+              "cue_input_enabled": true,
+              "kc_type": "KCg-m",
+              "mbon_type": "MBON01",
+              "learning_rate": 0.1,
+              "eligibility_tau_s": 1.0,
+              "min_factor": 0.2,
+              "kc_input_hz": 80.0,
+              "coding_fraction": 0.25,
+              "cue_seed": 0,
+              "reward_source": "manual"
+            },
+            "selection_revision": 0,
+            "pattern_revision": 1,
+            "cues": {
+              "sugar": 0.6,
+              "fruit": 0.2
+            },
+            "teaching_signal": 0.8,
+            "eligibility_evolved": false,
+            "factor_updates_enabled": false,
+            "kc": {
+              "count": 20,
+              "spikes": 12,
+              "active": 3,
+              "mean_hz": 3.0,
+              "groups": {
+                "sugar": {
+                  "count": 5,
+                  "spikes": 5,
+                  "active": 2,
+                  "mean_hz": 5.0,
+                  "eligibility_mean": 0.0,
+                  "eligibility_max": 0.0
+                },
+                "fruit": {
+                  "count": 5,
+                  "spikes": 3,
+                  "active": 1,
+                  "mean_hz": 3.0,
+                  "eligibility_mean": 0.0,
+                  "eligibility_max": 0.0
+                },
+                "overlap": {
+                  "count": 2,
+                  "spikes": 3,
+                  "active": 1,
+                  "mean_hz": 7.5,
+                  "eligibility_mean": 0.0,
+                  "eligibility_max": 0.0
+                }
+              }
+            },
+            "eligibility": {
+              "mean": 0.0,
+              "max": 0.0
+            },
+            "factor_before": {
+              "min": 1.0,
+              "mean": 1.0,
+              "changed_edges": 0
+            },
+            "factor_after": {
+              "min": 1.0,
+              "mean": 1.0,
+              "changed_edges": 0
+            },
+            "factor_histogram": {
+              "edges": [
+                0.0,
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,
+                1.0
+              ],
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                39
+              ]
+            },
+            "interpretation": "Actual post-intervention chunk counts, including silent selected cells in rate denominators. Sugar/fruit groups may overlap. Disabled eligibility is held unchanged; frozen factors are held unchanged. factor_after applies to the next chunk."
+          },
+          "frozen_zero": {
+            "schema_version": 1,
+            "chunk_s": 0.1,
+            "controls": {
+              "enabled": true,
+              "plasticity_enabled": false,
+              "cue_input_enabled": true,
+              "kc_type": "KCg-m",
+              "mbon_type": "MBON01",
+              "learning_rate": 0.1,
+              "eligibility_tau_s": 1.0,
+              "min_factor": 0.2,
+              "kc_input_hz": 80.0,
+              "coding_fraction": 0.25,
+              "cue_seed": 0,
+              "reward_source": "manual"
+            },
+            "selection_revision": 0,
+            "pattern_revision": 1,
+            "cues": {
+              "sugar": 0.0,
+              "fruit": 0.0
+            },
+            "teaching_signal": 0.7,
+            "eligibility_evolved": true,
+            "factor_updates_enabled": false,
+            "kc": {
+              "count": 20,
+              "spikes": 0,
+              "active": 0,
+              "mean_hz": 0.0,
+              "groups": {
+                "sugar": {
+                  "count": 5,
+                  "spikes": 0,
+                  "active": 0,
+                  "mean_hz": 0.0,
+                  "eligibility_mean": 0.0,
+                  "eligibility_max": 0.0
+                },
+                "fruit": {
+                  "count": 5,
+                  "spikes": 0,
+                  "active": 0,
+                  "mean_hz": 0.0,
+                  "eligibility_mean": 0.0,
+                  "eligibility_max": 0.0
+                },
+                "overlap": {
+                  "count": 2,
+                  "spikes": 0,
+                  "active": 0,
+                  "mean_hz": 0.0,
+                  "eligibility_mean": 0.0,
+                  "eligibility_max": 0.0
+                }
+              }
+            },
+            "eligibility": {
+              "mean": 0.0,
+              "max": 0.0
+            },
+            "factor_before": {
+              "min": 1.0,
+              "mean": 1.0,
+              "changed_edges": 0
+            },
+            "factor_after": {
+              "min": 1.0,
+              "mean": 1.0,
+              "changed_edges": 0
+            },
+            "factor_histogram": {
+              "edges": [
+                0.0,
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,
+                1.0
+              ],
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                39
+              ]
+            },
+            "interpretation": "Actual post-intervention chunk counts, including silent selected cells in rate denominators. Sugar/fruit groups may overlap. Disabled eligibility is held unchanged; frozen factors are held unchanged. factor_after applies to the next chunk."
+          },
+          "learning": {
+            "schema_version": 1,
+            "chunk_s": 0.2,
+            "controls": {
+              "enabled": true,
+              "plasticity_enabled": true,
+              "cue_input_enabled": true,
+              "kc_type": "KCg-m",
+              "mbon_type": "MBON01",
+              "learning_rate": 0.2,
+              "eligibility_tau_s": 1.0,
+              "min_factor": 0.2,
+              "kc_input_hz": 80.0,
+              "coding_fraction": 0.25,
+              "cue_seed": 0,
+              "reward_source": "manual"
+            },
+            "selection_revision": 0,
+            "pattern_revision": 1,
+            "cues": {
+              "sugar": 0.6,
+              "fruit": 0.2
+            },
+            "teaching_signal": 0.8,
+            "eligibility_evolved": true,
+            "factor_updates_enabled": true,
+            "kc": {
+              "count": 20,
+              "spikes": 12,
+              "active": 3,
+              "mean_hz": 3.0,
+              "groups": {
+                "sugar": {
+                  "count": 5,
+                  "spikes": 5,
+                  "active": 2,
+                  "mean_hz": 5.0,
+                  "eligibility_mean": 0.05000000149011612,
+                  "eligibility_max": 0.15000000596046448
+                },
+                "fruit": {
+                  "count": 5,
+                  "spikes": 3,
+                  "active": 1,
+                  "mean_hz": 3.0,
+                  "eligibility_mean": 0.030000001192092896,
+                  "eligibility_max": 0.15000000596046448
+                },
+                "overlap": {
+                  "count": 2,
+                  "spikes": 3,
+                  "active": 1,
+                  "mean_hz": 7.5,
+                  "eligibility_mean": 0.07500000298023224,
+                  "eligibility_max": 0.15000000596046448
+                }
+              }
+            },
+            "eligibility": {
+              "mean": 0.030000000074505807,
+              "max": 0.3499999940395355
+            },
+            "factor_before": {
+              "min": 1.0,
+              "mean": 1.0,
+              "changed_edges": 0
+            },
+            "factor_after": {
+              "min": 0.9887999892234802,
+              "mean": 0.9990153832313342,
+              "changed_edges": 6
+            },
+            "factor_histogram": {
+              "edges": [
+                0.0,
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,
+                1.0
+              ],
+              "counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                39
+              ]
+            },
+            "interpretation": "Actual post-intervention chunk counts, including silent selected cells in rate denominators. Sugar/fruit groups may overlap. Disabled eligibility is held unchanged; frozen factors are held unchanged. factor_after applies to the next chunk."
+          },
+          "histogram": {
+            "schema_version": 1,
+            "chunk_s": 0.02,
+            "controls": {
+              "enabled": false,
+              "plasticity_enabled": true,
+              "cue_input_enabled": true,
+              "kc_type": "KCg-m",
+              "mbon_type": "MBON01",
+              "learning_rate": 0.2,
+              "eligibility_tau_s": 1.0,
+              "min_factor": 0.05,
+              "kc_input_hz": 80.0,
+              "coding_fraction": 0.25,
+              "cue_seed": 1,
+              "reward_source": "manual"
+            },
+            "selection_revision": 0,
+            "pattern_revision": 0,
+            "cues": {
+              "sugar": 0.0,
+              "fruit": 0.0
+            },
+            "teaching_signal": 1.0,
+            "eligibility_evolved": false,
+            "factor_updates_enabled": false,
+            "kc": {
+              "count": 20,
+              "spikes": 0,
+              "active": 0,
+              "mean_hz": 0.0,
+              "groups": {
+                "sugar": {
+                  "count": 5,
+                  "spikes": 0,
+                  "active": 0,
+                  "mean_hz": 0.0,
+                  "eligibility_mean": 0.0,
+                  "eligibility_max": 0.0
+                },
+                "fruit": {
+                  "count": 5,
+                  "spikes": 0,
+                  "active": 0,
+                  "mean_hz": 0.0,
+                  "eligibility_mean": 0.0,
+                  "eligibility_max": 0.0
+                },
+                "overlap": {
+                  "count": 3,
+                  "spikes": 0,
+                  "active": 0,
+                  "mean_hz": 0.0,
+                  "eligibility_mean": 0.0,
+                  "eligibility_max": 0.0
+                }
+              }
+            },
+            "eligibility": {
+              "mean": 0.0,
+              "max": 0.0
+            },
+            "factor_before": {
+              "min": 0.05000000074505806,
+              "mean": 0.4666666690355692,
+              "changed_edges": 36
+            },
+            "factor_after": {
+              "min": 0.05000000074505806,
+              "mean": 0.4666666690355692,
+              "changed_edges": 36
+            },
+            "factor_histogram": {
+              "edges": [
+                0.0,
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,
+                1.0
+              ],
+              "counts": [
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                6,
+                0,
+                6,
+                3
+              ]
+            },
+            "interpretation": "Actual post-intervention chunk counts, including silent selected cells in rate denominators. Sugar/fruit groups may overlap. Disabled eligibility is held unchanged; frozen factors are held unchanged. factor_after applies to the next chunk."
+          }
+        }
+      },
+      "all_passed": true,
+      "checks": [
+        {
+          "name": "unobserved_summary_is_None",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "verification_patterns_include_overlap_and_unique_members",
+          "passed": true,
+          "details": {
+            "algorithm": "sha256-rank-v1",
+            "seed": 0,
+            "kc_count": 20,
+            "per_cue_count": 5,
+            "actual_coding_fraction": 0.25,
+            "overlap_count": 2,
+            "jaccard": 0.25,
+            "uses_external_odor_values": false,
+            "interpretation": "Deterministic engineering odor→KC bridge; not reconstructed ORN→PN connectivity"
+          }
+        },
+        {
+          "name": "disabled_observation_records_current_teaching_and_cues",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "disabled_observation_does_not_evolve_eligibility_or_weights",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "all_KC_rate_denominator_includes_silent_selected_cells",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "group_sugar_uses_exact_pattern_members_and_denominator",
+          "passed": true,
+          "details": {
+            "count": 5,
+            "spikes": 5,
+            "active": 2,
+            "mean_hz": 5.0,
+            "eligibility_mean": 0.0,
+            "eligibility_max": 0.0
+          }
+        },
+        {
+          "name": "group_fruit_uses_exact_pattern_members_and_denominator",
+          "passed": true,
+          "details": {
+            "count": 5,
+            "spikes": 3,
+            "active": 1,
+            "mean_hz": 3.0,
+            "eligibility_mean": 0.0,
+            "eligibility_max": 0.0
+          }
+        },
+        {
+          "name": "group_overlap_uses_exact_pattern_members_and_denominator",
+          "passed": true,
+          "details": {
+            "count": 2,
+            "spikes": 3,
+            "active": 1,
+            "mean_hz": 7.5,
+            "eligibility_mean": 0.0,
+            "eligibility_max": 0.0
+          }
+        },
+        {
+          "name": "overlapping_groups_are_not_misreported_as_partition",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "all_one_factor_histogram_counts_one_in_final_bin",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "ordinary_control_changes_retain_captured_old_controls",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "frozen_zero_count_readout_is_zero_with_valid_denominators",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "frozen_observation_keeps_factors_before_equal_after",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "telemetry_does_not_change_learning_equations_bitwise",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "factor_before_after_matches_actual_device_transition",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "group_sugar_eligibility_statistics_match_actual_trace",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "group_fruit_eligibility_statistics_match_actual_trace",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "group_overlap_eligibility_statistics_match_actual_trace",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "legacy_equality_{'plasticity_enabled': False}_dt_0.03",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "legacy_equality_{'enabled': False}_dt_0.07",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "legacy_equality_{'enabled': True, 'plasticity_enabled': True}_dt_0.1",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "observation_is_small_CPU_JSON_only",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "summary_returns_defensive_observation_copy",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "reset_clears_observation",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "memory_load_clears_observation_and_eligibility",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "pattern_change_clears_observation_without_changing_factors",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "selection_change_clears_observation_and_updates_revision",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "empty_overlap_has_no_invalid_rate_or_eligibility_denominator",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "factor_histogram_matches_independent_bin_count_and_total",
+          "passed": true,
+          "details": {
+            "histogram": {
+              "edges": [
+                0.0,
+                0.1,
+                0.2,
+                0.3,
+                0.4,
+                0.5,
+                0.6,
+                0.7,
+                0.8,
+                0.9,
+                1.0
+              ],
+              "counts": [
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                6,
+                0,
+                6,
+                3
+              ]
+            },
+            "reference": [
+              4,
+              4,
+              4,
+              4,
+              4,
+              4,
+              6,
+              0,
+              6,
+              3
+            ]
+          }
+        },
+        {
+          "name": "observing_disabled_retained_memory_preserves_factors",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "telemetry_does_not_mutate_original_matrix_or_consume_RNG",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "no_CUDA_initialized",
+          "passed": true,
+          "details": null
+        }
+      ],
+      "raw_evidence": "output/mb_learning_verification/20261018_144020_029136/验证结果.json",
+      "checks_count": 32
+    },
+    {
+      "mode": "stdlib",
+      "source_sha256": {
+        "mb_observer.py": "1f8617aa417c55a8153ad8a364e0ddfdbb74c520c6457ecffea2770d6c9e1189",
+        "mb_learning_runtime.py": "f98ef4a5b43181ff6bd44b789a92061b64dead86b450d138a86aa92d8906ba72",
+        "brain_worker.py": "6ebb3a42ab21e05fb66af26cf72dea3918e273b40efa5f3be06cf02cd5930897",
+        "mb_learning.py": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57"
+      },
+      "limitations": [
+        "Synthetic counters and explicit simulated completed-chunk clocks; no full neural integration",
+        "No full weights, GPU/body/browser/service or installer execution",
+        "Window compatibility does not establish causal learning effects"
+      ],
+      "details": {
+        "scope": "Pure stdlib synthetic chunk/time-window checks only",
+        "examples": {
+          "weighted_window": {
+            "schema_version": 1,
+            "slot": "before",
+            "start_s": 0.0,
+            "end_s": 0.3,
+            "requested_duration_s": 0.3,
+            "duration_s": 0.30000000000000004,
+            "samples": 2,
+            "first_seq": 1,
+            "last_seq": 2,
+            "mean": {
+              "cues": {
+                "sugar": 0.4,
+                "fruit": 0.2
+              },
+              "teaching_signal": 0.6666666666666666,
+              "kc_hz": 1.9999999999999998,
+              "mbon_hz": 6.666666666666666,
+              "eligibility_mean": 0.30000000000000004,
+              "factor_mean": 0.8333333333333334
+            },
+            "mbon": [
+              {
+                "flywire_id": "720575940000000020",
+                "spikes": 1,
+                "hz": 3.333333333333333
+              },
+              {
+                "flywire_id": "720575940000000021",
+                "spikes": 3,
+                "hz": 9.999999999999998
+              }
+            ],
+            "input_mean": {
+              "sugar_rate_hz": 4.999999999999999,
+              "p9_rate_hz": [
+                9.999999999999998,
+                19.999999999999996
+              ]
+            },
+            "signature": {
+              "controls": {
+                "enabled": true,
+                "plasticity_enabled": false,
+                "kc_type": "KCg-m",
+                "mbon_type": "MBON01",
+                "learning_rate": 0.1
+              },
+              "reset_revision": 0,
+              "selection_revision": 0,
+              "pattern_revision": 0,
+              "mbon_ids": [
+                "720575940000000020",
+                "720575940000000021"
+              ],
+              "background": {
+                "arena_revision": 0,
+                "behavior_revision": 0,
+                "intervention_revision": 7,
+                "brain_controls": {
+                  "p9_gain_a": 1.0
+                },
+                "sensory_switches": {
+                  "odor_enabled": true
+                },
+                "disconnect_brain_output": false,
+                "intervention_state": {
+                  "phase": "idle",
+                  "active_fraction": 0.0
+                }
+              }
+            },
+            "comparison_signature": {
+              "controls": {
+                "enabled": true,
+                "kc_type": "KCg-m",
+                "mbon_type": "MBON01",
+                "learning_rate": 0.1
+              },
+              "reset_revision": 0,
+              "selection_revision": 0,
+              "pattern_revision": 0,
+              "mbon_ids": [
+                "720575940000000020",
+                "720575940000000021"
+              ],
+              "background": {
+                "arena_revision": 0,
+                "behavior_revision": 0,
+                "intervention_revision": 7,
+                "brain_controls": {
+                  "p9_gain_a": 1.0
+                },
+                "sensory_switches": {
+                  "odor_enabled": true
+                },
+                "disconnect_brain_output": false,
+                "intervention_state": {
+                  "phase": "idle",
+                  "active_fraction": 0.0
+                }
+              }
+            }
+          },
+          "phase_comparison": {
+            "compatible": false,
+            "reasons": [
+              "目标、编码、局部记忆重置或背景控制不同；不能直接比较为同一条件的学习效应。"
+            ],
+            "warnings": [
+              "条件相符只代表记录参数可比较，不证明差异完全由学习引起；脑/身体初态和随机输入仍可能不同。"
+            ],
+            "delta": null
+          },
+          "fresh_after": {
+            "schema_version": 1,
+            "slot": "after",
+            "start_s": 0.19999999999999998,
+            "end_s": 0.4,
+            "requested_duration_s": 0.2,
+            "duration_s": 0.2,
+            "samples": 2,
+            "first_seq": 3,
+            "last_seq": 4,
+            "mean": {
+              "cues": {
+                "sugar": 0.4000000000000001,
+                "fruit": 0.20000000000000004
+              },
+              "teaching_signal": 0.0,
+              "kc_hz": 2.0,
+              "mbon_hz": 5.0,
+              "eligibility_mean": 0.20000000000000004,
+              "factor_mean": 0.9
+            },
+            "mbon": [
+              {
+                "flywire_id": "720575940000000020",
+                "spikes": 2,
+                "hz": 10.0
+              },
+              {
+                "flywire_id": "720575940000000021",
+                "spikes": 0,
+                "hz": 0.0
+              }
+            ],
+            "input_mean": {
+              "sugar_rate_hz": 5.0,
+              "p9_rate_hz": [
+                10.0,
+                20.0
+              ]
+            },
+            "signature": {
+              "controls": {
+                "enabled": true,
+                "plasticity_enabled": false,
+                "kc_type": "KCg-m",
+                "mbon_type": "MBON01",
+                "learning_rate": 0.2
+              },
+              "reset_revision": 0,
+              "selection_revision": 0,
+              "pattern_revision": 0,
+              "mbon_ids": [
+                "720575940000000020",
+                "720575940000000021"
+              ],
+              "background": {
+                "arena_revision": 0,
+                "behavior_revision": 0,
+                "intervention_revision": 7,
+                "brain_controls": {
+                  "p9_gain_a": 1.0
+                },
+                "sensory_switches": {
+                  "odor_enabled": true
+                },
+                "disconnect_brain_output": false,
+                "intervention_state": {
+                  "phase": "idle",
+                  "active_fraction": 0.0
+                }
+              }
+            },
+            "comparison_signature": {
+              "controls": {
+                "enabled": true,
+                "kc_type": "KCg-m",
+                "mbon_type": "MBON01",
+                "learning_rate": 0.2
+              },
+              "reset_revision": 0,
+              "selection_revision": 0,
+              "pattern_revision": 0,
+              "mbon_ids": [
+                "720575940000000020",
+                "720575940000000021"
+              ],
+              "background": {
+                "arena_revision": 0,
+                "behavior_revision": 0,
+                "intervention_revision": 7,
+                "brain_controls": {
+                  "p9_gain_a": 1.0
+                },
+                "sensory_switches": {
+                  "odor_enabled": true
+                },
+                "disconnect_brain_output": false,
+                "intervention_state": {
+                  "phase": "idle",
+                  "active_fraction": 0.0
+                }
+              }
+            }
+          }
+        }
+      },
+      "all_passed": true,
+      "checks": [
+        {
+          "name": "window_rates_use_actual_duration_and_silent_population_denominators",
+          "passed": true,
+          "details": {
+            "schema_version": 1,
+            "slot": "before",
+            "start_s": 0.0,
+            "end_s": 0.3,
+            "requested_duration_s": 0.3,
+            "duration_s": 0.30000000000000004,
+            "samples": 2,
+            "first_seq": 1,
+            "last_seq": 2,
+            "mean": {
+              "cues": {
+                "sugar": 0.4,
+                "fruit": 0.2
+              },
+              "teaching_signal": 0.6666666666666666,
+              "kc_hz": 1.9999999999999998,
+              "mbon_hz": 6.666666666666666,
+              "eligibility_mean": 0.30000000000000004,
+              "factor_mean": 0.8333333333333334
+            },
+            "mbon": [
+              {
+                "flywire_id": "720575940000000020",
+                "spikes": 1,
+                "hz": 3.333333333333333
+              },
+              {
+                "flywire_id": "720575940000000021",
+                "spikes": 3,
+                "hz": 9.999999999999998
+              }
+            ],
+            "input_mean": {
+              "sugar_rate_hz": 4.999999999999999,
+              "p9_rate_hz": [
+                9.999999999999998,
+                19.999999999999996
+              ]
+            },
+            "signature": {
+              "controls": {
+                "enabled": true,
+                "plasticity_enabled": false,
+                "kc_type": "KCg-m",
+                "mbon_type": "MBON01",
+                "learning_rate": 0.1
+              },
+              "reset_revision": 0,
+              "selection_revision": 0,
+              "pattern_revision": 0,
+              "mbon_ids": [
+                "720575940000000020",
+                "720575940000000021"
+              ],
+              "background": {
+                "arena_revision": 0,
+                "behavior_revision": 0,
+                "intervention_revision": 7,
+                "brain_controls": {
+                  "p9_gain_a": 1.0
+                },
+                "sensory_switches": {
+                  "odor_enabled": true
+                },
+                "disconnect_brain_output": false,
+                "intervention_state": {
+                  "phase": "idle",
+                  "active_fraction": 0.0
+                }
+              }
+            },
+            "comparison_signature": {
+              "controls": {
+                "enabled": true,
+                "kc_type": "KCg-m",
+                "mbon_type": "MBON01",
+                "learning_rate": 0.1
+              },
+              "reset_revision": 0,
+              "selection_revision": 0,
+              "pattern_revision": 0,
+              "mbon_ids": [
+                "720575940000000020",
+                "720575940000000021"
+              ],
+              "background": {
+                "arena_revision": 0,
+                "behavior_revision": 0,
+                "intervention_revision": 7,
+                "brain_controls": {
+                  "p9_gain_a": 1.0
+                },
+                "sensory_switches": {
+                  "odor_enabled": true
+                },
+                "disconnect_brain_output": false,
+                "intervention_state": {
+                  "phase": "idle",
+                  "active_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "window_telemetry_uses_duration_weighted_means",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "pagination_reports_eviction_cursor_and_remaining_page",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "pagination_read_is_defensive_copy",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "duplicate_end_time_is_rejected",
+          "passed": true,
+          "details": "观察块重复或模型时间倒退"
+        },
+        {
+          "name": "backwards_end_time_is_rejected",
+          "passed": true,
+          "details": "观察块重复或模型时间倒退"
+        },
+        {
+          "name": "paused_edit_cannot_capture_pre_edit_window",
+          "passed": true,
+          "details": "设置已改变；请恢复积分并等待足够的变更后模型时间，不能捕获旧读出"
+        },
+        {
+          "name": "one_new_chunk_is_not_enough_for_post_edit_window",
+          "passed": true,
+          "details": "设置已改变；请恢复积分并等待足够的变更后模型时间，不能捕获旧读出"
+        },
+        {
+          "name": "sufficient_new_stable_chunks_allow_capture",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "different_control_windows_are_marked_incompatible",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "scheduled_and_active_same_revision_are_incompatible",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "capture_cannot_cross_scheduled_to_active_phase_boundary",
+          "passed": true,
+          "details": "观察窗内目标或控制发生变化；请等待一段设置稳定的模型时间"
+        },
+        {
+          "name": "overlapping_comparison_windows_are_rejected_as_comparable",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "chronologically_reversed_slots_are_rejected_as_comparable",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "missing_model_time_interval_cannot_form_complete_window",
+          "passed": true,
+          "details": "观察窗含缺失的模型时间块，不能捕获为完整窗口"
+        },
+        {
+          "name": "missing_telemetry_is_a_gap_not_fabricated_zero_activity",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "missing_telemetry_window_capture_is_rejected",
+          "passed": true,
+          "details": "观察窗缺少实际局部遥测；请启用模块并等待足够模型时间"
+        },
+        {
+          "name": "mismatched_observation_clock_is_not_available_data",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "mismatched_clock_cannot_be_captured",
+          "passed": true,
+          "details": "观察窗缺少实际局部遥测；请启用模块并等待足够模型时间"
+        },
+        {
+          "name": "overlapping_chunk_intervals_cannot_form_window",
+          "passed": true,
+          "details": "观察窗含缺失的模型时间块，不能捕获为完整窗口"
+        },
+        {
+          "name": "sealed_observer_rejects_new_capture",
+          "passed": true,
+          "details": "本轮已封存，不能修改已保存观察窗"
+        },
+        {
+          "name": "sealed_observer_rejects_new_chunk",
+          "passed": true,
+          "details": "本轮观察器已封存"
+        },
+        {
+          "name": "sealed_export_preserves_recorded_comparisons",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "stdlib_checks_import_no_torch_numpy_mujoco",
+          "passed": true,
+          "details": null
+        }
+      ],
+      "ending_source_sha256": {
+        "mb_observer.py": "1f8617aa417c55a8153ad8a364e0ddfdbb74c520c6457ecffea2770d6c9e1189",
+        "mb_learning_runtime.py": "f98ef4a5b43181ff6bd44b789a92061b64dead86b450d138a86aa92d8906ba72",
+        "brain_worker.py": "6ebb3a42ab21e05fb66af26cf72dea3918e273b40efa5f3be06cf02cd5930897",
+        "mb_learning.py": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57"
+      },
+      "sources_changed_during_check": false,
+      "raw_evidence": "output/mb_observer_verification/20261018_144549_058485/验证结果.json",
+      "checks_count": 24
+    },
+    {
+      "mode": "cpu",
+      "source_sha256": {
+        "mb_observer.py": "1f8617aa417c55a8153ad8a364e0ddfdbb74c520c6457ecffea2770d6c9e1189",
+        "mb_learning_runtime.py": "f98ef4a5b43181ff6bd44b789a92061b64dead86b450d138a86aa92d8906ba72",
+        "brain_worker.py": "6ebb3a42ab21e05fb66af26cf72dea3918e273b40efa5f3be06cf02cd5930897",
+        "mb_learning.py": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57"
+      },
+      "limitations": [
+        "Synthetic counters and explicit simulated completed-chunk clocks; no full neural integration",
+        "No full weights, GPU/body/browser/service or installer execution",
+        "Window compatibility does not establish causal learning effects"
+      ],
+      "details": {
+        "scope": "Brain.__new__ + real runtime observe/summary + actual MBObserver; clocks/counts artificially supplied; Brain.__init__/advance not called",
+        "nodes": 25,
+        "before": {
+          "schema_version": 1,
+          "slot": "before",
+          "start_s": 0.0,
+          "end_s": 0.2,
+          "requested_duration_s": 0.2,
+          "duration_s": 0.2,
+          "samples": 1,
+          "first_seq": 1,
+          "last_seq": 1,
+          "mean": {
+            "cues": {
+              "sugar": 0.4000000000000001,
+              "fruit": 0.20000000000000004
+            },
+            "teaching_signal": 0.0,
+            "kc_hz": 0.5,
+            "mbon_hz": 2.5,
+            "eligibility_mean": 0.005000000074505806,
+            "factor_mean": 1.0
+          },
+          "mbon": [
+            {
+              "flywire_id": "720575940000000020",
+              "spikes": 1,
+              "hz": 5.0
+            },
+            {
+              "flywire_id": "720575940000000021",
+              "spikes": 0,
+              "hz": 0.0
+            }
+          ],
+          "input_mean": {
+            "sugar_rate_hz": 5.0,
+            "p9_rate_hz": [
+              10.0,
+              20.0
+            ]
+          },
+          "signature": {
+            "controls": {
+              "enabled": true,
+              "plasticity_enabled": false,
+              "cue_input_enabled": true,
+              "kc_type": "KCg-m",
+              "mbon_type": "MBON01",
+              "learning_rate": 0.1,
+              "eligibility_tau_s": 1.0,
+              "min_factor": 0.2,
+              "kc_input_hz": 80.0,
+              "coding_fraction": 0.1,
+              "cue_seed": 1,
+              "reward_source": "manual"
+            },
+            "reset_revision": 0,
+            "selection_revision": 0,
+            "pattern_revision": 0,
+            "mbon_ids": [
+              "720575940000000020",
+              "720575940000000021"
+            ],
+            "background": {
+              "arena_revision": 0,
+              "behavior_revision": 0,
+              "intervention_revision": 7,
+              "brain_controls": {
+                "p9_gain_a": 1.0
+              },
+              "sensory_switches": {
+                "odor_enabled": true
+              },
+              "disconnect_brain_output": false,
+              "intervention_state": {
+                "phase": "idle",
+                "active_fraction": 0.0
+              }
+            }
+          },
+          "comparison_signature": {
+            "controls": {
+              "enabled": true,
+              "cue_input_enabled": true,
+              "kc_type": "KCg-m",
+              "mbon_type": "MBON01",
+              "learning_rate": 0.1,
+              "eligibility_tau_s": 1.0,
+              "min_factor": 0.2,
+              "kc_input_hz": 80.0,
+              "coding_fraction": 0.1,
+              "cue_seed": 1,
+              "reward_source": "manual"
+            },
+            "reset_revision": 0,
+            "selection_revision": 0,
+            "pattern_revision": 0,
+            "mbon_ids": [
+              "720575940000000020",
+              "720575940000000021"
+            ],
+            "background": {
+              "arena_revision": 0,
+              "behavior_revision": 0,
+              "intervention_revision": 7,
+              "brain_controls": {
+                "p9_gain_a": 1.0
+              },
+              "sensory_switches": {
+                "odor_enabled": true
+              },
+              "disconnect_brain_output": false,
+              "intervention_state": {
+                "phase": "idle",
+                "active_fraction": 0.0
+              }
+            }
+          }
+        },
+        "after": {
+          "schema_version": 1,
+          "slot": "after",
+          "start_s": 0.2,
+          "end_s": 0.4,
+          "requested_duration_s": 0.2,
+          "duration_s": 0.2,
+          "samples": 1,
+          "first_seq": 2,
+          "last_seq": 2,
+          "mean": {
+            "cues": {
+              "sugar": 0.4000000000000001,
+              "fruit": 0.20000000000000004
+            },
+            "teaching_signal": 0.0,
+            "kc_hz": 1.5,
+            "mbon_hz": 7.5,
+            "eligibility_mean": 0.019093653932213784,
+            "factor_mean": 1.0
+          },
+          "mbon": [
+            {
+              "flywire_id": "720575940000000020",
+              "spikes": 0,
+              "hz": 0.0
+            },
+            {
+              "flywire_id": "720575940000000021",
+              "spikes": 3,
+              "hz": 15.0
+            }
+          ],
+          "input_mean": {
+            "sugar_rate_hz": 5.0,
+            "p9_rate_hz": [
+              10.0,
+              20.0
+            ]
+          },
+          "signature": {
+            "controls": {
+              "enabled": true,
+              "plasticity_enabled": false,
+              "cue_input_enabled": true,
+              "kc_type": "KCg-m",
+              "mbon_type": "MBON01",
+              "learning_rate": 0.1,
+              "eligibility_tau_s": 1.0,
+              "min_factor": 0.2,
+              "kc_input_hz": 80.0,
+              "coding_fraction": 0.1,
+              "cue_seed": 1,
+              "reward_source": "manual"
+            },
+            "reset_revision": 0,
+            "selection_revision": 0,
+            "pattern_revision": 0,
+            "mbon_ids": [
+              "720575940000000020",
+              "720575940000000021"
+            ],
+            "background": {
+              "arena_revision": 0,
+              "behavior_revision": 0,
+              "intervention_revision": 7,
+              "brain_controls": {
+                "p9_gain_a": 1.0
+              },
+              "sensory_switches": {
+                "odor_enabled": true
+              },
+              "disconnect_brain_output": false,
+              "intervention_state": {
+                "phase": "idle",
+                "active_fraction": 0.0
+              }
+            }
+          },
+          "comparison_signature": {
+            "controls": {
+              "enabled": true,
+              "cue_input_enabled": true,
+              "kc_type": "KCg-m",
+              "mbon_type": "MBON01",
+              "learning_rate": 0.1,
+              "eligibility_tau_s": 1.0,
+              "min_factor": 0.2,
+              "kc_input_hz": 80.0,
+              "coding_fraction": 0.1,
+              "cue_seed": 1,
+              "reward_source": "manual"
+            },
+            "reset_revision": 0,
+            "selection_revision": 0,
+            "pattern_revision": 0,
+            "mbon_ids": [
+              "720575940000000020",
+              "720575940000000021"
+            ],
+            "background": {
+              "arena_revision": 0,
+              "behavior_revision": 0,
+              "intervention_revision": 7,
+              "brain_controls": {
+                "p9_gain_a": 1.0
+              },
+              "sensory_switches": {
+                "odor_enabled": true
+              },
+              "disconnect_brain_output": false,
+              "intervention_state": {
+                "phase": "idle",
+                "active_fraction": 0.0
+              }
+            }
+          }
+        },
+        "comparison": {
+          "compatible": true,
+          "reasons": [],
+          "warnings": [
+            "条件相符只代表记录参数可比较，不证明差异完全由学习引起；脑/身体初态和随机输入仍可能不同。"
+          ],
+          "delta": {
+            "kc_hz": 1.0,
+            "mbon_hz": 5.0,
+            "eligibility_mean": 0.014093653857707979,
+            "factor_mean": 0.0,
+            "teaching_signal": 0.0,
+            "cues": {
+              "sugar": 0.0,
+              "fruit": 0.0
+            },
+            "mbon": [
+              {
+                "flywire_id": "720575940000000020",
+                "before_hz": 5.0,
+                "after_hz": 0.0,
+                "delta_hz": -5.0
+              },
+              {
+                "flywire_id": "720575940000000021",
+                "before_hz": 0.0,
+                "after_hz": 15.0,
+                "delta_hz": 15.0
+              }
+            ]
+          }
+        },
+        "paused_observation": {
+          "schema_version": 1,
+          "chunk_s": 0.2,
+          "controls": {
+            "enabled": true,
+            "plasticity_enabled": false,
+            "cue_input_enabled": true,
+            "kc_type": "KCg-m",
+            "mbon_type": "MBON01",
+            "learning_rate": 0.1,
+            "eligibility_tau_s": 1.0,
+            "min_factor": 0.2,
+            "kc_input_hz": 80.0,
+            "coding_fraction": 0.1,
+            "cue_seed": 1,
+            "reward_source": "manual"
+          },
+          "selection_revision": 0,
+          "pattern_revision": 0,
+          "cues": {
+            "sugar": 0.4,
+            "fruit": 0.2
+          },
+          "teaching_signal": 0.0,
+          "eligibility_evolved": true,
+          "factor_updates_enabled": false,
+          "kc": {
+            "count": 20,
+            "spikes": 6,
+            "active": 2,
+            "mean_hz": 1.5,
+            "groups": {
+              "sugar": {
+                "count": 2,
+                "spikes": 2,
+                "active": 1,
+                "mean_hz": 5.0,
+                "eligibility_mean": 0.05000000074505806,
+                "eligibility_max": 0.10000000149011612
+              },
+              "fruit": {
+                "count": 2,
+                "spikes": 0,
+                "active": 0,
+                "mean_hz": 0.0,
+                "eligibility_mean": 0.0,
+                "eligibility_max": 0.0
+              },
+              "overlap": {
+                "count": 1,
+                "spikes": 0,
+                "active": 0,
+                "mean_hz": 0.0,
+                "eligibility_mean": 0.0,
+                "eligibility_max": 0.0
+              }
+            }
+          },
+          "eligibility": {
+            "mean": 0.019093653932213784,
+            "max": 0.28187307715415955
+          },
+          "factor_before": {
+            "min": 1.0,
+            "mean": 1.0,
+            "changed_edges": 0
+          },
+          "factor_after": {
+            "min": 1.0,
+            "mean": 1.0,
+            "changed_edges": 0
+          },
+          "factor_histogram": {
+            "edges": [
+              0.0,
+              0.1,
+              0.2,
+              0.3,
+              0.4,
+              0.5,
+              0.6,
+              0.7,
+              0.8,
+              0.9,
+              1.0
+            ],
+            "counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              39
+            ]
+          },
+          "interpretation": "Actual post-intervention chunk counts, including silent selected cells in rate denominators. Sugar/fruit groups may overlap. Disabled eligibility is held unchanged; frozen factors are held unchanged. factor_after applies to the next chunk.",
+          "start_ms": 200.0,
+          "end_ms": 400.0,
+          "settings_revision": 1,
+          "reset_revision": 0
+        }
+      },
+      "all_passed": true,
+      "checks": [
+        {
+          "name": "default_uninitialized_worker_has_no_observation",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_masks_unclocked_runtime_observation",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "actual_runtime_summary_KC_rates_reach_observer_windows",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "actual_runtime_summary_MBON_rates_include_silent_MBON",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "observer_delta_uses_actual_window_aggregates",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "paused_edit_does_not_relabel_captured_controls_clock_or_revisions",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "paused_requested_reward_does_not_relabel_actual_teaching",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_reset_observation_None_despite_old_clock",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "next_simulated_completed_chunk_gets_current_revisions",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_pattern_change_clears_observation_without_clock_advance",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "clock_summary_and_observer_paths_preserve_rng_base_and_no_CUDA",
+          "passed": true,
+          "details": null
+        }
+      ],
+      "ending_source_sha256": {
+        "mb_observer.py": "1f8617aa417c55a8153ad8a364e0ddfdbb74c520c6457ecffea2770d6c9e1189",
+        "mb_learning_runtime.py": "f98ef4a5b43181ff6bd44b789a92061b64dead86b450d138a86aa92d8906ba72",
+        "brain_worker.py": "6ebb3a42ab21e05fb66af26cf72dea3918e273b40efa5f3be06cf02cd5930897",
+        "mb_learning.py": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57"
+      },
+      "sources_changed_during_check": false,
+      "raw_evidence": "output/mb_observer_verification/20261018_144553_718760/验证结果.json",
+      "checks_count": 11
+    },
+    {
+      "scope": "Pure stdlib synthetic observer save/export/import only; no real experiment or brain execution",
+      "source_sha256": {
+        "mb_observer.py": "1f8617aa417c55a8153ad8a364e0ddfdbb74c520c6457ecffea2770d6c9e1189",
+        "experiment_store.py": "7398bd8eda1cbae39adff45d77fecf325f1dbc13969124afbeddc7cdb7dfaf93"
+      },
+      "all_passed": true,
+      "checks": [
+        {
+          "name": "compact_observer_file_atomic_and_bounded",
+          "passed": true
+        },
+        {
+          "name": "saved_real_chunk_shapes_and_both_captured_windows",
+          "passed": true
+        },
+        {
+          "name": "observer_JSON_preserved_in_export_import",
+          "passed": true
+        },
+        {
+          "name": "full_learning_JSONL_preserved_in_export_import",
+          "passed": true
+        },
+        {
+          "name": "original_record_and_manifest_unchanged",
+          "passed": true
+        },
+        {
+          "name": "imported_observer_file_available_to_strict_read_only_download",
+          "passed": true
+        },
+        {
+          "name": "import_uses_new_unique_record",
+          "passed": true
+        },
+        {
+          "name": "observer_and_archive_modules_import_no_neural_or_body_stack",
+          "passed": true
+        }
+      ],
+      "details": {
+        "archive": "synthetic_record_root\\output\\experiment_exports\\synthetic_observer_20261018T064714Z_5e416857.zip",
+        "saved": {
+          "bytes": 50279,
+          "retained_chunks": 30,
+          "dropped_chunks": 0
+        },
+        "imported_id": "imported_20261018T064714Z_053a7553540a",
+        "no_old_records_modified": true
+      },
+      "raw_evidence": "output/mb_observer_verification/20261018_144713_969374/验证结果.json",
+      "checks_count": 8
+    },
+    {
+      "all_passed": true,
+      "scope": "Node pure helper and in-memory bounded Response checks; no DOM/network/browser/service",
+      "checks": [
+        {
+          "name": "missing_point_is_not_zero_activity",
+          "passed": true
+        },
+        {
+          "name": "zero_rate_is_real_numeric_zero",
+          "passed": true
+        },
+        {
+          "name": "null_is_missing_not_numeric_zero",
+          "passed": true
+        },
+        {
+          "name": "sequence_gap_breaks_plot_segments",
+          "passed": true
+        },
+        {
+          "name": "time_gap_breaks_plot_segments",
+          "passed": true
+        },
+        {
+          "name": "unavailable_chunk_breaks_plot_segments",
+          "passed": true
+        },
+        {
+          "name": "hover_does_not_interpolate_time_gaps",
+          "passed": true
+        },
+        {
+          "name": "mean_MBON_includes_silent_neuron",
+          "passed": true
+        },
+        {
+          "name": "cursor_merge_deduplicates_and_bounds",
+          "passed": true
+        },
+        {
+          "name": "missing_MBON_does_not_become_zero",
+          "passed": true
+        },
+        {
+          "name": "bounded_file_reader_accepts_valid_JSON",
+          "passed": true
+        },
+        {
+          "name": "declared_file_size_over_limit_rejected",
+          "passed": true
+        },
+        {
+          "name": "stream_size_over_limit_without_header_rejected",
+          "passed": true
+        },
+        {
+          "name": "malformed_JSON_rejected",
+          "passed": true
+        }
+      ],
+      "source_sha256": {
+        "web/mb_observer.js": "48edc3062a2af3d8884a1c6b8d268072ab94060128331d3cd0dc02b732a388ad"
+      },
+      "raw_evidence": "output/mb_observer_verification/2026-10-18T06_47_48_340Z/验证结果.json",
+      "checks_count": 14
+    }
+  ],
+  "scope": "25节点CPU遥测/无积分worker方法、纯标准库模型时间窗口、Node纯逻辑/内存Response和合成记录ZIP往返；不是真实实验全链路验收。",
+  "tests_run": true,
+  "full_brain_loaded": false,
+  "gpu_used": false,
+  "body_started": false,
+  "browser_interactions_automated": false,
+  "service_started": false,
+  "existing_experiments_touched": false,
+  "github_committed": false,
+  "github_pushed": false,
+  "delivery_rebuilt": false,
+  "limitations": [
+    "人工counts和显式完成块时钟不代表真实全脑积分或行为改善。",
+    "前后参数相符不构成学习因果证据。",
+    "未进行完整连接组CUDA、身体、浏览器、性能、安装或长时验收。"
+  ]
+}

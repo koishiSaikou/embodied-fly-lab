@@ -276,6 +276,7 @@ function drawRate(history) {
 let recoveryMessage=false;
 function renderLifecycle(state) {
   lastStatus=state.status;
+  window.ExperimentIO?.updateState(state);
   if(state.project){
     document.title=state.project.name+' · '+state.project.version;
     const version=document.getElementById('appVersion');
@@ -306,6 +307,9 @@ function render(state) {
   if(latest&&latest.directory!==h.directory){spikeTimes.clear();lastRetina=-1;lastTarget=null;}
   latest=h;modelTime=h.time_s;lastStatus=state.status;
   window.BrainControls?.update(h,state.status==='running',state.metadata,state.latest);
+  window.NeuralIntervention?.update(h,state.status==='running');
+  window.MBLearning?.update(h,state.status==='running');
+  window.MBObserver?.update(h,state.status);
   window.ArenaUI?.update(h,state.status==='running');
   window.BehaviorUI?.update(h,state.status==='running');
   latestNeuralChunk=state.latest;

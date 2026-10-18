@@ -4,14 +4,16 @@
   let saved={};try{saved=JSON.parse(localStorage.getItem(storeKey)||'{}')||{};}catch{}
   let layer=20,previousFocus=null;
   const defaults={map:[.12,.10,570,640],activity:[.13,.10,850,620],identity:[.17,.13,960,600],
-    rate:[.20,.30,620,270],raster:[.13,.20,670,420],classes:[.22,.26,650,440],types:[.30,.32,650,440],about:[.24,.24,540,350]};
+    rate:[.20,.30,620,270],raster:[.13,.20,670,420],classes:[.22,.26,650,440],types:[.30,.32,650,440],about:[.24,.24,540,350],
+    'mb-observer':[.12,.08,1000,650]};
   const bounds=()=>({width:innerWidth,height:innerHeight,top:52,bottom:innerHeight-27});
   function persist(){try{localStorage.setItem(storeKey,JSON.stringify(saved));}catch{}}
   function remember(key){const w=windows.get(key);
     saved.windows??={};saved.windows[key]={x:parseFloat(w.element.style.left),y:parseFloat(w.element.style.top),width:parseFloat(w.element.style.width),height:w.height,open:!w.element.hidden,minimized:w.minimized};persist();}
   function constrain(w){const b=bounds(),e=w.element,d=defaults[w.key];
-    const width=Math.min(Math.max(360,parseFloat(e.style.width)||d[2]),b.width-16);
-    const height=Math.min(Math.max(180,w.height||parseFloat(e.style.height)||d[3]),b.bottom-b.top-8);
+    const minimum=w.key==='mb-observer'?[720,540]:[360,180];
+    const width=Math.min(Math.max(minimum[0],parseFloat(e.style.width)||d[2]),b.width-16);
+    const height=Math.min(Math.max(minimum[1],w.height||parseFloat(e.style.height)||d[3]),b.bottom-b.top-8);
     const left=Math.max(8,Math.min(parseFloat(e.style.left)||8,b.width-width-8));
     const top=Math.max(b.top,Math.min(parseFloat(e.style.top)||b.top,b.bottom-(w.minimized?34:height)));
     Object.assign(e.style,{width:width+'px',height:w.minimized?'34px':height+'px',left:left+'px',top:top+'px'});w.height=height;
@@ -80,7 +82,7 @@
     button.onclick=()=>inspector(button.dataset.inspector);
     button.onkeydown=event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();const tabs=[...document.querySelectorAll('[data-inspector]')],i=tabs.indexOf(button),next=event.key==='Home'?0:event.key==='End'?tabs.length-1:(i+(event.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[next].click();tabs[next].focus();};
   }
-  inspector(['brain','senses','behavior','arena'].includes(saved.inspector)?saved.inspector:'brain',false);
+  inspector(['brain','senses','behavior','arena','intervention','mb-learning'].includes(saved.inspector)?saved.inspector:'brain',false);
   document.addEventListener('keydown',event=>{if(event.key!=='Escape')return;
     const candidates=[...windows.values()].filter(w=>!w.element.hidden).sort((a,b)=>Number(b.element.style.zIndex)-Number(a.element.style.zIndex));if(candidates[0])hide(candidates[0]);
   });

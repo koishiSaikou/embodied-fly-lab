@@ -214,6 +214,7 @@ def main():
                        ('Start-Brain.cmd', 'brain'), ('Start-Coupled.cmd', 'coupled'),
                        ('Start-Activity.cmd', 'activity'), ('Check-Environment.cmd', 'check')]:
         cmd(name, 'launch', mode)
+    shutil.copy2(ROOT / 'View-Records.cmd', stage / 'View-Records.cmd')
     manifest = write_manifest(stage)
     print(json.dumps(dict(stage=str(stage), files=len(manifest['files']),
                           uncompressed_bytes=sum(item['bytes'] for item in manifest['files'])), indent=2), flush=True)

@@ -1,0 +1,668 @@
+{
+  "checked_at_utc": "2026-10-18T06:30:01.551224+00:00",
+  "status": "小型CPU与只读数据/格式核对通过",
+  "checks_count": 58,
+  "checks": [
+    {
+      "timestamp": "2026-10-18T14:22:23.134475+08:00",
+      "source_sha256": {
+        "mb_learning.py": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57",
+        "mb_learning_runtime.py": "a8338f20b9f139a4ce2e974831f01d8e895a00c1a3c1646abd7f8399d8e295a8",
+        "neural_intervention_runtime.py": "ffb03101a9d6e9f2ab5a885076db14260d4a343b26929d345b1227053ab7c6a3",
+        "brain-model/code/run_pytorch.py": "699655db7a56045271ba467268be153d0a3318d4cc4cecc0a13f33e69ce79667"
+      },
+      "scope": "25 synthetic neurons on CPU; no full model, no GPU/body/service, no weight pickle read",
+      "limitations": [
+        "No biological memory or behavioral improvement established",
+        "No full-brain/GPU/GUI integration coverage",
+        "Chunk-aggregate eligibility is an engineering approximation; explicit KC spike train readout is synthetic"
+      ],
+      "kind": "tiny_cpu_only",
+      "nodes": 25,
+      "positive_plastic_edges": 39,
+      "actual_synaptic_readout": {
+        "source_kc_index": 0,
+        "readout_mbon_index": 20,
+        "plasticity_frozen": true,
+        "before": {
+          "model_ms": 100.0,
+          "forced_kc_spike_pulses": 20,
+          "mbon_spikes": 0,
+          "mbon_hz": 0.0,
+          "recurrent_input_integral_model_units_ms": 1.1000000238418581,
+          "conductance_integral_model_units_ms": 52.68799430876969,
+          "peak_conductance_model_units": 0.8650113344192505,
+          "maximum_voltage_mv": -51.44915771484375
+        },
+        "after": {
+          "model_ms": 100.0,
+          "forced_kc_spike_pulses": 20,
+          "mbon_spikes": 0,
+          "mbon_hz": 0.0,
+          "recurrent_input_integral_model_units_ms": 0.22000001370906838,
+          "conductance_integral_model_units_ms": 10.537598502263435,
+          "peak_conductance_model_units": 0.1730022430419922,
+          "maximum_voltage_mv": -51.889827728271484
+        },
+        "interpretation": "Fixed imposed KC spikes in a tiny synthetic network; both MBON spike counts may be zero. Reduced actual recurrent input/conductance demonstrates local synaptic effect, not learned navigation or behavior improvement."
+      },
+      "checks": [
+        {
+          "name": "default_off_exact_weight_and_rate_objects",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "default_off_no_eligibility_or_factor_update",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "default_off_no_torch_rng_consumption",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "roles_use_cell_class_despite_all_top_nt_dopamine",
+          "passed": true,
+          "details": {
+            "kc": 20,
+            "mbon": 3,
+            "dan": 1
+          }
+        },
+        {
+          "name": "only_actual_positive_selected_edges",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "cue_hash_is_deterministic_without_random_sampling",
+          "passed": true,
+          "details": {
+            "algorithm": "sha256-rank-v1",
+            "seed": 0,
+            "kc_count": 20,
+            "per_cue_count": 2,
+            "actual_coding_fraction": 0.1,
+            "overlap_count": 1,
+            "jaccard": 0.3333333333333333,
+            "uses_external_odor_values": false,
+            "interpretation": "Deterministic engineering odor→KC bridge; not reconstructed ORN→PN connectivity"
+          }
+        },
+        {
+          "name": "actual_kc_spike_eligibility_plus_teaching_causes_local_LTD",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "unassociated_and_other_odor_only_KC_edges_stay_one",
+          "passed": true,
+          "details": {
+            "sugar_indices": [
+              0,
+              8
+            ],
+            "fruit_only_indices": [
+              9
+            ],
+            "unaffected_edges": 35
+          }
+        },
+        {
+          "name": "frozen_learning_does_not_change_factors",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "composed_tensor_is_cached_when_NT_and_factors_unchanged",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "default_and_frozen_learning_do_not_mutate_base",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "negative_or_nonselected_edges_unchanged",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "NT_gain_and_local_factor_multiply_on_selected_entries",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "frozen_readout_identical_artificial_KC_input",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "upstream_LIF_actual_MBON_recurrent_input_and_conductance_decrease",
+          "passed": true,
+          "details": {
+            "source_kc_index": 0,
+            "readout_mbon_index": 20,
+            "plasticity_frozen": true,
+            "before": {
+              "model_ms": 100.0,
+              "forced_kc_spike_pulses": 20,
+              "mbon_spikes": 0,
+              "mbon_hz": 0.0,
+              "recurrent_input_integral_model_units_ms": 1.1000000238418581,
+              "conductance_integral_model_units_ms": 52.68799430876969,
+              "peak_conductance_model_units": 0.8650113344192505,
+              "maximum_voltage_mv": -51.44915771484375
+            },
+            "after": {
+              "model_ms": 100.0,
+              "forced_kc_spike_pulses": 20,
+              "mbon_spikes": 0,
+              "mbon_hz": 0.0,
+              "recurrent_input_integral_model_units_ms": 0.22000001370906838,
+              "conductance_integral_model_units_ms": 10.537598502263435,
+              "peak_conductance_model_units": 0.1730022430419922,
+              "maximum_voltage_mv": -51.889827728271484
+            },
+            "interpretation": "Fixed imposed KC spikes in a tiny synthetic network; both MBON spike counts may be zero. Reduced actual recurrent input/conductance demonstrates local synaptic effect, not learned navigation or behavior improvement."
+          }
+        },
+        {
+          "name": "memory_missing_edge_rejected",
+          "passed": true,
+          "details": {
+            "rejected": "记忆必须完整覆盖当前所选的既有正 KC→MBON 边"
+          }
+        },
+        {
+          "name": "memory_negative_existing_graph_edge_rejected_after_shape_acceptance",
+          "passed": true,
+          "details": {
+            "rejected": "记忆必须完整覆盖当前所选的既有正 KC→MBON 边"
+          }
+        },
+        {
+          "name": "memory_extra_nonplastic_edge_rejected",
+          "passed": true,
+          "details": {
+            "rejected": "记忆必须完整覆盖当前所选的既有正 KC→MBON 边"
+          }
+        },
+        {
+          "name": "memory_duplicate_edge_rejected",
+          "passed": true,
+          "details": {
+            "rejected": "局部记忆含重复 KC→MBON 边"
+          }
+        },
+        {
+          "name": "memory_NaN_rejected",
+          "passed": true,
+          "details": {
+            "rejected": "局部突触因子必须是有效范围内的有限数值"
+          }
+        },
+        {
+          "name": "memory_numeric_18_digit_ID_rejected",
+          "passed": true,
+          "details": {
+            "rejected": "记忆中的 ID 必须是 18 位字符串"
+          }
+        },
+        {
+          "name": "memory_wrong_cell_class_role_rejected",
+          "passed": true,
+          "details": {
+            "rejected": "记忆边不属于所选精确 KC / MBON 角色与类型"
+          }
+        },
+        {
+          "name": "invalid_memory_attempts_preserve_current_factors",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "configure_zero_positive_edge_selection_rejected",
+          "passed": true,
+          "details": {
+            "rejected": "所选类型没有既有正权重 KC→MBON 边，不能建立可塑性实验"
+          }
+        },
+        {
+          "name": "configure_failure_is_transactional",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "pattern_change_clears_traces_but_preserves_weights",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "float32_min_factor_point9_memory_roundtrip",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "memory_reload_requires_exact_full_edge_set_and_restores_no_traces",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "disabled_returns_current_NT_and_base_rate_objects",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "disabled_after_training_preserves_base",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "intervention_preserves_each_steps_current_MB_cue_input",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "cue_and_intervention_cache_checks_do_not_consume_extra_rng",
+          "passed": true,
+          "details": null
+        }
+      ],
+      "all_passed": true,
+      "raw_evidence": "output/mb_learning_verification/20261018_142223_134475/验证结果.json",
+      "checks_count": 32
+    },
+    {
+      "mode": "cpu",
+      "timestamp": "2026-10-18T14:27:56.844043+08:00",
+      "source_sha256": {
+        "brain_worker.py": "8d223ae6445c35edabaa5a5473b5a53139c4b963b8526677957386e96f13896c",
+        "mb_learning.py": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57",
+        "mb_learning_runtime.py": "a8338f20b9f139a4ce2e974831f01d8e895a00c1a3c1646abd7f8399d8e295a8",
+        "mb_learning_catalog.py": "d73e4b5de4f0c3532ab13505346acb6a50f01d30b5e8b60d5d471b14eafedd35",
+        "experiment_profile.py": "ef9117a291035f93d590c9100dbeb814b500e91431c4d01116f403c0077c688d",
+        "neural_intervention_runtime.py": "ffb03101a9d6e9f2ab5a885076db14260d4a343b26929d345b1227053ab7c6a3"
+      },
+      "limitations": [
+        "No Brain.advance or full-model/CUDA/body execution",
+        "No browser/service/installer",
+        "No old recording changed"
+      ],
+      "all_passed": true,
+      "checks": [
+        {
+          "name": "worker_default_does_not_construct_local_runtime",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_default_preserves_weight_object_time_and_rng",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_enable_initializes_only_tiny_CPU_runtime_without_advancing_time",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_export_returns_complete_identified_memory",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_freeze_readout_preserves_time",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_invalid_higher_floor_is_rejected",
+          "passed": true,
+          "details": "现有记忆低于新的最小因子；请先重置局部记忆，避免隐式增强突触"
+        },
+        {
+          "name": "worker_failed_floor_is_transactional_and_does_not_advance_time",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_new_process_import_restores_full_factors_without_traces_or_time_advance",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_second_initial_memory_is_rejected",
+          "passed": true,
+          "details": "学习记忆只允许在新脑工作进程首次配置时载入"
+        },
+        {
+          "name": "worker_second_memory_failure_keeps_state_and_time",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_reset_restores_one_factors_and_zero_traces_without_time_advance",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_disable_preserves_original_weights_and_model_time",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_initial_memory_failure_does_not_commit_partial_runtime",
+          "passed": true,
+          "details": "记忆必须完整覆盖当前所选的既有正 KC→MBON 边"
+        },
+        {
+          "name": "worker_failed_initial_memory_keeps_default_state",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "worker_control_and_summary_paths_consume_no_rng_and_start_no_CUDA",
+          "passed": true,
+          "details": null
+        }
+      ],
+      "ending_source_sha256": {
+        "brain_worker.py": "8d223ae6445c35edabaa5a5473b5a53139c4b963b8526677957386e96f13896c",
+        "mb_learning.py": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57",
+        "mb_learning_runtime.py": "a8338f20b9f139a4ce2e974831f01d8e895a00c1a3c1646abd7f8399d8e295a8",
+        "mb_learning_catalog.py": "d73e4b5de4f0c3532ab13505346acb6a50f01d30b5e8b60d5d471b14eafedd35",
+        "experiment_profile.py": "ef9117a291035f93d590c9100dbeb814b500e91431c4d01116f403c0077c688d",
+        "neural_intervention_runtime.py": "ffb03101a9d6e9f2ab5a885076db14260d4a343b26929d345b1227053ab7c6a3"
+      },
+      "sources_changed_during_check": false,
+      "details": {
+        "scope": "Brain.__new__ on 25-node CPU tensors; configure_learning/learning_summary only; Brain.__init__/advance never called",
+        "nodes": 25,
+        "edges": 39,
+        "cuda_initialized": false
+      },
+      "raw_evidence": "output/mb_learning_verification/20261018_142756_844043/验证结果.json",
+      "checks_count": 15
+    },
+    {
+      "mode": "catalog",
+      "timestamp": "2026-10-18T14:28:03.920395+08:00",
+      "source_sha256": {
+        "brain_worker.py": "8d223ae6445c35edabaa5a5473b5a53139c4b963b8526677957386e96f13896c",
+        "mb_learning.py": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57",
+        "mb_learning_runtime.py": "a8338f20b9f139a4ce2e974831f01d8e895a00c1a3c1646abd7f8399d8e295a8",
+        "mb_learning_catalog.py": "d73e4b5de4f0c3532ab13505346acb6a50f01d30b5e8b60d5d471b14eafedd35",
+        "experiment_profile.py": "ef9117a291035f93d590c9100dbeb814b500e91431c4d01116f403c0077c688d",
+        "neural_intervention_runtime.py": "ffb03101a9d6e9f2ab5a885076db14260d4a343b26929d345b1227053ab7c6a3"
+      },
+      "limitations": [
+        "No Brain.advance or full-model/CUDA/body execution",
+        "No browser/service/installer",
+        "No old recording changed"
+      ],
+      "all_passed": true,
+      "checks": [
+        {
+          "name": "local_default_preflight_exact_counts",
+          "passed": true,
+          "details": {
+            "controls": {
+              "enabled": false,
+              "plasticity_enabled": true,
+              "cue_input_enabled": true,
+              "kc_type": "KCg-m",
+              "mbon_type": "MBON01",
+              "learning_rate": 0.1,
+              "eligibility_tau_s": 1.0,
+              "min_factor": 0.2,
+              "kc_input_hz": 80.0,
+              "coding_fraction": 0.1,
+              "cue_seed": 1,
+              "reward_source": "manual"
+            },
+            "kc_count": 2189,
+            "mbon_count": 2,
+            "positive_edges": 1865,
+            "edge_count": 1865,
+            "excluded_nonpositive_edges": 0,
+            "role_counts": {
+              "kc": 5177,
+              "mbon": 96,
+              "dan": 331
+            },
+            "patterns": {
+              "algorithm": "sha256-rank-v1",
+              "seed": 1,
+              "kc_count": 2189,
+              "per_cue_count": 219,
+              "actual_coding_fraction": 0.10004568296025583,
+              "overlap_count": 27,
+              "jaccard": 0.06569343065693431,
+              "uses_external_odor_values": false,
+              "interpretation": "Deterministic engineering odor→KC bridge; not reconstructed ORN→PN connectivity"
+            },
+            "mbon_ids": [
+              "720575940624117245",
+              "720575940643309197"
+            ],
+            "warnings": [
+              "角色按 cell_class 识别，不能按 top_nt 预测代替；不改原连接符号。",
+              "本地连接表只做预检，实际运行以脑工作进程 CSR 再核对结果为准。",
+              "外部教学门控和确定性气味→KC输入为工程代理；无完整ORN→PN或DAN释放机制。"
+            ]
+          }
+        },
+        {
+          "name": "local_dataset_complete_positive_edge_memory_is_accepted",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "local_unknown_type_rejected",
+          "passed": true,
+          "details": "所选精确类型必须同时匹配 cell_class=Kenyon_Cell 的 KC 与 cell_class=MBON 的 MBON"
+        },
+        {
+          "name": "local_missing_memory_edge_rejected",
+          "passed": true,
+          "details": "记忆必须完整覆盖当前所选的既有正 KC→MBON 边"
+        },
+        {
+          "name": "local_extra_memory_edge_rejected",
+          "passed": true,
+          "details": "记忆必须完整覆盖当前所选的既有正 KC→MBON 边"
+        },
+        {
+          "name": "profile_initial_uses_initial_learning_config_and_memory",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "profile_initial_preserves_MB_settings_reset_and_reward_events",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "profile_final_uses_final_learning_state_without_replaying_events",
+          "passed": true,
+          "details": null
+        },
+        {
+          "name": "profile_final_missing_initialized_learning_memory_rejected",
+          "passed": true,
+          "details": "缺少已初始化蘑菇体的局部突触记忆，不能假装恢复为已学习条件"
+        },
+        {
+          "name": "profile_no_brain_learning_memory_or_enabled_controls_rejected",
+          "passed": true,
+          "details": "蘑菇体局部学习和突触记忆需要脑模型"
+        },
+        {
+          "name": "local_table_and_profile_preflight_imports_no_torch_or_mujoco",
+          "passed": true,
+          "details": null
+        }
+      ],
+      "ending_source_sha256": {
+        "brain_worker.py": "8d223ae6445c35edabaa5a5473b5a53139c4b963b8526677957386e96f13896c",
+        "mb_learning.py": "e98aeab2d518965ce552c3500cc60a02ed80169c3f1107e38cf72941950cac57",
+        "mb_learning_runtime.py": "a8338f20b9f139a4ce2e974831f01d8e895a00c1a3c1646abd7f8399d8e295a8",
+        "mb_learning_catalog.py": "d73e4b5de4f0c3532ab13505346acb6a50f01d30b5e8b60d5d471b14eafedd35",
+        "experiment_profile.py": "ef9117a291035f93d590c9100dbeb814b500e91431c4d01116f403c0077c688d",
+        "neural_intervention_runtime.py": "ffb03101a9d6e9f2ab5a885076db14260d4a343b26929d345b1227053ab7c6a3"
+      },
+      "sources_changed_during_check": false,
+      "details": {
+        "scope": "Actual local annotation table + filtered connectivity Parquet columns; synthetic config/report in this fresh evidence directory only",
+        "selected_counts": {
+          "kc_count": 2189,
+          "mbon_count": 2,
+          "edge_count": 1865
+        },
+        "initial_compatibility_warnings": [
+          "源程序 Git 提交 SHA 未记录；关键源码摘要只覆盖列出的文件",
+          "旧记录未提供关键源码 SHA256，程序条件兼容性未知"
+        ],
+        "no_weight_pickle_read": true,
+        "no_old_records_modified": true
+      },
+      "raw_evidence": "output/mb_learning_verification/20261018_142803_919972/验证结果.json",
+      "checks_count": 11
+    }
+  ],
+  "read_only_data_inventory": {
+    "selection": {
+      "presynaptic": {
+        "cell_class": "Kenyon_Cell",
+        "cell_type": "KCg-m"
+      },
+      "postsynaptic": {
+        "cell_class": "MBON",
+        "cell_type": "MBON01"
+      },
+      "positive_edge_condition": "Excitatory x Connectivity > 0; existing source values unchanged"
+    },
+    "all_kenyon_cells": {
+      "neurons": 5177,
+      "sides": {
+        "right": 2597,
+        "left": 2580
+      },
+      "predicted_top_nt": {
+        "dopamine": 5172,
+        "acetylcholine": 4,
+        "gaba": 1
+      },
+      "known_nt": {
+        "acetylcholine; acetylcholine": 1044,
+        "acetylcholine; sNPF; acetylcholine, sNPF": 4133
+      },
+      "known_nt_source": {
+        "Barnstedt et al. 2016 (immuno, RNAi); Aso et al. 2019 (scRNA-seq)": 915,
+        "Barnstedt et al. 2016 (immuno); Johard et al., 2008 (immuno); Aso et al. 2019 (scRNA-seq)": 2489,
+        "Barnstedt et al. 2016 (immuno, RNAi); Johard et al. (immuno); Aso et al. 2019 (scRNA-seq)": 1643,
+        "Barnstedt et al. 2016 (immuno); Aso et al. 2019 (scRNA-seq)": 129,
+        "Barnstedt et al., 2016 (immuno); Johard et al., 2008 (immuno); Aso et al., 2019 (scRNA-seq)": 1
+      }
+    },
+    "selected_kenyon_cells": {
+      "neurons": 2189,
+      "sides": {
+        "right": 1120,
+        "left": 1069
+      },
+      "predicted_top_nt": {
+        "dopamine": 2186,
+        "acetylcholine": 2,
+        "gaba": 1
+      },
+      "known_nt": {
+        "acetylcholine; sNPF; acetylcholine, sNPF": 2189
+      },
+      "known_nt_source": {
+        "Barnstedt et al. 2016 (immuno); Johard et al., 2008 (immuno); Aso et al. 2019 (scRNA-seq)": 2188,
+        "Barnstedt et al., 2016 (immuno); Johard et al., 2008 (immuno); Aso et al., 2019 (scRNA-seq)": 1
+      }
+    },
+    "selected_mbons": {
+      "neurons": 2,
+      "sides": {
+        "right": 1,
+        "left": 1
+      },
+      "predicted_top_nt": {
+        "glutamate": 2
+      },
+      "known_nt": {
+        "glutamate; glutamate": 2
+      },
+      "known_nt_source": {
+        "Aso et al., 2014 (immuno); Aso et al. 2019 (scRNA-seq)": 2
+      }
+    },
+    "mbon_identity_rows": [
+      {
+        "root_id": "720575940624117245",
+        "neuron_index": 64506,
+        "cell_class": "MBON",
+        "cell_type": "MBON01",
+        "side": "right",
+        "top_nt": "glutamate",
+        "known_nt": "glutamate; glutamate",
+        "known_nt_source": "Aso et al., 2014 (immuno); Aso et al. 2019 (scRNA-seq)",
+        "super_class": "central",
+        "cell_sub_class": null
+      },
+      {
+        "root_id": "720575940643309197",
+        "neuron_index": 132236,
+        "cell_class": "MBON",
+        "cell_type": "MBON01",
+        "side": "left",
+        "top_nt": "glutamate",
+        "known_nt": "glutamate; glutamate",
+        "known_nt_source": "Aso et al., 2014 (immuno); Aso et al. 2019 (scRNA-seq)",
+        "super_class": "central",
+        "cell_sub_class": null
+      }
+    ],
+    "positive_edges": 1865,
+    "positive_synaptic_contacts": 6974,
+    "positive_pre_neurons": 1865,
+    "positive_post_neurons": 2,
+    "positive_edges_by_anatomical_side": {
+      "right->left": {
+        "weighted_edges": 852,
+        "synaptic_contacts": 2244,
+        "positive_signed_weight_sum": 2244,
+        "presynaptic_neurons": 852,
+        "postsynaptic_neurons": 1
+      },
+      "left->right": {
+        "weighted_edges": 1013,
+        "synaptic_contacts": 4730,
+        "positive_signed_weight_sum": 4730,
+        "presynaptic_neurons": 1013,
+        "postsynaptic_neurons": 1
+      }
+    },
+    "positive_edge_identity_mismatches": 0,
+    "annotation_sha256": "feb97008a7791e34e32943cc404435b3682ba47659d3037575dfdbaa1fb7c132",
+    "connectivity_sha256": "efeb23fb99098e9c390f6869969b2a121a2ee92c833cfc45ecb2c1d8e1af0347"
+  },
+  "scope": "25节点CPU局部数值、Brain.__new__控制方法和真实表只读/合成配置检查；没有运行完整Brain.advance或真实实验回放。",
+  "tests_run": true,
+  "full_brain_loaded": false,
+  "gpu_used": false,
+  "body_started": false,
+  "browser_interactions_automated": false,
+  "existing_experiments_touched": false,
+  "github_committed": false,
+  "github_pushed": false,
+  "delivery_rebuilt": false,
+  "interpretation": "相同人工KC输入下实际MBON电导积分降低；两次放电均为0。证明局部突触有效性，不证明学习后的行为改善、生物机制复现或全链路运行。"
+}

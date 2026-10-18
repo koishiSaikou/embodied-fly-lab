@@ -28,6 +28,52 @@ Runtime profiles:
 - Habitat defaults to continuous mode (`--seconds 0`, `target_steps=None`). Finite experiments use `.02 <= seconds <= 3600`; other launch profiles still require positive durations. Preserve the 200-tick chunks, explicit manual stop/save, pause/resume, and same-service restart into a new recording directory. Ctrl+C records `interrupted` and closes the service after saving. Do not encode infinity in JSON or silently reset neural state every 30 seconds.
 - Windows MuJoCo mesh loading failed under a Chinese project path despite the files existing. This release requires an ASCII root path (spaces are supported); bootstrap checks it before installing. Do not remove that guard without an actual Unicode-path rendering regression test.
 
+## 本机实验记录扩展（2026-10-17）
+
+当前请求是保存数据与配置、本地查看、分享导入后重建条件。新增 `experiment_store.py`（纯标准库存储/ZIP/有界预览）、`experiment_profile.py`（条件白名单与事件重放）、`experiment_library.py`（共享 FastAPI 路由）、`experiment_viewer.py`（不加载仿真的查看器）及 `web/records.*`。入口为 `/records` 或 `View-Records.cmd`，协议见 docs/实验包格式.md，操作见 docs/实验保存与分享说明.md。
+
+Habitat 接受 --experiment / --experiment-mode / --no-replay-events；initial 复用初值和已应用的 command 设置事件，final 只取最终环境、参数和外置需要/气味价值。未知路径、端口和执行字段不能从实验包进入运行参数；只在本轮保存/清理完成后允许新开，永不自动停止现有仿真。普通 restart 保留导入轮次的初始方案。不是完整 checkpoint 或逐位确定性重放。
+
+新记录保存初始/最终条件、版本/依赖/时钟及已有 worker activity（仍保留 events_truncated，不能宣称全量）。关闭文件并成功生成清单后才去掉 .recording；报告或清单失败不得宣称完整保存。导出旧数据不能写回历史目录，所有 import 使用本次独立暂存和新目录。保存入口、声明及许可须随功能一同维护。
+
+补充：`experiment_destination.py` 只在用户显式请求时打开原生 Windows 目录选择器，也可手输现有可写绝对路径。`ExperimentStore.save_to_directory` 校验/流式复制 ZIP 并以唯一名称原子发布，不替换原目录。`ExperimentSaveCoordinator` 持有本轮另存请求，主线程在 manifest 完成后执行；浏览器关闭不取消，另存错误单独报告，不回写已完成清单或破坏默认记录。API 为 POST choose-directory/save-current/{id}/save-to 与 GET save-status（均在 /api/experiments 下）。保存目标路径不能来自包；import 初始/最终条件运行只接受本机白名单配置。仅有 error.json 的合法结束记录也能用于提取条件。
+
+首次实现只做静态核对；维护者随后要求“确保可以导入运行”，本次另行完成指定目录保存、HTTP 导入和初始/最终两种实际脑模式短运行。证据为 docs/指定目录保存与导入验证.json。未执行安装、全量测试、性能或长时验收，未自动操作原生文件夹选择窗口。发布标签、旧运行 ZIP 与远程仓库保持原样，继续不提交、不推送。
+
+## 虚拟神经干预扩展（2026-10-17）
+
+首版单协议：`None`取消；否则为 mode(stimulate/silence)、target(精确字符串IDs或cell_type)、start_s/duration_s/rate_hz。`neural_intervention.py`纯标准库校验和按模型顺序解析目标；`neural_intervention_runtime.py`缓存GPU索引并按绝对积分tick执行；`brain_worker.py`请求缺失intervention时保持，显式None清除，相同协议不重复解析。
+
+未干预与窗口外走原model调用，不增加随机采样。刺激只添加目标Poisson率并保留普通目标既有不应期门控；静默须在稀疏传播前夹持上一spikes，并在模型调用后再夹持；counts/trace一定取夹持后结果。不改原始磁盘权重/上游方程，已排队进入其他神经元的电流保留，取消非回滚。
+
+Habitat按控制边界应用命令，暂停不推进时钟。主界面h.neural_intervention恒为对象，protocol可null；actual.revision对应上一次真实脑块，仅修订匹配时才能视为当前设置的结果。配置量化窗口与真实first_applied_ms/last_applied_ms分开，绝不补做过去积分。目标放电总率分母为整个实际chunk_ms，每目标平均再除全部目标（含静默者）。
+
+初始/最终配置、完整目标解析及变更事件都保存；profile白名单支持neural_intervention命令与补充阶段事件。已在profile导入前拒绝未知目标和无脑模式的有效协议。最终配置新实验从0开始复用完整配置窗口，不是中途恢复。文档为docs/虚拟神经干预说明.md。9项8节点CPU数值核对见docs/神经干预验证记录.json；本轮未启动完整连接组、CUDA、身体、浏览器或已有实验。
+
+## 蘑菇体局部学习扩展（2026-10-18）
+
+可选的真实局部突触因子 LTD，默认关闭；不是 AdaptiveBehavior 的 odor_values。纯校验 mb_learning.py、无 torch 的表预检 mb_learning_catalog.py、运行时 mb_learning_runtime.py；角色按 cell_class=Kenyon_Cell/MBON 加精确 cell_type，严禁用 top_nt 代替角色。本地默认 KCg-m→MBON01，2189候选KC/2MBON/1865既有正边，保留原索引和符号。NT有效矩阵先组合，只有这些边乘因子；关闭或因子全1返回NT原张量，磁盘缓存与上游方程保持。
+
+稀疏气味KC模式通过固定ID的SHA256排序建立，不消耗原RNG；糖/果香来自门控后的真实场景感觉，非odor_values。输入保留原不应期门控；与神经刺激组合时每步复制最新rates，不能缓存首步KC率。教学为独立持续manual 0..1或taste开启后的sweetness，属于外源工程代理，非DAN释放/RPE。每实际chunk秒使用夹持后KC计数更新有界资格迹，门控LTD在下一chunk生效。没有LTP或MBON→行为解码器，不保证行为提升。
+
+Brain.configure_learning与BrainClient.learning_state为无积分控制/导出RPC，不改sim_ms/state/RNG。保持settings_revision/reset_revision和请求/实际分开；业务拒绝仅返回error，保留旧controls，Habitat记录mb_learning_rejected而不记录成功command；面板必须显示error，不能仅凭revision变化报成功。暂停MBON读数仍来自旧块。freeze只停因子更新，仍读已学增益且资格迹继续演化；off绕过因子与气味桥但保留内存；reset显式清因子/资格迹/累计而非回滚整个脑。
+
+learning_memory.json是精确完整既有正边的字符串pre/post ID+factor，非pickle/任意路径。只在新脑首次配置载入，范围/类型/完整集合双层核对，资格迹不保存。initial复现使用初始memory+已应用模型时间commands，final使用最终memory+最终controls启动新脑；已初始化却无最终memory应拒绝final，不可静默退回全1。mb_learning.jsonl记录实际块摘要。保存白名单与关键源码指纹同步覆盖三个新模块（当前22文件）。源哈希改变的旧记录可能因兼容检查被拒绝，不能绕过校验强行宣称可复现。
+
+操作、算法和科学边界见docs/蘑菇体局部学习说明.md；当前仅小型CPU及数据/格式核对，未跑全脑CUDA/身体/浏览器/长时验收。保持未提交、未推送、交付包不重建。
+
+## 蘑菇体学习观察器扩展（2026-10-18）
+
+mb_learning_runtime.observe在既有块计数后缓存observation：选中全部KC/两个气味组/重叠组实际计数、含静默成员的平均Hz、块末资格迹、factor_before/after及10桶分布。只添加遥测，不改方程/更新/RNG；off不演化trace，freeze继续trace但不改factor。普通paused controls edit保留旧observation.captured controls；reset/load/selection/pattern改动清空。
+
+Brain.learning_summary只给观测盖上advance刚完成时记录的mb_observation_clock（start/end、settings/reset revision），admin RPC不能用新revision重标旧块。当前块MBON响应来自更新前权重，factor_after下一块才用。MBObserver纯stdlib模块逐实际脑块建立seq时间线，deque最多6000块；分页600块、明确缺口/截断，捕获只用完整块计数/实际duration，不插值分摊spikes或补0。
+
+成功设置后require_fresh要求捕获窗全部来自新seq，避免paused重置后误捕获旧读出。签名包含局部controls、reset/selection/pattern、MBON身份、脑/感觉控制、场景/行为修订、干预修订及实际phase+active_fraction；同一排程干预跨阶段不能假作同条件。比较允许plasticity_enabled前后不同，其他签名不符不算delta，输入/教学差异给warning，compatible也不是因果证据。capture不写刺激命令重放。
+
+HabitatMonitor提供/api/mb-observer GET游标页与POST capture（同源/有界/运行中含暂停）。保存前seal阻止late capture，mb_observer.json紧凑原子保存，超30MiB裁最旧整块并标记；完整新遥测另在mb_learning.jsonl。白名单与SHA进入实验ZIP。当前关键科学源码指纹23文件，mb_observer.py已纳入。
+
+web/mb_observer.js/css/html提供六轨模型时间图、直方图、hover与前后实际窗比较；工作台浮窗关闭/折叠/页面隐藏停读，重开按seq补取，新run清旧缓冲。records的蘑菇体学习入口在observer_run历史模式只GET白名单JSON一次，流式32MiB上限，无POST/实时轮询/脑加载。旧记录缺字段留空。操作见docs/蘑菇体学习观察器说明.md；89项小型数值/纯逻辑/合成记录往返检查见docs/学习观察器验证记录.json，不代表全脑CUDA/身体/浏览器/长时验收。保持不提交、不推送、不重建交付包。
+
 ## 2. Current implementation map
 
 | File / directory | Responsibility |
@@ -71,7 +117,7 @@ FlyGym source is included in `flygym/`, but the installer normally installs the 
 
 The full v783 node/edge table is loaded into a simplified uniform LIF network. There are 138,639 nodes and 15,091,983 weighted neuron-pair rows, representing 54,492,922 synaptic contacts when source counts are summed. Do not call the 15 million rows separate anatomical synapses without specifying the counting unit.
 
-Visual/odor navigation is currently engineering policy. It decides P9 stimulation and some movement signs. Measured P9 firing rates set smoothed CPG amplitudes. Taste drives the upstream 21 sugar GRNs and an explicit dwell rule. A CPG/hybrid controller approximates VNC motor control. The brain has no plasticity or learned policy. Type/NT annotations are metadata, not newly implemented cell-type physiology.
+Visual/odor navigation is currently engineering policy. It decides P9 stimulation and some movement signs. Measured P9 firing rates set smoothed CPG amplitudes. Taste drives the upstream 21 sugar GRNs and an explicit dwell rule. A CPG/hybrid controller approximates VNC motor control. The baseline has no plasticity or learned policy; the optional local KC→MBON LTD extension is described above and does not supply a learned behavioral policy. Type/NT annotations are metadata, not newly implemented cell-type physiology.
 
 Do not advertise a running sensory neural pathway merely because its neurons have labels. Do not color static brain ROIs with invented activity. Do not silently teleport/reset the body to make behavior look successful.
 
@@ -244,7 +290,7 @@ Preserve generated reports. For controls, use a short dedicated run rather than 
 ## 8. Suggested extension paths
 
 - Real sensory neural routes: introduce an explicit sensory encoding/interface before replacing engineering P9 stimulation. Define which real cells receive what signal and validate against controlled stimuli.
-- Full-brain learning: current AdaptiveBehavior already provides external two-odor value memory. Any future connectome plasticity needs its own explicit reward/plasticity module and evaluation; do not duplicate the current memory or call policy-level learning neural plasticity.
+- Full-brain learning: current AdaptiveBehavior already provides external two-odor value memory. The optional local KC→MBON module is separate and limited to positive existing edges; do not duplicate either memory or call policy-level learning neural plasticity. Whole-brain learning remains absent.
 - Type-specific physiology: maintain a versioned parameter mapping, unknown defaults and data provenance. Annotation predictions alone do not establish receptor/sign/dynamics.
 - More morphology: select bounded IDs and cache them; do not request all 138k skeletons by default. Keep visual scale/coordinate conventions and rendering limits clear.
 - Performance: profile brain, physics, capture, serialization and rendering separately; preserve model timing and numerical checks when optimizing.
